@@ -4,25 +4,27 @@ import { theme } from '../styles/theme';
 import Logo from './logo.js';
 import Menu from './menu';
 
+const logoWidth = 170;
+
 const HeaderContainer = styled.div`
 	display: flex;
-	background: rgba(0, 0, 0, 0.2);
-	color: rgb(0, 0, 0, 0.8);
+	background: #ffffff;
 	height: ${theme.headerHeight}px;
-    align-items: center;
-    justify-content: space-between;
-	padding: 0 2%;
+	align-items: center;
+	border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
+	padding: 0 5%;
 	position: fixed;
 	width: 100%;
 `;
 
 const LogoContainer = styled.div`
 	flex: 0 0 auto;
+	width: ${logoWidth}px;
 `;
 
 const MenuContainer = styled.div`
-    flex: 0 0 40%;
-    
+	flex: 1 0 auto;
+	margin-right: ${logoWidth}px;
 `;
 
 const GlobalStyles = createGlobalStyle`
