@@ -1,9 +1,9 @@
-import React from "react"
-import Toolbar from "./toolbar"
+import React from 'react';
+import Header from './header';
 
 export default ({ children }) => (
-  <>
-    <Toolbar />
-    {children}
-  </>
-)
+	<>
+		<Header />
+		{children}
+	</>
+);
