@@ -18,6 +18,7 @@ body {
 a, a:visited {
 	color: rgba(0, 0, 0, 0.6);
 	text-decoration: none;
+	transition: 0.5s;
 }
 
 a:focus, a:hover, a:active {
