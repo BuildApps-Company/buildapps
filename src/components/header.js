@@ -15,6 +15,7 @@ const HeaderContainer = styled.div`
 	border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
 	padding: 0 5%;
 	position: fixed;
+	top: 0px;
 	width: 100%;
 `;
 
@@ -28,7 +29,7 @@ const MenuContainer = styled.div`
 `;
 
 const GlobalStyles = createGlobalStyle`
-    body: {
+    body {
 		padding-top: ${theme.headerHeight}px;
 	}
 `;

@@ -2,12 +2,13 @@ import React from "react";
 import styled from 'styled-components';
 
 const ContactUsLink = styled.a`
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
     &, &:focus, &:hover, &:visited {
-        color: #3949AB;
-        font-size: 1.2rem;
-    }
-    &:hover, &:visited, &:focus {
+        background: rgb(46, 46, 46);
+        color: #ffffff;
     }
 `;
 
-export default () => <ContactUsLink href="mailto:test@test.com">Contact US</ContactUsLink>;
+export default () => <ContactUsLink href="mailto:test@test.com">Contact Us</ContactUsLink>;

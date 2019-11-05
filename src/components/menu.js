@@ -24,7 +24,7 @@ const MenuItem = styled.div`
 
 const MenuLink = styled.a`
 	padding: 0 2rem;
-	font-size: 1.2rem;
+	font-size: 1rem;
 `;
 
 export default () => (
