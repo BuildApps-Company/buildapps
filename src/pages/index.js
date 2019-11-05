@@ -1,8 +1,9 @@
 import React from 'react';
-import Layour from '../components/layout';
+import Layout from '../components/layout';
+import Preview from '../components/preview';
 
 export default () => (
-	<div>
-		<Layour></Layour>
-	</div>
+		<Layout>
+			<Preview/>
+		</Layout>
 );
