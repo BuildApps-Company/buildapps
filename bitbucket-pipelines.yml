@@ -9,6 +9,7 @@ pipelines:
   default:
     - step:
         name: 'Build'
+        deployment: production
         caches:
           - node
         script: # Modify the commands below to build your repository.
@@ -16,10 +17,6 @@ pipelines:
           - npm run build
           - npm i -g bestzip 
           - bestzip public.zip public/*
-          - ls
-    - step:
-        deployment: production
-        script:
           - ls
           - pipe: atlassian/heroku-deploy:1.1.0
             variables:
