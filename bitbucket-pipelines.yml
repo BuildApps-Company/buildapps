@@ -16,7 +16,7 @@ pipelines:
           - npm build
           - zip -r public.zip public
     - step:
-        deployment: production-east
+        deployment: production
         script:
           - pipe: atlassian/heroku-deploy:1.1.0
             variables:
