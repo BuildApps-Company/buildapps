@@ -31,7 +31,9 @@ const Preview = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 2% 5%;
+    padding-bottom: 6%;
+    border-bottom: 1px solid #eeeeee;
+    margin: 3% 5% 6% 5%;
 `;
 
 const SmallDescription = styled.div`
@@ -39,6 +41,7 @@ const SmallDescription = styled.div`
     opacity: 0.6;
     font-size: 1rem;
     text-align: center;
+    text-transform: uppercase;
     margin: 8% 0 2% 0;
 `;
 
@@ -48,19 +51,11 @@ const LargeDescription = styled.div`
     text-align: center;
 `;
 
-const Divider = styled.div`
-    height: 1px;
-    margin: 6% 0;
-    background-color: #EEEEEE;
-    width: 100%;
-`;
-
 export default () => <Preview>
     <Banner>
         <Title>Grow your business.</Title>
         <SubTitle>Give your business a boost with a beautifully crafted homepage.</SubTitle>
     </Banner>
-    <SmallDescription>WHAT WE BELIEVE IN</SmallDescription>
+    <SmallDescription>What we believe in</SmallDescription>
     <LargeDescription>Grow your business, establish your brand, and put your customers first.</LargeDescription>
-    <Divider/>
 </Preview>
