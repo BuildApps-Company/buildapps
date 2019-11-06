@@ -13,14 +13,14 @@ pipelines:
           - node
         script: # Modify the commands below to build your repository.
           - npm i
-          - npm build
-          - ls
+          - npm run build
           - npm i -g bestzip 
           - bestzip public.zip public/*
           - ls
     - step:
         deployment: production
         script:
+          - ls
           - pipe: atlassian/heroku-deploy:1.1.0
             variables:
               HEROKU_API_KEY: '4230548b-619a-4a68-9981-119f888ce0e1'
