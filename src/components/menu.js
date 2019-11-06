@@ -4,11 +4,19 @@ import styled from 'styled-components';
 const menuTabs = [
 	{
 		key: 'about',
-		title: 'About Us',
+		title: 'About',
 	},
 	{
 		key: 'service',
-		title: 'Our Service',
+		title: 'Services',
+	},
+	{
+		key: 'portfolio',
+		title: 'Portfolio',
+	},
+	{
+		key: 'contacts',
+		title: 'Contacts',
 	}
 ];
 
@@ -23,8 +31,9 @@ const MenuItem = styled.div`
 `;
 
 const MenuLink = styled.a`
-	padding: 0 2rem;
+	padding: 0 1rem;
 	font-size: 1rem;
+	text-transform: uppercase;
 `;
 
 export default () => (

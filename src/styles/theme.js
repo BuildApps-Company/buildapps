@@ -1,3 +1,3 @@
 export const theme = {
-	headerHeight: 65,
+	headerHeight: 104,
 };

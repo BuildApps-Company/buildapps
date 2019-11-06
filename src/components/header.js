@@ -12,11 +12,11 @@ const HeaderContainer = styled.div`
 	background: #ffffff;
 	height: ${theme.headerHeight}px;
 	align-items: center;
-	border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
-	padding: 0 5%;
+	padding: 0 50px;
 	position: fixed;
 	top: 0px;
 	width: 100%;
+	z-index: 9;	
 `;
 
 const SideContainer = styled.div`

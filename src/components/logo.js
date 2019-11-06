@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import logo from '../../static/images/logo.png';
 
 const LogoContainer = styled.a`
     font-size: 1.8rem;
@@ -11,4 +12,4 @@ const LogoContainer = styled.a`
     }
 `;
 
-export default () => <LogoContainer href="/">BuildApps</LogoContainer>;
+export default () => <LogoContainer href="/"><img src={logo} alt="BuildApps" /></LogoContainer>;

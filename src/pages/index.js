@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import Preview from '../components/preview';
 
 export default () => (
-		<Layout>
-			<Preview/>
-		</Layout>
+	<Layout>
+		<Preview />
+	</Layout>
 );
