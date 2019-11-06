@@ -14,8 +14,11 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm i
           - npm build
+          - cd ../
+          - ls
           - npm i -g bestzip 
           - bestzip public.zip public/*
+          - ls
     - step:
         deployment: production
         script:
