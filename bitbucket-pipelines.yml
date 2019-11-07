@@ -15,8 +15,7 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm i
           - npm run build
-          - npm i -g bestzip 
-          - bestzip public.zip public/*
+          - cd public && tar cf ../public.tar . && cd ../
           - ls
           - pipe: atlassian/heroku-deploy:1.1.0
             variables:
