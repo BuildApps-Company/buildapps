@@ -1,14 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import banner_background from '../../static/images/banner_background.svg';
+import ContactUs from './contact-us-white';
 
 const Banner = styled.div`
-    height: 620px;
+    height: 710px;
     justify-content: center;
+    background-size: cover;
+    background-image: url("${banner_background}");
     align-items: center;
+    bacground-color: #000000
     display: flex;
     width: 100%;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
 `;
 
 const Title = styled.div`
@@ -19,8 +23,7 @@ const Title = styled.div`
 
 const SubTitle = styled.div`
     color: #FFFFFF;
-    opacity: 0.6;
-    margin: 2% 5% 0 5%;
+    margin: 2% 30% 0 30%;
     text-align: center;
     font-size: 1.6rem;
 `;
@@ -33,7 +36,7 @@ const Preview = styled.div`
     flex-direction: column;
     padding-bottom: 6%;
     border-bottom: 1px solid #eeeeee;
-    margin: 3% 5% 6% 5%;
+    margin-bottom: 6%;
 `;
 
 const SmallDescription = styled.div`
@@ -51,10 +54,15 @@ const LargeDescription = styled.div`
     text-align: center;
 `;
 
+const ContactUsButtonContainer = styled.div`
+    margin-top: 32px;
+`;
+
 export default () => <Preview>
     <Banner>
-        <Title>Grow your business.</Title>
-        <SubTitle>Give your business a boost with a beautifully crafted homepage.</SubTitle>
+        <Title>BuildApps</Title>
+        <SubTitle>A close-knit team with extensive experience and understanding of what is necessary for you</SubTitle>
+       <ContactUsButtonContainer><ContactUs/></ContactUsButtonContainer> 
     </Banner>
     <SmallDescription>What we believe in</SmallDescription>
     <LargeDescription>Grow your business, establish your brand, and put your customers first.</LargeDescription>
