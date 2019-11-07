@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
 const Footer = styled.div`
-    height: ${theme.headerHeight}px;
+    height: ${theme.footerHeight}px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 ${(100 - theme.containerWidthProcentage) / 2}%;
+    padding: 0 ${(100 - theme.containerWidthPercent) / 2}%;
 `
 const TermsOfUseContainer = styled.div`
     color: ${theme.colors.gray};
