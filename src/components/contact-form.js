@@ -31,10 +31,18 @@ const SubTitle = styled.div`
 
 const HorizontalContainer = styled.div`
     display: flex;
+    margin-bottom: 46px;
     flex-direction: row;
 `;
 
-const FloatTextField = styled(FloatingLabelInput)`
+const HorizontalDivider = styled.div`
+    width: 24px;
+`;
+
+const SendButton = styled.button`
+    width: 140px;
+    margin: 64px auto 0 auto;
+    text-transform: uppercase;
     background-color: transparent;
 `;
 
@@ -43,11 +51,10 @@ export default () =>
     <Title>Contact us</Title>
     <SubTitle>We will help you with your project</SubTitle>
     <HorizontalContainer>
-    <FloatTextField 
-        id="user_name"
-        label="User name"/>
-    <FloatTextField 
-        id="user_email"
-        label="Email"/>
+    <FloatingLabelInput className="FloatingLabelInput" id="name" label="User name"/>
+    <HorizontalDivider/>
+    <FloatingLabelInput className="FloatingLabelInput" id="email" label="Email"/>
     </HorizontalContainer>
+    <FloatingLabelInput className="FloatingLabelInput" id="description"label="Additional information or question (optional)"/>
+    <SendButton className="primary">send</SendButton>
 </FormContainer>

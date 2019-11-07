@@ -83,3 +83,7 @@ button.primary:hover {
 	background: #8147A5;
 	color: #ffffff;
 }
+
+.FloatingLabelInput{
+	background-color: transparent;
+}
