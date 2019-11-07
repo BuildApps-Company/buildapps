@@ -1,6 +1,7 @@
 export const theme = {
 	headerHeight: 104,
-	containerWidthProcentage: 70,
+	containerWidthPercent: 70,
+	divederWidthPercent: 25,
 	colors: 
 	{
 		primary: "#8147A5",
