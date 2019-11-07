@@ -16,9 +16,8 @@ pipelines:
           - npm i
           - npm run build
           - cd public && tar cf ../public.tar . && cd ../
-          - ls
           - pipe: atlassian/heroku-deploy:1.1.0
             variables:
               HEROKU_API_KEY: '4230548b-619a-4a68-9981-119f888ce0e1'
               HEROKU_APP_NAME: 'buildapps-homesite'
-              ZIP_FILE: 'public.zip'
+              ZIP_FILE: 'public.tar'
