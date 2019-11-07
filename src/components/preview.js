@@ -7,14 +7,25 @@ import ContactUs from './contact-us';
 const Banner = styled.div`
     height: 710px;
     justify-content: center;
-    background-size: cover;
-    background-image: url("${banner_background}");
     align-items: center;
     bacground-color: ${theme.colors.black};
     display: flex;
     width: 100%;
     margin-bottom: 128px;
     flex-direction: column;
+    position: relative;
+    &:before {
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 5%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 95%, rgba(0,0,0,1) 100%)
+            , url("${banner_background}"), #000000; 
+        background-size: cover;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+    }
 `;
 
 const Title = styled.div`
@@ -61,17 +72,17 @@ const ContactUsButtonContainer = styled.div`
 `;
 
 const ViewProjectsLink = styled.a`
-    color: ${theme.colors.darkGray};
+    color: ${theme.colors.lightGray};
 `;
 
-export default () => 
-<Preview>
-    <Banner>
-        <Title>BuildApps</Title>
-        <SubTitle>A close-knit team with extensive experience <br/> and understanding of what is necessary for you</SubTitle>
-        <ContactUsButtonContainer><ContactUs isOutline={true}/></ContactUsButtonContainer>
-        <ViewProjectsLink>view projects</ViewProjectsLink>
-    </Banner>
-    <SmallDescription>SERVICES</SmallDescription>
-    <LargeDescription>UI/UX Design, Web and mobile development</LargeDescription>
-</Preview>
+export default () =>
+    <Preview>
+        <Banner>
+            <Title>BuildApps</Title>
+            <SubTitle>A close-knit team with extensive experience <br /> and understanding of what is necessary for you</SubTitle>
+            <ContactUsButtonContainer><ContactUs isOutline={true} /></ContactUsButtonContainer>
+            <ViewProjectsLink>view projects</ViewProjectsLink>
+        </Banner>
+        <SmallDescription>SERVICES</SmallDescription>
+        <LargeDescription>UI/UX Design, Web and mobile development</LargeDescription>
+    </Preview>
