@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import banner_background from '../../static/images/banner_background.svg';
+import { theme } from '../styles/theme';
 import ContactUs from './contact-us';
 
 const Banner = styled.div`
@@ -9,21 +10,22 @@ const Banner = styled.div`
     background-size: cover;
     background-image: url("${banner_background}");
     align-items: center;
-    bacground-color: #000000
+    bacground-color: ${theme.colors.black};
     display: flex;
     width: 100%;
+    margin-bottom: 128px;
     flex-direction: column;
 `;
 
 const Title = styled.div`
-    color: #FFFFFF;
+    color: ${theme.colors.white};
     font-size: 3rem;
+    margin-bottom: 2%;
     text-align: center;
 `;
 
 const SubTitle = styled.div`
-    color: #FFFFFF;
-    margin: 2% 30% 0 30%;
+    color: ${theme.colors.white};
     text-align: center;
     font-size: 1.6rem;
 `;
@@ -35,35 +37,41 @@ const Preview = styled.div`
     display: flex;
     flex-direction: column;
     padding-bottom: 6%;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid ${theme.colors.lightGray};
     margin-bottom: 6%;
 `;
 
 const SmallDescription = styled.div`
-    color: #1A1B1F;
-    opacity: 0.6;
-    font-size: 1rem;
+    color: ${theme.colors.black};
+    font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
-    margin: 8% 0 2% 0;
+    margin: 0 0 2% 0;
 `;
 
 const LargeDescription = styled.div`
-    color: #1A1B1F;
+    color: ${theme.colors.black};
     font-size: 2rem;
     text-align: center;
 `;
 
 const ContactUsButtonContainer = styled.div`
     margin-top: 32px;
+    margin-bottom: 16px;
 `;
 
-export default () => <Preview>
+const ViewProjectsLink = styled.a`
+    color: ${theme.colors.darkGray};
+`;
+
+export default () => 
+<Preview>
     <Banner>
         <Title>BuildApps</Title>
-        <SubTitle>A close-knit team with extensive experience and understanding of what is necessary for you</SubTitle>
-        <ContactUsButtonContainer><ContactUs isOutline={true}/></ContactUsButtonContainer> 
+        <SubTitle>A close-knit team with extensive experience <br/> and understanding of what is necessary for you</SubTitle>
+        <ContactUsButtonContainer><ContactUs isOutline={true}/></ContactUsButtonContainer>
+        <ViewProjectsLink>view projects</ViewProjectsLink>
     </Banner>
-    <SmallDescription>What we believe in</SmallDescription>
-    <LargeDescription>Grow your business, establish your brand, and put your customers first.</LargeDescription>
+    <SmallDescription>SERVICES</SmallDescription>
+    <LargeDescription>UI/UX Design, Web and mobile development</LargeDescription>
 </Preview>
