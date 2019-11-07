@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../../static/images/logo.png';
+import logo from '../../static/images/logo.svg';
 
 const LogoContainer = styled.a`
     font-size: 1.8rem;
