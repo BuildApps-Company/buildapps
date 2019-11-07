@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import banner_background from '../../static/images/banner_background.svg';
-import ContactUs from './contact-us-white';
+import ContactUs from './contact-us';
 
 const Banner = styled.div`
     height: 710px;
@@ -62,7 +62,7 @@ export default () => <Preview>
     <Banner>
         <Title>BuildApps</Title>
         <SubTitle>A close-knit team with extensive experience and understanding of what is necessary for you</SubTitle>
-       <ContactUsButtonContainer><ContactUs/></ContactUsButtonContainer> 
+        <ContactUsButtonContainer><ContactUs isOutline={true}/></ContactUsButtonContainer> 
     </Banner>
     <SmallDescription>What we believe in</SmallDescription>
     <LargeDescription>Grow your business, establish your brand, and put your customers first.</LargeDescription>

@@ -1,3 +1,3 @@
 import React from "react";
 
-export default () => <button type="button" className='primary'>Contact Us</button>;
+export default ({isOutline}) => <button type="button" className={isOutline ? 'primary-outline' : 'primary'}>Contact Us</button>;
