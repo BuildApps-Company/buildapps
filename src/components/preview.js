@@ -48,7 +48,6 @@ const Preview = styled.div`
     display: flex;
     flex-direction: column;
     padding-bottom: 6%;
-    border-bottom: 1px solid ${theme.colors.lightGray};
     margin-bottom: 6%;
 `;
 
@@ -63,6 +62,7 @@ const SmallDescription = styled.div`
 const LargeDescription = styled.div`
     color: ${theme.colors.black};
     font-size: 2rem;
+    margin-bottom: 64px;
     text-align: center;
 `;
 
@@ -75,6 +75,13 @@ const ViewProjectsLink = styled.a`
     color: ${theme.colors.lightGray};
 `;
 
+const Divider = styled.div`
+    background-color: ${theme.colors.lightGray};
+    width: ${theme.divederWidthPercent}%;
+    height: 2px;
+    margin: 0 auto 0 auto;
+`;
+
 export default () =>
     <Preview>
         <Banner>
@@ -85,4 +92,5 @@ export default () =>
         </Banner>
         <SmallDescription>SERVICES</SmallDescription>
         <LargeDescription>UI/UX Design, Web and mobile development</LargeDescription>
+        <Divider />
     </Preview>
