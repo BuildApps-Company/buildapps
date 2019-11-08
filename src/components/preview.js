@@ -5,6 +5,7 @@ import { theme } from '../styles/theme';
 import ContactUs from './contact-us';
 import SectionHeader from './section-header';
 import scroll_image from '../../static/images/ic_scroll.svg';
+import { menuTabs } from '../data/menu';
 
 const Banner = styled.div`
     height: 710px;
@@ -30,31 +31,31 @@ const Banner = styled.div`
 `;
 
 const Title = styled.div`
-    color: ${theme.colors.white};
-    font-size: 3rem;
-    margin-bottom: 2%;
-    text-align: center;
+	color: ${theme.colors.white};
+	font-size: 3rem;
+	margin-bottom: 2%;
+	text-align: center;
 `;
 
 const SubTitle = styled.div`
-    color: ${theme.colors.white};
-    text-align: center;
-    font-size: 1.6rem;
+	color: ${theme.colors.white};
+	text-align: center;
+	font-size: 1.6rem;
 `;
 
 const Preview = styled.div`
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 6%;
-    margin-bottom: 6%;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 6%;
+	margin-bottom: 6%;
 `;
 
 const ContactUsButtonContainer = styled.div`
-    margin-top: 32px;
-    margin-bottom: 16px;
+	margin-top: 32px;
+	margin-bottom: 16px;
 `;
 
 const ScrollImage = styled.img`
@@ -73,11 +74,11 @@ const ScrollImage = styled.img`
 `;
 
 const ViewProjectsLink = styled.a`
-    color: ${theme.colors.lightGray};
+	color: ${theme.colors.lightGray};
 `;
 
 export default () =>
-    <Preview>
+<Preview id={menuTabs.About.key}>
         <Banner>
             <Title>BuildApps</Title>
             <SubTitle>A close-knit team with extensive experience <br /> and understanding of what is necessary for you</SubTitle>
