@@ -17,8 +17,8 @@ export default () =>
     <>
         <SectionHeader smallDescription="portfolio" largeDescription="Projects we worked on" />
         <CardsContainer>
-            <PortfolioCard text="Перербуржская Недвижимость" image={logo} />
-            <PortfolioCard text="qp.ru" image={logo} />
-            <PortfolioCard text="VIOL Commander" image={logo}/>
+            <PortfolioCard text="Перербуржская Недвижимость" image={logo} description="Mobile application" />
+            <PortfolioCard text="qp.ru" image={logo} description="Mobile application" />
+            <PortfolioCard text="VIOL Commander" image={logo} description="Desktop application" />
         </CardsContainer>
     </>
