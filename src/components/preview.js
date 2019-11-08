@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import banner_background from '../../static/images/banner_background.svg';
 import { theme } from '../styles/theme';
 import ContactUs from './contact-us';
+import SectionHeader from './section-header';
 
 const Banner = styled.div`
     height: 710px;
@@ -10,9 +11,9 @@ const Banner = styled.div`
     align-items: center;
     bacground-color: ${theme.colors.black};
     display: flex;
+    flex-direction: column;
     width: 100%;
     margin-bottom: 128px;
-    flex-direction: column;
     position: relative;
     &:before {
         background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 5%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 95%, rgba(0,0,0,1) 100%)
@@ -24,7 +25,6 @@ const Banner = styled.div`
         width: 100%;
         height: 100%;
         z-index: -1;
-
     }
 `;
 
@@ -51,21 +51,6 @@ const Preview = styled.div`
     margin-bottom: 6%;
 `;
 
-const SmallDescription = styled.div`
-    color: ${theme.colors.black};
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0 0 2% 0;
-`;
-
-const LargeDescription = styled.div`
-    color: ${theme.colors.black};
-    font-size: 2rem;
-    margin-bottom: 64px;
-    text-align: center;
-`;
-
 const ContactUsButtonContainer = styled.div`
     margin-top: 32px;
     margin-bottom: 16px;
@@ -73,13 +58,6 @@ const ContactUsButtonContainer = styled.div`
 
 const ViewProjectsLink = styled.a`
     color: ${theme.colors.lightGray};
-`;
-
-const Divider = styled.div`
-    background-color: ${theme.colors.lightGray};
-    width: ${theme.divederWidthPercent}%;
-    height: 2px;
-    margin: 0 auto 0 auto;
 `;
 
 export default () =>
@@ -90,7 +68,5 @@ export default () =>
             <ContactUsButtonContainer><ContactUs isOutline={true} /></ContactUsButtonContainer>
             <ViewProjectsLink>view projects</ViewProjectsLink>
         </Banner>
-        <SmallDescription>SERVICES</SmallDescription>
-        <LargeDescription>UI/UX Design, Web and mobile development</LargeDescription>
-        <Divider />
+        <SectionHeader smallDescription="services" largeDescription="UI/UX Design, Web and mobile development" />
     </Preview>
