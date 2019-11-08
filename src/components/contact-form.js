@@ -50,7 +50,7 @@ export default () =>
     <FormContainer>
         <Title>Contact us</Title>
         <SubTitle>We will help you with your project</SubTitle>
-        <HorizontalContainer className="row">
+        <HorizontalContainer>
             <FloatingLabelInput className="FloatingLabelInput" id="name" label="User name" />
             <HorizontalDivider />
             <FloatingLabelInput className="FloatingLabelInput" id="email" label="Email" />
