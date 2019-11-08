@@ -20,7 +20,7 @@ const HeaderImage = styled.img`
     height: 187px;
 `;
 
-const DescriptionContainer = styled.div`
+const InformationContainer = styled.div`
     color: ${theme.colors.black};
     border-width: 0 1px 1px 1px;
     border-color: ${theme.colors.black};
@@ -31,16 +31,37 @@ const DescriptionContainer = styled.div`
     align-items: center;
     flex-direction: column;
     display: flex;
+        &:hover {
+            background: #8147A5;
+            color: #ffffff;
+        }
+        &:hover div:first-of-type {
+            color: white;
+        }
+        &:hover div:last-of-type {
+            display: block;
+        }
 `;
 
-const Description = styled.div`
+const Title = styled.div`
     padding: 2%;
     font-size: 1.3rem;
     text-align: center;
 `;
 
-export default ({image, text}) =>
+const Description = styled.div`
+    padding: 2%;
+    font-size: 0.8rem;
+    color: white;
+    display: none;
+    text-align: center;
+`;
+
+export default ({ image, text, description }) =>
     <CardContainer>
-        <HeaderImage src={image}/>
-        <DescriptionContainer><Description>{text}</Description></DescriptionContainer>
+        <HeaderImage src={image} />
+        <InformationContainer>
+            <Title>{text}</Title>
+            <Description>{description}</Description>
+        </InformationContainer>
     </CardContainer>

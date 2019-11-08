@@ -51,10 +51,10 @@ export default () =>
         <Title>Contact us</Title>
         <SubTitle>We will help you with your project</SubTitle>
         <HorizontalContainer>
-            <FloatingLabelInput className="FloatingLabelInput" id="name" label="User name" />
+            <FloatingLabelInput className="transparent" id="name" label="User name" />
             <HorizontalDivider />
-            <FloatingLabelInput className="FloatingLabelInput" id="email" label="Email" />
+            <FloatingLabelInput className="transparent" id="email" label="Email" />
         </HorizontalContainer>
-        <FloatingLabelInput className="FloatingLabelInput" id="description" label="Additional information or question (optional)" />
+        <FloatingLabelInput className="transparent" id="description" label="Additional information or question (optional)" />
         <SendButton className="primary">send</SendButton>
     </FormContainer>
