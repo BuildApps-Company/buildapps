@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import banner_background from '../../static/images/banner_background.svg';
 import { theme } from '../styles/theme';
@@ -10,6 +10,7 @@ import { smoothScrollTo } from '../utils/url';
 const Banner = styled.div`
 	max-height: 700px;
 	min-height: 330px;
+	height: calc(100vh - ${theme.headerHeight}px);
     justify-content: center;
     align-items: center;
     bacground-color: ${theme.colors.black};
@@ -77,13 +78,8 @@ const ViewProjectsLink = styled.a`
 `;
 
 export default () => {
-	const bannerHeight = useEffect(
-		() => window.innerHeight - theme.headerHeight,
-		[]
-	);
-
 	return (
-		<Banner id={Menu.About.key} style={{ height: `${bannerHeight}px` }}>
+		<Banner id={Menu.About.key}>
 			<Title>BuildApps</Title>
 			<SubTitle>
 				A close-knit team with extensive experience <br /> and understanding of
