@@ -4,7 +4,7 @@ import { theme } from '../styles/theme';
 import PortfolioCard from './portfolio-card';
 import SectionHeader from './section-header';
 import logo from '../../static/images/logo.svg';
-import { menuTabs } from '../data/menu';
+import { Menu } from '../data/menu';
 
 const CardsContainer = styled.div`
 	display: flex;
@@ -15,7 +15,7 @@ const CardsContainer = styled.div`
 `;
 
 export default () => (
-	<div id={menuTabs.Portfolio.key}>
+	<div id={Menu.Portfolio.key}>
 		<SectionHeader
 			smallDescription="portfolio"
 			largeDescription="Projects we worked on"

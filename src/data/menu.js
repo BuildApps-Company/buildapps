@@ -1,4 +1,4 @@
-export const menuTabs = {
+export const Menu = {
 	About: {
 		key: 'about',
 		title: 'About',

@@ -5,7 +5,7 @@ import { theme } from '../styles/theme';
 import ContactUs from './contact-us';
 import SectionHeader from './section-header';
 import scroll_image from '../../static/images/ic_scroll.svg';
-import { menuTabs } from '../data/menu';
+import { Menu } from '../data/menu';
 
 const Banner = styled.div`
     height: 710px;
@@ -78,7 +78,7 @@ const ViewProjectsLink = styled.a`
 `;
 
 export default () =>
-<Preview id={menuTabs.About.key}>
+<Preview id={Menu.About.key}>
         <Banner>
             <Title>BuildApps</Title>
             <SubTitle>A close-knit team with extensive experience <br /> and understanding of what is necessary for you</SubTitle>
