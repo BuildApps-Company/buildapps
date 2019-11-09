@@ -22,7 +22,8 @@ const Banner = styled.div`
     &:before {
         background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 5%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 95%, rgba(0,0,0,1) 100%)
             , url("${banner_background}"), #000000; 
-        background-size: cover;
+		background-size: cover;
+		background-position-y: 100%;
         content: '';
         display: block;
         position: absolute;
