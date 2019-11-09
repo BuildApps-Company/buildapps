@@ -23,10 +23,12 @@ const LogoContainer = styled.a`
 
 const DefaultImage = styled.img`
 	display: block;
+	width: 80px;
 `;
 
 const ModifiedImage = styled.img`
 	display: none;
+	width: 80px;
 `;
 
 export default () => (
