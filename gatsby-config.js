@@ -5,9 +5,10 @@
  */
 
 module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-plugin-styled-components`,
-    },
-  ],
-}
+	plugins: [
+		{
+			resolve: `gatsby-plugin-styled-components`,
+		},
+		`gatsby-plugin-react-helmet`,
+	],
+};

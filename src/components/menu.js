@@ -42,7 +42,6 @@ export default () => {
 							: [item, top],
 					[]
 				);
-ъ
 			if (closestSection && activeMenuKey !== closestSection.key) {
 				window.history.replaceState(null, null, `#${closestSection.key}`);
 				setActiveMenuKey(closestSection.key);
