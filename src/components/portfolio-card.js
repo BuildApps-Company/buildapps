@@ -43,7 +43,7 @@ const InformationContainer = styled.div`
 `;
 
 const Title = styled.div`
-    padding: 2%;
+	padding: 2%;
 	font-size: 1.3rem;
 	text-align: center;
 `;
