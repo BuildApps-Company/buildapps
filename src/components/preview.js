@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import banner_background from '../../static/images/banner_background.svg';
 import { theme } from '../styles/theme';
@@ -10,7 +10,6 @@ import { smoothScrollTo } from '../utils/url';
 const Banner = styled.div`
 	max-height: 700px;
 	min-height: 330px;
-	height: ${window.innerHeight - theme.headerHeight}px;
     justify-content: center;
     align-items: center;
     bacground-color: ${theme.colors.black};
@@ -70,22 +69,29 @@ const ViewProjectsLink = styled.a`
 	opacity: 0.8;
 `;
 
-export default () => (
-	<Banner id={Menu.About.key}>
-		<Title>BuildApps</Title>
-		<SubTitle>
-			A close-knit team with extensive experience <br /> and understanding of
-			what is necessary for you
-		</SubTitle>
-		<ContactUsButtonContainer>
-			<ContactUs isOutline={true} />
-		</ContactUsButtonContainer>
-		<ViewProjectsLink
-			onClick={e => smoothScrollTo(e, Menu.Portfolio.key)}
-			href={`#${Menu.Portfolio.key}`}
-		>
-			view projects
-		</ViewProjectsLink>
-		<ScrollImage src={scroll_image} />
-	</Banner>
-);
+export default () => {
+	const bannerHeight = useMemo(
+		() => window.innerHeight - theme.headerHeight,
+		[]
+	);
+
+	return (
+		<Banner id={Menu.About.key} style={{ height: `${bannerHeight}px` }}>
+			<Title>BuildApps</Title>
+			<SubTitle>
+				A close-knit team with extensive experience <br /> and understanding of
+				what is necessary for you
+			</SubTitle>
+			<ContactUsButtonContainer>
+				<ContactUs isOutline={true} />
+			</ContactUsButtonContainer>
+			<ViewProjectsLink
+				onClick={e => smoothScrollTo(e, Menu.Portfolio.key)}
+				href={`#${Menu.Portfolio.key}`}
+			>
+				view projects
+			</ViewProjectsLink>
+			<ScrollImage src={scroll_image} />
+		</Banner>
+	);
+};
