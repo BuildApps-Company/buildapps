@@ -8,7 +8,7 @@ import design_stroke_image from '../../static/images/ic_design_stroke.svg';
 import web_fill_image from '../../static/images/ic_web_fill.svg';
 import mobile_fill_image from '../../static/images/ic_mobile_fill.svg';
 import design_fill_image from '../../static/images/ic_design_fill.svg';
-import { menuTabs } from '../data/menu';
+import { Menu } from '../data/menu';
 
 const CardsContainer = styled.div`
 	display: flex;
@@ -19,7 +19,7 @@ const CardsContainer = styled.div`
 `;
 
 export default () => (
-	<div id={menuTabs.Service.key}>
+	<div id={Menu.Service.key}>
 		<SectionHeader
 			smallDescription="services"
 			largeDescription="UI/UX Design, Web and mobile development"
