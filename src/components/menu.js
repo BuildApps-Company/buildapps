@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { menuTabs } from '../data/menu';
+import { Menu } from '../data/menu';
 import { theme } from '../styles/theme';
+import { smoothScrollTo, setHash } from '../utils/url';
 
 const MenuContainer = styled.div`
 	display: flex;
@@ -15,20 +16,16 @@ const MenuItem = styled.a`
 
 export default () => {
 	const [activeMenuKey, setActiveMenuKey] = useState();
-	function smoothScroll(event, menuItem) {
-		event.preventDefault();
-		const section = document.getElementById(menuItem.key);
-		if (section) {
-			window.scrollTo({
-				top: section.offsetTop - theme.headerHeight,
-				behavior: 'smooth',
-			});
-		}
-	}
 
 	useEffect(() => {
-		const menuItems = Object.entries(menuTabs).map(([, x]) => x);
+		setHash('about');
+		setActiveMenuKey('about');
+	}, []);
+
+	useEffect(() => {
+		const menuItems = Object.entries(Menu).map(([, x]) => x);
 		const middleOfScreen = window.innerHeight / 2 + theme.headerHeight / 2;
+
 		const handler = () => {
 			const [closestSection] = menuItems
 				.map(x => [x, document.getElementById(x.key)])
@@ -43,7 +40,7 @@ export default () => {
 					[]
 				);
 			if (closestSection && activeMenuKey !== closestSection.key) {
-				window.history.replaceState(null, null, `#${closestSection.key}`);
+				setHash(closestSection.key);
 				setActiveMenuKey(closestSection.key);
 			}
 		};
@@ -55,11 +52,11 @@ export default () => {
 
 	return (
 		<MenuContainer>
-			{Object.entries(menuTabs).map(([, x]) => (
+			{Object.entries(Menu).map(([, x]) => (
 				<MenuItem
 					key={x.key}
 					className={activeMenuKey === x.key ? 'active' : ''}
-					onClick={event => smoothScroll(event, x)}
+					onClick={event => smoothScrollTo(event, x.key)}
 					href={`#${x.key}`}
 				>
 					{x.title}

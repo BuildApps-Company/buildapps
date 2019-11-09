@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/theme';
-import { menuTabs } from '../data/menu';
+import { Menu } from '../data/menu';
 import FloatingLabelInput from 'react-floating-label-input';
 
 const FormContainer = styled.div`
@@ -48,7 +48,7 @@ const SendButton = styled.button`
 `;
 
 export default () => (
-	<FormContainer id={menuTabs.Contacts.key}>
+	<FormContainer id={Menu.Contacts.key}>
 		<Title>Contact us</Title>
 		<SubTitle>We will help you with your project</SubTitle>
 		<HorizontalContainer>
