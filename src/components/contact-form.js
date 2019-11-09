@@ -43,8 +43,6 @@ const HorizontalDivider = styled.div`
 const SendButton = styled.button`
 	width: 140px;
 	margin: 64px auto 0 auto;
-	text-transform: uppercase;
-	background-color: transparent;
 `;
 
 export default () => (
@@ -61,6 +59,6 @@ export default () => (
 			id="description"
 			label="Additional information or question (optional)"
 		/>
-		<SendButton className="primary">send</SendButton>
+		<SendButton className="primary transparent">send</SendButton>
 	</FormContainer>
 );
