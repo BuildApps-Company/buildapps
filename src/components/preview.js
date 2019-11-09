@@ -43,48 +43,41 @@ const SubTitle = styled.div`
 	font-size: 1.6rem;
 `;
 
-const Preview = styled.div`
-	height: auto;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	padding-bottom: 6%;
-	margin-bottom: 6%;
-`;
-
 const ContactUsButtonContainer = styled.div`
 	margin-top: 32px;
 	margin-bottom: 16px;
 `;
 
 const ScrollImage = styled.img`
-    position: absolute;
-    top: 90%;
-    position: absolute; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 20px;
-    height: 20px;
-    animation-name: scrollAnimation; 
-    animation-duration: 0.7s; 
-    animation-delay: 1s; 
-    animation-iteration-count: 5;
-    animation-timing-function: linear;
+	position: absolute;
+	top: 90%;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20px;
+	height: 20px;
+	animation-name: scrollAnimation;
+	animation-duration: 0.7s;
+	animation-delay: 1s;
+	animation-iteration-count: 5;
+	animation-timing-function: linear;
 `;
 
 const ViewProjectsLink = styled.a`
 	color: ${theme.colors.lightGray};
 `;
 
-export default () =>
-<Preview id={menuTabs.About.key}>
-        <Banner>
-            <Title>BuildApps</Title>
-            <SubTitle>A close-knit team with extensive experience <br /> and understanding of what is necessary for you</SubTitle>
-            <ContactUsButtonContainer><ContactUs isOutline={true} /></ContactUsButtonContainer>
-            <ViewProjectsLink>view projects</ViewProjectsLink>
-            <ScrollImage src={scroll_image} />
-        </Banner>
-        <SectionHeader smallDescription="services" largeDescription="UI/UX Design, Web and mobile development" />
-    </Preview>
+export default () => (
+	<Banner id={menuTabs.About.key}>
+		<Title>BuildApps</Title>
+		<SubTitle>
+			A close-knit team with extensive experience <br /> and understanding of
+			what is necessary for you
+		</SubTitle>
+		<ContactUsButtonContainer>
+			<ContactUs isOutline={true} />
+		</ContactUsButtonContainer>
+		<ViewProjectsLink>view projects</ViewProjectsLink>
+		<ScrollImage src={scroll_image} />
+	</Banner>
+);

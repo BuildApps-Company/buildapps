@@ -44,7 +44,6 @@ const InformationContainer = styled.div`
 
 const Title = styled.div`
     padding: 2%;
-    text-transform: uppercase;
 	font-size: 1.3rem;
 	text-align: center;
 `;

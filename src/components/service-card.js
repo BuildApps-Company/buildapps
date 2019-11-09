@@ -5,7 +5,7 @@ import { theme } from '../styles/theme';
 const CardContainer = styled.div`
     display: flex;
     width:100%;
-    height: 450px;
+    height: 370px;
     flex-direction: column;
     border-width: 1px;
 	border-color: ${theme.colors.black};
@@ -19,32 +19,43 @@ const CardContainer = styled.div`
         &:hover div {
             color: white;
         }
-        &:hover div {
-            color: white;
+        &:hover img:first-of-type {
+            display: none;
+        }
+        &:hover img:last-of-type {
+            display: block;
         }
 `;
 
-const HeaderImage = styled.img`
-	filter: invert(100%)
+const DefaultImage = styled.img`
+    display: block;
+`;
+
+const TintedImage = styled.img`
+    display: none;
 `;
 
 const Title = styled.div`
 	padding: 2%;
-	font-size: 1.3rem;
+    font-size: 1.4rem;
+    margin: 0 5%;
+    text-transform: uppercase;
 	color: ${theme.colors.black};
 	text-align: center;
 `;
 
 const Description = styled.div`
-	padding: 2%;
-	font-size: 0.8rem;
+    padding: 2%;
+    margin: 0 5%;
+	font-size: 0.9rem;
 	color: ${theme.colors.black};
 	text-align: center;
 `;
 
-export default ({ image, text, description }) => (
+export default ({ defaultImage, tintImage, text, description }) => (
 	<CardContainer>
-		<HeaderImage src={image} />
+		<DefaultImage src={defaultImage} />
+        <TintedImage src={tintImage} />
 		<Title>{text}</Title>
 		<Description>{description}</Description>
 	</CardContainer>
