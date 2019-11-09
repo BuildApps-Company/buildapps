@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import banner_background from '../../static/images/banner_background.svg';
 import { theme } from '../styles/theme';
 import ContactUs from './contact-us';
-import SectionHeader from './section-header';
 import scroll_image from '../../static/images/ic_scroll.svg';
 import { menuTabs } from '../data/menu';
 
