@@ -5,6 +5,7 @@ import { theme } from '../styles/theme';
 import ContactUs from './contact-us';
 import scroll_image from '../../static/images/ic_scroll.svg';
 import { Menu } from '../data/menu';
+import { smoothScrollTo } from '../utils/url';
 
 const Banner = styled.div`
     height: 710px;
@@ -48,7 +49,6 @@ const ContactUsButtonContainer = styled.div`
 `;
 
 const ScrollImage = styled.img`
-	position: absolute;
 	top: 90%;
 	position: absolute;
 	margin-left: auto;
@@ -56,9 +56,9 @@ const ScrollImage = styled.img`
 	width: 20px;
 	height: 20px;
 	animation-name: scrollAnimation;
-	animation-duration: 0.7s;
+	animation-duration: 1s;
 	animation-delay: 1s;
-	animation-iteration-count: 5;
+	animation-iteration-count: 2;
 	animation-timing-function: linear;
 `;
 
@@ -76,7 +76,12 @@ export default () => (
 		<ContactUsButtonContainer>
 			<ContactUs isOutline={true} />
 		</ContactUsButtonContainer>
-		<ViewProjectsLink>view projects</ViewProjectsLink>
+		<ViewProjectsLink
+			onClick={e => smoothScrollTo(e, Menu.Portfolio.key)}
+			href={`#${Menu.Portfolio.key}`}
+		>
+			view projects
+		</ViewProjectsLink>
 		<ScrollImage src={scroll_image} />
 	</Banner>
 );
