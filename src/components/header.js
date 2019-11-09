@@ -16,7 +16,7 @@ const HeaderContainer = styled.div`
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	z-index: 999;	
+	z-index: 999;
 `;
 
 const SideContainer = styled.div`
@@ -42,7 +42,7 @@ export default () => (
 				<Logo />
 			</SideContainer>
 			<MenuContainer>
-				<Menu />
+				<Menu showActive />
 			</MenuContainer>
 			<SideContainer>
 				<ContactUs></ContactUs>
