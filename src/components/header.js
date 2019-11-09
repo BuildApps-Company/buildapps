@@ -16,7 +16,7 @@ const HeaderContainer = styled.div`
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	z-index: 9;
+	z-index: 999;	
 `;
 
 const SideContainer = styled.div`

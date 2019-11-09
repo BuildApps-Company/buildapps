@@ -5,7 +5,7 @@ import { theme } from '../styles/theme';
 import ContactUs from './contact-us';
 import SectionHeader from './section-header';
 import scroll_image from '../../static/images/ic_scroll.svg';
-import { menuTabs } from '../data/menu';
+import { Menu } from '../data/menu';
 
 const Banner = styled.div`
     height: 710px;
