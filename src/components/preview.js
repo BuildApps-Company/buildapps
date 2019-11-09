@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import banner_background from '../../static/images/banner_background.svg';
 import { theme } from '../styles/theme';
@@ -67,10 +67,17 @@ const ScrollImage = styled.img`
 const ViewProjectsLink = styled.a`
 	color: ${theme.colors.whiteSmoke};
 	opacity: 0.8;
+
+	&:active,
+	&:hover,
+	&:focus {
+		color: ${theme.colors.whiteSmoke};
+		opacity: 1;
+	}
 `;
 
 export default () => {
-	const bannerHeight = useMemo(
+	const bannerHeight = useEffect(
 		() => window.innerHeight - theme.headerHeight,
 		[]
 	);
