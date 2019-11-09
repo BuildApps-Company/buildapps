@@ -5,7 +5,6 @@ import { theme } from '../styles/theme';
 const CardContainer = styled.div`
 	display: flex;
 	width: 100%;
-	height: auto;
 	flex-direction: column;
 	margin: 1px 9px;
 	border: 1px solid ${theme.colors.black};
