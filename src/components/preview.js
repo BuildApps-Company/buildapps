@@ -67,7 +67,7 @@ const ViewProjectsLink = styled.a`
 `;
 
 export default () => (
-	<Banner id={menuTabs.About.key}>
+	<Banner id={Menu.About.key}>
 		<Title>BuildApps</Title>
 		<SubTitle>
 			A close-knit team with extensive experience <br /> and understanding of
