@@ -14,8 +14,8 @@ const HeaderImage = styled.img`
 	object-fit: fill;
 	width: 100%;
 	padding: 6%;
-    height: 187px;
-    z-index: -2;
+	height: 187px;
+	z-index: -2;
 	border-bottom: 1px solid ${theme.colors.black};
 `;
 
@@ -36,10 +36,10 @@ const InformationContainer = styled.div`
 		width: 20px;
 		height: 20px;
 		background: ${theme.colors.white};
-		transform: rotate(45deg);
+		transform: rotate(57deg) skewX(25deg);
 		border: 1px solid ${theme.colors.black};
 		border-width: 1px 0 0 1px;
-		top: -10px;
+		top: -5px;
 		left: calc(50% - 10px);
 		z-index: -1;
 	}
