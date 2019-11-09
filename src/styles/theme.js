@@ -12,4 +12,7 @@ export const theme = {
 		lightGray: '#DDDDDD',
 		whiteSmoke: '#F9F9F9',
 	},
+	breakpoints: {
+		hdScreen: 1280,
+	},
 };

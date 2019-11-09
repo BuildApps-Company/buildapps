@@ -8,7 +8,9 @@ import { Menu } from '../data/menu';
 import { smoothScrollTo } from '../utils/url';
 
 const Banner = styled.div`
-    height: 710px;
+	max-height: 700px;
+	min-height: 330px;
+	height: ${window.innerHeight - theme.headerHeight}px;
     justify-content: center;
     align-items: center;
     bacground-color: ${theme.colors.black};
@@ -27,7 +29,7 @@ const Banner = styled.div`
         width: 100%;
         height: 100%;
         z-index: -1;
-    }
+	}
 `;
 
 const Title = styled.div`
@@ -63,7 +65,8 @@ const ScrollImage = styled.img`
 `;
 
 const ViewProjectsLink = styled.a`
-	color: ${theme.colors.lightGray};
+	color: ${theme.colors.whiteSmoke};
+	opacity: 0.8;
 `;
 
 export default () => (
