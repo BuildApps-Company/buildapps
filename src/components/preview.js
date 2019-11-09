@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import banner_background from '../../static/images/banner_background.svg';
 import { theme } from '../styles/theme';
 import ContactUs from './contact-us';
-import SectionHeader from './section-header';
 import scroll_image from '../../static/images/ic_scroll.svg';
 
 const Banner = styled.div`
@@ -18,7 +17,7 @@ const Banner = styled.div`
     position: relative;
     &:before {
         background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 5%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 95%, rgba(0,0,0,1) 100%)
-            , url("${banner_background}"), #000000; 
+            , url("${banner_background}"), ${theme.colors.black}; 
         background-size: cover;
         content: '';
         display: block;
@@ -40,16 +39,6 @@ const SubTitle = styled.div`
     color: ${theme.colors.white};
     text-align: center;
     font-size: 1.6rem;
-`;
-
-const Preview = styled.div`
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 6%;
-    margin-bottom: 6%;
 `;
 
 const ContactUsButtonContainer = styled.div`
@@ -77,13 +66,10 @@ const ViewProjectsLink = styled.a`
 `;
 
 export default () =>
-    <Preview>
-        <Banner>
-            <Title>BuildApps</Title>
-            <SubTitle>A close-knit team with extensive experience <br /> and understanding of what is necessary for you</SubTitle>
-            <ContactUsButtonContainer><ContactUs isOutline={true} /></ContactUsButtonContainer>
-            <ViewProjectsLink>view projects</ViewProjectsLink>
-            <ScrollImage src={scroll_image} />
-        </Banner>
-        <SectionHeader smallDescription="services" largeDescription="UI/UX Design, Web and mobile development" />
-    </Preview>
+    <Banner>
+        <Title>BuildApps</Title>
+        <SubTitle>A close-knit team with extensive experience <br /> and understanding of what is necessary for you</SubTitle>
+        <ContactUsButtonContainer><ContactUs isOutline={true} /></ContactUsButtonContainer>
+        <ViewProjectsLink>view projects</ViewProjectsLink>
+        <ScrollImage src={scroll_image} />
+    </Banner>
