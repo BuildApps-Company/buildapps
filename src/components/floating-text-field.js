@@ -4,8 +4,8 @@ import { theme } from '../styles/theme';
 
 const TextField = styled.input`
 	width: 100%;
-	padding: 0 0 0 0;
-	font-size: 16px;
+	padding: 0;
+	font-size: 1rem;
 	position: absolute;
 	bottom: 3px;
 	background-color: transparent;
@@ -19,18 +19,17 @@ const TextFieldContainer = styled.div`
 	height: 50px;
 	position: relative;
 	width: 100%;
-	background-color: transparent;
 	border-bottom: 1px solid ${theme.colors.black};
 	&:focus-within div:first-of-type {
 		display: block;
-		font-size: 11px;
+		font-size: 0.69;
 		bottom: 30px !important;
 	}
 `;
 
 const TextPlaceholder = styled.div`
 	position: absolute;
-	font-size: 16px;
+	font-size: 1rem;
 	bottom: 3px;
 	display: none;
 	background-color: transparent;
@@ -44,7 +43,6 @@ export default ({ placeholder, id }) => {
 		<TextFieldContainer>
 			<TextPlaceholder>{placeholder}</TextPlaceholder>
 			<TextField
-				required
 				placeholder={placeholder}
 				onFocus={e => (e.target.placeholder = '')}
 				onBlur={e => (e.target.placeholder = placeholder)}
