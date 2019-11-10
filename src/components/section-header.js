@@ -21,7 +21,7 @@ const SmallDescription = styled.div`
 const LargeDescription = styled.div`
 	color: ${theme.colors.black};
 	font-size: 2rem;
-	margin-bottom: 64px;
+	margin-bottom: 44px;
 	text-align: center;
 `;
 

@@ -25,7 +25,7 @@ const SubTitle = styled.div`
 	color: ${theme.colors.black};
 	font-size: 2rem;
 	text-align: center;
-	padding-bottom: 64px;
+	padding-bottom: 44px;
 	margin-bottom: 46px;
 	border-bottom: 2px solid ${theme.colors.lightGray};
 `;

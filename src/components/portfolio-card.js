@@ -2,14 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
-const CardContainer = styled.div`
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-	margin: 1px 9px;
-	border: 1px solid ${theme.colors.black};
-`;
-
 const HeaderImage = styled.img`
 	object-fit: fill;
 	width: 100%;
@@ -43,17 +35,6 @@ const InformationContainer = styled.div`
 		left: calc(50% - 10px);
 		z-index: -1;
 	}
-	&:hover,
-	&:hover:before {
-		background: #8147a5;
-		color: #ffffff;
-	}
-	&:hover div:first-of-type {
-		color: ${theme.colors.white};
-	}
-	&:hover div:last-of-type {
-		display: block;
-	}
 `;
 
 const Title = styled.div`
@@ -68,6 +49,25 @@ const Description = styled.div`
 	color: ${theme.colors.white};
 	display: none;
 	text-align: center;
+`;
+
+const CardContainer = styled.div`
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	margin: 1px 9px;
+	border: 1px solid ${theme.colors.black};
+
+	&:hover ${InformationContainer}, &:hover ${InformationContainer}:before {
+		background: #8147a5;
+		color: #ffffff;
+	}
+	&:hover ${InformationContainer} div:first-of-type {
+		color: ${theme.colors.white};
+	}
+	&:hover ${InformationContainer} div:last-of-type {
+		display: block;
+	}
 `;
 
 export default ({ image, text, description }) => (
