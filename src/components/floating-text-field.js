@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/theme';
+
+const Placeholder = styled.div`
+	position: absolute;
+	font-size: 1rem;
+	bottom: 3px;
+	background-color: transparent;
+	transition-property: bottom, font-size;
+	transition-duration: 0.3s;
+	color: ${theme.colors.gray};
+`;
 
 const TextField = styled.input`
 	width: 100%;
@@ -8,45 +18,34 @@ const TextField = styled.input`
 	font-size: 1rem;
 	position: absolute;
 	bottom: 3px;
-	background-color: transparent;
-	border: 1px solid transparent;
-	&::placeholder {
-		color: ${theme.colors.gray};
-	}
+	background: transparent;
+	border: none;
 `;
 
 const TextFieldContainer = styled.div`
 	height: 50px;
 	position: relative;
-	width: 100%;
+	flex: 1 0 auto;
 	border-bottom: 1px solid ${theme.colors.black};
-	&:focus-within div:first-of-type {
+
+	&:focus-within ${Placeholder}, ${Placeholder}.fixed {
 		display: block;
-		font-size: 0.69;
-		bottom: 30px !important;
+		font-size: 0.7rem;
+		bottom: 24px;
 	}
 `;
 
-const TextPlaceholder = styled.div`
-	position: absolute;
-	font-size: 1rem;
-	bottom: 3px;
-	display: none;
-	background-color: transparent;
-	transition-property: bottom, font-size;
-	transition-duration: 0.5s;
-	color: ${theme.colors.gray};
-`;
-
 export default ({ placeholder, id }) => {
+	const [value, setValue] = useState(null);
 	return (
 		<TextFieldContainer>
-			<TextPlaceholder>{placeholder}</TextPlaceholder>
+			<Placeholder className={value ? 'fixed' : null}>
+				{placeholder}
+			</Placeholder>
 			<TextField
-				placeholder={placeholder}
-				onFocus={e => (e.target.placeholder = '')}
-				onBlur={e => (e.target.placeholder = placeholder)}
 				id={id}
+				value={value}
+				onChange={e => setValue(e.target.value)}
 			/>
 		</TextFieldContainer>
 	);
