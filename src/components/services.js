@@ -14,8 +14,8 @@ const CardsContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	width: 90%;
-	margin: 0 auto 0 auto;
-	margin-bottom: 128px;
+	margin: 0 auto;
+	margin-bottom: 8rem;
 `;
 
 export default () => (

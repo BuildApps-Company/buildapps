@@ -3,6 +3,7 @@ export const theme = {
 	footerHeight: 90,
 	containerWidthPercent: 65,
 	divederWidthPercent: 25,
+	slideBottomMarginRem: 8,
 	colors: {
 		primary: '#8147A5',
 		white: '#FFFFFF',

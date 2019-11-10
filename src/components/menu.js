@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import styled from 'styled-components';
 import { Menu } from '../data/menu';
 import { theme } from '../styles/theme';
@@ -52,9 +52,17 @@ export default ({ showActive }) => {
 		}, [activeMenuKey]);
 	}
 
+	const menu = useMemo(
+		() =>
+			Object.entries(Menu)
+				.map(([, x]) => x)
+				.filter(x => !x.hidden),
+		[]
+	);
+
 	return (
 		<MenuContainer>
-			{Object.entries(Menu).map(([, x]) => (
+			{menu.map(x => (
 				<MenuItem
 					key={x.key}
 					className={showActive && activeMenuKey === x.key ? 'active' : ''}

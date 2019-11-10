@@ -11,8 +11,13 @@ export const Menu = {
 		key: 'portfolio',
 		title: 'Portfolio',
 	},
+	Team: {
+		key: 'team',
+		title: 'Team',
+	},
 	Contacts: {
 		key: 'contacts',
 		title: 'Contacts',
+		hidden: true,
 	},
 };

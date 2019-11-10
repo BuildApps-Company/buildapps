@@ -5,13 +5,10 @@ import PortfolioCard from './portfolio-card';
 import SectionHeader from './section-header';
 import logo from '../../static/images/logo.svg';
 import { Menu } from '../data/menu';
+import { SlideContainer } from '../styles/shared';
 
-const CardsContainer = styled.div`
+const CardsContainer = styled(SlideContainer)`
 	display: flex;
-	flex-direction: row;
-	margin: 0 auto 0 auto;
-	width: ${theme.containerWidthPercent}%;
-	margin-bottom: 128px;
 `;
 
 export default () => (

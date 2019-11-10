@@ -13,11 +13,10 @@ const Banner = styled.div`
 	height: calc(100vh - ${theme.headerHeight}px);
     justify-content: center;
     align-items: center;
-    bacground-color: ${theme.colors.black};
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 128px;
+    margin-bottom: ${theme.slideBottomMarginRem}rem;
     position: relative;
     &:before {
         background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 5%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 95%, rgba(0,0,0,1) 100%)

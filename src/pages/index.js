@@ -4,6 +4,7 @@ import Preview from '../components/preview';
 import ContactForm from '../components/contact-form';
 import Portfolio from '../components/portfolio';
 import Services from '../components/services';
+import Team from '../components/team';
 import { Helmet } from 'react-helmet';
 
 export default () => (
@@ -15,6 +16,7 @@ export default () => (
 			<Preview />
 			<Services />
 			<Portfolio />
+			<Team />
 			<ContactForm />
 		</Layout>
 	</>
