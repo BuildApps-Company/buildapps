@@ -9,13 +9,12 @@ import web_fill_image from '../../static/images/ic_web_fill.svg';
 import mobile_fill_image from '../../static/images/ic_mobile_fill.svg';
 import design_fill_image from '../../static/images/ic_design_fill.svg';
 import { Menu } from '../data/menu';
+import { SlideContainer } from '../styles/shared';
 
-const CardsContainer = styled.div`
+const CardsContainer = styled(SlideContainer)`
 	display: flex;
 	flex-direction: row;
 	width: 90%;
-	margin: 0 auto;
-	margin-bottom: 8rem;
 `;
 
 export default () => (
