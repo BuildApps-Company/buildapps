@@ -19,7 +19,6 @@
     "gatsby-plugin-styled-components": "^3.1.11",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-floating-label-input": "^4.2.1",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.4.1"
   },

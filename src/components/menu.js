@@ -11,6 +11,7 @@ const MenuContainer = styled.div`
 
 const MenuItem = styled.a`
 	padding: 0 1rem;
+	font-size: 0.81rem;
 	text-transform: uppercase;
 `;
 

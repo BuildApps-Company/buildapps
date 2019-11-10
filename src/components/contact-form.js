@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/theme';
 import { Menu } from '../data/menu';
-import FloatingLabelInput from 'react-floating-label-input';
+import FloatingInput from './floating-text-field';
 
 const FormContainer = styled.div`
 	background-color: ${theme.colors.whiteSmoke};
@@ -50,14 +50,13 @@ export default () => (
 		<Title>Contact us</Title>
 		<SubTitle>We will help you with your project</SubTitle>
 		<HorizontalContainer>
-			<FloatingLabelInput className="transparent" id="name" label="User name" />
+			<FloatingInput placeholder="User name" id="name" />
 			<HorizontalDivider />
-			<FloatingLabelInput className="transparent" id="email" label="Email" />
+			<FloatingInput placeholder="Email" id="email" />
 		</HorizontalContainer>
-		<FloatingLabelInput
-			className="transparent"
+		<FloatingInput
+			placeholder="Additional information or question (optional)"
 			id="description"
-			label="Additional information or question (optional)"
 		/>
 		<SendButton className="primary transparent">send</SendButton>
 	</FormContainer>
