@@ -16,8 +16,13 @@ const HiddenSvg = styled.svg`
 	height: 0;
 `;
 
-const MemberPhoto = styled.img`
+const MemberPhoto = styled.div`
 	width: 100%;
+	height: 100%;
+	background: url(${props => props.src}) no-repeat;
+	background-size: 100% auto;
+	background-color: #e4e4e4;
+	background-size: 94%;
 `;
 
 const MemberDescription = styled.div`
@@ -77,11 +82,13 @@ export default () => (
 		/>
 		<div>
 			<TeamGrid>
-				{Object.entries(Team).map(([, member]) => (
+				{Object.entries(Team).map(([key, member]) => (
 					<MemberContainer>
 						<MemberPhoto src={member.url} />
 						<MemberDescription>
-							<MemberName>{member.name}</MemberName>
+							<MemberName className={`member-photo-${member.key}`}>
+								{member.name}
+							</MemberName>
 							{member.description}
 						</MemberDescription>
 					</MemberContainer>
