@@ -18,6 +18,5 @@ export const Menu = {
 	Contacts: {
 		key: 'contacts',
 		title: 'Contacts',
-		hidden: true,
 	},
 };

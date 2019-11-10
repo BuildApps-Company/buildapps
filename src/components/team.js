@@ -33,10 +33,10 @@ const MemberName = styled.div`
 `;
 
 const MemberContainer = styled.div`
-	width: 220px;
+	width: 240px;
 	height: 240px;
 	flex: 0 0 auto;
-	margin: 0 4rem;
+	margin: 0 2rem;
 	position: relative;
 	cursor: pointer;
 
@@ -57,13 +57,16 @@ const MemberContainer = styled.div`
 	&:hover ${MemberDescription} {
 		display: block;
 	}
+	&:hover ${MemberPhoto} {
+		filter: url(#hoverFilter);
+	}
 `;
 
 const TeamGrid = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: 0 4rem;
+	padding: 0 2rem;
 `;
 
 export default () => (
@@ -86,6 +89,16 @@ export default () => (
 			</TeamGrid>
 
 			<HiddenSvg>
+				<filter id="hoverFilter">
+					<feColorMatrix
+						type="matrix"
+						values="0.51     0     0     0     0
+								0     0.28     0     0     0
+								0     0     0.65     0     0
+								0     0     0     1     0 "
+					/>
+					<feGaussianBlur stdDeviation="2" />
+				</filter>
 				<clipPath id="pattern1">
 					<path
 						d="M2.50286 132.53C-3.97293 92.7043 5.85655 52.9616 23.3151 27.7764C32.0443 15.1839 42.6521 6.2704 54.0396 2.76567C65.4022 -0.731437 77.6048 1.13591 89.6115 10.2271C114.017 28.7064 135.999 27.3224 154.052 24.8201C155.719 24.5891 157.349 24.3492 158.942 24.1148C165.997 23.0765 172.33 22.1447 177.92 22.5593C184.714 23.0631 190.355 25.555 194.753 32.3273C196.961 35.7262 199.009 40.882 200.79 47.3789C202.569 53.8678 204.072 61.6637 205.201 70.3217C207.461 87.6378 208.224 108.375 206.724 128.951C205.223 149.53 201.461 169.923 194.685 186.564C187.906 203.213 178.141 216.033 164.682 221.599C151.146 227.196 140.53 227.021 131.65 224.159C122.745 221.289 115.545 215.707 108.849 210.389C108.612 210.2 108.375 210.012 108.139 209.824C101.748 204.743 95.7376 199.964 89.1488 198.39C82.2379 196.739 74.7889 198.622 65.6776 206.935C56.7123 215.114 48.8542 217.507 42.001 215.913C35.1176 214.312 29.0825 208.654 23.8623 200.349C13.4255 183.745 6.46812 156.917 2.50286 132.53Z"
