@@ -16,5 +16,6 @@ export const theme = {
 	},
 	breakpoints: {
 		hdScreen: 1280,
+		tablet: 900,
 	},
 };

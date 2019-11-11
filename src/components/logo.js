@@ -6,15 +6,9 @@ import { smoothScrollTo } from '../utils/url';
 import { Menu } from '../data/menu';
 
 const LogoContainer = styled.a`
-	font-size: 1.8rem;
-	font-weight: 700;
-	color: rgba(0, 0, 0, 0.9);
+	width: 108px;
+	display: inline-block;
 
-	&:hover,
-	&:active,
-	&:focus {
-		color: rgba(0, 0, 0, 0.9);
-	}
 	&:hover img:first-of-type {
 		display: none;
 	}
@@ -25,12 +19,10 @@ const LogoContainer = styled.a`
 
 const DefaultImage = styled.img`
 	display: block;
-	width: 108px;
 `;
 
 const ModifiedImage = styled.img`
 	display: none;
-	width: 108px;
 `;
 
 export default () => (

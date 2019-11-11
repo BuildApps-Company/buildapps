@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { theme } from '../styles/theme';
 import Logo from './logo.js';
 import Menu from './menu';
 import ContactUs from './contact-us';
+import MobileMenu from './mobile-menu';
 
 const logoWidth = 170;
 
@@ -34,19 +35,45 @@ const GlobalStyles = createGlobalStyle`
 	}
 `;
 
-export default () => (
-	<>
-		<GlobalStyles />
-		<HeaderContainer>
-			<SideContainer>
-				<Logo />
-			</SideContainer>
-			<MenuContainer>
-				<Menu showActive />
-			</MenuContainer>
-			<SideContainer>
-				<ContactUs></ContactUs>
-			</SideContainer>
-		</HeaderContainer>
-	</>
-);
+const Center = styled.div`
+	text-align: right;
+`;
+
+export default () => {
+	const [layout, changeLayout] = useState('desktop');
+	useEffect(() => {
+		changeLayout(
+			window.innerWidth <= theme.breakpoints.tablet ? 'tablet' : 'desktop'
+		);
+	}, [window.innerWidth]);
+
+	return (
+		<>
+			<GlobalStyles />
+			<HeaderContainer>
+				<SideContainer>
+					<Logo />
+				</SideContainer>
+				{layout === 'desktop' ? (
+					<>
+						<MenuContainer>
+							<Menu showActive />
+						</MenuContainer>
+						<SideContainer>
+							<ContactUs></ContactUs>
+						</SideContainer>
+					</>
+				) : (
+					<>
+						<MenuContainer>
+							<ContactUs></ContactUs>
+						</MenuContainer>
+						<SideContainer style={{ textAlign: 'right' }}>
+							<MobileMenu />
+						</SideContainer>
+					</>
+				)}
+			</HeaderContainer>
+		</>
+	);
+};
