@@ -4,7 +4,7 @@ import viol from '../../static/images/portfolio/viol.jpg';
 export const Portfolio = {
 	spbProperty: {
 		image: spbProperty,
-		title: 'Петербуржская Недвижимость',
+		title: 'Петербургская Недвижимость',
 		description: 'Mobile application',
 	},
 	viol: {

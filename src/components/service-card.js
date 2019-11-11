@@ -4,23 +4,28 @@ import { theme } from '../styles/theme';
 
 const CardContainer = styled.div`
 	display: flex;
-	width: 100%;
+	flex: 1 1 250px;
+	max-width: 350px;
 	height: 370px;
 	flex-direction: column;
 	border: 1px ${theme.colors.black} solid;
 	justify-content: center;
 	align-items: center;
 	margin: 1px 9px;
+
 	&:hover {
 		background: ${theme.colors.primary};
-		border-color: #490076;
+		border-color: ${theme.colors.darkPrimary};
 	}
+
 	&:hover div {
-		color: white;
+		color: ${theme.colors.white};
 	}
+
 	&:hover img:first-of-type {
 		display: none;
 	}
+
 	&:hover img:last-of-type {
 		display: block;
 	}

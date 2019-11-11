@@ -53,28 +53,35 @@ const Description = styled.div`
 	display: none;
 `;
 
-const CardContainer = styled.div`
+const Container = styled.div`
 	display: flex;
-	flex: 1 1 0;
+	flex: 1 1 250px;
 	max-width: 350px;
 	flex-direction: column;
 	margin: 1px 9px;
 	border: 1px solid ${theme.colors.black};
 
+	&:hover {
+		border-color: ${theme.colors.darkPrimary};
+	}
+
 	&:hover ${InformationContainer}, &:hover ${InformationContainer}:before {
 		background: #8147a5;
+		border-color: ${theme.colors.darkPrimary};
 		color: #ffffff;
 	}
+
 	&:hover ${InformationContainer} div:first-of-type {
 		color: ${theme.colors.white};
 	}
+	
 	&:hover ${InformationContainer} div:last-of-type {
 		display: block;
 	}
 `;
 
 export default ({ image, text, description }) => (
-	<CardContainer>
+	<Container>
 		<ImageContainer>
 			<HeaderImage src={image} />
 		</ImageContainer>
@@ -82,5 +89,5 @@ export default ({ image, text, description }) => (
 			<Title>{text}</Title>
 			<Description>{description}</Description>
 		</InformationContainer>
-	</CardContainer>
+	</Container>
 );

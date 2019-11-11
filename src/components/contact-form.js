@@ -3,12 +3,11 @@ import styled from 'styled-components';
 import { theme } from '../styles/theme';
 import { Menu } from '../data/menu';
 import FloatingInput from './floating-text-field';
+import { SlideContainer } from '../styles/shared';
 
-const FormContainer = styled.div`
+const FormContainer = styled(SlideContainer)`
 	background-color: ${theme.colors.whiteSmoke};
-	margin: 0 auto 0 auto;
 	padding: 64px 62px;
-	width: ${theme.containerWidthPercent}%;
 	display: flex;
 	flex-direction: column;
 `;

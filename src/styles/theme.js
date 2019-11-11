@@ -1,11 +1,12 @@
 export const theme = {
 	headerHeight: 104,
 	footerHeight: 90,
-	containerWidthPercent: 65,
+	containerWidthPercent: 85,
 	divederWidthPercent: 25,
 	slideBottomMarginRem: 8,
 	colors: {
 		primary: '#8147A5',
+		darkPrimary: '#490076',
 		white: '#FFFFFF',
 		black: '#000000',
 		darkGray: '#A1A1A1',

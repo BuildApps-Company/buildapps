@@ -14,7 +14,8 @@ import { SlideContainer } from '../styles/shared';
 const CardsContainer = styled(SlideContainer)`
 	display: flex;
 	flex-direction: row;
-	width: 90%;
+	flex-wrap: wrap;
+	justify-content: center;
 `;
 
 export default () => (
