@@ -65,7 +65,7 @@ export default () => {
 					</>
 				) : (
 					<>
-						<MenuContainer>
+						<MenuContainer style={{ textAlign: 'center' }}>
 							<ContactUs></ContactUs>
 						</MenuContainer>
 						<SideContainer style={{ textAlign: 'right' }}>
