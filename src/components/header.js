@@ -45,7 +45,7 @@ export default () => {
 		changeLayout(
 			window.innerWidth <= theme.breakpoints.tablet ? 'tablet' : 'desktop'
 		);
-	}, [window.innerWidth]);
+	}, []);
 
 	return (
 		<>
