@@ -78,7 +78,7 @@ const ViewProjectsLink = styled.a`
 
 export default () => {
 	return (
-		<Banner id={Menu.About.key}>
+		<Banner id={Menu.about.key}>
 			<Title>BuildApps</Title>
 			<SubTitle>
 				A close-knit team with extensive experience <br /> and understanding of
@@ -88,8 +88,8 @@ export default () => {
 				<ContactUs isOutline={true} />
 			</ContactUsButtonContainer>
 			<ViewProjectsLink
-				onClick={e => smoothScrollTo(e, Menu.Portfolio.key)}
-				href={`#${Menu.Portfolio.key}`}
+				onClick={e => smoothScrollTo(e, Menu.portfolio.key)}
+				href={`#${Menu.portfolio.key}`}
 			>
 				view projects
 			</ViewProjectsLink>

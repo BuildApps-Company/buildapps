@@ -46,7 +46,7 @@ const SendButton = styled.button`
 `;
 
 export default () => (
-	<FormContainer id={Menu.Contacts.key}>
+	<FormContainer id={Menu.contacts.key}>
 		<Title>Contact us</Title>
 		<SubTitle>We will help you with your project</SubTitle>
 		<HorizontalContainer>

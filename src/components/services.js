@@ -18,7 +18,7 @@ const CardsContainer = styled(SlideContainer)`
 `;
 
 export default () => (
-	<div id={Menu.Service.key}>
+	<div id={Menu.service.key}>
 		<SectionHeader
 			smallDescription="services"
 			largeDescription="UI/UX Design, Web and mobile development"

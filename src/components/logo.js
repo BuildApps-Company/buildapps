@@ -34,7 +34,7 @@ const ModifiedImage = styled.img`
 `;
 
 export default () => (
-	<LogoContainer href="#about" onClick={e => smoothScrollTo(e, Menu.About.key)}>
+	<LogoContainer href="#about" onClick={e => smoothScrollTo(e, Menu.about.key)}>
 		<DefaultImage src={logo} alt="BuildApps" />
 		<ModifiedImage src={logoModified} alt="BuildApps" />
 	</LogoContainer>

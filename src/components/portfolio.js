@@ -1,38 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../styles/theme';
 import PortfolioCard from './portfolio-card';
 import SectionHeader from './section-header';
-import logo from '../../static/images/logo.svg';
 import { Menu } from '../data/menu';
 import { SlideContainer } from '../styles/shared';
+import { Portfolio } from '../data/portfolio';
 
 const CardsContainer = styled(SlideContainer)`
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 `;
 
 export default () => (
-	<div id={Menu.Portfolio.key}>
+	<div id={Menu.portfolio.key}>
 		<SectionHeader
 			smallDescription="portfolio"
 			largeDescription="Projects we worked on"
 		/>
 		<CardsContainer>
-			<PortfolioCard
-				text="Перербуржская Недвижимость"
-				image={logo}
-				description="Mobile application"
-			/>
-			<PortfolioCard
-				text="qp.ru"
-				image={logo}
-				description="Mobile application"
-			/>
-			<PortfolioCard
-				text="VIOL Commander"
-				image={logo}
-				description="Desktop application"
-			/>
+			{Object.entries(Portfolio).map(([key, example]) => (
+				<PortfolioCard
+					key={key}
+					text={example.title}
+					image={example.image}
+					description={example.description}
+				/>
+			))}
 		</CardsContainer>
 	</div>
 );

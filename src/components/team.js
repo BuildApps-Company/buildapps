@@ -70,7 +70,7 @@ const TeamGrid = styled.div`
 `;
 
 export default () => (
-	<div id={Menu.Team.key}>
+	<div id={Menu.team.key}>
 		<SectionHeader
 			smallDescription="team"
 			largeDescription="Our beloved team of professionals"
@@ -78,7 +78,7 @@ export default () => (
 		<SlideContainer>
 			<TeamGrid>
 				{Object.entries(Team).map(([key, member]) => (
-					<MemberContainer>
+					<MemberContainer key={key}>
 						<MemberPhoto src={member.url} />
 						<MemberDescription>
 							<MemberName className={`member-photo-${member.key}`}>

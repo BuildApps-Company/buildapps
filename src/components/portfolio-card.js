@@ -3,17 +3,21 @@ import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
 const HeaderImage = styled.img`
-	object-fit: fill;
-	width: 100%;
-	padding: 6%;
-	height: 187px;
+	max-width: 90%;
+`;
+
+const ImageContainer = styled.div`
+	height: 160px;
 	z-index: -2;
 	border-bottom: 1px solid ${theme.colors.black};
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 const InformationContainer = styled.div`
 	position: relative;
-	height: 117px;
+	height: 120px;
 	color: ${theme.colors.black};
 	background: ${theme.colors.white};
 	display: flex;
@@ -40,7 +44,6 @@ const InformationContainer = styled.div`
 const Title = styled.div`
 	padding: 2%;
 	font-size: 1.3rem;
-	text-align: center;
 `;
 
 const Description = styled.div`
@@ -48,12 +51,12 @@ const Description = styled.div`
 	font-size: 0.8rem;
 	color: ${theme.colors.white};
 	display: none;
-	text-align: center;
 `;
 
 const CardContainer = styled.div`
 	display: flex;
-	width: 100%;
+	flex: 1 1 0;
+	max-width: 350px;
 	flex-direction: column;
 	margin: 1px 9px;
 	border: 1px solid ${theme.colors.black};
@@ -72,7 +75,9 @@ const CardContainer = styled.div`
 
 export default ({ image, text, description }) => (
 	<CardContainer>
-		<HeaderImage src={image} />
+		<ImageContainer>
+			<HeaderImage src={image} />
+		</ImageContainer>
 		<InformationContainer>
 			<Title>{text}</Title>
 			<Description>{description}</Description>
