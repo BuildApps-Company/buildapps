@@ -1,21 +1,21 @@
 export const Menu = {
-	About: {
+	about: {
 		key: 'about',
 		title: 'About',
 	},
-	Service: {
+	service: {
 		key: 'service',
 		title: 'Services',
 	},
-	Portfolio: {
+	portfolio: {
 		key: 'portfolio',
 		title: 'Portfolio',
 	},
-	Team: {
+	team: {
 		key: 'team',
 		title: 'Team',
 	},
-	Contacts: {
+	contacts: {
 		key: 'contacts',
 		title: 'Contacts',
 	},

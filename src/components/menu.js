@@ -11,11 +11,11 @@ const MenuContainer = styled.div`
 
 const MenuItem = styled.a`
 	padding: 0 1rem;
-	font-size: 0.81rem;
+	font-size: 1rem;
 	text-transform: uppercase;
 `;
 
-export default ({ showActive }) => {
+export default ({ showActive, ...rest }) => {
 	const [activeMenuKey, setActiveMenuKey] = useState();
 
 	if (showActive) {
@@ -62,7 +62,7 @@ export default ({ showActive }) => {
 	);
 
 	return (
-		<MenuContainer>
+		<MenuContainer {...rest}>
 			{menu.map(x => (
 				<MenuItem
 					key={x.key}

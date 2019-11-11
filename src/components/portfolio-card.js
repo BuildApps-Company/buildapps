@@ -2,26 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
-const CardContainer = styled.div`
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-	margin: 1px 9px;
-	border: 1px solid ${theme.colors.black};
+const HeaderImage = styled.img`
+	max-width: 90%;
 `;
 
-const HeaderImage = styled.img`
-	object-fit: fill;
-	width: 100%;
-	padding: 6%;
-	height: 187px;
+const ImageContainer = styled.div`
+	height: 160px;
 	z-index: -2;
 	border-bottom: 1px solid ${theme.colors.black};
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 const InformationContainer = styled.div`
 	position: relative;
-	height: 117px;
+	height: 120px;
 	color: ${theme.colors.black};
 	background: ${theme.colors.white};
 	display: flex;
@@ -43,23 +39,11 @@ const InformationContainer = styled.div`
 		left: calc(50% - 10px);
 		z-index: -1;
 	}
-	&:hover,
-	&:hover:before {
-		background: #8147a5;
-		color: #ffffff;
-	}
-	&:hover div:first-of-type {
-		color: ${theme.colors.white};
-	}
-	&:hover div:last-of-type {
-		display: block;
-	}
 `;
 
 const Title = styled.div`
 	padding: 2%;
 	font-size: 1.3rem;
-	text-align: center;
 `;
 
 const Description = styled.div`
@@ -67,15 +51,43 @@ const Description = styled.div`
 	font-size: 0.8rem;
 	color: ${theme.colors.white};
 	display: none;
-	text-align: center;
+`;
+
+const Container = styled.div`
+	display: flex;
+	flex: 1 1 250px;
+	max-width: 350px;
+	flex-direction: column;
+	margin: 1px 9px;
+	border: 1px solid ${theme.colors.black};
+
+	&:hover {
+		border-color: ${theme.colors.darkPrimary};
+	}
+
+	&:hover ${InformationContainer}, &:hover ${InformationContainer}:before {
+		background: #8147a5;
+		border-color: ${theme.colors.darkPrimary};
+		color: #ffffff;
+	}
+
+	&:hover ${InformationContainer} div:first-of-type {
+		color: ${theme.colors.white};
+	}
+	
+	&:hover ${InformationContainer} div:last-of-type {
+		display: block;
+	}
 `;
 
 export default ({ image, text, description }) => (
-	<CardContainer>
-		<HeaderImage src={image} />
+	<Container>
+		<ImageContainer>
+			<HeaderImage src={image} />
+		</ImageContainer>
 		<InformationContainer>
 			<Title>{text}</Title>
 			<Description>{description}</Description>
 		</InformationContainer>
-	</CardContainer>
+	</Container>
 );

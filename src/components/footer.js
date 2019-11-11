@@ -9,6 +9,7 @@ const Footer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 ${(100 - theme.containerWidthPercent) / 2}%;
+	font-size: 0.9rem;
 `;
 const TermsOfUseContainer = styled.div`
 	color: ${theme.colors.gray};
@@ -16,7 +17,8 @@ const TermsOfUseContainer = styled.div`
 
 const StyledMenu = styled(Menu)`
 	& a {
-		padding: 0 0 0 2rem;
+		font-size: 0.8rem;
+		padding: 0 0 0 1rem;
 	}
 `;
 

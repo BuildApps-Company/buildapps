@@ -4,12 +4,7 @@ import { theme } from '../styles/theme';
 import { Menu } from '../data/menu';
 import { Team } from '../data/team';
 import SectionHeader from './section-header';
-
-const Container = styled.div`
-	margin-bottom: ${theme.slideBottomMarginRem}rem;
-	width: ${theme.containerWidthPercent}%;
-	margin: 0 auto ${theme.slideBottomMarginRem}rem;
-`;
+import { SlideContainer } from '../styles/shared';
 
 const HiddenSvg = styled.svg`
 	width: 0;
@@ -75,15 +70,15 @@ const TeamGrid = styled.div`
 `;
 
 export default () => (
-	<Container id={Menu.Team.key}>
+	<div id={Menu.team.key}>
 		<SectionHeader
 			smallDescription="team"
 			largeDescription="Our beloved team of professionals"
 		/>
-		<div>
+		<SlideContainer>
 			<TeamGrid>
 				{Object.entries(Team).map(([key, member]) => (
-					<MemberContainer>
+					<MemberContainer key={key}>
 						<MemberPhoto src={member.url} />
 						<MemberDescription>
 							<MemberName className={`member-photo-${member.key}`}>
@@ -119,6 +114,6 @@ export default () => (
 					/>
 				</clipPath>
 			</HiddenSvg>
-		</div>
-	</Container>
+		</SlideContainer>
+	</div>
 );
