@@ -10,6 +10,7 @@ const FormContainer = styled(SlideContainer)`
 	padding: 64px 62px;
 	display: flex;
 	flex-direction: column;
+	max-width: 1200px;
 `;
 
 const Title = styled.div`
