@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export default () => {
-	const [layout, changeLayout] = useState('desktop');
+	const [layout, changeLayout] = useState(null);
 
 	useEffect(() => {
 		let newLayout = 'desktop';
