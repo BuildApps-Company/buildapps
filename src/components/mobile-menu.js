@@ -15,14 +15,12 @@ const MenuList = styled.div`
 	z-index: 999;
 	top: ${theme.headerHeight}px;
 	left: 0;
-	display: flex;
 	width: 100vw;
 	flex-direction: column;
 	background: ${theme.colors.whiteSmoke};
-	padding: 1rem;
 	text-align: center;
-	height: 0;
 	overflow: hidden;
+	height: 0;
 
 	@keyframes showAnimation {
 		0% {
@@ -58,7 +56,6 @@ const MenuList = styled.div`
 	&.visible {
 		opacity: 1;
 		height: auto;
-		display: block;
 		animation-name: showAnimation;
 		animation-duration: 0.3s;
 		animation-timing-function: linear;
@@ -74,13 +71,14 @@ const MenuList = styled.div`
 `;
 
 const MenuItem = styled.a`
-	flex: 1 0 100%;
-	padding: 0.5rem 0;
+	padding: 1rem 0;
 	display: block;
 `;
 
 export default () => {
-	const [visible, setVisibleState] = useState(false);
+	const [visible, setVisibleState] = useState(null);
+	const listClassName =
+		visible != null ? (visible ? 'visible' : 'hidden') : null;
 
 	function toogleMenu(show) {
 		show = show == null ? !visible : show;
@@ -90,10 +88,7 @@ export default () => {
 	return (
 		<>
 			<MenuImage src={icon} alt="Menu" onClick={() => toogleMenu()} />
-			<MenuList
-				onClick={() => toogleMenu(false)}
-				className={visible ? 'visible' : 'hidden'}
-			>
+			<MenuList onClick={() => toogleMenu(false)} className={listClassName}>
 				{Object.entries(Menu).map(([key, item]) => (
 					<MenuItem
 						key={key}
