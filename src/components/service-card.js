@@ -6,12 +6,12 @@ const CardContainer = styled.div`
 	display: flex;
 	flex: 1 1 250px;
 	max-width: 350px;
+	margin: 0.5rem;
 	height: 370px;
 	flex-direction: column;
 	border: 1px ${theme.colors.black} solid;
 	justify-content: center;
 	align-items: center;
-	margin: 1px 9px;
 
 	&:hover {
 		background: ${theme.colors.primary};
