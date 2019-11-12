@@ -84,7 +84,9 @@ export default () => (
 							<MemberName className={`member-photo-${member.key}`}>
 								{member.name}
 							</MemberName>
-							{member.description}
+							<div
+								dangerouslySetInnerHTML={{ __html: member.description }}
+							></div>
 						</MemberDescription>
 					</MemberContainer>
 				))}
