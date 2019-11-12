@@ -1,12 +1,14 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import { theme } from '../styles/theme';
+import closeImage from '../../static/images/ic_close.svg';
 import { Menu } from '../data/menu';
-import FloatingInput from './floating-text-field';
 import { SlideContainer } from '../styles/shared';
+import { theme } from '../styles/theme';
+import FloatingInput from './floating-text-field';
 
 const FormContainer = styled(SlideContainer)`
-	background-color: ${theme.colors.whiteSmoke};
+	background: ${theme.colors.whiteSmoke};
 	padding: 64px 62px;
 	display: flex;
 	flex-direction: column;
@@ -16,17 +18,17 @@ const FormContainer = styled(SlideContainer)`
 const Title = styled.div`
 	color: ${theme.colors.black};
 	font-size: 3rem;
-	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: 24px;
+	text-align: center;
 `;
 
 const SubTitle = styled.div`
 	color: ${theme.colors.black};
 	font-size: 2rem;
-	text-align: center;
 	padding-bottom: 44px;
 	margin-bottom: 46px;
+	text-align: center;
 	border-bottom: 2px solid ${theme.colors.lightGray};
 `;
 
@@ -43,32 +45,117 @@ const SendButton = styled.button`
 	margin: 64px auto 0 auto;
 `;
 
+const ButtonContainer = styled.div`
+	text-align: center;
+`;
+
 const FloatingInputContainer = styled.div`
 	flex: 0 0 49%;
 	min-width: 49%;
-	
+
 	@media all and (max-width: ${theme.breakpoints.tablet}px) {
 		flex-base: 100%;
 		min-width: 100%;
 	}
 `;
 
-export default () => (
-	<FormContainer id={Menu.contacts.key}>
-		<Title>Contact us</Title>
-		<SubTitle>We will help you with your project</SubTitle>
-		<HorizontalContainer>
-			<FloatingInputContainer>
-				<FloatingInput placeholder="User name" id="name" />
-			</FloatingInputContainer>
-			<FloatingInputContainer>
-				<FloatingInput placeholder="Email" id="email" />
-			</FloatingInputContainer>
-		</HorizontalContainer>
-		<FloatingInput
-			placeholder="Additional information or question (optional)"
-			id="description"
-		/>
-		<SendButton className="primary transparent">send</SendButton>
-	</FormContainer>
-);
+const RelativeForm = styled.form`
+	position: relative;
+`;
+
+const MessageContainer = styled.div`
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9;
+	background: ${theme.colors.whiteSmoke};
+`;
+
+const CloseIcon = styled.div`
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+`;
+
+export default () => {
+	const [form, setForm] = useState({ name: '', email: '', description: '' });
+	const [isBusy, setIsBusy] = useState(false);
+	const [message, setMessage] = useState(null);
+	const formRef = useRef();
+
+	function getErrorMessage(error) {
+		const errorArray = [
+			error.title,
+			error.message,
+			...Object.entries(error.errors || {})
+				.map(([, messages]) => messages || [])
+				.reduce((prev, next) => [...prev, ...next], []),
+		].filter(x => x);
+		return errorArray && errorArray.length
+			? errorArray.join(',')
+			: 'Error happened. Please, try again.';
+	}
+
+	async function submitForm(e) {
+		e.preventDefault();
+		setIsBusy(true);
+		try {
+			const formData = new FormData(formRef.current);
+			const response = await axios.post(
+				'https://devrybalko.com/buildapps/api/email/send',
+				formData
+			);
+
+			if (response.status === '200') {
+				setMessage('Thanks, we will contact You');
+			} else {
+				setMessage(getErrorMessage(response.data));
+			}
+		} catch (error) {
+			setMessage(getErrorMessage(error));
+		} finally {
+			setIsBusy(false);
+		}
+	}
+
+	return (
+		<FormContainer id={Menu.contacts.key}>
+			<Title>Contact us</Title>
+			<SubTitle>We will help you with your project</SubTitle>
+			<RelativeForm onSubmit={submitForm} ref={formRef}>
+				{message && (
+					<MessageContainer>
+						{message}
+						<CloseIcon onClick={() => setMessage(undefined)}>
+							<img src={closeImage} alt="close" />
+						</CloseIcon>
+					</MessageContainer>
+				)}
+				<HorizontalContainer>
+					<FloatingInputContainer>
+						<FloatingInput placeholder="User name" name="name" required />
+					</FloatingInputContainer>
+					<FloatingInputContainer>
+						<FloatingInput placeholder="Email" name="email" required />
+					</FloatingInputContainer>
+				</HorizontalContainer>
+				<FloatingInput
+					placeholder="Additional information or question (optional)"
+					name="description"
+					onChange={value => setForm({ ...form, description: value })}
+				/>
+				<ButtonContainer>
+					<SendButton disabled={isBusy} className="primary transparent">
+						send
+					</SendButton>
+				</ButtonContainer>
+			</RelativeForm>
+		</FormContainer>
+	);
+};

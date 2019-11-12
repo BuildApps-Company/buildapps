@@ -42,6 +42,10 @@ const GlobalStyles = createGlobalStyle`
 	}
 `;
 
+const StyledLogo = styled(Logo)`
+	margin-top: -8px;
+`;
+
 export default () => {
 	const [layout, changeLayout] = useState(null);
 
@@ -55,7 +59,7 @@ export default () => {
 			newLayout = 'tablet';
 		}
 
-		newLayout !== layout && changeLayout(newLayout);
+		changeLayout(newLayout);
 	}, []);
 
 	return (
@@ -66,7 +70,7 @@ export default () => {
 					{layout === 'desktop' && (
 						<>
 							<FixedContainer>
-								<Logo />
+								<StyledLogo />
 							</FixedContainer>
 							<GrowContainer>
 								<Menu showActive />

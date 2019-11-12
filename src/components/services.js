@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import ServiceCard from './service-card';
 import SectionHeader from './section-header';
 import web_stroke_image from '../../static/images/ic_web_stroke.svg';
-import mobile_stroke_image from '../../static/images/ic_mobile_stroke.svg';
-import design_stroke_image from '../../static/images/ic_design_stroke.svg';
 import web_fill_image from '../../static/images/ic_web_fill.svg';
+import mobile_stroke_image from '../../static/images/ic_mobile_stroke.svg';
 import mobile_fill_image from '../../static/images/ic_mobile_fill.svg';
+import design_stroke_image from '../../static/images/ic_design_stroke.svg';
 import design_fill_image from '../../static/images/ic_design_fill.svg';
+import desktop_stroke_image from '../../static/images/ic_desktop_stroke.svg';
+import desktop_fill_image from '../../static/images/ic_desktop_fill.svg';
 import { Menu } from '../data/menu';
 import { SlideContainer } from '../styles/shared';
 
@@ -45,8 +47,8 @@ export default () => (
 			/>
 			<ServiceCard
 				text="desktop development"
-				defaultImage={web_stroke_image}
-				tintImage={web_fill_image}
+				defaultImage={desktop_stroke_image}
+				tintImage={desktop_fill_image}
 				description="WPF, UWP, Xamarin.Forms for Windows"
 			/>
 		</CardsContainer>
