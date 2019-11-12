@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import icon from '../../static/images/mobile_menu.svg';
+import icon from '../../static/images/ic_mobile_menu.svg';
 import { theme } from '../styles/theme';
 import { Menu } from '../data/menu';
 import { smoothScrollTo } from '../utils/url';
@@ -22,6 +22,7 @@ const MenuList = styled.div`
 	padding: 1rem;
 	text-align: center;
 	height: 0;
+	overflow: hidden;
 
 	@keyframes showAnimation {
 		0% {

@@ -20,6 +20,10 @@ const StyledMenu = styled(Menu)`
 		font-size: 0.8rem;
 		padding: 0 0 0 1rem;
 	}
+
+	@media all and (max-width: ${theme.breakpoints.tablet}px) {
+		display: none;
+	}
 `;
 
 export default () => (

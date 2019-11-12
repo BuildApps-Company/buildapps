@@ -20,12 +20,17 @@ const HeaderContainer = styled.div`
 	z-index: 999;
 `;
 
-const SideContainer = styled.div`
+const FixedContainer = styled.div`
 	flex: 0 0 auto;
 	width: ${logoWidth}px;
 `;
 
-const MenuContainer = styled.div`
+const ResponsiveContainer = styled.div`
+	flex: 0 1 auto;
+	margin-right: 2rem;
+`;
+
+const GrowContainer = styled.div`
 	flex: 1 0 auto;
 `;
 
@@ -35,42 +40,60 @@ const GlobalStyles = createGlobalStyle`
 	}
 `;
 
-const Center = styled.div`
-	text-align: right;
-`;
-
 export default () => {
 	const [layout, changeLayout] = useState('desktop');
+
 	useEffect(() => {
-		changeLayout(
-			window.innerWidth <= theme.breakpoints.tablet ? 'tablet' : 'desktop'
-		);
+		let newLayout = 'desktop';
+		const { innerWidth } = window;
+
+		if (innerWidth <= theme.breakpoints.phone) {
+			newLayout = 'phone';
+		} else if (innerWidth <= theme.breakpoints.tablet) {
+			newLayout = 'tablet';
+		}
+
+		newLayout !== layout && changeLayout(newLayout);
 	}, []);
 
 	return (
 		<>
 			<GlobalStyles />
 			<HeaderContainer>
-				<SideContainer>
-					<Logo />
-				</SideContainer>
-				{layout === 'desktop' ? (
+				{layout === 'desktop' && (
 					<>
-						<MenuContainer>
+						<FixedContainer>
+							<Logo />
+						</FixedContainer>
+						<GrowContainer>
 							<Menu showActive />
-						</MenuContainer>
-						<SideContainer>
+						</GrowContainer>
+						<FixedContainer>
 							<ContactUs></ContactUs>
-						</SideContainer>
+						</FixedContainer>
 					</>
-				) : (
+				)}
+				{layout === 'tablet' && (
 					<>
-						<MenuContainer style={{ textAlign: 'center' }}>
-							<ContactUs></ContactUs>
-						</MenuContainer>
-						<SideContainer style={{ textAlign: 'right' }}>
+						<ResponsiveContainer>
 							<MobileMenu />
-						</SideContainer>
+						</ResponsiveContainer>
+						<ResponsiveContainer>
+							<Logo />
+						</ResponsiveContainer>
+						<GrowContainer style={{ textAlign: 'right' }}>
+							<ContactUs></ContactUs>
+						</GrowContainer>
+					</>
+				)}
+				{layout === 'phone' && (
+					<>
+						<ResponsiveContainer>
+							<MobileMenu />
+						</ResponsiveContainer>
+						<GrowContainer>
+							<Logo />
+						</GrowContainer>
 					</>
 				)}
 			</HeaderContainer>

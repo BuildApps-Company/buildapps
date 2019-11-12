@@ -31,12 +31,10 @@ const SubTitle = styled.div`
 
 const HorizontalContainer = styled.div`
 	display: flex;
+	justify-content: space-between;
 	margin-bottom: 46px;
 	flex-direction: row;
-`;
-
-const HorizontalDivider = styled.div`
-	width: 24px;
+	flex-wrap: wrap;
 `;
 
 const SendButton = styled.button`
@@ -44,14 +42,27 @@ const SendButton = styled.button`
 	margin: 64px auto 0 auto;
 `;
 
+const FloatingInputContainer = styled.div`
+	flex: 0 0 49%;
+	min-width: 49%;
+	
+	@media all and (max-width: ${theme.breakpoints.tablet}px) {
+		flex-base: 100%;
+		min-width: 100%;
+	}
+`;
+
 export default () => (
 	<FormContainer id={Menu.contacts.key}>
 		<Title>Contact us</Title>
 		<SubTitle>We will help you with your project</SubTitle>
 		<HorizontalContainer>
-			<FloatingInput placeholder="User name" id="name" />
-			<HorizontalDivider />
-			<FloatingInput placeholder="Email" id="email" />
+			<FloatingInputContainer>
+				<FloatingInput placeholder="User name" id="name" />
+			</FloatingInputContainer>
+			<FloatingInputContainer>
+				<FloatingInput placeholder="Email" id="email" />
+			</FloatingInputContainer>
 		</HorizontalContainer>
 		<FloatingInput
 			placeholder="Additional information or question (optional)"
