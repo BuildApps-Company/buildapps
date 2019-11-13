@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
@@ -35,17 +35,22 @@ const TextFieldContainer = styled.div`
 	}
 `;
 
-export default ({ placeholder, id }) => {
-	const [value, setValue] = useState(null);
+export default ({ placeholder, name, onChange, required }) => {
+	const [value, setValue] = useState('');
+	useEffect(() => {
+		onChange && typeof onChange === 'function' && onChange(value);
+	}, [value]);
+
 	return (
 		<TextFieldContainer>
 			<Placeholder className={value ? 'fixed' : null}>
 				{placeholder}
 			</Placeholder>
 			<TextField
-				id={id}
+				name={name}
 				value={value}
 				onChange={e => setValue(e.target.value)}
+				required={required}
 			/>
 		</TextFieldContainer>
 	);

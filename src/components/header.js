@@ -1,52 +1,110 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { theme } from '../styles/theme';
 import Logo from './logo.js';
 import Menu from './menu';
 import ContactUs from './contact-us';
-
-const logoWidth = 170;
+import MobileMenu from './mobile-menu';
+import { SlideContainer } from '../styles/shared';
 
 const HeaderContainer = styled.div`
-	display: flex;
 	background: #ffffff;
 	height: ${theme.headerHeight}px;
-	align-items: center;
-	padding: 0 50px;
 	position: fixed;
 	top: 0px;
 	width: 100%;
 	z-index: 999;
 `;
 
-const SideContainer = styled.div`
-	flex: 0 0 auto;
-	width: ${logoWidth}px;
+const FlexSlideContainer = styled(SlideContainer)`
+	display: flex;
+	align-items: center;
+	height: 100%;
 `;
 
-const MenuContainer = styled.div`
+const FixedContainer = styled.div`
+	flex: 0 0 auto;
+	width: 170px;
+`;
+
+const ResponsiveContainer = styled.div`
+	flex: 0 1 auto;
+	margin-right: 2rem;
+`;
+
+const GrowContainer = styled.div`
 	flex: 1 0 auto;
 `;
 
 const GlobalStyles = createGlobalStyle`
-    body {
+  body {
 		padding-top: ${theme.headerHeight}px;
 	}
 `;
 
-export default () => (
-	<>
-		<GlobalStyles />
-		<HeaderContainer>
-			<SideContainer>
-				<Logo />
-			</SideContainer>
-			<MenuContainer>
-				<Menu showActive />
-			</MenuContainer>
-			<SideContainer>
-				<ContactUs></ContactUs>
-			</SideContainer>
-		</HeaderContainer>
-	</>
-);
+const StyledLogo = styled(Logo)`
+	margin-top: -8px;
+`;
+
+export default () => {
+	const [layout, changeLayout] = useState(null);
+
+	useEffect(() => {
+		let newLayout = 'desktop';
+		const { innerWidth } = window;
+
+		if (innerWidth <= theme.breakpoints.phone) {
+			newLayout = 'phone';
+		} else if (innerWidth <= theme.breakpoints.tablet) {
+			newLayout = 'tablet';
+		}
+
+		changeLayout(newLayout);
+	}, []);
+
+	return (
+		<>
+			<GlobalStyles />
+			<HeaderContainer>
+				<FlexSlideContainer>
+					{layout === 'desktop' && (
+						<>
+							<FixedContainer>
+								<StyledLogo />
+							</FixedContainer>
+							<GrowContainer>
+								<Menu showActive />
+							</GrowContainer>
+							<FixedContainer>
+								<ContactUs></ContactUs>
+							</FixedContainer>
+						</>
+					)}
+					{layout === 'tablet' && (
+						<>
+							<ResponsiveContainer>
+								<MobileMenu />
+							</ResponsiveContainer>
+							<ResponsiveContainer>
+								<Logo />
+							</ResponsiveContainer>
+							<GrowContainer style={{ textAlign: 'right' }}>
+								<ContactUs></ContactUs>
+							</GrowContainer>
+						</>
+					)}
+					{layout === 'phone' && (
+						<>
+							<ResponsiveContainer>
+								<MobileMenu />
+							</ResponsiveContainer>
+							<GrowContainer>
+								<Logo />
+							</GrowContainer>
+						</>
+					)}
+				</FlexSlideContainer>
+			</HeaderContainer>
+		</>
+	);
+};

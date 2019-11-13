@@ -8,26 +8,26 @@ export const Team = {
 	oleksii: {
 		url: oleksii,
 		name: 'Oleksii Semelit',
-		description: 'Mobile developer',
+		description: 'Developer',
 	},
 	sasha: {
 		url: sasha,
 		name: 'Alex Budyakov',
-		description: 'Mobile developer',
+		description: 'Developer',
 	},
 	vadim: {
 		url: vadim,
 		name: 'Vadim Rybalko',
-		description: 'Mobile developer',
+		description: 'Developer',
 	},
 	vlad: {
 		url: vlad,
 		name: 'Vlad Gulin',
-		description: 'Designer',
+		description: 'UX/UI Designer',
 	},
 	ivan: {
 		url: ivan,
 		name: 'Ivan Kolosinskyi',
-		description: 'Web developer',
+		description: ' Developer',
 	},
 };

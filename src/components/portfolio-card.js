@@ -58,13 +58,17 @@ const Container = styled.div`
 	flex: 1 1 250px;
 	max-width: 350px;
 	flex-direction: column;
-	margin: 1px 9px;
+	margin: 0.5rem;
 	border: 1px solid ${theme.colors.black};
 
-	&:hover {
+	&:hover{
 		border-color: ${theme.colors.darkPrimary};
 	}
 
+	&:hover ${ImageContainer}  {
+		border-color: ${theme.colors.darkPrimary};
+	}
+	
 	&:hover ${InformationContainer}, &:hover ${InformationContainer}:before {
 		background: #8147a5;
 		border-color: ${theme.colors.darkPrimary};
@@ -74,7 +78,7 @@ const Container = styled.div`
 	&:hover ${InformationContainer} div:first-of-type {
 		color: ${theme.colors.white};
 	}
-	
+
 	&:hover ${InformationContainer} div:last-of-type {
 		display: block;
 	}

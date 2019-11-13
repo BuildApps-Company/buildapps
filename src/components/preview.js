@@ -8,7 +8,7 @@ import { Menu } from '../data/menu';
 import { smoothScrollTo } from '../utils/url';
 
 const Banner = styled.div`
-	max-height: 700px;
+	max-height: 900px;
 	min-height: 330px;
 	height: calc(100vh - ${theme.headerHeight}px);
     justify-content: center;
@@ -17,7 +17,8 @@ const Banner = styled.div`
     flex-direction: column;
     width: 100%;
     margin-bottom: ${theme.slideBottomMarginRem}rem;
-    position: relative;
+	position: relative;
+	
     &:before {
         background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 5%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 95%, rgba(0,0,0,1) 100%)
             , url("${banner_background}"), #000000; 
