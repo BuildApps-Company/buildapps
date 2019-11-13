@@ -83,8 +83,11 @@ const CloseIcon = styled.div`
 	height: 20px;
 `;
 
+const ResponseMessage = styled.div`
+	font-size: 1.4rem;
+`;
+
 export default () => {
-	const [form, setForm] = useState({ name: '', email: '', description: '' });
 	const [isBusy, setIsBusy] = useState(false);
 	const [message, setMessage] = useState(null);
 	const formRef = useRef();
@@ -98,7 +101,7 @@ export default () => {
 				.reduce((prev, next) => [...prev, ...next], []),
 		].filter(x => x);
 		return errorArray && errorArray.length
-			? errorArray.join(',')
+			? errorArray.join('<br/>')
 			: 'Error happened. Please, try again.';
 	}
 
@@ -112,13 +115,17 @@ export default () => {
 				formData
 			);
 
-			if (response.status === '200') {
+			if (response.status === 200) {
 				setMessage('Thanks, we will contact You');
 			} else {
 				setMessage(getErrorMessage(response.data));
 			}
 		} catch (error) {
-			setMessage(getErrorMessage(error));
+			setMessage(
+				getErrorMessage(
+					(error && error.response && error.response.data) || error
+				)
+			);
 		} finally {
 			setIsBusy(false);
 		}
@@ -131,7 +138,9 @@ export default () => {
 			<RelativeForm onSubmit={submitForm} ref={formRef}>
 				{message && (
 					<MessageContainer>
-						{message}
+						<ResponseMessage
+							dangerouslySetInnerHTML={{ __html: message }}
+						></ResponseMessage>
 						<CloseIcon onClick={() => setMessage(undefined)}>
 							<img src={closeImage} alt="close" />
 						</CloseIcon>
@@ -147,8 +156,7 @@ export default () => {
 				</HorizontalContainer>
 				<FloatingInput
 					placeholder="Additional information or question (optional)"
-					name="description"
-					onChange={value => setForm({ ...form, description: value })}
+					name="message"
 				/>
 				<ButtonContainer>
 					<SendButton disabled={isBusy} className="primary transparent">
