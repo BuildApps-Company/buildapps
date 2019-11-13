@@ -51,6 +51,7 @@ const Title = styled.div`
 const Description = styled.div`
 	padding: 2%;
 	margin: 0 5%;
+	max-width: 90%;
 	font-size: 0.9rem;
 	color: ${theme.colors.black};
 	text-align: center;

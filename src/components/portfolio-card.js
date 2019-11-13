@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
 const HeaderImage = styled.img`
-	max-width: 90%;
+	width: 90%;
 `;
 
 const ImageContainer = styled.div`
