@@ -11,6 +11,11 @@ export default () => (
 	<>
 		<Helmet>
 			<title>Build Apps</title>
+			<meta
+				name="description"
+				content="We are strong development team with more than 4 years of commercial experience and more than 5 years of freelance experience in developing various applications. We are here to make your ideas a reality."
+			/>
+			<meta http-equiv="Content-Language" content="en"></meta>
 		</Helmet>
 		<Layout>
 			<Preview />
