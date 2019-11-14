@@ -35,17 +35,22 @@ const Banner = styled.div`
 	}
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
 	color: ${theme.colors.white};
 	font-size: 3rem;
-	margin-bottom: 2%;
+	margin: 0 0 2%;
+	padding: 0;
 	text-align: center;
+	font-weight: 400;
 `;
 
-const SubTitle = styled.div`
+const SubTitle = styled.h2`
 	color: ${theme.colors.white};
 	text-align: center;
 	font-size: 1.6rem;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
 `;
 
 const ContactUsButtonContainer = styled.div`
