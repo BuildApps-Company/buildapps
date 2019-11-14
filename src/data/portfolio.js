@@ -13,9 +13,9 @@ export const Portfolio = {
 		title: 'VIOL Commander',
 		description: 'Desktop application',
 	},
-	leclub: {
-		image: leclub,
-		title: 'Le Club',
-		description: 'Web shop',
-	},
+	// leclub: {
+	// 	image: leclub,
+	// 	title: 'Le Club',
+	// 	description: 'Web shop',
+	// },
 };
