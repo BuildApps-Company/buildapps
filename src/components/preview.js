@@ -89,8 +89,7 @@ export default () => {
 		<Banner id={Menu.about.key}>
 			<Title>BuildApps</Title>
 			<SubTitle>
-				A close-knit team with extensive experience <br /> and understanding of
-				what is necessary for you
+			Strong and skilled team with experience of developing large projects, <br/> from estimating to publishing applications
 			</SubTitle>
 			<ContactUsButtonContainer>
 				<ContactUs isOutline={true} />
