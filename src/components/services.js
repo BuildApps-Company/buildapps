@@ -24,20 +24,20 @@ export default () => (
 	<div id={Menu.service.key}>
 		<SectionHeader
 			smallDescription="services"
-			largeDescription="UI/UX Design, Web and mobile development"
+			largeDescription="UI/UX Design, Web and Mobile development"
 		/>
 		<CardsContainer>
 			<ServiceCard
-				text="mobile development"
+				text="mobile"
 				defaultImage={mobile_stroke_image}
 				tintImage={mobile_fill_image}
-				description="Flutter, Xamarin Native, MVVMCross"
+				description="Flutter, Xamarin Native, Xamarin Forms and frameworks: MVVMCross, FreshMVVM"
 			/>
 			<ServiceCard
-				text="web development"
+				text="web"
 				defaultImage={web_stroke_image}
 				tintImage={web_fill_image}
-				description="HTML/CSS, JavaScript + frameworks, React, NodeJS, jQuery"
+				description="HTML/CSS, JavaScript and frameworks: React, NodeJS, jQuery"
 			/>
 			<ServiceCard
 				text="UX/UI design"
@@ -46,7 +46,7 @@ export default () => (
 				description="UX, UI, Prototyping, Supporting, Mobile, Web, Desktop"
 			/>
 			<ServiceCard
-				text="desktop development"
+				text="desktop"
 				defaultImage={desktop_stroke_image}
 				tintImage={desktop_fill_image}
 				description="WPF, UWP, Xamarin.Forms for Windows"
