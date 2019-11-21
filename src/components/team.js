@@ -5,6 +5,7 @@ import { Menu } from '../data/menu';
 import { Team } from '../data/team';
 import SectionHeader from './section-header';
 import { SlideContainer } from '../styles/shared';
+import linkedIn from '../../static/images/ic_linkedin.svg';
 
 const HiddenSvg = styled.svg`
 	width: 0;
@@ -69,6 +70,8 @@ const TeamGrid = styled.div`
 	padding: 0 2rem;
 `;
 
+const LinkedinLink = styled.a``;
+
 export default () => (
 	<div id={Menu.team.key}>
 		<SectionHeader
@@ -88,6 +91,9 @@ export default () => (
 								dangerouslySetInnerHTML={{ __html: member.description }}
 							></div>
 						</MemberDescription>
+						<LinkedinLink>
+							<img src={linkedIn} alt="LinkedIn" />
+						</LinkedinLink>
 					</MemberContainer>
 				))}
 			</TeamGrid>

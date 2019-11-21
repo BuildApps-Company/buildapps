@@ -32,6 +32,6 @@ export default ({ ...rest }) => (
 		onClick={e => smoothScrollTo(e, Menu.about.key)}
 	>
 		<DefaultImage src={logo} alt="BuildApps" />
-		<ModifiedImage src={logoModified} alt="BuildApps" />
+		<ModifiedImage src={logoModified} alt="BuildApps ^" />
 	</LogoContainer>
 );

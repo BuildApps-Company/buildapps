@@ -59,8 +59,8 @@ const Description = styled.div`
 
 export default ({ defaultImage, tintImage, text, description }) => (
 	<CardContainer>
-		<DefaultImage src={defaultImage} />
-		<TintedImage src={tintImage} />
+		<DefaultImage src={defaultImage} alt=''/>
+		<TintedImage src={tintImage} alt=''/>
 		<Title>{text}</Title>
 		<Description>{description}</Description>
 	</CardContainer>

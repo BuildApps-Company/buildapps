@@ -87,7 +87,7 @@ const Container = styled.div`
 export default ({ image, text, description }) => (
 	<Container>
 		<ImageContainer>
-			<HeaderImage src={image} />
+			<HeaderImage src={image} alt=""/>
 		</ImageContainer>
 		<InformationContainer>
 			<Title>{text}</Title>
