@@ -39,7 +39,7 @@ export default ({ placeholder, name, onChange, required }) => {
 	const [value, setValue] = useState('');
 	useEffect(() => {
 		onChange && typeof onChange === 'function' && onChange(value);
-	}, [value]);
+	}, [value, onChange]);
 
 	return (
 		<TextFieldContainer>

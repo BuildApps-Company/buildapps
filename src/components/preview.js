@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import banner_background from '../../static/images/banner_background.svg';
+import banner_background from '../../static/images/banner_background.jpg';
 import { theme } from '../styles/theme';
 import ContactUs from './contact-us';
 import scroll_image from '../../static/images/ic_scroll.svg';
@@ -100,7 +100,7 @@ export default () => {
 			>
 				view projects
 			</ViewProjectsLink>
-			<ScrollImage src={scroll_image} />
+			<ScrollImage src={scroll_image} alt="scroll down"/>
 		</Banner>
 	);
 };
