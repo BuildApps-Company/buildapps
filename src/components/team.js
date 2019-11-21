@@ -5,7 +5,14 @@ import { Menu } from '../data/menu';
 import { Team } from '../data/team';
 import SectionHeader from './section-header';
 import { SlideContainer } from '../styles/shared';
-import linkedIn from '../../static/images/ic_linkedin.svg';
+import linkedin from '../../static/images/ic_linkedin.svg';
+
+const LinkedinLink = styled.a`
+	position: absolute;
+	bottom: 45px;
+	opacity: 0.7;
+	left: calc(63% - 25px);
+`;
 
 const HiddenSvg = styled.svg`
 	width: 0;
@@ -30,7 +37,7 @@ const MemberDescription = styled.div`
 
 const MemberName = styled.div`
 	font-size: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 `;
 
 const MemberContainer = styled.div`
@@ -41,25 +48,34 @@ const MemberContainer = styled.div`
 	position: relative;
 	cursor: pointer;
 
-	&:nth-child(odd) ${MemberPhoto} {
-		clip-path: url(#pattern1);
+	&:nth-child(odd) {
+		${MemberPhoto} {
+			clip-path: url(#pattern1);
+		}
+		${MemberDescription} {
+			padding: 20% 15%;
+		}
 	}
-	&:nth-child(odd) ${MemberDescription} {
-		padding: 20% 15%;
+	&:nth-child(even) {
+		${MemberPhoto} {
+			clip-path: url(#pattern2);
+		}
+
+		&:nth-child(even) ${MemberDescription} {
+			padding: 20%;
+		}
 	}
 
-	&:nth-child(even) ${MemberPhoto} {
-		clip-path: url(#pattern2);
-	}
-	&:nth-child(even) ${MemberDescription} {
-		padding: 20%;
-	}
-
-	&:hover ${MemberDescription} {
-		display: block;
-	}
-	&:hover ${MemberPhoto} {
-		filter: url(#hoverFilter);
+	&:hover {
+		${MemberDescription} {
+			display: block;
+		}
+		${LinkedinLink} {
+			opacity: 1;
+		}
+		${MemberPhoto} {
+			filter: url(#hoverFilter);
+		}
 	}
 `;
 
@@ -69,8 +85,6 @@ const TeamGrid = styled.div`
 	justify-content: center;
 	padding: 0 2rem;
 `;
-
-const LinkedinLink = styled.a``;
 
 export default () => (
 	<div id={Menu.team.key}>
@@ -91,9 +105,11 @@ export default () => (
 								dangerouslySetInnerHTML={{ __html: member.description }}
 							></div>
 						</MemberDescription>
-						<LinkedinLink>
-							<img src={linkedIn} alt="LinkedIn" />
-						</LinkedinLink>
+						{member.linkedin && (
+							<LinkedinLink target="_blank" href={member.linkedin}>
+								<img src={linkedin} alt={member.linkedin} />
+							</LinkedinLink>
+						)}
 					</MemberContainer>
 				))}
 			</TeamGrid>
