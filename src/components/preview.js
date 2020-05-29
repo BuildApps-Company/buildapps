@@ -38,24 +38,29 @@ const Banner = styled.div`
 const Title = styled.h1`
 	color: ${theme.colors.white};
 	font-size: 3rem;
-	margin: 0 0 2%;
 	padding: 0;
 	text-align: center;
 	font-weight: 400;
+	margin: 0;
+	text-transform: none;
+
+	@media all and (max-width: ${theme.breakpoints.phone}px) {
+		font-size: 2rem;
+	}
 `;
 
-const SubTitle = styled.h2`
+const SubTitle = styled.div`
 	color: ${theme.colors.white};
 	text-align: center;
-	font-size: 1.6rem;
+	font-size: 0.5em;
 	font-weight: 400;
 	padding: 0;
-	margin: 0;
+	margin: 2rem 0 0;
 `;
 
 const ContactUsButtonContainer = styled.div`
-	margin-top: 32px;
-	margin-bottom: 16px;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
 `;
 
 const ScrollImage = styled.img`
@@ -87,10 +92,13 @@ const ViewProjectsLink = styled.a`
 export default () => {
 	return (
 		<Banner id={Menu.about.key}>
-			<Title>BuildApps</Title>
-			<SubTitle>
-			Strong and skilled team with experience of developing large projects, <br/> from estimating to publishing applications
-			</SubTitle>
+			<Title>
+				BuildApps
+				<SubTitle>
+					Strong and skilled team with experience of developing large projects,{' '}
+					<br /> from estimating to publishing applications
+				</SubTitle>
+			</Title>
 			<ContactUsButtonContainer>
 				<ContactUs isOutline={true} />
 			</ContactUsButtonContainer>
@@ -100,7 +108,7 @@ export default () => {
 			>
 				view projects
 			</ViewProjectsLink>
-			<ScrollImage src={scroll_image} alt="scroll down"/>
+			<ScrollImage src={scroll_image} alt="scroll down" />
 		</Banner>
 	);
 };
