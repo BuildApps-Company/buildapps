@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
-const Divider = styled.h1`
+const Divider = styled.div`
 	background-color: ${theme.colors.lightGray};
 	width: ${theme.divederWidthPercent}%;
 	height: 1px;
@@ -10,28 +10,32 @@ const Divider = styled.h1`
 	margin-bottom: 64px;
 `;
 
-const SmallDescription = styled.h1`
+const SmallDescription = styled.h2`
 	color: ${theme.colors.black};
 	font-size: 3rem;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 400;
-	margin: 0 0 2%;
+	margin: 0 0 2rem;
 `;
 
-const LargeDescription = styled.h2`
+const LargeDescription = styled.div`
 	color: ${theme.colors.black};
 	font-size: 2rem;
 	margin: 0 0 44px;
 	padding: 0;
 	text-align: center;
 	font-weight: 400;
+	margin: 2rem 0 0;
+	text-transform: none;
 `;
 
 export default ({ smallDescription, largeDescription }) => (
 	<>
-		<SmallDescription>{smallDescription}</SmallDescription>
-		<LargeDescription>{largeDescription}</LargeDescription>
+		<SmallDescription>
+			{smallDescription}
+			<LargeDescription>{largeDescription}</LargeDescription>
+		</SmallDescription>
 		<Divider />
 	</>
 );

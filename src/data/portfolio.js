@@ -1,6 +1,6 @@
 import spbProperty from '../../static/images/portfolio/spbProperty.jpg';
 import viol from '../../static/images/portfolio/viol.jpg';
-import leclub from '../../static/images/portfolio/leclub.jpg';
+// import leclub from '../../static/images/portfolio/leclub.jpg';
 import askod from '../../static/images/portfolio/askod.jpg';
 
 export const Portfolio = {

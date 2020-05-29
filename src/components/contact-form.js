@@ -155,6 +155,7 @@ export default () => {
 					</FloatingInputContainer>
 				</HorizontalContainer>
 				<FloatingInput
+					rows={3}
 					placeholder="Additional information or question (optional)"
 					name="message"
 				/>

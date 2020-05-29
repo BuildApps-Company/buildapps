@@ -15,8 +15,8 @@ export const theme = {
 		whiteSmoke: '#F9F9F9',
 	},
 	breakpoints: {
-		hdScreen: 1280,
-		tablet: 900,
+		hdScreen: 1270,
+		tablet: 899,
 		phone: 400,
 	},
 };
