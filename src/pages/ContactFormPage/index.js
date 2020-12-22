@@ -1,1 +1,1 @@
-import ContactFormPage from './ContactFormPage'
+import ContactFormPage from './ContactFormPage';
