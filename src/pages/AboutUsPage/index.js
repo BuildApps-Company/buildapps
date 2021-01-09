@@ -1,1 +1,1 @@
-import AboutUsPage from './AboutUsPage'
+import AboutUsPage from './AboutUsPage';

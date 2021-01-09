@@ -1,1 +1,1 @@
-import PricesPage from './PricesPage'
+import PricesPage from './PricesPage';

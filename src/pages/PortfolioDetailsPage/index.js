@@ -1,1 +1,1 @@
-import PortfolioDetailsPage from './PortfolioDetailsPage'
+import PortfolioDetailsPage from './PortfolioDetailsPage';
