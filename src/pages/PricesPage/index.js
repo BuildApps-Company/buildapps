@@ -1,0 +1,1 @@
+import PricesPage from './PricesPage'

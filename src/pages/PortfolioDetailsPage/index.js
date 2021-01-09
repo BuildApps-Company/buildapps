@@ -1,0 +1,1 @@
+import PortfolioDetailsPage from './PortfolioDetailsPage'
