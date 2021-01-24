@@ -23,7 +23,7 @@ const InformationContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	width: 400px;
+	max-width: 400px;
 `;
 
 const Title = styled.div`

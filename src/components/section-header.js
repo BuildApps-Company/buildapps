@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../styles/theme';
 
-const Divider = styled.div`
+export const Divider = styled.div`
 	background-color: ${theme.colors.lightGray};
 	width: ${theme.divederWidthPercent}%;
 	height: 1px;
