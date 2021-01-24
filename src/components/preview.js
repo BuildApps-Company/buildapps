@@ -16,7 +16,6 @@ const Banner = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: ${theme.slideBottomMarginRem}rem;
 	position: relative;
 	
     &:before {

@@ -29,8 +29,8 @@ const StyledMenu = styled(Menu)`
 export default () => (
 	<Footer>
 		<TermsOfUseContainer>
-			© BuildApps, 2019 |{' '}
-			<a href="mailto:buildappsua@gmail.com">buildappsua@gmail.com</a>
+			© BuildApps, 2021 |{' '}
+			<a href="mailto:sales@buildapps.pro">sales@buildapps.pro</a>
 		</TermsOfUseContainer>
 		<StyledMenu />
 	</Footer>

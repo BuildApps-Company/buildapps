@@ -11,12 +11,12 @@ export const Menu = {
 		key: 'portfolio',
 		title: 'Portfolio',
 	},
-	team: {
-		key: 'team',
-		title: 'Team',
-	},
-	contacts: {
-		key: 'contacts',
-		title: 'Contacts',
-	},
+	// team: {
+	// 	key: 'team',
+	// 	title: 'Team',
+	// },
+	// contacts: {
+	// 	key: 'contacts',
+	// 	title: 'Contacts',
+	// },
 };
