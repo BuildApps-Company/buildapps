@@ -8,8 +8,8 @@ const HeaderImage = styled.img`
 
 const ImageContainer = styled.div`
 	height: 160px;
-	z-index: -2;
-	border-bottom: 1px solid ${theme.colors.black};
+	/* z-index: -2; */
+	/* border-bottom: 1px solid ${theme.colors.black}; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -33,8 +33,8 @@ const InformationContainer = styled.div`
 		height: 20px;
 		background: ${theme.colors.white};
 		transform: rotate(57deg) skewX(25deg);
-		border: 1px solid ${theme.colors.black};
-		border-width: 1px 0 0 1px;
+		/* border: 1px solid ${theme.colors.black};
+		border-width: 1px 0 0 1px; */
 		top: -5px;
 		left: calc(50% - 10px);
 		z-index: -1;
@@ -59,19 +59,19 @@ const Container = styled.div`
 	max-width: 350px;
 	flex-direction: column;
 	margin: 0.5rem;
-	border: 1px solid ${theme.colors.black};
+	/* border: 1px solid ${theme.colors.black}; */
 
 	&:hover{
-		border-color: ${theme.colors.darkPrimary};
+		/* border-color: ${theme.colors.darkPrimary}; */
 	}
 
 	&:hover ${ImageContainer}  {
-		border-color: ${theme.colors.darkPrimary};
+		/* border-color: ${theme.colors.darkPrimary}; */
 	}
 	
 	&:hover ${InformationContainer}, &:hover ${InformationContainer}:before {
 		background: #8147a5;
-		border-color: ${theme.colors.darkPrimary};
+		/* border-color: ${theme.colors.darkPrimary}; */
 		color: #ffffff;
 	}
 
