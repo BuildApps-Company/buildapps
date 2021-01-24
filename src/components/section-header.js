@@ -17,10 +17,11 @@ const SmallDescription = styled.h2`
 	text-transform: uppercase;
 	font-weight: 400;
 	margin: 0 0 2rem;
+	padding: ${theme.slideBottomMarginRem}rem 0 0;
 `;
 
 const LargeDescription = styled.div`
-	color: ${theme.colors.black};
+	color: inherit;
 	font-size: 2rem;
 	margin: 0 0 44px;
 	padding: 0;
@@ -30,9 +31,9 @@ const LargeDescription = styled.div`
 	text-transform: none;
 `;
 
-export default ({ smallDescription, largeDescription }) => (
+export default ({ smallDescription, largeDescription, ...rest }) => (
 	<>
-		<SmallDescription>
+		<SmallDescription {...rest}>
 			{smallDescription}
 			<LargeDescription>{largeDescription}</LargeDescription>
 		</SmallDescription>

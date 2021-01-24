@@ -8,6 +8,8 @@ import { SlideContainer } from '../styles/shared';
 import { Portfolio } from '../data/portfolio';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
+import { theme } from '../styles/theme';
+
 // import Slider from 'react-slick';
 // import 'react-slick/slick-carousel/slick/slick.css';
 // import 'react-slick/slick-carousel/slick/slick-theme.css';
@@ -69,16 +71,35 @@ import 'react-awesome-slider/dist/styles.css';
 // 	}
 // }
 const StyledAwesomeSlider = styled(AwesomeSlider)`
-	
 	.awssld__content {
-		background-color: #f9f9f9;
+		background-color: ${theme.colors.primary};
+	}
+
+	.awssld__wrapper {
+		height: 48vh;
 		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.awssld__controls__arrow-left:before,
+	.awssld__controls__arrow-left:after,
+	.awssld__controls__arrow-right:before,
+	.awssld__controls__arrow-right:after {
+		background-color: ${theme.colors.whiteSmoke} !important;
 	}
 `;
 
+const Container = styled.div`
+	background-color: ${theme.colors.primary};
+`;
+
+const StyledSectionHeader = styled(SectionHeader)`
+	color: ${theme.colors.whiteSmoke};
+`;
+
 export default () => (
-	<div id={Menu.portfolio.key}>
-		<SectionHeader
+	<Container id={Menu.portfolio.key}>
+		<StyledSectionHeader
 			smallDescription="portfolio"
 			largeDescription="Projects we worked on"
 		/>
@@ -90,9 +111,10 @@ export default () => (
 						text={example.title}
 						image={example.image}
 						description={example.description}
+						responsibility={example.responsibility}
 					/>
 				</div>
 			))}
 		</StyledAwesomeSlider>
-	</div>
+	</Container>
 );
