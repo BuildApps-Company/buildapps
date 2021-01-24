@@ -19,9 +19,7 @@ const ImageContainer = styled.div`
 
 const InformationContainer = styled.div`
 	position: relative;
-	// height: 120px;
 	color: ${theme.colors.white};
-	// background: ${theme.colors.white};
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -36,35 +34,16 @@ const Title = styled.div`
 const Description = styled.div`
 	padding: 2%;
 	font-size: 0.8rem;
-	// color: ${theme.colors.white};
-	// display: none;
 `;
 
 const Container = styled.div`
 	display: flex;
 	flex: 1 1 250px;
-	// max-width: 350px;
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 0.5rem;
 	align-items: center;
 	justify-content: center;
-	/* border: 1px solid ${theme.colors.black}; */
-
-	
-	// &:hover ${InformationContainer}, &:hover ${InformationContainer}:before {
-	// 	background: #8147a5;
-	// 	/* border-color: ${theme.colors.darkPrimary}; */
-	// 	color: #ffffff;
-	// }
-
-	// &:hover ${InformationContainer} div:first-of-type {
-	// 	color: ${theme.colors.white};
-	// }
-
-	// &:hover ${InformationContainer} div:last-of-type {
-	// 	display: block;
-	// }
 `;
 
 const Responsibility = styled.span`
