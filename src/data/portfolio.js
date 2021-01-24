@@ -17,28 +17,28 @@ export const Portfolio = {
 		image: ppf,
 		title: 'Lead management software',
 		description: 'Internal CRM for organizing an ecosystem of work with leads.',
-		responsibility: ['Web application', 'Web API', 'DevOps'],
+		responsibility: ['Web Development', 'Web API Development', 'DevOps'],
 	},
 	sushi: {
 		image: sushi,
 		title: 'СУШИШОП',
 		description:
 			'Client application for selling sushi directly from your phone.',
-		responsibility: ['Mobile application', 'IOS', 'Android'],
+		responsibility: ['Mobile Development', 'IOS', 'Android'],
 	},
 	spbProperty: {
 		image: spbProperty,
 		title: 'Петербургская Недвижимость',
-		responsibility: ['Mobile application', 'IOS', 'Android'],
+		responsibility: ['Mobile Development', 'IOS', 'Android'],
 	},
 	askod: {
 		image: askod,
 		title: 'Askod Online',
-		responsibility: ['Website design'],
+		responsibility: ['Website Design'],
 	},
 	viol: {
 		image: viol,
 		title: 'VIOL Commander',
-		responsibility: ['Desktop application', 'Windows App'],
+		responsibility: ['Desktop Development', 'Windows App'],
 	},
 };
