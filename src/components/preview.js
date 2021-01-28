@@ -94,7 +94,7 @@ export default () => {
 			<Title>
 				BuildApps
 				<SubTitle>
-					Strong and skilled team with experience of developing large projects,{' '}
+					Strong and skilled software development agency with experience of developing large projects,{' '}
 					<br /> from estimating to publishing applications
 				</SubTitle>
 			</Title>
