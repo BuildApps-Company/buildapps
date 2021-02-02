@@ -10,6 +10,7 @@ export function Header({ children }) {
 }
 
 const StyledHeader = styled.header`
-    width: 100vw;
-    heigth: 5rem;
+    width: 100%;
+    height: 5rem;
+    z-index: 1;
 `;

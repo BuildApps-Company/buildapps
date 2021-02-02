@@ -1,7 +1,5 @@
 import React from 'react';
-import MainBanner from '../../components/MainPage/Banner';
+import { MainPage } from '../../components/MainPage';
 import '../../styles/global.css';
 
-export default function MainPage() {
-	return <MainBanner></MainBanner>;
-}
+export default MainPage;
