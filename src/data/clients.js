@@ -1,18 +1,13 @@
-import askod from "../../static/images/portfolio/askod.jpg";
-import viol from "../../static/images/portfolio/viol.jpg";
-import leclub from "../../static/images/portfolio/leclub.jpg";
+import papafinance from '../../static/images/clients/papafinance.svg';
+import notissimus from '../../static/images/clients/notissimus.png';
 
 export const clients = [
-    {
-        name: "Askod",
-        url: askod
-    },
-    {
-        name: "Viol",
-        url: viol
-    },
-    {
-        name: "Leclub",
-        url: leclub
-    },
-]
+	{
+		name: 'ПапаФинанс',
+		url: papafinance,
+	},
+	{
+		name: 'Notissimus',
+		url: notissimus,
+	},
+];

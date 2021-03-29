@@ -1,21 +1,45 @@
-@import url("https://p.typekit.net/p.css?s=1&k=gub0idc&ht=tk&f=15779.15782.37497&a=63266882&app=typekit&e=css");
+@import url('https://p.typekit.net/p.css?s=1&k=gub0idc&ht=tk&f=15779.15782.37497&a=63266882&app=typekit&e=css');
 
 @font-face {
-	font-family:'muli';
-	src: local('Muli Light'), url("https://use.typekit.net/af/57285c/00000000000000003b9b32be/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/57285c/00000000000000003b9b32be/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/57285c/00000000000000003b9b32be/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
-	font-display:auto;font-style:normal;font-weight:300;
+	font-family: 'muli';
+	src: local('Muli Light'),
+		url('https://use.typekit.net/af/57285c/00000000000000003b9b32be/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+			format('woff2'),
+		url('https://use.typekit.net/af/57285c/00000000000000003b9b32be/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+			format('woff'),
+		url('https://use.typekit.net/af/57285c/00000000000000003b9b32be/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+			format('opentype');
+	font-display: auto;
+	font-style: normal;
+	font-weight: 300;
 }
 
 @font-face {
-	font-family:'muli';
-	src: local('Muli'), url("https://use.typekit.net/af/0e034d/00000000000000003b9b32c0/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/0e034d/00000000000000003b9b32c0/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/0e034d/00000000000000003b9b32c0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-	font-display:auto;font-style:normal;font-weight:400;
+	font-family: 'muli';
+	src: local('Muli'),
+		url('https://use.typekit.net/af/0e034d/00000000000000003b9b32c0/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+			format('woff2'),
+		url('https://use.typekit.net/af/0e034d/00000000000000003b9b32c0/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+			format('woff'),
+		url('https://use.typekit.net/af/0e034d/00000000000000003b9b32c0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+			format('opentype');
+	font-display: auto;
+	font-style: normal;
+	font-weight: 400;
 }
 
 @font-face {
-	font-family:'muli';
-	src: local('Muli Bold'), url("https://use.typekit.net/af/234105/00000000000000003b9b32c4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/234105/00000000000000003b9b32c4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/234105/00000000000000003b9b32c4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
-	font-display:auto;font-style:normal;font-weight:700;
+	font-family: 'muli';
+	src: local('Muli Bold'),
+		url('https://use.typekit.net/af/234105/00000000000000003b9b32c4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+			format('woff2'),
+		url('https://use.typekit.net/af/234105/00000000000000003b9b32c4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+			format('woff'),
+		url('https://use.typekit.net/af/234105/00000000000000003b9b32c4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+			format('opentype');
+	font-display: auto;
+	font-style: normal;
+	font-weight: 700;
 }
 
 /*@font-face {
@@ -47,4 +71,5 @@ body {
 	box-sizing: border-box;
 	outline: none;
 	font-family: 'Muli', sans-serif;
+	color: #313131;
 }
