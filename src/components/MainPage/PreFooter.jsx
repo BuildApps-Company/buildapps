@@ -15,7 +15,6 @@ export const PreFooter = () => {
 };
 
 const Container = styled.div`
-	margin-top: 172px;
 	display: flex;
 	height: 179px;
 	justify-content: center;
