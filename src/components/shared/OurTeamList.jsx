@@ -1,40 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
-import plusIcon from '../../../static/images/ic_plus.svg';
-import minusIcon from '../../../static/images/ic_minus.svg';
+import { ourTeamListData } from '../../data/ourTeamListData';
 import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
-
-const ourTeamList = [
-	{
-		key: 'portfolio',
-		title: 'Portfolio',
-		href: '',
-	},
-	{
-		key: 'service',
-		title: 'Prices and services',
-		href: '',
-	},
-	{
-		key: 'about',
-		title: 'About us',
-		href: '',
-	},
-	{
-		key: 'blog',
-		title: 'Blog',
-		href: '',
-	},
-];
+import plusIcon from '../../../static/images/ic_plus.svg';
+import minusIcon from '../../../static/images/ic_minus.svg';
 
 export const OurTeamList = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [windowSize, setWindowSize] = useState(0);
 
 	useEffect(() => {
-		window.innerWidth > 450 && setIsOpen(true);
-	}, []);
+		window.addEventListener('resize', setWindowSize(window.innerWidth));
+		windowSize > 450 && setIsOpen(true);
+	}, [windowSize]);
 
 	const toogleList = () => setIsOpen(!isOpen);
 
@@ -54,7 +34,7 @@ export const OurTeamList = () => {
 
 			{isOpen && (
 				<OurTeamListStyle>
-					{ourTeamList.map(el => (
+					{ourTeamListData.map(el => (
 						<li key={el.key}>
 							<a href={el.href}>{el.title}</a>
 						</li>

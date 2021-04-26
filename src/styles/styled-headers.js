@@ -90,9 +90,9 @@ export const ListTitleWithUnderline = styled(ListTitle)`
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		:after {
+			content: '';
 			width: 32px;
 			height: 3px;
-			content: '';
 			display: block;
 			background: ${colors.Main};
 		}

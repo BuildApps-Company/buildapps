@@ -1,25 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../styles/breakpoints';
-import instagramIcon from '../../../static/images/ic_instagram.svg';
-import facebookIcon from '../../../static/images/ic_facebook.svg';
-
-const socialMediaLinks = [
-	{
-		key: 'instagram',
-		img: instagramIcon,
-		href: '',
-	},
-	{
-		key: 'facebook',
-		img: facebookIcon,
-		href: '',
-	},
-];
+import { socialMediaListData } from '../../data/socialMediaListData';
 
 export const SocialMediaList = () => (
 	<StyledSocialMediaList>
-		{socialMediaLinks.map(el => (
+		{socialMediaListData.map(el => (
 			<li key={el.key}>
 				<a href={el.href}>
 					<img src={el.img} alt={el.key} />

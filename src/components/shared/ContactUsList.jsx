@@ -1,33 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
+import { contactUsListData } from '../../data/contactUsListData';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
-
-const contactUsList = [
-	{
-		key: 'form',
-		title: 'Contact form',
-		href: '',
-	},
-	{
-		key: 'adress',
-		title: 'Kyiv, Ukraine',
-		href: '',
-	},
-	{
-		key: 'email',
-		title: 'buildapps.pro@gmail.com',
-		href: '',
-	},
-];
 
 export const ContactUsList = () => (
 	<div>
 		<ListTitleWithUnderline>Contact Us</ListTitleWithUnderline>
 
 		<ContuctUsListStyle>
-			{contactUsList.map(el => (
+			{contactUsListData.map(el => (
 				<li key={el.key}>
 					<a href={el.href}>{el.title}</a>
 				</li>
