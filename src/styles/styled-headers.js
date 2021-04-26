@@ -44,9 +44,9 @@ export const Body1 = styled.p`
 `;
 
 export const Body2 = styled.p`
-	font-size: 1rem;
-	padding: 0;
 	margin: 0;
+	padding: 0;
+	font-size: 1rem;
 	line-height: 160%;
 `;
 
