@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from './breakpoints';
 import { colors } from './colors';
 
 export const H1 = styled.h1`
@@ -65,5 +66,35 @@ export const UnderlinedH = elem => styled(elem)`
 		width: 64px;
 		display: block;
 		margin-top: -10px;
+	}
+`;
+
+export const ListTitle = styled.h3`
+	margin: 0 0 20px 0;
+	padding: 0;
+	max-width: 600px;
+
+	font-size: 1.5rem;
+	line-height: 160%;
+	color: ${colors.light.white};
+
+	@media all and (max-width: ${breakpoints.phone}) {
+		:last-of-type {
+			margin-top: 16px;
+		}
+	}
+`;
+
+export const ListTitleWithUnderline = styled(ListTitle)`
+	text-transform: uppercase;
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		:after {
+			content: '';
+			width: 32px;
+			height: 3px;
+			display: block;
+			background: ${colors.Main};
+		}
 	}
 `;

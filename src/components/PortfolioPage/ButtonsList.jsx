@@ -37,7 +37,6 @@ const StyledButtonsList = styled.ul`
 	button {
 		white-space: nowrap;
 		padding: 12px 16px;
-		font-size: 16px;
 		font-weight: 700;
 		line-height: 160%;
 		text-transform: uppercase;

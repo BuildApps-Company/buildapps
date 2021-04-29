@@ -56,11 +56,11 @@ const StyledPortfolioList = styled.ul`
 	}
 
 	h3 {
-		font-size: 20px;
+		font-size: 1.25rem;
 		line-height: 160%;
 
 		@media all and (min-width: ${breakpoints.phone}) {
-			font-size: 24px;
+			font-size: 1.5rem;
 		}
 	}
 
@@ -92,7 +92,6 @@ const AboutProject = styled.div`
 `;
 
 const StyledResponsibility = styled.p`
-	font-size: 16px;
 	font-weight: 700;
 	line-height: 160%;
 	text-transform: uppercase;
@@ -100,6 +99,5 @@ const StyledResponsibility = styled.p`
 `;
 
 const StyledDescription = styled.p`
-	font-size: 16px;
 	line-height: 160%;
 `;
