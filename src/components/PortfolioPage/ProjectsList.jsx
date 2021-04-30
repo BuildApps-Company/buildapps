@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { Portfolio } from '../../data/projects';
 import { breakpoints } from '../../styles/breakpoints';
 
@@ -8,7 +9,10 @@ export const ProjectsList = () => {
 		<StyledPortfolioList>
 			{Object.entries(Portfolio).map(([key, el]) => (
 				<li key={key}>
-					<a href="">
+					<Link
+						to="/PortfolioDetails/PortfolioDetailsPage"
+						state={{ project: el }}
+					>
 						<ImageContainer>
 							<h3>{el.title}</h3>
 							<img src={el.longImage} alt={el.title} />
@@ -18,7 +22,7 @@ export const ProjectsList = () => {
 							<StyledResponsibility>{el.responsibility}</StyledResponsibility>
 							<StyledDescription>{el.description}</StyledDescription>
 						</AboutProject>
-					</a>
+					</Link>
 				</li>
 			))}
 		</StyledPortfolioList>
