@@ -1,0 +1,131 @@
+export const calculationOptionsData = {
+	workingOn: {
+		title: 'What are you working on?',
+		buttons: [
+			{
+				key: 'businessWebsite',
+				name: 'Business website',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+			{
+				key: 'commerceWebsite',
+				name: 'E-commerce website',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+			{
+				key: 'mobileApp',
+				name: 'Mobile App',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+		],
+	},
+	withDesign: {
+		title: 'With design?',
+		buttons: [
+			{
+				key: 'customDesign',
+				name: 'Custom design',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+			{
+				key: 'ownDesign',
+				name: 'Own design',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+		],
+	},
+	whichDevices: {
+		title: 'Which devices?',
+		buttons: [
+			{
+				key: 'pcTabletMobile',
+				name: 'PC + Tablet + Mobile',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+		],
+	},
+	cms: {
+		title: 'CMS?',
+		buttons: [
+			{
+				key: 'openCart',
+				name: 'OpenCart',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+			{
+				key: 'wordpress',
+				name: 'Wordpress',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+			{
+				key: 'custom',
+				name: 'Custom',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+			{
+				key: 'withoutCms',
+				name: 'Without CMS',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+		],
+	},
+	languages: {
+		title: 'Multiple languages?',
+		buttons: [
+			{
+				key: 'one',
+				name: '1',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+			{
+				key: 'two',
+				name: '2',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+			{
+				key: 'threeAndMore',
+				name: '3 and more',
+				planning: 1,
+				design: 2,
+				development: 3,
+				maintain: 4,
+			},
+		],
+	},
+};

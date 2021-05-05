@@ -54,6 +54,7 @@ export const Portfolio = {
 	},
 	askod: {
 		image: askod,
+		longImage: askod,
 		title: 'Askod Online',
 		description: `ASKOD Online service is designed to
 		automate the processes of document
@@ -66,7 +67,9 @@ export const Portfolio = {
 	},
 	viol: {
 		image: viol,
+		longImage: viol,
 		title: 'VIOL Commander',
+		description: `Semper porta viverra arcu, pharetra. Scelerisque consectetur faucibus nibh dictum mi sodales ac ornare. Mauris maecenas dignissim enim, pharetra, tortor, sed. Adipiscing felis et sit dolor volutpat nulla volutpat, at etiam.`,
 		responsibility: ['Desktop Development', 'Windows App'],
 	},
 };
