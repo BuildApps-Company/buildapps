@@ -4,6 +4,6 @@ import { Page } from '../../components/shared/Page';
 
 export default () => (
 	<Page>
-		<h1>sdasd</h1>
+		<AboutUsPage />
 	</Page>
 );
