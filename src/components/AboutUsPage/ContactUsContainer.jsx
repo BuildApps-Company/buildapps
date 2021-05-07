@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { routes } from '../../utilities/routes';
 
 export const ContactUsContainer = () => {
 	return (
 		<ContactUsWrap>
 			<StyledAdress>Kyiv, Ukraine</StyledAdress>
 			<StyledEmail>buildapps.pro@gmail.com</StyledEmail>
-			<StyledBtn>Contact us</StyledBtn>
+			<StyledLink to={routes.contactForm}>Contact us</StyledLink>
 		</ContactUsWrap>
 	);
 };
@@ -32,11 +34,11 @@ const StyledEmail = styled(StyledText)`
 	font-size: 3.125rem;
 `;
 
-const StyledBtn = styled.button`
+const StyledLink = styled(Link)`
 	padding: 12px 32px;
-	border: none;
 	font-size: 2rem;
 	line-height: 160%;
+	text-decoration: none;
 	text-transform: uppercase;
 	color: #874aad;
 	background: #ffffff;

@@ -65,7 +65,6 @@ export const UnderlinedH = elem => styled(elem)`
 		height: 6px;
 		width: 64px;
 		display: block;
-		margin-top: -10px;
 	}
 `;
 

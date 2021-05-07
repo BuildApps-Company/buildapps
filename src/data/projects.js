@@ -19,7 +19,7 @@ export const Portfolio = {
 		application and its full support. Lead processing
 		automation, integration with various government
 		and private partners.`,
-		responsibility: ['Web Development', 'Web API Development', 'DevOps'],
+		responsibility: ['Web', 'Desktop'],
 	},
 	sushi: {
 		image: sushi,
@@ -32,7 +32,7 @@ export const Portfolio = {
 			also provides a bonus program, an accumulative
 			system and various discounts for different holidays
 			or seasons.`,
-		responsibility: ['Mobile Development', 'IOS', 'Android'],
+		responsibility: ['Mobile'],
 	},
 	prankChat: {
 		image: prankchat,
@@ -40,7 +40,7 @@ export const Portfolio = {
 		title: 'PrankChat смешные видео',
 		description:
 			'PrankChat is a social video network where users shoot and post very funny and absolutely unique videos.',
-		responsibility: ['Mobile Development', 'IOS', 'Android', 'DevOps'],
+		responsibility: ['Mobile'],
 	},
 	spbProperty: {
 		image: spbProperty,
@@ -50,7 +50,7 @@ export const Portfolio = {
 		complex, St. Petersburg and Moscow. The system
 		allows you to book apartments, make pre-orders
 		and find apartments at competitive prices`,
-		responsibility: ['Mobile Development', 'IOS', 'Android'],
+		responsibility: ['Mobile'],
 	},
 	askod: {
 		image: askod,
@@ -63,13 +63,13 @@ export const Portfolio = {
 		approval, signing, sending, receiving
 		and storing documents in a cloud
 		environment.`,
-		responsibility: ['Website Design'],
+		responsibility: ['Design'],
 	},
 	viol: {
 		image: viol,
 		longImage: viol,
 		title: 'VIOL Commander',
 		description: `Semper porta viverra arcu, pharetra. Scelerisque consectetur faucibus nibh dictum mi sodales ac ornare. Mauris maecenas dignissim enim, pharetra, tortor, sed. Adipiscing felis et sit dolor volutpat nulla volutpat, at etiam.`,
-		responsibility: ['Desktop Development', 'Windows App'],
+		responsibility: ['Desktop'],
 	},
 };
