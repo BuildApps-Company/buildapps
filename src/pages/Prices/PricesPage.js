@@ -30,8 +30,6 @@ export default function PortfolioPage() {
 			<PricesCalculator />
 
 			<PreFooter />
-
-			<Footer />
 		</>
 	);
 }

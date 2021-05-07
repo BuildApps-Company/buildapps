@@ -21,8 +21,6 @@ export default function ContactFormPage() {
 					<Contacts />
 				</FlexContainer>
 			</StyledPageContainer>
-
-			<Footer />
 		</>
 	);
 }

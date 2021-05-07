@@ -42,8 +42,6 @@ export default function PortfolioDetailsPage({ location }) {
 			</ProjectDetailsContainer>
 
 			<PreFooter />
-
-			<Footer />
 		</>
 	);
 }
