@@ -1,44 +1,57 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
-import { PrimaryButtonOutline } from '../../styles/buttons';
 import { colors } from '../../styles/colors';
-import { H3 } from '../../styles/styled-headers';
 
 export const PreFooter = () => {
 	return (
 		<Container>
-			<Content>
-				Ready to get started? <ContactUs>Contact Us</ContactUs>
-			</Content>
+			<FlexWrap>
+				<StyledText>Ready to get started?</StyledText>
+				<StyledLink to={routes.contactForm}>Contact Us</StyledLink>
+			</FlexWrap>
 		</Container>
 	);
 };
 
 const Container = styled.div`
 	margin-top: 90px;
+	padding: 40px 0;
 	display: flex;
-	height: 179px;
 	justify-content: center;
 	align-items: center;
 	background: ${colors.grey.background};
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		margin-top: 200px;
+		padding: 64px 0;
 	}
 `;
 
-const Content = styled(H3)``;
+const FlexWrap = styled.div`
+	display: flex;
+`;
 
-const ContactUs = styled(PrimaryButtonOutline)`
-	font-size: 2rem;
-	font-weight: 400;
-	line-height: 100%;
-	border-width: 3px;
-	&,
-	&:hover,
-	&:active,
-	&:focus {
-		color: ${colors.Font};
+const StyledText = styled.h3`
+	margin: 0 10px 0 0;
+	padding: 0;
+	font-size: 1.25rem;
+	line-height: 160%;
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		font-size: 2rem;
+	}
+`;
+
+const StyledLink = styled(Link)`
+	font-size: 1.25rem;
+	line-height: 160%;
+	text-decoration: none;
+	border-bottom: 3px solid #874aad;
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		font-size: 2rem;
 	}
 `;

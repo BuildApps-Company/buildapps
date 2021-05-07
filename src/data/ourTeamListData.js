@@ -1,18 +1,20 @@
+import { routes } from '../utilities/routes';
+
 export const ourTeamListData = [
 	{
 		key: 'portfolio',
 		title: 'Portfolio',
-		href: '',
+		href: routes.portfolio,
 	},
 	{
-		key: 'service',
+		key: 'prices',
 		title: 'Prices and services',
-		href: '',
+		href: routes.prices,
 	},
 	{
 		key: 'about',
 		title: 'About us',
-		href: '',
+		href: routes.aboutUs,
 	},
 	{
 		key: 'blog',

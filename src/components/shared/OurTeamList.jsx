@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { useWindowSize } from '../../utilities/useWindowSize';
 import { ourTeamListData } from '../../data/ourTeamListData';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
-import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
 import plusIcon from '../../../static/images/ic_plus.svg';
 import minusIcon from '../../../static/images/ic_minus.svg';
@@ -38,7 +38,7 @@ export const OurTeamList = () => {
 				<OurTeamListStyle>
 					{ourTeamListData.map(el => (
 						<li key={el.key}>
-							<a href={el.href}>{el.title}</a>
+							<StyledLink to={el.href}>{el.title}</StyledLink>
 						</li>
 					))}
 				</OurTeamListStyle>
@@ -60,18 +60,16 @@ const OurTeamListStyle = styled.ul`
 	font-size: 1.25rem;
 	line-height: 160%;
 
-	a {
-		text-decoration: none;
-		color: ${colors.light.white};
+	li {
+		margin-bottom: 16px;
 	}
 
-	li:not(:last-child) {
-		margin-bottom: 16px;
+	li:last-child {
+		margin-bottom: 32px;
 	}
 `;
 
-const IconComtainer = styled.div`
-	@media all and (min-width: ${breakpoints.phone}) {
-		display: none;
-	}
+const StyledLink = styled(Link)`
+	text-decoration: none;
+	color: ${colors.light.white};
 `;

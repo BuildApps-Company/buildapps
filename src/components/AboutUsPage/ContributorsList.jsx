@@ -44,7 +44,7 @@ const StyledContributorsList = styled.ul`
 	li:not(:nth-last-child(-n + 2)) {
 		margin-bottom: 24px;
 
-		@media all and (max-width: ${breakpoints.phone}) {
+		@media all and (min-width: ${breakpoints.phone}) {
 			margin-bottom: 40px;
 		}
 	}
@@ -70,7 +70,7 @@ const StyledContributorsList = styled.ul`
 		opacity: 0.75;
 		margin-bottom: 8px;
 
-		@media all and (max-width: ${breakpoints.phone}) {
+		@media all and (min-width: ${breakpoints.phone}) {
 			font-size: 1rem;
 		}
 	}

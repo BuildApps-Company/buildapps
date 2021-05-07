@@ -1,46 +1,62 @@
 import React from 'react';
 import styled from 'styled-components';
+import Slider from 'react-slick';
+import { useWindowSize } from '../../utilities/useWindowSize';
 import { colors } from '../../styles/colors';
-import { breakpoints } from '../../styles/breakpoints';
 import { H2Block, UnderlinedH } from '../../styles/styled-headers';
+import { clients } from '../../data/clients';
+import { breakpoints } from '../../styles/breakpoints';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-export function Clients({ clients }) {
+export function Clients() {
+	const { width } = useWindowSize();
+
+	const settings = {
+		dots: false,
+		infinite: true,
+		speed: 500,
+		slidesToShow: width <= 450 ? 1 : 2,
+		slidesToScroll: 1,
+	};
+
 	return (
 		<BlockWrapper>
-			<Header>Clients</Header>
-			<ClientsWrapper>
+			{width > 450 && <Title>Clients</Title>}
+
+			<Slider {...settings}>
 				{clients.map(client => (
-					<ImageContainer key={client.name}>
-						<Image src={client.url} alt={client.name} />
-					</ImageContainer>
+					<div>
+						<Image key={client.name} src={client.url} alt={client.name} />
+					</div>
 				))}
-			</ClientsWrapper>
+			</Slider>
 		</BlockWrapper>
 	);
 }
 
-const Header = UnderlinedH(H2Block);
+const Title = styled(UnderlinedH(H2Block))`
+	margin-bottom: 67px;
+`;
 
 const BlockWrapper = styled.div`
+	margin-bottom: 40px;
+	padding: 45px 30px;
 	background: ${colors.grey.background};
-	width: 100%;
-	padding: 40px 10%;
-`;
 
-const ClientsWrapper = styled.div`
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	display: flex;
-	margin: 40px 0;
-`;
+	.slick-prev:before,
+	.slick-next:before {
+		color: #000000;
+	}
 
-const ImageContainer = styled.div`
-	width: 220px;
-	overflow: hidden;
-	text-align: center;
+	@media all and (min-width: ${breakpoints.phone}) {
+		padding: 40px 215px 80px 215px;
+	}
 `;
 
 const Image = styled.img`
-	height: 92px;
-	max-width: 200px;
+	max-width: 270px;
+	max-height: 90px;
+	margin-left: auto;
+	margin-right: auto;
 `;

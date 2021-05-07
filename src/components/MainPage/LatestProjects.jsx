@@ -1,93 +1,149 @@
-import * as React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
-import { PrimaryButton, PrimaryButtonOutline } from '../../styles/buttons';
+import { Link } from 'gatsby';
+import { useWindowSize } from '../../utilities/useWindowSize';
+import { routes } from '../../utilities/routes';
+import { PrimaryButton } from '../../styles/buttons';
 import { colors } from '../../styles/colors';
-import { BlueGradient } from '../../styles/gradients';
-import { HeroBlock } from '../../styles/layout';
-import { H2Block, H4, SubH3, Body2 } from '../../styles/styled-headers';
+import { breakpoints } from '../../styles/breakpoints';
+import { H4, SubH3, Body2 } from '../../styles/styled-headers';
 
 export const LatestProjects = ({ projects }) => {
+	const { width } = useWindowSize();
 	const [index, setIndex] = useState(0);
 	const activeProject = projects[index];
 
 	return (
-		<BlockWrapper>
-			<HeaderLine>
-				<div>
-					<H2Block>LATEST PROJECTS</H2Block>
-					<Pagination>
-						{projects.map((_, i) => (
-							<Tab
-								key={i}
-								onClick={() => setIndex(i)}
-								active={index === i}
-							></Tab>
-						))}
-					</Pagination>
-				</div>
-			</HeaderLine>
-			<ProjectDetails>
-				<ImageSection>
-					<LongImage src={activeProject.longImage} />
-				</ImageSection>
-				<DescriptionSection>
-					<SmallLogo src={activeProject.image} />
-					<Title>{activeProject.title}</Title>
-					<TagContainer>
-						{activeProject.responsibility.map(res => (
-							<Tag key={res}>{res}</Tag>
-						))}
-					</TagContainer>
-					<Description>{activeProject.description}</Description>
-					<ContactUs>Contact us</ContactUs>
-				</DescriptionSection>
-			</ProjectDetails>
-		</BlockWrapper>
+		<>
+			<Container>
+				<TitleWrap>
+					<TitlePage>Latest Projects</TitlePage>
+					{width > 450 && <StyledLink to={routes.portfolio}>All</StyledLink>}
+				</TitleWrap>
+
+				<Pagination>
+					{projects.map((_, i) => (
+						<Tab key={i} onClick={() => setIndex(i)} active={index === i}></Tab>
+					))}
+				</Pagination>
+			</Container>
+
+			<ProjectContainer>
+				<ProjectWrap>
+					<ImageWrap>
+						{width <= 450 && <h3>{activeProject.title}</h3>}
+						<img src={activeProject.longImage} />
+					</ImageWrap>
+
+					{width > 450 && (
+						<DetailsWrap>
+							<SmallLogo src={activeProject.image} />
+
+							<Title>{activeProject.title}</Title>
+
+							<TagContainer>
+								{activeProject.responsibility.map(res => (
+									<Tag key={res}>{res}</Tag>
+								))}
+							</TagContainer>
+
+							<Description>{activeProject.description}</Description>
+
+							<ContactUs>Contact us</ContactUs>
+						</DetailsWrap>
+					)}
+				</ProjectWrap>
+			</ProjectContainer>
+		</>
 	);
 };
 
-const BlockWrapper = styled(HeroBlock)`
-	background: ${colors.light.background};
-	padding: 80px 0 0;
+const Container = styled.div`
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		padding-left: 215px;
+		padding-right: 215px;
+	}
 `;
 
-const HeaderLine = styled.div`
-	padding: 0 11%;
-	flex: 0 0 auto;
-	justify-content: space-between;
+const ProjectContainer = styled(Container)`
+	@media all and (min-width: ${breakpoints.phone}) {
+		padding-left: 0;
+	}
 `;
 
-const ProjectDetails = styled.div`
-	flex: 1 1 auto;
+const TitleWrap = styled.div`
 	display: flex;
-	margin-top: 30px;
-	overflow: hidden;
+	justify-content: space-between;
+	align-items: baseline;
 `;
 
-const Section = styled.div`
-	flex: 0 0 50%;
+const TitlePage = styled.h2`
+	margin: 0;
+	padding: 0;
+	font-size: 3rem;
+	line-height: 160%;
+	text-transform: uppercase;
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		font-size: 4rem;
+	}
 `;
 
-const ImageSection = styled(Section)`
+const StyledLink = styled(Link)`
+	font-size: 1.5rem;
+	line-height: 160%;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #874aad;
+`;
+
+const Pagination = styled.div`
+	display: flex;
+	margin-bottom: 32px;
+`;
+
+const ProjectWrap = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: center;
-
-	${BlueGradient}
 `;
 
-const LongImage = styled.img`
-	max-height: 80%;
-	max-width: 80%;
-`;
-
-const DescriptionSection = styled(Section)`
-	padding: 0 8%;
+const ImageWrap = styled.div`
+	width: 100%;
+	min-height: 200px;
+	padding: 33px 36px 33px 16px;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
+	justify-content: space-between;
+	background: linear-gradient(88deg, #d0eeff 3.37%, #e3fffd 96.63%);
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		margin-right: 167px;
+		padding: 150px;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+		line-height: 160%;
+	}
+
+	img {
+		max-width: 150px;
+		max-height: 130px;
+
+		@media all and (min-width: ${breakpoints.phone}) {
+			max-width: 500px;
+			max-height: 450px;
+		}
+	}
+`;
+
+const DetailsWrap = styled.div`
+	width: 50%;
 `;
 
 const SmallLogo = styled.img`
@@ -116,15 +172,9 @@ const Description = styled(Body2)`
 	margin-top: 16px;
 `;
 
-const Pagination = styled.div`
-	display: flex;
-	margin-top: -18px;
-`;
-
 const Tab = styled.div`
 	cursor: pointer;
 	padding: 8px;
-	margin-left: -8px;
 
 	${({ active }) =>
 		!active &&

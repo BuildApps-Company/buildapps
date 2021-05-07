@@ -14,6 +14,9 @@ export const ButtonsList = () => {
 
 	return (
 		<StyledButtonsList>
+			<li key="all">
+				<button>All</button>
+			</li>
 			{buttons.map(el => (
 				<li key={el}>
 					<button>{el}</button>

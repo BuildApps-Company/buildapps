@@ -1,8 +1,10 @@
+import { routes } from '../utilities/routes';
+
 export const contactUsListData = [
 	{
 		key: 'form',
 		title: 'Contact form',
-		href: '',
+		href: routes.contactForm,
 	},
 	{
 		key: 'adress',

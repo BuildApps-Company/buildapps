@@ -28,7 +28,6 @@ const StyledSocialMediaList = styled.ul`
 	@media all and (max-width: ${breakpoints.phone}) {
 		justify-content: center;
 		padding: 32px 0 32px 0;
-		border-top: 1px solid rgba(255, 255, 255, 0.5);
 	}
 
 	@media all and (min-width: ${breakpoints.phone}) {
