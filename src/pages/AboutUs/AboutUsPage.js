@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { Toolbar } from '../../components/shared/Toolbar';
 import {
@@ -7,12 +7,18 @@ import {
 } from '../../components/AboutUsPage';
 import { PreFooter } from '../../components/MainPage/PreFooter';
 import { Footer } from '../../components/shared/Footer';
-import { useWindowSize } from '../../utilities/useWindowSize';
+
 import { SmallContainer } from '../../styles/container';
 import { breakpoints } from '../../styles/breakpoints';
 
 export default function AboutUsPage() {
-	const { width } = useWindowSize();
+	const [width, setWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		window.addEventListener('resize', setWidth(window.innerWidth));
+		return () =>
+			window.removeEventListener('resize', setWidth(window.innerWidth));
+	}, []);
 
 	return (
 		<>

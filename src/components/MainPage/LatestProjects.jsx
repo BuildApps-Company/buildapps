@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
-import { useWindowSize } from '../../utilities/useWindowSize';
 import { routes } from '../../utilities/routes';
 import { PrimaryButton } from '../../styles/buttons';
 import { colors } from '../../styles/colors';
@@ -9,9 +8,15 @@ import { breakpoints } from '../../styles/breakpoints';
 import { H4, SubH3, Body2 } from '../../styles/styled-headers';
 
 export const LatestProjects = ({ projects }) => {
-	const { width } = useWindowSize();
+	const [width, setWidth] = useState(0);
 	const [index, setIndex] = useState(0);
 	const activeProject = projects[index];
+
+	useLayoutEffect(() => {
+		window.addEventListener('resize', setWidth(window.innerWidth));
+		return () =>
+			window.removeEventListener('resize', setWidth(window.innerWidth));
+	}, []);
 
 	return (
 		<>

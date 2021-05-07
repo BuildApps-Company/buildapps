@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { useWindowSize } from '../../utilities/useWindowSize';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { contactUsListData } from '../../data/contactUsListData';
 import { colors } from '../../styles/colors';
@@ -9,7 +8,13 @@ import { breakpoints } from '../../styles/breakpoints';
 import { routes } from '../../utilities/routes';
 
 export const ContactUsList = () => {
-	const { width } = useWindowSize();
+	const [width, setWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		window.addEventListener('resize', setWidth(window.innerWidth));
+		return () =>
+			window.removeEventListener('resize', setWidth(window.innerWidth));
+	}, []);
 
 	return (
 		<div>
