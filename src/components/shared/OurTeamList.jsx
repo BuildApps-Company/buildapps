@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { useWindowSize } from '../../utilities/useWindowSize';
 import { ourTeamListData } from '../../data/ourTeamListData';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { colors } from '../../styles/colors';
@@ -9,8 +8,14 @@ import plusIcon from '../../../static/images/ic_plus.svg';
 import minusIcon from '../../../static/images/ic_minus.svg';
 
 export const OurTeamList = () => {
-	const { width } = useWindowSize();
 	const [isOpen, setIsOpen] = useState(false);
+	const [width, setWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		window.addEventListener('resize', setWidth(window.innerWidth));
+		return () =>
+			window.removeEventListener('resize', setWidth(window.innerWidth));
+	}, []);
 
 	useEffect(() => {
 		width > 450 && setIsOpen(true);

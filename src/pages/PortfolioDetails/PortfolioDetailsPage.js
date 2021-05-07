@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { Toolbar } from '../../components/shared/Toolbar';
 import { PreFooter } from '../../components/MainPage/PreFooter';
 import { Footer } from '../../components/shared/Footer';
-import { useWindowSize } from '../../utilities/useWindowSize';
 import { breakpoints } from '../../styles/breakpoints';
 
 export default function PortfolioDetailsPage({ location }) {
-	const { width } = useWindowSize();
+	const [width, setWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		window.addEventListener('resize', setWidth(window.innerWidth));
+		return () =>
+			window.removeEventListener('resize', setWidth(window.innerWidth));
+	}, []);
 
 	return (
 		<>
@@ -23,21 +28,21 @@ export default function PortfolioDetailsPage({ location }) {
 			<ProjectImageContainer>
 				<ImageWrap>
 					<img
-						src={location.state.project.longImage}
-						alt={location.state.project.title}
+						src={location?.state?.project?.longImage}
+						alt={location?.state?.project?.title}
 					/>
 				</ImageWrap>
 			</ProjectImageContainer>
 
 			<ProjectDetailsContainer>
-				<Title>{location.state.project.title}</Title>
+				<Title>{location?.state?.project?.title}</Title>
 
 				<StyledResponsibility>
-					{location.state.project.responsibility}
+					{location?.state?.project?.responsibility}
 				</StyledResponsibility>
 
 				<StyledDescription>
-					{location.state.project.description}
+					{location?.state?.project?.description}
 				</StyledDescription>
 			</ProjectDetailsContainer>
 

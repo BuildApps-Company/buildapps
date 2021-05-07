@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import { useWindowSize } from '../../utilities/useWindowSize';
 import { colors } from '../../styles/colors';
 import { H2Block, UnderlinedH } from '../../styles/styled-headers';
 import { clients } from '../../data/clients';
@@ -10,7 +9,13 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export function Clients() {
-	const { width } = useWindowSize();
+	const [width, setWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		window.addEventListener('resize', setWidth(window.innerWidth));
+		return () =>
+			window.removeEventListener('resize', setWidth(window.innerWidth));
+	}, []);
 
 	const settings = {
 		dots: false,
