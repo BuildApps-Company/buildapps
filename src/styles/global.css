@@ -1,38 +1,65 @@
+@import url('https://p.typekit.net/p.css?s=1&k=gub0idc&ht=tk&f=15779.15782.37497&a=63266882&app=typekit&e=css');
+
 @font-face {
-	font-family: 'Roboto';
-	src: local('Roboto Light'),
-		/* local */ url('/fonts/Roboto-Light.woff2') format('woff2'),
-		/* woff2 */ url('/fonts/Roboto-Light.woff') format('woff'),
-		/* woff */ url('/fonts/Roboto-Light.ttf') format('ttf');
+	font-family: 'muli';
+	src: local('Muli Light'),
+		url('https://use.typekit.net/af/57285c/00000000000000003b9b32be/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+			format('woff2'),
+		url('https://use.typekit.net/af/57285c/00000000000000003b9b32be/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+			format('woff'),
+		url('https://use.typekit.net/af/57285c/00000000000000003b9b32be/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+			format('opentype');
+	font-display: auto;
+	font-style: normal;
 	font-weight: 300;
 }
 
 @font-face {
-	font-family: 'Roboto';
-	src: local('Roboto'),
-		/* local */ url('/fonts/Roboto-Regular.woff2') format('woff2'),
-		/* woff2 */ url('/fonts/Roboto-Regular.woff') format('woff'),
-		/* woff */ url('/fonts/Roboto-Regular.ttf') format('ttf');
+	font-family: 'muli';
+	src: local('Muli'),
+		url('https://use.typekit.net/af/0e034d/00000000000000003b9b32c0/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+			format('woff2'),
+		url('https://use.typekit.net/af/0e034d/00000000000000003b9b32c0/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+			format('woff'),
+		url('https://use.typekit.net/af/0e034d/00000000000000003b9b32c0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+			format('opentype');
+	font-display: auto;
+	font-style: normal;
 	font-weight: 400;
 }
 
 @font-face {
-	font-family: 'Roboto';
-	src: local('Roboto Bold'),
-		/* local */ url('/fonts/Roboto-Bold.woff2') format('woff2'),
-		/* woff2 */ url('/fonts/Roboto-Bold.woff') format('woff'),
-		/* woff */ url('/fonts/Roboto-Bold.ttf') format('ttf');
+	font-family: 'muli';
+	src: local('Muli Bold'),
+		url('https://use.typekit.net/af/234105/00000000000000003b9b32c4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+			format('woff2'),
+		url('https://use.typekit.net/af/234105/00000000000000003b9b32c4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+			format('woff'),
+		url('https://use.typekit.net/af/234105/00000000000000003b9b32c4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+			format('opentype');
+	font-display: auto;
+	font-style: normal;
 	font-weight: 700;
+}
+
+/*@font-face {
+	font-family: 'Muli';
+	src: local('Muli'), url(/fonts/Muli.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'Muli';
+	src: local('Muli Light'), url(/fonts/Muli-Light.ttf) format('ttf');
+}*/
+
+html {
+	font-size: 16px;
 }
 
 head,
 body {
 	margin: 0;
 	padding: 0;
-}
-
-head {
-	font-size: 16px;
 }
 
 body {
@@ -43,70 +70,6 @@ body {
 * {
 	box-sizing: border-box;
 	outline: none;
-	font-family: 'Roboto', sans-serif;
-}
-
-a {
-	transition: 0.3s;
-}
-
-a {
-	color: #a3a3a3;
-	text-decoration: none;
-}
-
-a:focus,
-a:hover,
-a:active {
-	color: #623280;
-}
-
-a.active {
-	color: #623280;
-}
-
-button {
-	text-transform: uppercase;
-	padding: 0.75rem 1.375rem;
-}
-
-.primary-outline {
-	border: 1px solid #ffffff;
-	color: #ffffff;
-	cursor: pointer;
-	background: transparent;
-}
-
-.primary-outline:hover {
-	background: #8147a5;
-	color: #ffffff;
-	border: 1px solid #000000;
-}
-
-.primary {
-	border: 1px solid #000000;
-	color: #000000;
-	cursor: pointer;
-	background: #ffffff;
-}
-
-.primary:hover {
-	background: #8147a5;
-	color: #ffffff;
-}
-
-.transparent {
-	background-color: transparent;
-}
-
-@keyframes scrollAnimation {
-	0% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(15px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
+	font-family: 'Muli', sans-serif;
+	color: #313131;
 }
