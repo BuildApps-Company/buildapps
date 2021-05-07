@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { OurTeamList } from './OurTeamList';
 import { ContactUsList } from './ContactUsList';
 import { SocialMediaList } from './SocialMediaList';
-import { useWindowSize } from '../../utilities/useWindowSize';
 import { ListTitle } from '../../styles/styled-headers';
 import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
 
 export const Footer = () => {
-	const { width } = useWindowSize();
+	const [width, setWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		window.addEventListener('resize', setWidth(window.innerWidth));
+		return () =>
+			window.removeEventListener('resize', setWidth(window.innerWidth));
+	}, []);
 
 	return (
 		<StyledFooter>

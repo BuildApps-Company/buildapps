@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { Toolbar } from '../shared/Toolbar';
 import { routes } from '../../utilities/routes';
-import { useWindowSize } from '../../utilities/useWindowSize';
 import main_background from '../../../static/images/main_background.png';
 import design from '../../../static/images/design.svg';
 import arrows from '../../../static/images/arrows.svg';
@@ -12,7 +11,13 @@ import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
 
 export function MainBanner() {
-	const { width } = useWindowSize();
+	const [width, setWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		window.addEventListener('resize', setWidth(window.innerWidth));
+		return () =>
+			window.removeEventListener('resize', setWidth(window.innerWidth));
+	}, []);
 
 	return (
 		<HeroHeader>
