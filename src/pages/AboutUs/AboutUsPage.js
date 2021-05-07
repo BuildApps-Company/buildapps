@@ -40,8 +40,6 @@ export default function AboutUsPage() {
 			</StyledContainer>
 
 			<PreFooter />
-
-			<Footer />
 		</>
 	);
 }
