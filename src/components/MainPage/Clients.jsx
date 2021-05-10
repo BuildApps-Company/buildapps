@@ -1,9 +1,8 @@
 import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import { colors } from '../../styles/colors';
-import { H2Block, UnderlinedH } from '../../styles/styled-headers';
 import { clients } from '../../data/clients';
+import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -40,12 +39,22 @@ export function Clients() {
 	);
 }
 
-const Title = styled(UnderlinedH(H2Block))`
-	margin-bottom: 67px;
+const Title = styled.h2`
+	margin: 0 0 67px 0;
+	font-size: 4rem;
+	line-height: 160%;
+	text-transform: uppercase;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 64px;
+		height: 6px;
+		background: ${colors.Main};
+	}
 `;
 
 const BlockWrapper = styled.div`
-	margin-bottom: 40px;
 	padding: 45px 30px;
 	background: ${colors.grey.background};
 

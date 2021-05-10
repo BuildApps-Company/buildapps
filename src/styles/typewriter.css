@@ -1,0 +1,15 @@
+.Typewriter {
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 160%;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.Typewriter__wrapper {
+	color: #ffffff;
+}
+
+.Typewriter__cursor {
+	color: #874aad;
+}

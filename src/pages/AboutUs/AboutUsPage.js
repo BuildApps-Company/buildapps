@@ -6,8 +6,6 @@ import {
 	ContactUsContainer,
 } from '../../components/AboutUsPage';
 import { PreFooter } from '../../components/MainPage/PreFooter';
-import { Footer } from '../../components/shared/Footer';
-
 import { SmallContainer } from '../../styles/container';
 import { breakpoints } from '../../styles/breakpoints';
 

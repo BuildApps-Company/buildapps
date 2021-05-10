@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Toolbar } from '../../components/shared/Toolbar';
 import { PricesTable, PricesCalculator } from '../../components/PricesPage';
 import { PreFooter } from '../../components/MainPage/PreFooter';
-import { Footer } from '../../components/shared/Footer';
 import { Container } from '../../styles/container';
 import { breakpoints } from '../../styles/breakpoints';
 
