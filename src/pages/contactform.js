@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Toolbar } from '../../components/shared/Toolbar';
-import { ContactUsForm, Contacts } from '../../components/ContactUsPage';
-import { breakpoints } from '../../styles/breakpoints';
+import { Page } from '../components/shared/Page';
+import { Toolbar } from '../components/shared/Toolbar';
+import { ContactUsForm, Contacts } from '../components/ContactUsPage';
+import { breakpoints } from '../styles/breakpoints';
 
 export default function ContactFormPage() {
 	return (
-		<>
+		<Page>
 			<Toolbar />
 
 			<StyledPageContainer>
@@ -20,7 +21,7 @@ export default function ContactFormPage() {
 					<Contacts />
 				</FlexContainer>
 			</StyledPageContainer>
-		</>
+		</Page>
 	);
 }
 
