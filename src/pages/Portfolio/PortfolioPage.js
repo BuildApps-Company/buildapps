@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Toolbar } from '../../components/shared/Toolbar';
 import { ButtonsList, ProjectsList } from '../../components/PortfolioPage';
 import { PreFooter } from '../../components/MainPage/PreFooter';
-import { Footer } from '../../components/shared/Footer';
 import { Container } from '../../styles/container';
 import { breakpoints } from '../../styles/breakpoints';
 
@@ -36,6 +35,10 @@ export default function PortfolioPage() {
 
 const TitleContainer = styled.div`
 	margin-bottom: 16px;
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		margin-bottom: 40px;
+	}
 `;
 
 const SubTitle = styled.h2`

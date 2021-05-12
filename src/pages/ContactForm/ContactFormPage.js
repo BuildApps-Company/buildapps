@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Toolbar } from '../../components/shared/Toolbar';
 import { ContactUsForm, Contacts } from '../../components/ContactUsPage';
-import { Footer } from '../../components/shared/Footer';
 import { breakpoints } from '../../styles/breakpoints';
 
 export default function ContactFormPage() {

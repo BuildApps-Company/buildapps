@@ -6,10 +6,9 @@ import { Portfolio } from '../../data/projects';
 import { PreFooter } from './PreFooter';
 
 export function MainPage() {
-	const latestProjects = useMemo(
-		() => Object.values(Portfolio).slice(0, 4),
-		[]
-	);
+	const latestProjects = useMemo(() => Object.values(Portfolio).slice(0, 4), [
+		Portfolio,
+	]);
 
 	return (
 		<>

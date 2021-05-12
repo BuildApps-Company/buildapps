@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { Toolbar } from '../../components/shared/Toolbar';
 import { PreFooter } from '../../components/MainPage/PreFooter';
-import { Footer } from '../../components/shared/Footer';
+import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 
 export default function PortfolioDetailsPage({ location }) {
@@ -20,9 +20,7 @@ export default function PortfolioDetailsPage({ location }) {
 			<Toolbar />
 
 			{width > 450 && (
-				<StyledLink to="/Portfolio/PortfolioPage">
-					GO back to portfolio
-				</StyledLink>
+				<StyledLink to={routes.portfolio}>GO back to portfolio</StyledLink>
 			)}
 
 			<ProjectImageContainer>
@@ -37,9 +35,9 @@ export default function PortfolioDetailsPage({ location }) {
 			<ProjectDetailsContainer>
 				<Title>{location?.state?.project?.title}</Title>
 
-				<StyledResponsibility>
-					{location?.state?.project?.responsibility}
-				</StyledResponsibility>
+				{location?.state?.project?.responsibility.map(el => (
+					<StyledResponsibility>{el}</StyledResponsibility>
+				))}
 
 				<StyledDescription>
 					{location?.state?.project?.description}
@@ -52,7 +50,8 @@ export default function PortfolioDetailsPage({ location }) {
 }
 
 const StyledLink = styled(Link)`
-	margin: 0;
+	display: inline-block;
+	margin: 0 0 16px 0;
 	padding: 0 0 0 215px;
 	font-size: 0.75rem;
 	line-height: 160%;
@@ -100,12 +99,17 @@ const Title = styled.h1`
 `;
 
 const StyledResponsibility = styled.p`
+	display: inline-block;
 	margin: 0 0 16px 0;
 	padding: 0;
 	font-weight: 700;
 	line-height: 160%;
 	text-transform: uppercase;
 	opacity: 0.75;
+
+	&:not(:last-child) {
+		margin-right: 24px;
+	}
 `;
 
 const StyledDescription = styled.p`

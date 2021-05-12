@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { contactUsListData } from '../../data/contactUsListData';
 import { colors } from '../../styles/colors';
-import { breakpoints } from '../../styles/breakpoints';
 import { routes } from '../../utilities/routes';
 
 export const ContactUsList = () => {

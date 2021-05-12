@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { Portfolio } from '../../data/projects';
+import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 
 export const ProjectsList = () => {
+	const [width, setWidth] = useState(0);
+
+	useLayoutEffect(() => {
+		window.addEventListener('resize', setWidth(window.innerWidth));
+		return () =>
+			window.removeEventListener('resize', setWidth(window.innerWidth));
+	}, []);
+
 	return (
 		<StyledPortfolioList>
 			{Object.entries(Portfolio).map(([key, el]) => (
 				<li key={key}>
 					<Link
-						to="/PortfolioDetails/PortfolioDetailsPage"
+						to="/PortfolioDetails/PortfolioDetailsPage/"
 						state={{ project: el }}
 					>
 						<ImageContainer>
@@ -18,10 +27,14 @@ export const ProjectsList = () => {
 							<img src={el.longImage} alt={el.title} />
 						</ImageContainer>
 
-						<AboutProject>
-							<StyledResponsibility>{el.responsibility}</StyledResponsibility>
-							<StyledDescription>{el.description}</StyledDescription>
-						</AboutProject>
+						{width > 450 && (
+							<>
+								{el.responsibility.map(el => (
+									<StyledResponsibility>{el}</StyledResponsibility>
+								))}
+								<StyledDescription>{el.description}</StyledDescription>
+							</>
+						)}
 					</Link>
 				</li>
 			))}
@@ -30,7 +43,7 @@ export const ProjectsList = () => {
 };
 
 const StyledPortfolioList = styled.ul`
-	margin: 0 0 24px 0;
+	margin: 0;
 	padding: 0;
 	list-style: none;
 
@@ -45,8 +58,16 @@ const StyledPortfolioList = styled.ul`
 		}
 	}
 
+	li:not(:nth-last-child(-n + 2)) {
+		@media all and (min-width: ${breakpoints.phone}) {
+			margin-bottom: 64px;
+		}
+	}
+
 	li:not(:last-child) {
-		margin-bottom: 16px;
+		@media all and (max-width: ${breakpoints.phone}) {
+			margin-bottom: 16px;
+		}
 	}
 
 	li:nth-child(odd) {
@@ -87,21 +108,20 @@ const ImageContainer = styled.div`
 	}
 `;
 
-const AboutProject = styled.div`
-	display: none;
-
-	@media all and (min-width: ${breakpoints.phone}) {
-		display: block;
-	}
-`;
-
 const StyledResponsibility = styled.p`
+	display: inline-block;
 	font-weight: 700;
 	line-height: 160%;
 	text-transform: uppercase;
 	opacity: 0.75;
+
+	&:not(:last-child) {
+		margin-right: 24px;
+	}
 `;
 
 const StyledDescription = styled.p`
+	margin: 0;
+	padding: 0;
 	line-height: 160%;
 `;
