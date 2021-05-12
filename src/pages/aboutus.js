@@ -1,13 +1,14 @@
 import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
-import { Toolbar } from '../../components/shared/Toolbar';
+import { Page } from '../components/shared/Page';
+import { Toolbar } from '../components/shared/Toolbar';
 import {
 	ContributorsList,
 	ContactUsContainer,
-} from '../../components/AboutUsPage';
-import { PreFooter } from '../../components/MainPage/PreFooter';
-import { SmallContainer } from '../../styles/container';
-import { breakpoints } from '../../styles/breakpoints';
+} from '../components/AboutUsPage';
+import { PreFooter } from '../components/MainPage/PreFooter';
+import { SmallContainer } from '../styles/container';
+import { breakpoints } from '../styles/breakpoints';
 
 export default function AboutUsPage() {
 	const [width, setWidth] = useState(0);
@@ -19,7 +20,7 @@ export default function AboutUsPage() {
 	}, []);
 
 	return (
-		<>
+		<Page>
 			<Toolbar />
 
 			<StyledContainer>
@@ -44,7 +45,7 @@ export default function AboutUsPage() {
 			</StyledContainer>
 
 			<PreFooter />
-		</>
+		</Page>
 	);
 }
 

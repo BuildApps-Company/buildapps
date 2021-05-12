@@ -1,10 +1,11 @@
 import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { Toolbar } from '../../components/shared/Toolbar';
-import { PreFooter } from '../../components/MainPage/PreFooter';
-import { routes } from '../../utilities/routes';
-import { breakpoints } from '../../styles/breakpoints';
+import { Page } from '../components/shared/Page';
+import { Toolbar } from '../components/shared/Toolbar';
+import { PreFooter } from '../components/MainPage/PreFooter';
+import { routes } from '../utilities/routes';
+import { breakpoints } from '../styles/breakpoints';
 
 export default function PortfolioDetailsPage({ location }) {
 	const [width, setWidth] = useState(0);
@@ -16,7 +17,7 @@ export default function PortfolioDetailsPage({ location }) {
 	}, []);
 
 	return (
-		<>
+		<Page>
 			<Toolbar />
 
 			{width > 450 && (
@@ -45,7 +46,7 @@ export default function PortfolioDetailsPage({ location }) {
 			</ProjectDetailsContainer>
 
 			<PreFooter />
-		</>
+		</Page>
 	);
 }
 

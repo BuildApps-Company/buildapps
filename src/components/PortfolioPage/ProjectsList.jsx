@@ -18,10 +18,7 @@ export const ProjectsList = () => {
 		<StyledPortfolioList>
 			{Object.entries(Portfolio).map(([key, el]) => (
 				<li key={key}>
-					<Link
-						to="/PortfolioDetails/PortfolioDetailsPage/"
-						state={{ project: el }}
-					>
+					<Link to={routes.portfolioDetails} state={{ project: el }}>
 						<ImageContainer>
 							<h3>{el.title}</h3>
 							<img src={el.longImage} alt={el.title} />

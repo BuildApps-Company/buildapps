@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Toolbar } from '../../components/shared/Toolbar';
-import { PricesTable, PricesCalculator } from '../../components/PricesPage';
-import { PreFooter } from '../../components/MainPage/PreFooter';
-import { Container } from '../../styles/container';
-import { breakpoints } from '../../styles/breakpoints';
+import { Page } from '../components/shared/Page';
+import { Toolbar } from '../components/shared/Toolbar';
+import { PricesTable, PricesCalculator } from '../components/PricesPage';
+import { PreFooter } from '../components/MainPage/PreFooter';
+import { Container } from '../styles/container';
+import { breakpoints } from '../styles/breakpoints';
 
 export default function PortfolioPage() {
 	return (
-		<>
+		<Page>
 			<Toolbar />
 
 			<Container>
@@ -29,7 +30,7 @@ export default function PortfolioPage() {
 			<PricesCalculator />
 
 			<PreFooter />
-		</>
+		</Page>
 	);
 }
 
