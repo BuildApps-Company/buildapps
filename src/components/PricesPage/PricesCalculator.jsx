@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { calculationOptionsData } from '../../data/pricesCalculatorData';
 
@@ -12,7 +12,7 @@ export const PricesCalculator = () => {
 	const [estimatedTime, setEstimatedTime] = useState(0);
 	const [totalPrice, setTotalPrice] = useState(0);
 
-	const handleServiceSelect = useCallback(({ target }) => {
+	const handleServiceSelect = ({ target }) => {
 		target.checked &&
 			setPriceValues({
 				planning: (priceValues.planning += Number(target.dataset.planning)),
@@ -39,7 +39,7 @@ export const PricesCalculator = () => {
 				priceValues.development +
 				priceValues.maintain
 		);
-	});
+	};
 
 	return (
 		<PricesContainer>

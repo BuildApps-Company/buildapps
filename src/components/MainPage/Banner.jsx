@@ -1,14 +1,13 @@
 import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
+import Typewriter from 'typewriter-effect';
 import { Toolbar } from '../shared/Toolbar';
 import { routes } from '../../utilities/routes';
-import main_background from '../../../static/images/main_background.png';
-import design from '../../../static/images/design.svg';
-import arrows from '../../../static/images/arrows.svg';
-import { PrimaryButton } from '../../styles/buttons';
-import { H1, Body1, UnderlinedH } from '../../styles/styled-headers';
-import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
+import heroBackground from '../../../static/images/heroBackground.jpg';
+import arrows from '../../../static/images/arrows.svg';
+import '../../styles/typewriter.css';
 
 export function MainBanner() {
 	const [width, setWidth] = useState(0);
@@ -20,43 +19,64 @@ export function MainBanner() {
 	}, []);
 
 	return (
-		<HeroHeader>
+		<HeroWrap>
 			<Toolbar isWhite />
 
 			<StyledPageContainer>
 				<TitlesWrap>
 					<div>
-						<StyledH1>Web</StyledH1>
-						<StyledH1>Mobile</StyledH1>
-						<StyledH1>Desktop</StyledH1>
-						<StyledBody>Design & Development</StyledBody>
+						<Title>Web</Title>
+						<Title>Mobile</Title>
+						<Title>Desktop</Title>
+						<SubTitle>Design & Development</SubTitle>
 					</div>
 
-					{width > 450 && <Design src={design}></Design>}
+					{width > 450 && (
+						<Typewriter
+							style
+							options={{
+								strings: ['Design', 'Develop', 'Launch', 'Maintain'],
+								autoStart: true,
+								loop: true,
+							}}
+						/>
+					)}
 				</TitlesWrap>
 
 				<ButtonsWrap>
-					<StyledButton href={routes.contactForm}>Сontact us</StyledButton>
-					<StyledButton href={routes.prices}>Prices</StyledButton>
+					<StyledButton to={routes.contactForm}>
+						<svg>
+							<rect x="0" y="0" fill="none" width="100%" height="100%" />
+						</svg>
+						Сontact us
+					</StyledButton>
+
+					<StyledButton to={routes.prices}>
+						<svg>
+							<rect x="0" y="0" fill="none" width="100%" height="100%" />
+						</svg>
+						Prices
+					</StyledButton>
 				</ButtonsWrap>
 
-				<ArrowContainer>
-					<Arrows src={arrows}></Arrows>
-				</ArrowContainer>
+				<Arrows src={arrows}></Arrows>
 			</StyledPageContainer>
-		</HeroHeader>
+		</HeroWrap>
 	);
 }
 
-const HeroHeader = styled.div`
+const HeroWrap = styled.div`
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
 	background: linear-gradient(72.44deg, rgba(17, 3, 34, 0.92) 38.02%, rgba(17, 3, 34, 0.6) 100%)
-            , url("${main_background}");
+            , url("${heroBackground}");
 	background-size: cover;
 `;
 
 const StyledPageContainer = styled.div`
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
 	padding-left: 16px;
 	padding-right: 16px;
 
@@ -67,42 +87,43 @@ const StyledPageContainer = styled.div`
 `;
 
 const TitlesWrap = styled.div`
-	margin-top: 155px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-	@media all and (min-width: ${breakpoints.phone}) {
-		margin-top: 130px;
-	}
+	margin-bottom: 56px;
 `;
 
-const StyledH1 = styled(UnderlinedH(H1))`
+const Title = styled.h1`
 	margin: 0 0 45px 0;
 	padding: 0;
 	font-size: 3rem;
+	line-height: 160%;
 	text-transform: uppercase;
-	color: ${colors.light.white};
+	color: #ffffff;
+
+	&:after {
+		content: '';
+		background: #874aad;
+		height: 6px;
+		width: 64px;
+		display: block;
+	}
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		font-size: 4rem;
 	}
 `;
 
-const StyledBody = styled(Body1)`
-	margin: 0 0 30px 0;
-	font-size: 1 rem;
+const SubTitle = styled.h2`
+	margin: 0;
+	padding: 0;
+	line-height: 160%;
 	text-transform: uppercase;
-	color: ${colors.light.white};
+	color: #ffffff;
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		font-size: 1.5rem;
 	}
-`;
-
-const Design = styled.img`
-	width: 240px;
-	height: 100px;
 `;
 
 const ButtonsWrap = styled.div`
@@ -110,12 +131,43 @@ const ButtonsWrap = styled.div`
 	margin-bottom: 64px;
 `;
 
-const StyledButton = styled(PrimaryButton)`
+const StyledButton = styled(Link)`
+	position: relative;
+	display: inline-block;
 	padding: 16px 32px;
-	font-size: 1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #874aad;
 
 	&:not(:last-child) {
 		margin-right: 16px;
+	}
+
+	svg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	rect {
+		fill: none;
+		stroke: #874aad;
+		stroke-width: 3;
+		stroke-dasharray: 422, 0;
+		transition: all 0.35s linear;
+	}
+
+	&:hover rect {
+		stroke-width: 6;
+		stroke-dasharray: 15, 310;
+		stroke-dashoffset: 48;
+		transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	&:first-of-type:hover rect {
+		stroke-dasharray: 15, 415;
 	}
 
 	@media all and (min-width: ${breakpoints.phone}) {
@@ -123,12 +175,9 @@ const StyledButton = styled(PrimaryButton)`
 	}
 `;
 
-const ArrowContainer = styled.div`
-	padding-bottom: 32px;
-	text-align: center;
-`;
-
 const Arrows = styled.img`
+	display: block;
+	margin: 0 auto;
 	width: 27px;
 	height: 32px;
 
