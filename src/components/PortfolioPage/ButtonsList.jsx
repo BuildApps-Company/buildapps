@@ -1,43 +1,69 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { Portfolio } from '../../data/projects';
 
-export const ButtonsList = () => {
+export const ButtonsList = ({ selectedCategories, onSelectCategory }) => {
 	const buttons = useMemo(
-		() =>
-			Object.entries(Portfolio)
+		() => [
+			'All',
+			...Object.entries(Portfolio)
 				.map(([_, el]) => el.responsibility)
 				.flat()
 				.filter((el, index, self) => self.indexOf(el) === index),
+		],
 		[Portfolio]
 	);
 
 	return (
 		<StyledButtonsList>
-			<li key="all">
-				<button>All</button>
-			</li>
 			{buttons.map(el => (
-				<li key={el}>
-					<button>{el}</button>
-				</li>
+				<StyledLi
+					key={el}
+					selected={selectedCategories.includes(el)}
+					onClick={() => onSelectCategory(el)}
+				>
+					{el}
+				</StyledLi>
 			))}
 		</StyledButtonsList>
 	);
 };
 
+const StyledLi = styled.li`
+	margin-right: 16px;
+
+	display: block;
+	white-space: nowrap;
+	padding: 12px 16px;
+	font-weight: 700;
+	line-height: 160%;
+	text-transform: uppercase;
+	background-color: transparent;
+	border: 1px solid #d9dbe4;
+	word-wrap: break-word;
+	cursor: pointer;
+
+	${({ selected }) =>
+		selected &&
+		`
+		color: #ffffff;
+		background: #874aad;
+`}
+`;
+
 const StyledButtonsList = styled.ul`
-	overflow: scroll;
+	overflow: auto;
 	margin: 0 0 16px 0;
 	padding: 0;
 	display: flex;
 	list-style: none;
 
-	li {
-		margin-right: 16px;
+	.filterLabel {
 	}
-
-	button {
+	.filterChecked:checked + .filterLabel {
+	}
+	/* button {
+		display: block;
 		white-space: nowrap;
 		padding: 12px 16px;
 		font-weight: 700;
@@ -46,11 +72,10 @@ const StyledButtonsList = styled.ul`
 		background-color: transparent;
 		border: 1px solid rgba(49, 49, 49, 0.25);
 		word-wrap: break-word;
-
-		&:hover,
-		&:focus {
+		cursor: pointer;
+		&:hover &:focus {
 			color: #ffffff;
 			background: #874aad;
 		}
-	}
+	} */
 `;

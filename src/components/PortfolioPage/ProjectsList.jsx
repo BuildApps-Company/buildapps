@@ -5,18 +5,19 @@ import { Portfolio } from '../../data/projects';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 
-export const ProjectsList = () => {
-	const [width, setWidth] = useState(0);
 
-	useLayoutEffect(() => {
-		window.addEventListener('resize', setWidth(window.innerWidth));
-		return () =>
-			window.removeEventListener('resize', setWidth(window.innerWidth));
-	}, []);
+export const ProjectsList = ({ selectedCategories }) => {
+	const projects = Object.entries(Portfolio).filter(
+		x =>
+			selectedCategories.includes('All') ||
+			selectedCategories.some(cat =>
+				x[1].responsibility.some(res => res === cat)
+			)
+	);
 
 	return (
 		<StyledPortfolioList>
-			{Object.entries(Portfolio).map(([key, el]) => (
+			{projects.map(([key, el]) => (
 				<li key={key}>
 					<Link to={routes.portfolioDetails} state={{ project: el }}>
 						<ImageContainer>
@@ -24,14 +25,16 @@ export const ProjectsList = () => {
 							<img src={el.longImage} alt={el.title} />
 						</ImageContainer>
 
-						{width > 450 && (
-							<>
-								{el.responsibility.map(el => (
-									<StyledResponsibility>{el}</StyledResponsibility>
-								))}
-								<StyledDescription>{el.description}</StyledDescription>
-							</>
-						)}
+						<>
+							{el.responsibility.map(el => (
+								<StyledResponsibility key={el} className="projectAbout">
+									{el}
+								</StyledResponsibility>
+							))}
+							<StyledDescription className="projectAbout">
+								{el.description}
+							</StyledDescription>
+						</>
 					</Link>
 				</li>
 			))}
@@ -106,19 +109,26 @@ const ImageContainer = styled.div`
 `;
 
 const StyledResponsibility = styled.p`
-	display: inline-block;
-	font-weight: 700;
-	line-height: 160%;
-	text-transform: uppercase;
-	opacity: 0.75;
+	display: none;
+	@media (min-width: 450px) {
+		display: inline-block;
+		font-weight: 700;
+		line-height: 160%;
+		text-transform: uppercase;
+		opacity: 0.75;
 
-	&:not(:last-child) {
-		margin-right: 24px;
+		&:not(:last-child) {
+			margin-right: 24px;
+		}
 	}
 `;
 
 const StyledDescription = styled.p`
-	margin: 0;
-	padding: 0;
-	line-height: 160%;
+	display: none;
+	@media (min-width: 450px) {
+		display: block;
+		margin: 0;
+		padding: 0;
+		line-height: 160%;
+	}
 `;
