@@ -1,23 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SocialMediaList } from '../shared/SocialMediaList';
+import { email, tel } from '../../data/contactUsListData.js';
 
 export const Contacts = () => {
 	return (
 		<ContactsWrap>
 			<h3>Contacts</h3>
-
 			<ContactsList>
 				<ContactsListItem>
-					<span>Phone number</span> +38 (063) 000 000 00
+					<span>Phone number</span>
+					<a href={`tel:${tel}`}>{tel}</a>
 				</ContactsListItem>
-
 				<ContactsListItem>
-					<span>E-mail</span> buildapps.pro@gmail.com
+					<span> E-mail</span>
+					<a href={`mailto:${email}`}>{email}</a>
 				</ContactsListItem>
-
 				<ContactsListItem>
-					<span>Social medias</span> <SocialMediaList />
+					<span>Social medias</span>
+					<SocialMediaList />
 				</ContactsListItem>
 			</ContactsList>
 		</ContactsWrap>
@@ -42,15 +43,18 @@ const ContactsList = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	display: flex;
+	flex-direction: column;
 `;
 
 const ContactsListItem = styled.li`
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
+	white-space: nowrap;
 
 	&:last-child {
-		padding-top: 24px;
+		padding-top: 10px;
 		border-top: 1px solid #d9dbe4;
 	}
 
@@ -60,5 +64,11 @@ const ContactsListItem = styled.li`
 
 	span {
 		opacity: 0.5;
+	}
+	a {
+		text-decoration: none;
+		font-family: Muli;
+		font-size: 32px;
+		line-height: 160%;
 	}
 `;

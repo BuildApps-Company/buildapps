@@ -93,7 +93,7 @@ const Burger = styled.img`
 `;
 
 const LanguagesWrap = styled.div`
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: flex-end;
 	padding-right: 85px;

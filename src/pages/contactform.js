@@ -9,7 +9,6 @@ export default function ContactFormPage() {
 	return (
 		<Page>
 			<Toolbar />
-
 			<StyledPageContainer>
 				<SubTitle>Build apps - Contact form</SubTitle>
 
@@ -17,7 +16,6 @@ export default function ContactFormPage() {
 
 				<FlexContainer>
 					<ContactUsForm />
-
 					<Contacts />
 				</FlexContainer>
 			</StyledPageContainer>

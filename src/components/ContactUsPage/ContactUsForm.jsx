@@ -92,14 +92,21 @@ export const ContactUsForm = () => {
 				/>
 			</label>
 
-			<StyledBtn type="submit">Send</StyledBtn>
+			<StyledBtn type="submit">
+				Send<span className="arrow">&rarr;</span>
+			</StyledBtn>
 		</StyledContactUsForm>
 	);
 };
 
 const StyledContactUsForm = styled.form`
 	width: 60%;
-
+	.arrow {
+		color: #874aad;
+		width: 24px;
+		height: 8px;
+		padding-left: 40px;
+	}
 	input {
 		width: 90%;
 		margin-bottom: 40px;
@@ -127,11 +134,21 @@ const StyledContactUsForm = styled.form`
 `;
 
 const StyledBtn = styled.button`
-	padding: 8px 32px;
+	padding: 8px 30px;
 	font-size: 2rem;
 	line-height: 160%;
 	text-transform: uppercase;
 	color: #874aad;
-	border: 1px solid #874aad;
+	border: 2px solid #874aad;
 	background: transparent;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		color: #ffffff;
+		background: #874aad;
+
+		.arrow {
+			color: #ffffff;
+		}
+	}
 `;

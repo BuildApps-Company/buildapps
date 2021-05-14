@@ -28,7 +28,9 @@ export const ContactUsList = () => {
 					<ContuctUsListStyle>
 						{contactUsListData.map(el => (
 							<li key={el.key}>
-								<StyledLink href={el.href}>{el.title}</StyledLink>
+								<StyledLink href={el.href} target="_blank">
+									{el.title}
+								</StyledLink>
 							</li>
 						))}
 					</ContuctUsListStyle>

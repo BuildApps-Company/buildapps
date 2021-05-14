@@ -6,13 +6,14 @@ import { ButtonsList, ProjectsList } from '../components/PortfolioPage';
 import { PreFooter } from '../components/MainPage/PreFooter';
 import { Container } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
+import { allProjects } from '../data/projects';
 
 export default function PortfolioPage() {
-	const [selectedCategories, setSelectedCategories] = useState(['All']);
+	const [selectedCategories, setSelectedCategories] = useState([allProjects]);
 
 	const onSelectCategory = newCategory => {
-		if (newCategory === 'All') {
-			setSelectedCategories(['All']);
+		if (newCategory === allProjects) {
+			setSelectedCategories([allProjects]);
 			return;
 		}
 
@@ -26,13 +27,15 @@ export default function PortfolioPage() {
 		}
 
 		if (!newCategories.length) {
-			setSelectedCategories(['All']);
+			setSelectedCategories([allProjects]);
 		} else {
-			setSelectedCategories(newCategories.filter(x => x !== 'All'));
+			setSelectedCategories(
+				newCategories.filter(
+					newSelectedCategory => newSelectedCategory !== allProjects
+				)
+			);
 		}
 	};
-
-	console.log(selectedCategories);
 
 	return (
 		<Page>

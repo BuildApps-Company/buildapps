@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { routes } from '../../utilities/routes';
+import { email, address } from '../../data/projects';
 
 export const ContactUsContainer = () => {
 	return (
 		<ContactUsWrap>
-			<StyledAdress>Kyiv, Ukraine</StyledAdress>
-			<StyledEmail>buildapps.pro@gmail.com</StyledEmail>
+			<StyledAdress>{address}</StyledAdress>
+			<StyledEmail>{email}</StyledEmail>
 			<StyledLink to={routes.contactForm}>Contact us</StyledLink>
 		</ContactUsWrap>
 	);

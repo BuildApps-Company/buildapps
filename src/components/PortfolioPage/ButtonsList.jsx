@@ -1,11 +1,12 @@
 import React, { useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { Portfolio } from '../../data/projects';
+import { allProjects } from '../../data/projects';
 
 export const ButtonsList = ({ selectedCategories, onSelectCategory }) => {
 	const buttons = useMemo(
 		() => [
-			'All',
+			allProjects,
 			...Object.entries(Portfolio)
 				.map(([_, el]) => el.responsibility)
 				.flat()
@@ -58,10 +59,6 @@ const StyledButtonsList = styled.ul`
 	display: flex;
 	list-style: none;
 
-	.filterLabel {
-	}
-	.filterChecked:checked + .filterLabel {
-	}
 	/* button {
 		display: block;
 		white-space: nowrap;

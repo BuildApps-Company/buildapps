@@ -4,14 +4,14 @@ import { Link } from 'gatsby';
 import { Portfolio } from '../../data/projects';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
-
+import { allProjects } from '../../data/projects';
 
 export const ProjectsList = ({ selectedCategories }) => {
 	const projects = Object.entries(Portfolio).filter(
 		x =>
-			selectedCategories.includes('All') ||
-			selectedCategories.some(cat =>
-				x[1].responsibility.some(res => res === cat)
+			selectedCategories.includes(allProjects) ||
+			selectedCategories.some(category =>
+				x[1].responsibility.some(res => res === category)
 			)
 	);
 
