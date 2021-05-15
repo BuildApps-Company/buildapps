@@ -21,7 +21,7 @@ export function MainBanner() {
 
 	return (
 		<HeroWrap>
-			<VideoHeader playsinline autoPlay loop muted>
+			<VideoHeader playsInline autoPlay loop muted>
 				<source src={video} type="video/mp4" />
 			</VideoHeader>
 			<Toolbar isWhite />
