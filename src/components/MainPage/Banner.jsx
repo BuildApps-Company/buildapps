@@ -21,7 +21,7 @@ export function MainBanner() {
 
 	return (
 		<HeroWrap>
-			<VideoHeader className="videoTag" autoPlay loop muted>
+			<VideoHeader autoPlay loop muted>
 				<source src={video} type="video/mp4" />
 			</VideoHeader>
 			<Toolbar isWhite />
@@ -62,7 +62,6 @@ export function MainBanner() {
 						Prices
 					</StyledButton>
 				</ButtonsWrap>
-
 				<Arrows src={arrows}></Arrows>
 			</StyledPageContainer>
 		</HeroWrap>
@@ -70,6 +69,7 @@ export function MainBanner() {
 }
 
 const HeroWrap = styled.div`
+	position: relative;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -82,7 +82,10 @@ const HeroWrap = styled.div`
 `;
 const VideoHeader = styled.video`
 	position: absolute;
-	z-index: -2;
+	z-index: -99;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 `;
 
 const StyledPageContainer = styled.div`

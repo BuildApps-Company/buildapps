@@ -27,13 +27,9 @@ export const ProjectsList = ({ selectedCategories }) => {
 
 						<>
 							{el.responsibility.map(el => (
-								<StyledResponsibility key={el} className="projectAbout">
-									{el}
-								</StyledResponsibility>
+								<StyledResponsibility key={el}>{el}</StyledResponsibility>
 							))}
-							<StyledDescription className="projectAbout">
-								{el.description}
-							</StyledDescription>
+							<StyledDescription>{el.description}</StyledDescription>
 						</>
 					</Link>
 				</li>

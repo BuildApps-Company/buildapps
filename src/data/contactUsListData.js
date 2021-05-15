@@ -12,12 +12,12 @@ export const contactUsListData = [
 	},
 	{
 		key: 'address',
-		title: `${address}`,
+		title: address,
 		href: `http://maps.google.com/?q=${address}`,
 	},
 	{
 		key: 'email',
-		title: `${email}`,
+		title: email,
 		href: `mailto:${email}`,
 	},
 ];

@@ -93,20 +93,21 @@ export const ContactUsForm = () => {
 			</label>
 
 			<StyledBtn type="submit">
-				Send<span className="arrow">&rarr;</span>
+				Send<SpanStyledArrow>&rarr;</SpanStyledArrow>
 			</StyledBtn>
 		</StyledContactUsForm>
 	);
 };
 
+const SpanStyledArrow = styled.span`
+	color: #874aad;
+	width: 24px;
+	height: 8px;
+	padding-left: 40px;
+`;
+
 const StyledContactUsForm = styled.form`
 	width: 60%;
-	.arrow {
-		color: #874aad;
-		width: 24px;
-		height: 8px;
-		padding-left: 40px;
-	}
 	input {
 		width: 90%;
 		margin-bottom: 40px;
@@ -147,7 +148,7 @@ const StyledBtn = styled.button`
 		color: #ffffff;
 		background: #874aad;
 
-		.arrow {
+		${SpanStyledArrow} {
 			color: #ffffff;
 		}
 	}

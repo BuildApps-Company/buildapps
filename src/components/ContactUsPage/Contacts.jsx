@@ -67,7 +67,6 @@ const ContactsListItem = styled.li`
 	}
 	a {
 		text-decoration: none;
-		font-family: Muli;
 		font-size: 32px;
 		line-height: 160%;
 	}
