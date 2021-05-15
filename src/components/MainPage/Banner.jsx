@@ -7,6 +7,7 @@ import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import heroBackground from '../../../static/images/heroBackground.jpg';
 import arrows from '../../../static/images/arrows.svg';
+import video from '../../../static/images/videosHeader.mp4';
 import '../../styles/typewriter.css';
 
 export function MainBanner() {
@@ -20,6 +21,9 @@ export function MainBanner() {
 
 	return (
 		<HeroWrap>
+			<VideoHeader autoPlay loop muted>
+				<source src={video} type="video/mp4" />
+			</VideoHeader>
 			<Toolbar isWhite />
 
 			<StyledPageContainer>
@@ -58,7 +62,6 @@ export function MainBanner() {
 						Prices
 					</StyledButton>
 				</ButtonsWrap>
-
 				<Arrows src={arrows}></Arrows>
 			</StyledPageContainer>
 		</HeroWrap>
@@ -66,12 +69,23 @@ export function MainBanner() {
 }
 
 const HeroWrap = styled.div`
+	position: relative;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	background: linear-gradient(72.44deg, rgba(17, 3, 34, 0.92) 38.02%, rgba(17, 3, 34, 0.6) 100%)
-            , url("${heroBackground}");
+	background: linear-gradient(
+		72.44deg,
+		rgba(17, 3, 34, 0.92) 38.02%,
+		rgba(17, 3, 34, 0.6) 100%
+	);
 	background-size: cover;
+`;
+const VideoHeader = styled.video`
+	position: absolute;
+	z-index: -99;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 `;
 
 const StyledPageContainer = styled.div`

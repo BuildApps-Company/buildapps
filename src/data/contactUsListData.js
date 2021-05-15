@@ -1,5 +1,9 @@
 import { routes } from '../utilities/routes';
 
+export const address = 'Kyiv, Ukraine';
+export const email = 'sales@buildapps.pro';
+export const tel = '+38 (050) 611 54 99';
+
 export const contactUsListData = [
 	{
 		key: 'form',
@@ -7,13 +11,13 @@ export const contactUsListData = [
 		href: routes.contactForm,
 	},
 	{
-		key: 'adress',
-		title: 'Kyiv, Ukraine',
-		href: '',
+		key: 'address',
+		title: address,
+		href: `http://maps.google.com/?q=${address}`,
 	},
 	{
 		key: 'email',
-		title: 'buildapps.pro@gmail.com',
-		href: '',
+		title: email,
+		href: `mailto:${email}`,
 	},
 ];

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Page } from '../components/shared/Page';
 import { Toolbar } from '../components/shared/Toolbar';
@@ -6,8 +6,37 @@ import { ButtonsList, ProjectsList } from '../components/PortfolioPage';
 import { PreFooter } from '../components/MainPage/PreFooter';
 import { Container } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
+import { allProjects } from '../data/projects';
 
 export default function PortfolioPage() {
+	const [selectedCategories, setSelectedCategories] = useState([allProjects]);
+
+	const onSelectCategory = newCategory => {
+		if (newCategory === allProjects) {
+			setSelectedCategories([allProjects]);
+			return;
+		}
+
+		let newCategories = [];
+		const index = selectedCategories.indexOf(newCategory);
+		if (index < 0) {
+			newCategories = [...selectedCategories, newCategory];
+		} else {
+			newCategories = [...selectedCategories];
+			newCategories.splice(index, 1);
+		}
+
+		if (!newCategories.length) {
+			setSelectedCategories([allProjects]);
+		} else {
+			setSelectedCategories(
+				newCategories.filter(
+					newSelectedCategory => newSelectedCategory !== allProjects
+				)
+			);
+		}
+	};
+
 	return (
 		<Page>
 			<Toolbar />
@@ -24,9 +53,12 @@ export default function PortfolioPage() {
 					</AboutPage>
 				</TitleContainer>
 
-				<ButtonsList />
+				<ButtonsList
+					selectedCategories={selectedCategories}
+					onSelectCategory={onSelectCategory}
+				/>
 
-				<ProjectsList />
+				<ProjectsList selectedCategories={selectedCategories} />
 			</Container>
 
 			<PreFooter />
