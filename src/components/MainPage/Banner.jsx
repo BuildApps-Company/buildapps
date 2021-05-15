@@ -6,8 +6,9 @@ import { Toolbar } from '../shared/Toolbar';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import heroBackground from '../../../static/images/heroBackground.jpg';
+import headerBackground from '../../../static/images/headerBackground.jpeg';
 import arrows from '../../../static/images/arrows.svg';
-import video from '../../../static/images/videosHeader.mp4';
+import video from '../../../static/images/VideosHeader.mp4';
 import '../../styles/typewriter.css';
 
 export function MainBanner() {
@@ -74,10 +75,11 @@ const HeroWrap = styled.div`
 	display: flex;
 	flex-direction: column;
 	background: linear-gradient(
-		72.44deg,
-		rgba(17, 3, 34, 0.92) 38.02%,
-		rgba(17, 3, 34, 0.6) 100%
-	);
+			72.44deg,
+			rgba(17, 3, 34, 0.92) 38.02%,
+			rgba(17, 3, 34, 0.6) 100%
+		),
+		url(${headerBackground});
 	background-size: cover;
 `;
 const VideoHeader = styled.video`
