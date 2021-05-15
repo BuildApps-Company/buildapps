@@ -9,6 +9,7 @@ import sushiLong from '../../static/images/portfolio/sushi_long.png';
 import ppf from '../../static/images/portfolio/ppf.png';
 import ppfLong from '../../static/images/portfolio/ppf_long.png';
 
+export const allProjects = 'All';
 export const Portfolio = {
 	ppf: {
 		image: ppf,
