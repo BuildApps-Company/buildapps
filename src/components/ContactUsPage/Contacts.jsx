@@ -67,7 +67,7 @@ const ContactsListItem = styled.li`
 	}
 	a {
 		text-decoration: none;
-		font-size: 32px;
+		font-size: 2rem;
 		line-height: 160%;
 	}
 `;
