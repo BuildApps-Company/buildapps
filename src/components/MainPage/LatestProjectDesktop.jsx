@@ -115,6 +115,7 @@ const Container = styled.div`
 
 const ProjectContainer = styled(Container)`
 	@media all and (min-width: ${breakpoints.tablet}) {
+		width: 100%;
 		display: flex;
 		flex: 1 1 auto;
 		margin: 0;
@@ -165,6 +166,7 @@ const Pagination = styled.div`
 `;
 
 const ProjectWrap = styled.div`
+	width: 100%;
 	display: flex;
 	align-items: center;
 	flex-grow: 1;
