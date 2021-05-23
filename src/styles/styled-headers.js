@@ -28,7 +28,7 @@ export const H4 = styled.h4`
 `;
 
 export const SubH1 = styled.h1`
-	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 160%;
 `;
 

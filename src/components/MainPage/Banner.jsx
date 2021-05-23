@@ -6,8 +6,9 @@ import { Toolbar } from '../shared/Toolbar';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import heroBackground from '../../../static/images/heroBackground.jpg';
+import headerBackground from '../../../static/images/headerBackground.jpeg';
 import arrows from '../../../static/images/arrows.svg';
-import video from '../../../static/images/videosHeader.mp4';
+import video from '../../../static/images/VideosHeader.mp4';
 import '../../styles/typewriter.css';
 
 export function MainBanner() {
@@ -21,7 +22,7 @@ export function MainBanner() {
 
 	return (
 		<HeroWrap>
-			<VideoHeader playsInline autoPlay loop muted>
+			<VideoHeader playsInline autoPlay loop muted poster={headerBackground}>
 				<source src={video} type="video/mp4" />
 			</VideoHeader>
 			<Toolbar isWhite />
@@ -70,7 +71,7 @@ export function MainBanner() {
 
 const HeroWrap = styled.div`
 	position: relative;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	background: linear-gradient(
@@ -93,6 +94,7 @@ const StyledPageContainer = styled.div`
 	margin-bottom: auto;
 	padding-left: 16px;
 	padding-right: 16px;
+	padding-bottom: 34px;
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		padding-left: 215px;
@@ -134,8 +136,9 @@ const SubTitle = styled.h2`
 	line-height: 160%;
 	text-transform: uppercase;
 	color: #ffffff;
+	font-size: 1rem;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 1.5rem;
 	}
 `;
@@ -148,7 +151,7 @@ const ButtonsWrap = styled.div`
 const StyledButton = styled(Link)`
 	position: relative;
 	display: inline-block;
-	padding: 16px 32px;
+	padding: 16px 26px;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #874aad;
