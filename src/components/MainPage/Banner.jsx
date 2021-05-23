@@ -5,10 +5,9 @@ import Typewriter from 'typewriter-effect';
 import { Toolbar } from '../shared/Toolbar';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
-import heroBackground from '../../../static/images/heroBackground.jpg';
 import headerBackground from '../../../static/images/headerBackground.jpeg';
 import arrows from '../../../static/images/arrows.svg';
-import video from '../../../static/images/VideosHeader.mp4';
+import video from '../../../static/images/videosHeader.mp4';
 import '../../styles/typewriter.css';
 
 export function MainBanner() {
