@@ -24,11 +24,11 @@ export function BurgerMenu({ toogleList }) {
 				<Burger src={burgerClose} onClick={toogleList} />
 			</StyledBurgerHeader>
 
-			{/* <LanguagesWrap>
+			<LanguagesWrap>
 				<p>EN</p>
 				<p>RU</p>
 				<p>UA</p>
-			</LanguagesWrap> */}
+			</LanguagesWrap>
 
 			<BurgerMenuWrap>
 				<div>
@@ -51,8 +51,17 @@ export function BurgerMenu({ toogleList }) {
 }
 
 const StyledBurgerMenu = styled.div`
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-areas:
+		'header header header'
+		'div div div'
+		'div1 div1 div1'
+		'footer footer footer';
+	grid-template-rows: 60px 1fr 60px;
+	grid-template-columns: 20% 1fr 15%;
+	grid-gap: 10px;
+	height: 100vh;
+	margin: 0;
 	//
 	z-index: 999;
 	position: absolute;
@@ -64,6 +73,8 @@ const StyledBurgerMenu = styled.div`
 `;
 
 const StyledBurgerHeader = styled.div`
+	grid-area: header;
+	//
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -96,6 +107,7 @@ const Burger = styled.img`
 `;
 
 const LanguagesWrap = styled.div`
+	grid-area: div;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -114,9 +126,11 @@ const LanguagesWrap = styled.div`
 `;
 
 const BurgerMenuWrap = styled.div`
+	grid-area: div1;
+	//
 	display: flex;
 	justify-content: space-between;
-	padding: 0 215px;
+	/* padding: 0 215px; */
 `;
 
 const BurgerTitle = styled.h2`
@@ -138,12 +152,11 @@ const ContactUsLink = styled(Link)`
 
 const SocialLinksWrap = styled.div`
 	margin: 0 auto;
+	grid-area: footer;
+	//
 	display: flex;
 	justify-content: center;
-	padding-bottom: 24px;
-	&:last-of-type {
-		margin-top: auto;
-	}
+	align-self: flex-end;
 `;
 
 const SocialLink = styled(Link)`
@@ -161,3 +174,15 @@ const SocialLink = styled(Link)`
 		opacity: 1;
 	}
 `;
+
+// const OurTeamListWrap = styled(OurTeamList)`
+// 	grid-area: article;
+// `;
+
+// const ContactUsListWrap = styled(ContactUsList)`
+// 	grid-area: ads;
+// `;
+
+// const NavWrap = styled.div`
+// 	grid-area: nav;
+// `;
