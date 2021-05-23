@@ -22,7 +22,7 @@ export function MainBanner() {
 
 	return (
 		<HeroWrap>
-			<VideoHeader playsInline autoPlay loop muted>
+			<VideoHeader playsInline autoPlay loop muted poster={headerBackground}>
 				<source src={video} type="video/mp4" />
 			</VideoHeader>
 			<Toolbar isWhite />
@@ -71,15 +71,14 @@ export function MainBanner() {
 
 const HeroWrap = styled.div`
 	position: relative;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	background: linear-gradient(
-			72.44deg,
-			rgba(17, 3, 34, 0.92) 38.02%,
-			rgba(17, 3, 34, 0.6) 100%
-		),
-		url(${headerBackground});
+		72.44deg,
+		rgba(17, 3, 34, 0.92) 38.02%,
+		rgba(17, 3, 34, 0.6) 100%
+	);
 	background-size: cover;
 `;
 const VideoHeader = styled.video`
@@ -95,6 +94,7 @@ const StyledPageContainer = styled.div`
 	margin-bottom: auto;
 	padding-left: 16px;
 	padding-right: 16px;
+	padding-bottom: 34px;
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		padding-left: 215px;
@@ -136,8 +136,9 @@ const SubTitle = styled.h2`
 	line-height: 160%;
 	text-transform: uppercase;
 	color: #ffffff;
+	font-size: 1rem;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 1.5rem;
 	}
 `;
@@ -150,7 +151,7 @@ const ButtonsWrap = styled.div`
 const StyledButton = styled(Link)`
 	position: relative;
 	display: inline-block;
-	padding: 16px 32px;
+	padding: 16px 26px;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #874aad;

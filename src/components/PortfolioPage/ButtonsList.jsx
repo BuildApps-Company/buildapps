@@ -32,7 +32,6 @@ export const ButtonsList = ({ selectedCategories, onSelectCategory }) => {
 
 const StyledLi = styled.li`
 	margin-right: 16px;
-
 	display: block;
 	white-space: nowrap;
 	padding: 12px 16px;

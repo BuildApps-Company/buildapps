@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Marquee from './Marquee';
 import { Link } from 'gatsby';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
@@ -7,41 +8,45 @@ import { colors } from '../../styles/colors';
 
 export const PreFooter = () => {
 	return (
-		<Container>
-			<FlexWrap>
-				<StyledText>Ready to get started?</StyledText>
-				<StyledLink to={routes.contactForm}>Contact Us</StyledLink>
-			</FlexWrap>
-		</Container>
+		<>
+			<Marquee />
+			<Container>
+				<FlexWrap>
+					<StyledText>Ready to get started?</StyledText>
+					<StyledLink to={routes.contactForm}>Contact Us</StyledLink>
+				</FlexWrap>
+			</Container>
+		</>
 	);
 };
 
 const Container = styled.div`
-	margin-top: 90px;
-	padding: 40px 0;
+	padding: 40px 22px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: ${colors.grey.background};
 
-	@media all and (min-width: ${breakpoints.phone}) {
-		margin-top: 200px;
-		padding: 64px 0;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		padding: 54px 0;
 	}
 `;
 
 const FlexWrap = styled.div`
 	display: flex;
+	white-space: nowrap;
+	padding: 2px 5px 2px 5px;
 `;
 
 const StyledText = styled.h3`
-	margin: 0 10px 0 0;
-	padding: 0;
+	margin: 0;
+	padding: 2px 10px 2px 2px;
 	font-size: 1.25rem;
 	line-height: 160%;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.tablet}) {
 		font-size: 2rem;
+		padding: 2px 10px 2px 2px;
 	}
 `;
 

@@ -40,26 +40,22 @@ export default function PortfolioPage() {
 	return (
 		<Page>
 			<Toolbar />
-
-			<Container>
+			<ContainerWrap>
 				<TitleContainer>
 					<SubTitle>Build apps - Portfolio</SubTitle>
-
 					<Title>Portfolio</Title>
-
 					<AboutPage>
 						Et, morbi quam platea sit morbi consequat. Sollicitudin sagittis at
 						consectetur ac feugiat euismod purus.
 					</AboutPage>
 				</TitleContainer>
-
 				<ButtonsList
 					selectedCategories={selectedCategories}
 					onSelectCategory={onSelectCategory}
 				/>
 
 				<ProjectsList selectedCategories={selectedCategories} />
-			</Container>
+			</ContainerWrap>
 
 			<PreFooter />
 		</Page>
@@ -103,5 +99,12 @@ const AboutPage = styled.p`
 	@media all and (min-width: ${breakpoints.phone}) {
 		max-width: 900px;
 		font-size: 1.5rem;
+	}
+`;
+
+const ContainerWrap = styled(Container)`
+	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
+		padding-left: 56px;
+		padding-right: 56px;
 	}
 `;
