@@ -7,7 +7,6 @@ import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
 import headerBackground from '../../../static/images/headerBackground.jpeg';
-import arrows from '../../../static/images/arrows.svg';
 import video from '../../../static/images/videosHeader.mp4';
 import '../../styles/typewriter.css';
 
@@ -237,8 +236,8 @@ const ArrowSecond = styled.path``;
 const ArrowThird = styled.path``;
 
 const SvgArrows = styled.svg`
-	width: 48px;
-	height: 56px;
+	width: 27px;
+	height: 32px;
 	position: absolute;
 	left: 50%;
 	margin-left: -30px;
@@ -248,7 +247,7 @@ const SvgArrows = styled.svg`
 		stroke: ${colors.light.white};
 		fill: transparent;
 		stroke-width: 2px;
-		animation: arrow 2s infinite;
+		animation: arrow 2.5s infinite;
 	}
 
 	@keyframes arrow {
@@ -268,13 +267,20 @@ const SvgArrows = styled.svg`
 
 	${ArrowOne} {
 		animation-delay: 0s;
+		stroke-width: 2px;
 	}
 
 	${ArrowSecond} {
 		animation-delay: -0.5s;
+		stroke-width: 1px;
 	}
 
 	${ArrowThird} {
 		animation-delay: -1s;
+		stroke-width: 0.5px;
+	}
+	@media all and (min-width: ${breakpoints.notebook}) {
+		width: 48px;
+		height: 56px;
 	}
 `;

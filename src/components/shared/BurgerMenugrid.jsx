@@ -20,24 +20,19 @@ export function BurgerMenu({ toogleList }) {
 						onMouseOut={e => (e.currentTarget.src = logoWhite)}
 					/>
 				</Link>
-
 				<Burger src={burgerClose} onClick={toogleList} />
 			</StyledBurgerHeader>
-
 			<LanguagesWrap>
 				<p>EN</p>
 				<p>RU</p>
 				<p>UA</p>
 			</LanguagesWrap>
-
 			<BurgerMenuWrap>
 				<div>
 					<BurgerTitle>Ready to get started?</BurgerTitle>
 					<ContactUsLink to={routes.contactForm}>Contact Us</ContactUsLink>
 				</div>
-
 				<OurTeamList />
-
 				<ContactUsList />
 			</BurgerMenuWrap>
 
@@ -131,6 +126,9 @@ const BurgerMenuWrap = styled.div`
 	display: flex;
 	justify-content: space-between;
 	/* padding: 0 215px; */
+	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
+		padding: 0 115px;
+	}
 `;
 
 const BurgerTitle = styled.h2`

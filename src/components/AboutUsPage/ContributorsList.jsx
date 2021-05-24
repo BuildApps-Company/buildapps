@@ -28,9 +28,10 @@ const ContributorsTitle = styled.h2`
 	line-height: 160%;
 	text-transform: uppercase;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		margin-bottom: 40px;
 		font-size: 4rem;
+		white-space: nowrap;
 	}
 `;
 
