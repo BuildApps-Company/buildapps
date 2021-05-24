@@ -5,8 +5,8 @@ import Typewriter from 'typewriter-effect';
 import { Toolbar } from '../shared/Toolbar';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
+import { colors } from '../../styles/colors';
 import headerBackground from '../../../static/images/headerBackground.jpeg';
-import arrows from '../../../static/images/arrows.svg';
 import video from '../../../static/images/videosHeader.mp4';
 import '../../styles/typewriter.css';
 
@@ -62,7 +62,35 @@ export function MainBanner() {
 						Prices
 					</StyledButton>
 				</ButtonsWrap>
-				<Arrows src={arrows}></Arrows>
+
+				<SvgArrows
+					width="50"
+					height="58"
+					viewBox="0 0 50 58"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<ArrowOne
+						d="M1 40.1113L25 57.0002L49 40.1113"
+						stroke="white"
+						stroke-width="2"
+						stroke-linejoin="round"
+					/>
+					<ArrowSecond
+						opacity="0.5"
+						d="M1 20.5557L25 37.4446L49 20.5557"
+						stroke="white"
+						stroke-width="2"
+						stroke-linejoin="round"
+					/>
+					<ArrowThird
+						opacity="0.25"
+						d="M1 1L25 17.8889L49 1"
+						stroke="white"
+						stroke-width="2"
+						stroke-linejoin="round"
+					/>
+				</SvgArrows>
 			</StyledPageContainer>
 		</HeroWrap>
 	);
@@ -191,13 +219,55 @@ const StyledButton = styled(Link)`
 	}
 `;
 
-const Arrows = styled.img`
-	display: block;
-	margin: 0 auto;
+const ArrowOne = styled.path``;
+const ArrowSecond = styled.path``;
+const ArrowThird = styled.path``;
+
+const SvgArrows = styled.svg`
 	width: 27px;
 	height: 32px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	path {
+		stroke: ${colors.light.white};
+		fill: transparent;
+		stroke-width: 2px;
+		animation: arrow 2.5s infinite;
+	}
+
+	@keyframes arrow {
+		0% {
+			opacity: 0;
+		}
+		40% {
+			opacity: 1;
+		}
+		80% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	${ArrowOne} {
+		animation-delay: 0s;
+		stroke-width: 2px;
+	}
+
+	${ArrowSecond} {
+		animation-delay: -0.5s;
+		stroke-width: 1px;
+	}
+
+	${ArrowThird} {
+		animation-delay: -1s;
+		stroke-width: 0.5px;
+	}
+	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 48px;
 		height: 56px;
 	}

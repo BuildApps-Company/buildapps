@@ -24,41 +24,61 @@ export default function AboutUsPage() {
 			<Toolbar />
 
 			<StyledContainer>
-				<div>
+				<AboutUsWrap>
 					<TitleContainer>
 						<SubTitle>Build apps - About us</SubTitle>
-
 						<Title>About us</Title>
-
 						<AboutPage>
-							Tempor tempus purus ipsum blandit est elit condimentum. Pulvinar
-							molestie neque, sit amet tortor vel tortor hac. Pulvinar arcu eu
-							porttitor ut orci blandit tortor interdum et. Quam lectus dolor at
-							elementum lectus vivamus.
+							<p>
+								The BuildApps company has been operating since 2019 and
+								specializes in the development of web-projects that can solve
+								and automate tasks for small and medium-sized businesses.
+							</p>
+
+							<p>
+								Our most valuable resource is our team. We constantly invest in
+								the training and development of our employees, and we do
+								everything to make BuildApps not just an agency, but a lifestyle
+								and way of thinking. Our experts have a deep understaning of the
+								specifics of various solutions and software products: from the
+								right website interface to modern technologies in online
+								projects.
+							</p>
+							<p>
+								We love what we do and do it perfectly well, enjoying every
+								project. Our products always solve the task at hand and bring
+								advantages and benefits to our customers.
+							</p>
 						</AboutPage>
 					</TitleContainer>
-
 					<ContributorsList />
-				</div>
-
-				{width > 450 && <ContactUsContainer />}
+				</AboutUsWrap>
+				{width > 450 && <ContactUsContainerWrap />}
 			</StyledContainer>
-
 			<PreFooter />
 		</Page>
 	);
 }
 
+const AboutUsWrap = styled.div`
+	width: 100%;
+	padding-right: 16px;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		width: 50%;
+	}
+`;
+const ContactUsContainerWrap = styled(ContactUsContainer)`
+	@media all and (min-width: ${breakpoints.tablet}) {
+		width: 50%;
+	}
+`;
 const StyledContainer = styled(SmallContainer)`
 	display: flex;
+	width: 100%;
 `;
 
 const TitleContainer = styled.div`
 	margin-bottom: 40px;
-
-	@media all and (min-width: ${breakpoints.phone}) {
-		margin-bottom: 100px;
-	}
 `;
 
 const SubTitle = styled.h2`
@@ -77,18 +97,15 @@ const Title = styled.h1`
 	line-height: 160%;
 	text-transform: uppercase;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 4rem;
 	}
 `;
 
 const AboutPage = styled.p`
-	margin: 0;
-	padding: 0;
-	line-height: 160%;
+	font-size: 1rem;
 
-	@media all and (min-width: ${breakpoints.phone}) {
-		max-width: 900px;
+	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 1.5rem;
 	}
 `;

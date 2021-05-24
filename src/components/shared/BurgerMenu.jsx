@@ -24,11 +24,11 @@ export function BurgerMenu({ toogleList }) {
 				<Burger src={burgerClose} onClick={toogleList} />
 			</StyledBurgerHeader>
 
-			<LanguagesWrap>
+			{/* <LanguagesWrap>
 				<p>EN</p>
 				<p>RU</p>
 				<p>UA</p>
-			</LanguagesWrap>
+			</LanguagesWrap> */}
 
 			<BurgerMenuWrap>
 				<div>
@@ -51,6 +51,9 @@ export function BurgerMenu({ toogleList }) {
 }
 
 const StyledBurgerMenu = styled.div`
+	display: flex;
+	flex-direction: column;
+	//
 	z-index: 999;
 	position: absolute;
 	top: 0px;
@@ -93,7 +96,7 @@ const Burger = styled.img`
 `;
 
 const LanguagesWrap = styled.div`
-	display: none;
+	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	padding-right: 85px;
@@ -134,9 +137,13 @@ const ContactUsLink = styled(Link)`
 `;
 
 const SocialLinksWrap = styled.div`
+	margin: 0 auto;
 	display: flex;
 	justify-content: center;
-	align-self: flex-end;
+	padding-bottom: 24px;
+	&:last-of-type {
+		margin-top: auto;
+	}
 `;
 
 const SocialLink = styled(Link)`
