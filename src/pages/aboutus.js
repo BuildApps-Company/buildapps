@@ -29,18 +29,26 @@ export default function AboutUsPage() {
 						<SubTitle>Build apps - About us</SubTitle>
 						<Title>About us</Title>
 						<AboutPage>
-							The BuildApps company has been operating since 2020 and
-							specializes in the development of web-projects that can solve and
-							automate tasks for small and medium-sized businesses. Our most
-							valuable resource is our team. We constantly invest in the
-							training and development of our employees, and we do everything to
-							make BuildApps not just an agency, but a lifestyle and way of
-							thinking. Our experts have a deep understaning of the specifics of
-							various solutions and software products: from the right website
-							interface to modern technologies in online projects. We love what
-							we do and do it perfectly well, enjoying every project. Our
-							products always solve the task at hand and bring advantages and
-							benefits to our customers.
+							<p>
+								The BuildApps company has been operating since 2019 and
+								specializes in the development of web-projects that can solve
+								and automate tasks for small and medium-sized businesses.
+							</p>
+
+							<p>
+								Our most valuable resource is our team. We constantly invest in
+								the training and development of our employees, and we do
+								everything to make BuildApps not just an agency, but a lifestyle
+								and way of thinking. Our experts have a deep understaning of the
+								specifics of various solutions and software products: from the
+								right website interface to modern technologies in online
+								projects.
+							</p>
+							<p>
+								We love what we do and do it perfectly well, enjoying every
+								project. Our products always solve the task at hand and bring
+								advantages and benefits to our customers.
+							</p>
 						</AboutPage>
 					</TitleContainer>
 					<ContributorsList />
@@ -71,7 +79,6 @@ const StyledContainer = styled(SmallContainer)`
 
 const TitleContainer = styled.div`
 	margin-bottom: 40px;
-
 `;
 
 const SubTitle = styled.h2`
@@ -99,6 +106,6 @@ const AboutPage = styled.p`
 	font-size: 1rem;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		font-size: 1.5;
+		font-size: 1.5rem;
 	}
 `;
