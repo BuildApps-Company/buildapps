@@ -63,12 +63,12 @@ export default function AboutUsPage() {
 const AboutUsWrap = styled.div`
 	width: 100%;
 	padding-right: 16px;
-	@media all and (min-wirth: ${breakpoints.tablet}) {
+	@media all and (min-width: ${breakpoints.tablet}) {
 		width: 50%;
 	}
 `;
 const ContactUsContainerWrap = styled(ContactUsContainer)`
-	@media all and (min-wirth: ${breakpoints.tablet}) {
+	@media all and (min-width: ${breakpoints.tablet}) {
 		width: 50%;
 	}
 `;
