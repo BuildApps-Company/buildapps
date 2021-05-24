@@ -72,9 +72,6 @@ const StyledContainer = styled(SmallContainer)`
 const TitleContainer = styled.div`
 	margin-bottom: 40px;
 
-	/* @media all and (min-width: ${breakpoints.phone}) {
-		margin-bottom: 100px;
-	} */
 `;
 
 const SubTitle = styled.h2`
@@ -99,10 +96,6 @@ const Title = styled.h1`
 `;
 
 const AboutPage = styled.p`
-	/* margin: 0;
-	padding: 0;
-	line-height: 160%; */
-	/* max-width: 900px;*/
 	font-size: 1rem;
 
 	@media all and (min-width: ${breakpoints.notebook}) {

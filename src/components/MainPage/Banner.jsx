@@ -219,18 +219,6 @@ const StyledButton = styled(Link)`
 	}
 `;
 
-// const Arrows = styled.img`
-// 	display: block;
-// 	margin: 0 auto;
-// 	width: 27px;
-// 	height: 32px;
-
-// 	@media all and (min-width: ${breakpoints.phone}) {
-// 		width: 48px;
-// 		height: 56px;
-// 	}
-// `;
-
 const ArrowOne = styled.path``;
 const ArrowSecond = styled.path``;
 const ArrowThird = styled.path``;
