@@ -55,14 +55,14 @@ const StyledFooter = styled.footer`
 	background-color: ${colors.grey.dark};
 
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding: 32px 215px;
+		padding: 32px;
 	}
 `;
 
 const FlexContainer = styled.div`
 	@media all and (min-width: ${breakpoints.phone}) {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		margin-bottom: 70px;
 	}
 `;

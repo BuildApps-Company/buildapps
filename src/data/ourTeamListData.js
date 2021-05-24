@@ -16,9 +16,9 @@ export const ourTeamListData = [
 		title: 'About us',
 		href: routes.aboutUs,
 	},
-	{
-		key: 'blog',
-		title: 'Blog',
-		href: '',
-	},
+	// {
+	// 	key: 'blog',
+	// 	title: 'Blog',
+	// 	href: '',
+	// },
 ];
