@@ -77,7 +77,10 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 										))}
 									</TagContainer>
 									<Description>{activeProject.description}</Description>
-									<ContactUs>Details</ContactUs>
+
+									<LinkBtn to={`${routes.portfolio}/${activeProject.id}`}>
+										Details
+									</LinkBtn>
 								</DetailsWrap>
 							</ProjectWrap>
 						</ProjectContainer>
@@ -109,7 +112,7 @@ const Container = styled.div`
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		padding: 40px 80px 0;
+		padding: 40px 215px 0;
 	}
 `;
 
@@ -126,7 +129,7 @@ const ProjectContainer = styled(Container)`
 		${({ visible }) =>
 			visible
 				? 'opacity: 1; '
-				: 'opacity: 0; position: absolute; top: 0; left: 0; height: 100%; overflow: hidden;'};
+				: 'opacity: 0; position: absolute; top: 0; left: 0; height: 100%; z-index: -1; overflow: hidden;'};
 	}
 `;
 
@@ -259,9 +262,19 @@ const Tab = styled.div`
 	}
 `;
 
-const ContactUs = styled(PrimaryButton)`
-	font-size: 1rem;
+const LinkBtn = styled(Link)`
+	display: inline-block;
+	border: 2px solid ${colors.Main};
+	font-size: 1em;
+	text-transform: uppercase;
+	padding: 15px 30px;
 	margin-top: 32px;
+	color: ${colors.Main};
+	text-decoration: none;
+	&:hover,
+	&:visited {
+		color: ${colors.Main};
+	}
 `;
 
 const ProjectsContainer = styled.div`

@@ -1,48 +1,37 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { Page } from '../components/shared/Page';
-import { Toolbar } from '../components/shared/Toolbar';
-import { PreFooter } from '../components/MainPage/PreFooter';
-import { routes } from '../utilities/routes';
-import { breakpoints } from '../styles/breakpoints';
+import { Page } from '../../components/shared/Page';
+import { Toolbar } from '../../components/shared/Toolbar';
+import { PreFooter } from '../../components/MainPage/PreFooter';
+import { routes } from '../../utilities/routes';
+import { breakpoints } from '../../styles/breakpoints';
+import { Portfolio } from '../../data/projects';
 
-export default function PortfolioDetailsPage({ location }) {
-	const [width, setWidth] = useState(0);
-
-	useLayoutEffect(() => {
-		window.addEventListener('resize', setWidth(window.innerWidth));
-		return () =>
-			window.removeEventListener('resize', setWidth(window.innerWidth));
-	}, []);
-
+export function PortfolioDetails({ id }) {
+	const projectsValues = Object.values(Portfolio);
+	const projectValues = projectsValues.find(el => el.id === id);
+	// return <div>Hello</div>
 	return (
 		<Page>
 			<Toolbar />
 
-			{width > 450 && (
-				<StyledLink to={routes.portfolio}>GO back to portfolio</StyledLink>
-			)}
+			<StyledLink to={routes.portfolio}>GO back to portfolio</StyledLink>
 
 			<ProjectImageContainer>
 				<ImageWrap>
-					<img
-						src={location?.state?.project?.longImage}
-						alt={location?.state?.project?.title}
-					/>
+					<img src={projectValues.longImage} alt={projectValues.title} />
 				</ImageWrap>
 			</ProjectImageContainer>
 
 			<ProjectDetailsContainer>
-				<Title>{location?.state?.project?.title}</Title>
+				<Title>{projectValues.title}</Title>
 
-				{location?.state?.project?.responsibility.map(el => (
-					<StyledResponsibility>{el}</StyledResponsibility>
+				{projectValues.responsibility.map(res => (
+					<StyledResponsibility>{res}</StyledResponsibility>
 				))}
 
-				<StyledDescription>
-					{location?.state?.project?.description}
-				</StyledDescription>
+				<StyledDescription>{projectValues.description}</StyledDescription>
 			</ProjectDetailsContainer>
 
 			<PreFooter />
@@ -64,8 +53,8 @@ const StyledLink = styled(Link)`
 
 const ProjectImageContainer = styled.div`
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding-left: 516px;
-		padding-right: 516px;
+		padding-left: 25%;
+		padding-right: 25%;
 	}
 `;
 
@@ -132,8 +121,8 @@ const ProjectDetailsContainer = styled.div`
 	padding-right: 16px;
 
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding-left: 516px;
-		padding-right: 516px;
+		padding-left: 25%;
+		padding-right: 25%;
 		margin-bottom: 48px;
 	}
 `;
