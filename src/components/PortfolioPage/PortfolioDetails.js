@@ -8,10 +8,9 @@ import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import { Portfolio } from '../../data/projects';
 
-export function PortfolioDetails({ id }) {
+export function PortfolioDetails({ id, children }) {
 	const projectsValues = Object.values(Portfolio);
 	const projectValues = projectsValues.find(el => el.id === id);
-	// return <div>Hello</div>
 	return (
 		<Page>
 			<Toolbar />
@@ -33,7 +32,7 @@ export function PortfolioDetails({ id }) {
 
 				<StyledDescription>{projectValues.description}</StyledDescription>
 			</ProjectDetailsContainer>
-
+			{children}
 			<PreFooter />
 		</Page>
 	);
@@ -42,7 +41,7 @@ export function PortfolioDetails({ id }) {
 const StyledLink = styled(Link)`
 	display: inline-block;
 	margin: 0 0 16px 0;
-	padding: 0 0 0 215px;
+	padding: 0 0 0 12%;
 	font-size: 0.75rem;
 	line-height: 160%;
 	opacity: 0.75;
@@ -59,32 +58,41 @@ const ProjectImageContainer = styled.div`
 `;
 
 const ImageWrap = styled.div`
+	width: 100%;
+	overflow: hidden;
+	height: 216px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 32px;
-	padding: 30px 100px;
-	min-height: 215px;
+	/* margin-bottom: 32px; */
 	background: linear-gradient(88deg, #cfd9df 3.37%, #e2ebf0 96.63%);
 
-	@media all and (min-width: ${breakpoints.phone}) {
-		min-height: 325px;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		height: 324px;
+		padding: 20px;
 	}
 
 	img {
-		max-width: 150px;
-		max-height: 130px;
+		/* width: 44%; */
+		/* transform: rotate(-16deg); */
+		min-height: 60%;
+		max-height: 90%;
+		@media all and (min-width: ${breakpoints.notebook}) {
+			min-height: 80%;
+			max-height: 110%;
+			margin: 20px 0;
+		}
 	}
 `;
 
 const Title = styled.h1`
-	margin: 0 0 8px 0;
-	padding: 0;
 	font-size: 3rem;
 	line-height: 160%;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 4rem;
+		margin: 0 0 8px 0;
+		padding: 0;
 	}
 `;
 

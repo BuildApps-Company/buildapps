@@ -9,8 +9,9 @@ import React from 'react';
 import { PortfolioDetails } from '../../components/PortfolioPage/index';
 
 const sushi = () => {
-	return <PortfolioDetails id={'sushi'} />;
-	// return <div>Hello world</div>;
+	return <PortfolioDetails id={'sushi'}>
+		
+	</PortfolioDetails>;
 };
 
 export default sushi;

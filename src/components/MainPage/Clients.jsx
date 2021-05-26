@@ -64,7 +64,7 @@ const BlockWrapper = styled.div`
 	}
 
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding: 40px 215px 80px 215px;
+		padding: 40px 12% 80px 12%;
 	}
 `;
 

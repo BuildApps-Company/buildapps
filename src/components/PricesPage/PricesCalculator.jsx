@@ -99,7 +99,7 @@ export const PricesCalculator = () => {
 };
 
 const PricesContainer = styled.div`
-	padding: 0 64px 0 215px;
+	padding: 0 64px 0 12%;
 	display: flex;
 	justify-content: space-between;
 `;
