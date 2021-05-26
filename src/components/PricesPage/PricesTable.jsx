@@ -38,12 +38,12 @@ const StyledPricesTable = styled.table`
 	}
 
 	th {
-		padding: 32px 0 32px 12%;
+		padding: 32px 0 32px 11%;
 		text-align: start;
 		background: #eff0f3;
 	}
 
 	td {
-		padding: 32px 0 32px 12%;
+		padding: 32px 0 32px 11%;
 	}
 `;

@@ -41,7 +41,7 @@ export function PortfolioDetails({ id, children }) {
 const StyledLink = styled(Link)`
 	display: inline-block;
 	margin: 0 0 16px 0;
-	padding: 0 0 0 12%;
+	padding: 0 0 0 11%;
 	font-size: 0.75rem;
 	line-height: 160%;
 	opacity: 0.75;

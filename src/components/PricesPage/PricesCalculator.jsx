@@ -9,8 +9,10 @@ export const PricesCalculator = () => {
 		development: 0,
 		maintain: 0,
 	});
+	const [dayAmount, setDaysAmount] = useState(0);
 	const [estimatedTime, setEstimatedTime] = useState(0);
 	const [totalPrice, setTotalPrice] = useState(0);
+	const [totalDays, setTotalDays] = useState(0);
 
 	const handleServiceSelect = ({ target }) => {
 		target.checked &&
@@ -47,12 +49,11 @@ export const PricesCalculator = () => {
 				{Object.entries(calculationOptionsData).map(([key, el]) => (
 					<li key={key}>
 						<ServicesTitle>{el.title}</ServicesTitle>
-
 						{el.buttons.map(el => (
 							<ServicesBtn key={el.key}>
 								<input
 									id={el.key}
-									type="checkbox"
+									type="radio"
 									onClick={handleServiceSelect}
 									data-planning={el.planning}
 									data-design={el.design}
@@ -71,22 +72,23 @@ export const PricesCalculator = () => {
 
 				<CostsList>
 					<li>
-						<span>Planning</span> {priceValues.planning} $
+						<span>Planning</span> $ {priceValues.planning}
 					</li>
 					<li>
-						<span>Design</span> {priceValues.design} $
+						<span>Design</span> $ {priceValues.design}
 					</li>
 					<li>
-						<span>Development</span> {priceValues.development} $
+						<span>Development</span> $ {priceValues.development}
 					</li>
 					<li>
-						<span>Maintain</span> {priceValues.maintain} $
+						<span>Maintain</span> $ {priceValues.maintain}
 					</li>
 					<li>
-						<span>Estimated time</span> {estimatedTime} working days
+						<span>Estimated time</span>
+						<SpanEstimate>from {estimatedTime} working days</SpanEstimate>
 					</li>
 					<li>
-						<span>Total</span> {totalPrice} $
+						<span>Total cost </span> from $ {totalPrice}
 					</li>
 				</CostsList>
 
@@ -98,16 +100,22 @@ export const PricesCalculator = () => {
 	);
 };
 
+const SpanEstimate = styled.span`
+	text-align: end;
+`;
 const PricesContainer = styled.div`
-	padding: 0 64px 0 12%;
+	width: 100%;
+	padding: 0 64px 0 11%;
 	display: flex;
 	justify-content: space-between;
 `;
 
 const ServicesList = styled.ul`
+	width: 60%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	/* margin-right: 4%; */
 
 	li:not(:last-child) {
 		margin-bottom: 32px;
@@ -143,6 +151,7 @@ const ServicesBtn = styled.div`
 		background-color: transparent;
 		border: 1px solid #313131;
 		user-select: none;
+		margin-bottom: 20px;
 	}
 
 	input:checked + label {
@@ -152,7 +161,8 @@ const ServicesBtn = styled.div`
 `;
 
 const CostsContainer = styled.div`
-	min-width: 630px;
+	min-width: 560px;
+	width: 40%;
 	height: fit-content;
 	padding: 40px;
 	background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);

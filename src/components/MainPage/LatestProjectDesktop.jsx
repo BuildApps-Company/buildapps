@@ -112,7 +112,7 @@ const Container = styled.div`
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		padding: 40px 12% 0;
+		padding: 40px 11% 0;
 	}
 `;
 

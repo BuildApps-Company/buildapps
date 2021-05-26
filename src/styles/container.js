@@ -8,8 +8,8 @@ export const Container = styled.div`
 					padding-right: 16px;
 
 					@media all and (min-width: ${breakpoints.phone}) {
-						padding-left: 12%;
-						padding-right: 12%;
+						padding-left: 11%;
+						padding-right: 11%;
 					}
 				`;
 
@@ -20,7 +20,7 @@ export const SmallContainer = styled.div`
 					padding-right: 16px;
 
 					@media all and (min-width: ${breakpoints.phone}) {
-						padding-left: 12%;
+						padding-left: 11%;
 						padding-right: 64px;
 					}
 				`;

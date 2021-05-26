@@ -124,8 +124,8 @@ const StyledPageContainer = styled.div`
 	padding-bottom: 34px;
 
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding-left: 12%;
-		padding-right: 12%;
+		padding-left: 11%;
+		padding-right: 11%;
 	}
 `;
 
