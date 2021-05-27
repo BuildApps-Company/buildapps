@@ -19,7 +19,10 @@ export const ProjectsList = ({ selectedCategories }) => {
 		<StyledPortfolioList>
 			{projects.map(([key, el]) => (
 				<li key={key}>
-					<Link to={routes.portfolioDetails} state={{ project: el }}>
+					<Link
+						to={`${routes.portfolio}/${key}`}
+						state={{ project: el }}
+					>
 						<ImageContainer>
 							<h3>{el.title}</h3>
 							<img src={el.longImage} alt={el.title} />

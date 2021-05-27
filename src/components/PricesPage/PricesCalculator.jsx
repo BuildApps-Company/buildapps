@@ -2,62 +2,65 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { calculationOptionsData } from '../../data/pricesCalculatorData';
 
+const initPriceValues = {
+	planning: 0,
+	design: 0,
+	development: 0,
+	maintain: 0,
+	days: 0,
+};
 export const PricesCalculator = () => {
-	const [priceValues, setPriceValues] = useState({
-		planning: 0,
-		design: 0,
-		development: 0,
-		maintain: 0,
-	});
-	const [estimatedTime, setEstimatedTime] = useState(0);
+	const [priceValues, setPriceValues] = useState({ ...initPriceValues });
+	const [selectedButtons, setSelectedButtons] = useState({});
 	const [totalPrice, setTotalPrice] = useState(0);
 
-	const handleServiceSelect = ({ target }) => {
-		target.checked &&
-			setPriceValues({
-				planning: (priceValues.planning += Number(target.dataset.planning)),
-				design: (priceValues.design += Number(target.dataset.design)),
-				development: (priceValues.development += Number(
-					target.dataset.development
-				)),
-				maintain: (priceValues.maintain += Number(target.dataset.maintain)),
-			});
+	const serviceList = Object.entries(calculationOptionsData);
 
-		!target.checked &&
-			setPriceValues({
-				planning: (priceValues.planning -= Number(target.dataset.planning)),
-				design: (priceValues.design -= Number(target.dataset.design)),
-				development: (priceValues.development -= Number(
-					target.dataset.development
-				)),
-				maintain: (priceValues.maintain -= Number(target.dataset.maintain)),
-			});
+	const handleServiceSelect = (sectionName, button) => {
+		const newSelectedButtons = { ...selectedButtons, [sectionName]: button };
+		setSelectedButtons(newSelectedButtons);
 
-		setTotalPrice(
-			priceValues.planning +
-				priceValues.design +
-				priceValues.development +
-				priceValues.maintain
+		const totalValuesPrice = Object.values(newSelectedButtons).reduce(
+			(acc, el) => {
+				acc.planning += el.planning;
+				acc.design += el.design;
+				acc.development += el.development;
+				acc.maintain += el.maintain;
+				acc.days += el.days;
+				console.log(acc);
+				return acc;
+			},
+			{ ...initPriceValues }
 		);
+		console.log(totalValuesPrice);
+		setPriceValues(totalValuesPrice);
+		const total =
+			totalValuesPrice.planning +
+			totalValuesPrice.design +
+			totalValuesPrice.development +
+			totalValuesPrice.maintain;
+
+		setTotalPrice(total);
 	};
 
 	return (
 		<PricesContainer>
 			<ServicesList>
-				{Object.entries(calculationOptionsData).map(([key, el]) => (
+				{serviceList.map(([key, el]) => (
 					<li key={key}>
 						<ServicesTitle>{el.title}</ServicesTitle>
-
 						{el.buttons.map(el => (
 							<ServicesBtn key={el.key}>
 								<input
 									id={el.key}
-									type="checkbox"
-									onClick={handleServiceSelect}
+									name={key}
+									type="radio"
+									onClick={() => handleServiceSelect(key, el)}
 									data-planning={el.planning}
 									data-design={el.design}
 									data-development={el.development}
 									data-maintain={el.maintain}
+									data-days={el.days}
 								/>
 								<label for={el.key}>{el.name}</label>
 							</ServicesBtn>
@@ -71,22 +74,23 @@ export const PricesCalculator = () => {
 
 				<CostsList>
 					<li>
-						<span>Planning</span> {priceValues.planning} $
+						<span>Planning</span> $ {priceValues.planning}
 					</li>
 					<li>
-						<span>Design</span> {priceValues.design} $
+						<span>Design</span> $ {priceValues.design}
 					</li>
 					<li>
-						<span>Development</span> {priceValues.development} $
+						<span>Development</span> $ {priceValues.development}
 					</li>
 					<li>
-						<span>Maintain</span> {priceValues.maintain} $
+						<span>Maintain</span> $ {priceValues.maintain}
 					</li>
 					<li>
-						<span>Estimated time</span> {estimatedTime} working days
+						<span>Estimated time</span>
+						<SpanEstimate>from {priceValues.days} working days</SpanEstimate>
 					</li>
 					<li>
-						<span>Total</span> {totalPrice} $
+						<span>Total cost </span> from $ {totalPrice}
 					</li>
 				</CostsList>
 
@@ -98,16 +102,22 @@ export const PricesCalculator = () => {
 	);
 };
 
+const SpanEstimate = styled.span`
+	text-align: end;
+`;
 const PricesContainer = styled.div`
-	padding: 0 64px 0 215px;
+	width: 100%;
+	padding: 0 64px 0 11%;
 	display: flex;
 	justify-content: space-between;
 `;
 
 const ServicesList = styled.ul`
+	width: 60%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	/* margin-right: 4%; */
 
 	li:not(:last-child) {
 		margin-bottom: 32px;
@@ -143,6 +153,7 @@ const ServicesBtn = styled.div`
 		background-color: transparent;
 		border: 1px solid #313131;
 		user-select: none;
+		margin-bottom: 20px;
 	}
 
 	input:checked + label {
@@ -152,7 +163,8 @@ const ServicesBtn = styled.div`
 `;
 
 const CostsContainer = styled.div`
-	min-width: 630px;
+	min-width: 560px;
+	width: 40%;
 	height: fit-content;
 	padding: 40px;
 	background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
