@@ -45,8 +45,11 @@ export default function PortfolioPage() {
 					<SubTitle>Build apps - Portfolio</SubTitle>
 					<Title>Portfolio</Title>
 					<AboutPage>
-						Et, morbi quam platea sit morbi consequat. Sollicitudin sagittis at
-						consectetur ac feugiat euismod purus.
+						BuildApps is an actively developing IT company that provides a wide
+						range of high quality products, solutions and services in the field
+						of information technology. The main areas of our activity are the
+						development of Internet projects of various levels of complexity,
+						the creation of business automation systems and IT consulting.
 					</AboutPage>
 				</TitleContainer>
 				<ButtonsList

@@ -2,63 +2,65 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { calculationOptionsData } from '../../data/pricesCalculatorData';
 
+const initPriceValues = {
+	planning: 0,
+	design: 0,
+	development: 0,
+	maintain: 0,
+	days: 0,
+};
 export const PricesCalculator = () => {
-	const [priceValues, setPriceValues] = useState({
-		planning: 0,
-		design: 0,
-		development: 0,
-		maintain: 0,
-	});
-	const [dayAmount, setDaysAmount] = useState(0);
-	const [estimatedTime, setEstimatedTime] = useState(0);
+	const [priceValues, setPriceValues] = useState({ ...initPriceValues });
+	const [selectedButtons, setSelectedButtons] = useState({});
 	const [totalPrice, setTotalPrice] = useState(0);
-	const [totalDays, setTotalDays] = useState(0);
 
-	const handleServiceSelect = ({ target }) => {
-		target.checked &&
-			setPriceValues({
-				planning: (priceValues.planning += Number(target.dataset.planning)),
-				design: (priceValues.design += Number(target.dataset.design)),
-				development: (priceValues.development += Number(
-					target.dataset.development
-				)),
-				maintain: (priceValues.maintain += Number(target.dataset.maintain)),
-			});
+	const serviceList = Object.entries(calculationOptionsData);
 
-		!target.checked &&
-			setPriceValues({
-				planning: (priceValues.planning -= Number(target.dataset.planning)),
-				design: (priceValues.design -= Number(target.dataset.design)),
-				development: (priceValues.development -= Number(
-					target.dataset.development
-				)),
-				maintain: (priceValues.maintain -= Number(target.dataset.maintain)),
-			});
+	const handleServiceSelect = (sectionName, button) => {
+		const newSelectedButtons = { ...selectedButtons, [sectionName]: button };
+		setSelectedButtons(newSelectedButtons);
 
-		setTotalPrice(
-			priceValues.planning +
-				priceValues.design +
-				priceValues.development +
-				priceValues.maintain
+		const totalValuesPrice = Object.values(newSelectedButtons).reduce(
+			(acc, el) => {
+				acc.planning += el.planning;
+				acc.design += el.design;
+				acc.development += el.development;
+				acc.maintain += el.maintain;
+				acc.days += el.days;
+				console.log(acc);
+				return acc;
+			},
+			{ ...initPriceValues }
 		);
+		console.log(totalValuesPrice);
+		setPriceValues(totalValuesPrice);
+		const total =
+			totalValuesPrice.planning +
+			totalValuesPrice.design +
+			totalValuesPrice.development +
+			totalValuesPrice.maintain;
+
+		setTotalPrice(total);
 	};
 
 	return (
 		<PricesContainer>
 			<ServicesList>
-				{Object.entries(calculationOptionsData).map(([key, el]) => (
+				{serviceList.map(([key, el]) => (
 					<li key={key}>
 						<ServicesTitle>{el.title}</ServicesTitle>
 						{el.buttons.map(el => (
 							<ServicesBtn key={el.key}>
 								<input
 									id={el.key}
+									name={key}
 									type="radio"
-									onClick={handleServiceSelect}
+									onClick={() => handleServiceSelect(key, el)}
 									data-planning={el.planning}
 									data-design={el.design}
 									data-development={el.development}
 									data-maintain={el.maintain}
+									data-days={el.days}
 								/>
 								<label for={el.key}>{el.name}</label>
 							</ServicesBtn>
@@ -85,7 +87,7 @@ export const PricesCalculator = () => {
 					</li>
 					<li>
 						<span>Estimated time</span>
-						<SpanEstimate>from {estimatedTime} working days</SpanEstimate>
+						<SpanEstimate>from {priceValues.days} working days</SpanEstimate>
 					</li>
 					<li>
 						<span>Total cost </span> from $ {totalPrice}
