@@ -54,7 +54,7 @@ const Title = styled.h1`
 	line-height: 160%;
 	text-transform: uppercase;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		margin-bottom: 24px;
 		font-size: 4rem;
 	}
