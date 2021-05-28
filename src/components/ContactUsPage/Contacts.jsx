@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { SocialMediaList } from '../shared/SocialMediaList';
 import { email, tel } from '../../data/contactUsListData.js';
+import { breakpoints } from '../../styles/breakpoints';
 
 export const Contacts = () => {
 	return (
@@ -17,25 +18,39 @@ export const Contacts = () => {
 					<a href={`mailto:${email}`}>{email}</a>
 				</ContactsListItem>
 				<ContactsListItem>
-					<span>Social medias</span>
-					<SocialMediaList />
+					<SocialWrap>
+						<SocialSpanStyled>Social medias</SocialSpanStyled>
+						<SocialMediaList />
+					</SocialWrap>
 				</ContactsListItem>
 			</ContactsList>
 		</ContactsWrap>
 	);
 };
 
+const SocialWrap = styled.div`
+	display: flex;
+	align-items: baseline;
+`;
+const SocialSpanStyled = styled.span`
+	margin-right: 20px;
+`;
 const ContactsWrap = styled.div`
-	width: 50%;
+	width: 100%;
 	height: fit-content;
-	padding: 40px;
+	padding: 32px;
 	background: #eff0f3;
 	font-size: 2rem;
 	line-height: 160%;
+	white-space: nowrap;
+	margin-top: 32px;
 
 	h3 {
 		margin: 0 0 32px 0;
 		padding: 0;
+	}
+	@media all and (min-width: ${breakpoints.notebook}) {
+		width: 50%;
 	}
 `;
 
@@ -51,7 +66,7 @@ const ContactsListItem = styled.li`
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
-	white-space: nowrap;
+	flex-direction: column;
 
 	&:last-child {
 		padding-top: 10px;
@@ -64,10 +79,21 @@ const ContactsListItem = styled.li`
 
 	span {
 		opacity: 0.5;
+		font-size: 1.5rem;
 	}
 	a {
 		text-decoration: none;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		line-height: 160%;
+	}
+	@media all and (min-width: ${breakpoints.notebook}) {
+		a {
+			font-size: 2rem;
+		}
+		span {
+			font-size: 2rem;
+		}
+		flex-direction: row;
+		margin-top: 0px;
 	}
 `;

@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
+import { breakpoints } from '../../styles/breakpoints';
 
 export const ContactUsForm = () => {
 	const [isActive, setIsActive] = useState(true);
@@ -91,13 +92,21 @@ export const ContactUsForm = () => {
 					onChange={handleChange}
 				/>
 			</label>
-
-			<StyledBtn type="submit">
-				Send<SpanStyledArrow>&rarr;</SpanStyledArrow>
-			</StyledBtn>
+			<BtnWrap>
+				<StyledBtn type="submit">
+					Send<SpanStyledArrow>&rarr;</SpanStyledArrow>
+				</StyledBtn>
+			</BtnWrap>
 		</StyledContactUsForm>
 	);
 };
+
+const BtnWrap = styled.div`
+	text-align: end;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		text-align: start;
+	}
+`;
 
 const SpanStyledArrow = styled.span`
 	color: #874aad;
@@ -107,36 +116,45 @@ const SpanStyledArrow = styled.span`
 `;
 
 const StyledContactUsForm = styled.form`
-	width: 60%;
+	width: 100%;
 	input {
 		width: 90%;
 		margin-bottom: 40px;
 		padding: 8px;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		line-height: 160%;
 		border: none;
 		border-bottom: 2px solid #110322;
+		opacity: 0.5;
+		@media all and (min-width: ${breakpoints.notebook}) {
+			font-size: 2rem;
+		}
 	}
 
 	select {
 		width: 90%;
 		margin-bottom: 40px;
 		padding: 8px;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		line-height: 160%;
 		border: none;
 		border-bottom: 2px solid #110322;
 		background: transparent;
+		opacity: 0.5;
 
 		&:invalid {
 			color: gray;
 		}
 	}
+	@media all and (min-width: ${breakpoints.notebook}) {
+		width: 60%;
+		font-size: 2rem;
+	}
 `;
 
 const StyledBtn = styled.button`
 	padding: 8px 30px;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 160%;
 	text-transform: uppercase;
 	color: #874aad;
@@ -151,5 +169,8 @@ const StyledBtn = styled.button`
 		${SpanStyledArrow} {
 			color: #ffffff;
 		}
+	}
+	@media all and (min-width: ${breakpoints.notebook}) {
+		font-size: 2rem;
 	}
 `;

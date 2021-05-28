@@ -31,10 +31,10 @@ export function BurgerMenu({ toogleList }) {
 			</LanguagesWrap> */}
 
 			<BurgerMenuWrap>
-				<div>
+				<BurgerWrapDesktop>
 					<BurgerTitle>Ready to get started?</BurgerTitle>
 					<ContactUsLink to={routes.contactForm}>Contact Us</ContactUsLink>
-				</div>
+				</BurgerWrapDesktop>
 
 				<OurTeamList />
 
@@ -50,10 +50,16 @@ export function BurgerMenu({ toogleList }) {
 	);
 }
 
+
+const BurgerWrapDesktop = styled.div`
+	display: none;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		display: block;
+	}
+`;
 const StyledBurgerMenu = styled.div`
 	display: flex;
 	flex-direction: column;
-	//
 	z-index: 999;
 	position: absolute;
 	top: 0px;

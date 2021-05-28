@@ -15,7 +15,7 @@ export const Portfolio = {
 		id: 'ppf',
 		image: ppf,
 		longImage: ppfLong,
-		title: 'Lead management software',
+		title: 'Lead management',
 		description: `A CRM that covers most of the organization's processes related to business lending. A full cycle of processing an application - from the moment of an obtaining to the issuance of a loan.
 Integration with third-party services to obtain more complete information about the loan - credit history, information from registries for legal entities or individuals.
 `,
