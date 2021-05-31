@@ -118,7 +118,7 @@ const SpanStyledArrow = styled.span`
 const StyledContactUsForm = styled.form`
 	width: 100%;
 	input {
-		width: 90%;
+		width: 95%;
 		margin-bottom: 40px;
 		padding: 8px;
 		font-size: 1.5rem;
@@ -126,13 +126,13 @@ const StyledContactUsForm = styled.form`
 		border: none;
 		border-bottom: 2px solid #110322;
 		opacity: 0.5;
-		@media all and (min-width: ${breakpoints.notebook}) {
+		@media all and (min-width: 1480px) {
 			font-size: 2rem;
 		}
 	}
 
 	select {
-		width: 90%;
+		width: 95%;
 		margin-bottom: 40px;
 		padding: 8px;
 		font-size: 1.5rem;
@@ -147,8 +147,11 @@ const StyledContactUsForm = styled.form`
 		}
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 60%;
+		width: 50%;
 		font-size: 2rem;
+	}
+	@media all and (min-width: 1480px) {
+		width: 50%;
 	}
 `;
 
@@ -170,7 +173,7 @@ const StyledBtn = styled.button`
 			color: #ffffff;
 		}
 	}
-	@media all and (min-width: ${breakpoints.notebook}) {
+	@media all and (min-width: 1480px) {
 		font-size: 2rem;
 	}
 `;

@@ -8,6 +8,7 @@ import { breakpoints } from '../../styles/breakpoints';
 import logoWhite from '../../../static/images/logo/logoWhite.svg';
 import logoWhiteHover from '../../../static/images/logo/logoWhiteHover.svg';
 import burgerClose from '../../../static/images/burger/burgerClose.svg';
+import { email } from '../../data/contactUsListData';
 
 export function BurgerMenu({ toogleList }) {
 	return (
@@ -36,9 +37,19 @@ export function BurgerMenu({ toogleList }) {
 					<ContactUsLink to={routes.contactForm}>Contact Us</ContactUsLink>
 				</BurgerWrapDesktop>
 
-				<OurTeamList />
-
-				<ContactUsList />
+				<WrapMob>
+					<OurTeamList />
+					<ContactUsWrap>
+						<StyledEmail href={`mailto:${email}`} target="_blank">
+							{email}
+						</StyledEmail>
+						<StyledLink to={routes.contactForm}>Contact us</StyledLink>
+					</ContactUsWrap>
+				</WrapMob>
+				<WrapDesktop>
+					<OurTeamListDesktop />
+					<ContactUsList />
+				</WrapDesktop>
 			</BurgerMenuWrap>
 
 			<SocialLinksWrap>
@@ -50,6 +61,54 @@ export function BurgerMenu({ toogleList }) {
 	);
 }
 
+const WrapDesktop = styled.div`
+	display: none;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 48px;
+	}
+`;
+const OurTeamListDesktop = styled(OurTeamList)`
+	display: none;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		display: block;
+	}
+`;
+const StyledEmail = styled.a`
+	display: block;
+	margin: 0 0 28px 0;
+	padding: 0;
+	line-height: 160%;
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+`;
+const ContactUsWrap = styled.div`
+	margin-top: 18px;
+	padding: 34px 16px;
+	height: fit-content;
+	background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
+	text-align: center;
+`;
+const StyledLink = styled(Link)`
+	white-space: nowrap;
+	padding: 12px 32px;
+	font-size: 1.5rem;
+	line-height: 160%;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #874aad;
+	background: #ffffff;
+`;
+const WrapMob = styled.div`
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		display: none;
+	}
+`;
 
 const BurgerWrapDesktop = styled.div`
 	display: none;
@@ -123,6 +182,12 @@ const BurgerMenuWrap = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 0 11%;
+	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
+		flex-direction: column;
+	}
+	@media all and (min-width: ${breakpoints.notebook}) {
+		flex-direction: row;
+	}
 `;
 
 const BurgerTitle = styled.h2`

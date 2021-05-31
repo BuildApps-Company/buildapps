@@ -6,40 +6,37 @@ import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { colors } from '../../styles/colors';
 import plusIcon from '../../../static/images/ic_plus.svg';
 import minusIcon from '../../../static/images/ic_minus.svg';
+import { breakpoints } from '../../styles/breakpoints';
 
 export const OurTeamList = () => {
-	const [isOpen, setIsOpen] = useState(false);
-	const [width, setWidth] = useState(0);
+	// const [isOpen, setIsOpen] = useState(false);
+	// const [width, setWidth] = useState(0);
 
-	useLayoutEffect(() => {
-		window.addEventListener('resize', setWidth(window.innerWidth));
-		return () =>
-			window.removeEventListener('resize', setWidth(window.innerWidth));
-	}, []);
+	// useLayoutEffect(() => {
+	// 	window.addEventListener('resize', setWidth(window.innerWidth));
+	// 	return () =>
+	// 		window.removeEventListener('resize', setWidth(window.innerWidth));
+	// }, []);
 
-	useEffect(() => {
-		width > 450 && setIsOpen(true);
-	}, [width]);
+	// useEffect(() => {
+	// 	width > 450 && setIsOpen(true);
+	// }, [width]);
 
-	const toogleList = () => setIsOpen(prevState => !prevState);
+	// const toogleList = () => setIsOpen(prevState => !prevState);
 
 	return (
 		<div>
 			<TitleWrap>
 				<ListTitleWithUnderline>Our Team</ListTitleWithUnderline>
 
-				{width <= 450 && (
-					<>
-						{isOpen ? (
-							<img src={minusIcon} alt="Minus Icon" onClick={toogleList} />
-						) : (
-							<img src={plusIcon} alt="Plus Icon" onClick={toogleList} />
-						)}
-					</>
-				)}
+				{/* {isOpen ? (
+					<img src={minusIcon} alt="Minus Icon" onClick={toogleList} />
+				) : (
+					<img src={plusIcon} alt="Plus Icon" onClick={toogleList} />
+				)} */}
 			</TitleWrap>
 
-			{isOpen && (
+			{/* {isOpen && ( */}
 				<OurTeamListStyle>
 					{ourTeamListData.map(el => (
 						<li key={el.key}>
@@ -47,15 +44,18 @@ export const OurTeamList = () => {
 						</li>
 					))}
 				</OurTeamListStyle>
-			)}
+			{/* )} */}
 		</div>
 	);
 };
 
 const TitleWrap = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	display: none;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 `;
 
 const OurTeamListStyle = styled.ul`

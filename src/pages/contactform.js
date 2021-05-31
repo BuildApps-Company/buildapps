@@ -50,7 +50,7 @@ const Title = styled.h1`
 	line-height: 160%;
 	text-transform: uppercase;
 
-	@media all and (min-width: ${breakpoints.notebook}) {
+	@media all and (min-width: 1480px) {
 		font-size: 4rem;
 	}
 `;

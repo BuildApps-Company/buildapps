@@ -33,7 +33,7 @@ const SocialWrap = styled.div`
 	align-items: baseline;
 `;
 const SocialSpanStyled = styled.span`
-	margin-right: 20px;
+	margin-right: 10px;
 `;
 const ContactsWrap = styled.div`
 	width: 100%;
@@ -51,6 +51,7 @@ const ContactsWrap = styled.div`
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 50%;
+		margin-top: -24px;
 	}
 `;
 
@@ -86,7 +87,8 @@ const ContactsListItem = styled.li`
 		font-size: 1.5rem;
 		line-height: 160%;
 	}
-	@media all and (min-width: ${breakpoints.notebook}) {
+
+	@media all and (min-width: 1480px) {
 		a {
 			font-size: 2rem;
 		}
