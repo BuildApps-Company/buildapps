@@ -27,12 +27,10 @@ export const PricesCalculator = () => {
 				acc.development += el.development;
 				acc.maintain += el.maintain;
 				acc.days += el.days;
-				console.log(acc);
 				return acc;
 			},
 			{ ...initPriceValues }
 		);
-		console.log(totalValuesPrice);
 		setPriceValues(totalValuesPrice);
 		const total =
 			totalValuesPrice.planning +

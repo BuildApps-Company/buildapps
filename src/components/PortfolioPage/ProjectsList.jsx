@@ -19,10 +19,7 @@ export const ProjectsList = ({ selectedCategories }) => {
 		<StyledPortfolioList>
 			{projects.map(([key, el]) => (
 				<li key={key}>
-					<Link
-						to={`${routes.portfolio}/${key}`}
-						state={{ project: el }}
-					>
+					<Link to={`${routes.portfolio}/${key}`} state={{ project: el }}>
 						<ImageContainer>
 							<h3>{el.title}</h3>
 							<img src={el.longImage} alt={el.title} />
@@ -96,11 +93,21 @@ const StyledPortfolioList = styled.ul`
 
 const ImageContainer = styled.div`
 	min-height: 200px;
-	padding: 33px 36px 33px 16px;
+	padding: 20px;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: linear-gradient(88deg, #d0eeff 3.37%, #e3fffd 96.63%);
+	overflow: hidden;
+	h3 {
+		font-size: 1rem;
+		margin-right: 10px;
+		width: 40%;
+	}
+	img {
+		max-width: 60%;
+	}
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		min-height: 325px;

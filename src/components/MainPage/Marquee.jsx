@@ -1,12 +1,12 @@
 import React from 'react';
 import Ticker from 'react-ticker';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 
 const Marquee = () => {
 	return (
 		<MarqueeContainer>
-			<Ticker>
+			<Ticker speed={2}>
 				{() => (
 					<>
 						<MarqueeStyled>BUILDAPPS </MarqueeStyled>

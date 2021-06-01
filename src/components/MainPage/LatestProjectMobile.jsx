@@ -11,9 +11,13 @@ export const LatestProjectMobile = ({ projectsMobile }) => {
 			<TitleWrap>
 				<TitlePage>Latest Projects</TitlePage>
 			</TitleWrap>
+
 			<ProjectWrap>
 				{projectsMobile.map(project => (
-					<ImageWrap key={project.title}>
+					<ImageWrap
+						key={project.title}
+						to={`${routes.portfolio}/${project.id}`}
+					>
 						<h3>{project.title}</h3>
 						<img src={project.longImage} />
 					</ImageWrap>
@@ -85,7 +89,7 @@ const ProjectWrap = styled.div`
 	padding-right: 16px;
 `;
 
-const ImageWrap = styled.div`
+const ImageWrap = styled(Link)`
 	width: 100%;
 	min-height: 200px;
 	padding: 33px 36px 33px 16px;

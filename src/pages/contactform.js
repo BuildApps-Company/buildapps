@@ -25,10 +25,10 @@ const StyledPageContainer = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 120px;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: 5%;
+	padding-right: 5%;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		padding-left: 11%;
 		padding-right: 64px;
 	}
@@ -46,15 +46,19 @@ const SubTitle = styled.h2`
 const Title = styled.h1`
 	margin: 0 0 40px 0;
 	padding: 0;
-	font-size: 4rem;
+	font-size: 3rem;
 	line-height: 160%;
 	text-transform: uppercase;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: 1480px) {
 		font-size: 4rem;
 	}
 `;
 
 const FlexContainer = styled.div`
 	display: flex;
+	flex-direction: column;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		flex-direction: row;
+	}
 `;
