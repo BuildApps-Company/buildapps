@@ -1,61 +1,38 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { ourTeamListData } from '../../data/ourTeamListData';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { colors } from '../../styles/colors';
-import plusIcon from '../../../static/images/ic_plus.svg';
-import minusIcon from '../../../static/images/ic_minus.svg';
+import { breakpoints } from '../../styles/breakpoints';
 
 export const OurTeamList = () => {
-	const [isOpen, setIsOpen] = useState(false);
-	const [width, setWidth] = useState(0);
-
-	useLayoutEffect(() => {
-		window.addEventListener('resize', setWidth(window.innerWidth));
-		return () =>
-			window.removeEventListener('resize', setWidth(window.innerWidth));
-	}, []);
-
-	useEffect(() => {
-		width > 450 && setIsOpen(true);
-	}, [width]);
-
-	const toogleList = () => setIsOpen(prevState => !prevState);
-
 	return (
-		<div>
+		<TeamListWrap>
 			<TitleWrap>
 				<ListTitleWithUnderline>Our Team</ListTitleWithUnderline>
-
-				{width <= 450 && (
-					<>
-						{isOpen ? (
-							<img src={minusIcon} alt="Minus Icon" onClick={toogleList} />
-						) : (
-							<img src={plusIcon} alt="Plus Icon" onClick={toogleList} />
-						)}
-					</>
-				)}
 			</TitleWrap>
-
-			{isOpen && (
-				<OurTeamListStyle>
-					{ourTeamListData.map(el => (
-						<li key={el.key}>
-							<StyledLink to={el.href}>{el.title}</StyledLink>
-						</li>
-					))}
-				</OurTeamListStyle>
-			)}
-		</div>
+			<OurTeamListStyle>
+				{ourTeamListData.map(el => (
+					<li key={el.key}>
+						<StyledLink to={el.href}>{el.title}</StyledLink>
+					</li>
+				))}
+			</OurTeamListStyle>
+		</TeamListWrap>
 	);
 };
-
+const TeamListWrap = styled.div`
+	margin-right: 9%;
+	white-space: nowrap;
+`;
 const TitleWrap = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	display: none;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 `;
 
 const OurTeamListStyle = styled.ul`

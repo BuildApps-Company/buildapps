@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import { clients } from '../../data/clients';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
+import navLeft from '../../../static/images/navLeft.svg';
+import navRight from '../../../static/images/navRight.svg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -58,9 +60,11 @@ const BlockWrapper = styled.div`
 	padding: 45px 30px;
 	background: ${colors.grey.background};
 
-	.slick-prev:before,
+	.slick-prev:before {
+		content: url(${navLeft});
+	}
 	.slick-next:before {
-		color: #000000;
+		content: url(${navRight});
 	}
 
 	@media all and (min-width: ${breakpoints.phone}) {

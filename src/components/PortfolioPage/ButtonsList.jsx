@@ -58,20 +58,4 @@ const StyledButtonsList = styled.ul`
 	display: flex;
 	list-style: none;
 
-	/* button {
-		display: block;
-		white-space: nowrap;
-		padding: 12px 16px;
-		font-weight: 700;
-		line-height: 160%;
-		text-transform: uppercase;
-		background-color: transparent;
-		border: 1px solid rgba(49, 49, 49, 0.25);
-		word-wrap: break-word;
-		cursor: pointer;
-		&:hover &:focus {
-			color: #ffffff;
-			background: #874aad;
-		}
-	} */
 `;
