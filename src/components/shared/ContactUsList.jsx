@@ -1,17 +1,14 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { contactUsListData } from '../../data/contactUsListData';
 import { colors } from '../../styles/colors';
-import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 
 export const ContactUsList = () => {
 	return (
 		<div>
-			{/* <StyledLinkTitle to={routes.contactForm}>Contact Us</StyledLinkTitle> */}
-
 			<ContactFormContainer>
 				<ListTitleWithUnderline>Contact Us</ListTitleWithUnderline>
 
@@ -29,59 +26,11 @@ export const ContactUsList = () => {
 	);
 };
 
-// export const ContactUsList = () => {
-// 	const [width, setWidth] = useState(0);
-
-// 	useLayoutEffect(() => {
-// 		window.addEventListener('resize', setWidth(window.innerWidth));
-// 		return () =>
-// 			window.removeEventListener('resize', setWidth(window.innerWidth));
-// 	}, []);
-
-// 	return (
-// 		<div>
-// 			{width <= 450 && (
-// 				<StyledLinkTitle to={routes.contactForm}>Contact Us</StyledLinkTitle>
-// 			)}
-
-// 			{width > 450 && (
-// 				<>
-// 					<ListTitleWithUnderline>Contact Us</ListTitleWithUnderline>
-
-// 					<ContuctUsListStyle>
-// 						{contactUsListData.map(el => (
-// 							<li key={el.key}>
-// 								<StyledLink href={el.href} target="_blank">
-// 									{el.title}
-// 								</StyledLink>
-// 							</li>
-// 						))}
-// 					</ContuctUsListStyle>
-// 				</>
-// 			)}
-// 		</div>
-// 	);
-// };
 
 const ContactFormContainer = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
-	}
-`;
-const StyledLinkTitle = styled(Link)`
-	display: none;
-	@media all and (min-width: ${breakpoints.tablet}) {
-		display: block;
-		margin: 0;
-		padding: 0 0 16px 0;
-		font-size: 1.5rem;
-		font-weight: 700;
-		line-height: 160%;
-		text-transform: uppercase;
-		text-decoration: none;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-		color: ${colors.light.white};
 	}
 `;
 

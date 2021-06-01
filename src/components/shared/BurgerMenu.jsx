@@ -68,6 +68,9 @@ const WrapDesktop = styled.div`
 		justify-content: space-between;
 		margin-top: 48px;
 	}
+	@media all and (min-width: ${breakpoints.notebook}) {
+		margin-top: 0px;
+	}
 `;
 const OurTeamListDesktop = styled(OurTeamList)`
 	display: none;
@@ -90,6 +93,7 @@ const ContactUsWrap = styled.div`
 	height: fit-content;
 	background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
 	text-align: center;
+	max-width: 360px;
 `;
 const StyledLink = styled(Link)`
 	white-space: nowrap;
@@ -114,6 +118,7 @@ const BurgerWrapDesktop = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
+		margin-right: 6%;
 	}
 `;
 const StyledBurgerMenu = styled.div`
@@ -182,6 +187,8 @@ const BurgerMenuWrap = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 0 11%;
+	margin-top: auto;
+
 	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
 		flex-direction: column;
 	}

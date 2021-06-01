@@ -24,8 +24,6 @@ export const ContactUsForm = () => {
 		e => {
 			e.preventDefault();
 
-			console.log(inputValues);
-
 			setInputValues({
 				name: '',
 				number: '',
