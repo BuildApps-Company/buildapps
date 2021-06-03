@@ -9,6 +9,8 @@ import logoWhite from '../../../static/images/logo/logoWhite.svg';
 import logoWhiteHover from '../../../static/images/logo/logoWhiteHover.svg';
 import burgerClose from '../../../static/images/burger/burgerClose.svg';
 import { email } from '../../data/contactUsListData';
+import { socialMediaListData } from '../../data/socialMediaListData';
+import { colors } from '../../styles/colors';
 
 export function BurgerMenu({ toogleList }) {
 	return (
@@ -53,9 +55,17 @@ export function BurgerMenu({ toogleList }) {
 			</BurgerMenuWrap>
 
 			<SocialLinksWrap>
-				<SocialLink to="/">Facebook</SocialLink>
+				{socialMediaListData.map(el => (
+					<SocialLink key={el.key}>
+						<a href={el.href} target="_blank">
+							{el.key}
+						</a>
+					</SocialLink>
+				))}
+				{/* 				
 				<SocialLink to="/">Linkedin</SocialLink>
-				<SocialLink to="/">Instagram</SocialLink>
+				<SocialLink to="/">DOU</SocialLink>
+				<SocialLink to="/">Instagram</SocialLink> */}
 			</SocialLinksWrap>
 		</StyledBurgerMenu>
 	);
@@ -224,12 +234,11 @@ const SocialLinksWrap = styled.div`
 	}
 `;
 
-const SocialLink = styled(Link)`
+const SocialLink = styled.li`
 	line-height: 160%;
-	text-transform: uppercase;
-	text-decoration: none;
 	color: #ffffff;
 	opacity: 0.5;
+	list-style: none;
 
 	&:not(:last-child) {
 		margin-right: 24px;
@@ -237,5 +246,10 @@ const SocialLink = styled(Link)`
 
 	&:hover {
 		opacity: 1;
+	}
+	a {
+		text-transform: uppercase;
+		text-decoration: none;
+		color: ${colors.light.white};
 	}
 `;

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { breakpoints } from '../../styles/breakpoints';
+import { colors } from '../../styles/colors';
 import { calculationOptionsData } from '../../data/pricesCalculatorData';
+import { breakpoints } from '../../styles/breakpoints';
+import selectIcon from '../../../static/images/ic_select.svg';
 
 const initPriceValues = {
 	planning: 0,
@@ -10,7 +12,7 @@ const initPriceValues = {
 	maintain: 0,
 	days: 0,
 };
-export const PricesCalculator = () => {
+export const PricesCalculatorMob = () => {
 	const [priceValues, setPriceValues] = useState({ ...initPriceValues });
 	const [selectedButtons, setSelectedButtons] = useState({});
 	const [totalPrice, setTotalPrice] = useState(0);
@@ -18,6 +20,8 @@ export const PricesCalculator = () => {
 	const serviceList = Object.entries(calculationOptionsData);
 
 	const handleServiceSelect = (sectionName, button) => {
+		console.log(sectionName);
+		console.log(button);
 		const newSelectedButtons = { ...selectedButtons, [sectionName]: button };
 		setSelectedButtons(newSelectedButtons);
 
@@ -48,22 +52,22 @@ export const PricesCalculator = () => {
 				{serviceList.map(([key, el]) => (
 					<li key={key}>
 						<ServicesTitle>{el.title}</ServicesTitle>
-						{el.buttons.map(el => (
-							<ServicesBtn key={el.key}>
-								<input
+						<SelectWrap onChange={() => handleServiceSelect(key, el)}>
+							{el.buttons.map(el => (
+								<option
 									id={el.key}
-									name={key}
-									type="radio"
-									onClick={() => handleServiceSelect(key, el)}
+									key={el.key}
+									value={el.name}
 									data-planning={el.planning}
 									data-design={el.design}
 									data-development={el.development}
 									data-maintain={el.maintain}
 									data-days={el.days}
-								/>
-								<label for={el.key}>{el.name}</label>
-							</ServicesBtn>
-						))}
+								>
+									{el.name}
+								</option>
+							))}
+						</SelectWrap>
 					</li>
 				))}
 			</ServicesList>
@@ -100,22 +104,36 @@ export const PricesCalculator = () => {
 		</PricesContainer>
 	);
 };
-
-const SpanEstimate = styled.span`
-	text-align: end;
+const SelectWrap = styled.select`
+	border: none;
+	width: 100%;
+	font-size: 1.5rem;
+	border-bottom: 2px solid ${colors.grey.dark};
+	  appearance:none;
+	   background-image: url(${selectIcon});
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  padding-bottom:8px;
+	/* option {
+		background-color: ${colors.light.background};
+	} */
 `;
+const SpanEstimate = styled.span``;
 const PricesContainer = styled.div`
-	display: none;
+	width: 100%;
+	padding: 2px 4%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 100%;
-		padding: 64px 11%;
-		display: flex;
-		justify-content: space-between;
+		display: none;
 	}
 `;
 
 const ServicesList = styled.ul`
-	width: 60%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -129,8 +147,9 @@ const ServicesList = styled.ul`
 const ServicesTitle = styled.h3`
 	margin: 0 0 24px 0;
 	padding: 0;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	line-height: 160%;
+	text-transform: uppercase;
 `;
 
 const ServicesBtn = styled.div`
@@ -165,12 +184,11 @@ const ServicesBtn = styled.div`
 `;
 
 const CostsContainer = styled.div`
-	min-width: 560px;
-	width: 40%;
 	height: fit-content;
 	padding: 40px;
 	background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
 	color: #ffffff;
+	margin-top: 30px;
 `;
 
 const CostsTitle = styled.h3`
@@ -193,7 +211,9 @@ const CostsList = styled.ul`
 		margin: 0 0 16px 0;
 		display: flex;
 		justify-content: space-between;
+		flex-direction: column;
 		color: #ffffff;
+		font-size: 1.5rem;
 	}
 
 	li:nth-child(5) {
@@ -220,7 +240,7 @@ const CostsBtn = styled.button`
 	padding: 12px 32px;
 	cursor: pointer;
 	border: none;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 	line-height: 160%;
 	text-transform: uppercase;

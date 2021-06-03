@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoints } from '../../styles/breakpoints';
 import { pricesAndServicesTableData } from '../../data/pricesAndServicesTableData';
 
 export const PricesTable = () => {
@@ -26,24 +27,29 @@ export const PricesTable = () => {
 };
 
 const StyledPricesTable = styled.table`
-	margin-bottom: 64px;
-	width: 100%;
-	table-layout: fixed;
-	border-collapse: collapse;
-	font-size: 1.5rem;
-	line-height: 160%;
+	display: none;
 
-	tr {
-		border-bottom: 1px solid #eff0f3;
-	}
+	@media all and (min-width: ${breakpoints.notebook}) {
+		display: table;
+		margin-bottom: 64px;
+		width: 100%;
+		table-layout: fixed;
+		border-collapse: collapse;
+		font-size: 1.5rem;
+		line-height: 160%;
 
-	th {
-		padding: 32px 0 32px 11%;
-		text-align: start;
-		background: #eff0f3;
-	}
+		tr {
+			border-bottom: 1px solid #eff0f3;
+		}
 
-	td {
-		padding: 32px 0 32px 11%;
+		th {
+			padding: 32px 0 32px 11%;
+			text-align: start;
+			background: #eff0f3;
+		}
+
+		td {
+			padding: 32px 0 32px 11%;
+		}
 	}
 `;

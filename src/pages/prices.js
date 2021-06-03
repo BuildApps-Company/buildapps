@@ -2,7 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { Page } from '../components/shared/Page';
 import { Toolbar } from '../components/shared/Toolbar';
-import { PricesTable, PricesCalculator } from '../components/PricesPage';
+import {
+	PricesTable,
+	PricesTableMob,
+	PricesCalculator,
+	PricesCalculatorMob,
+} from '../components/PricesPage';
 import { PreFooter } from '../components/MainPage/PreFooter';
 import { Container } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
@@ -20,6 +25,7 @@ export default function PortfolioPage() {
 			</Container>
 
 			<PricesTable />
+			<PricesTableMob />
 
 			<Container>
 				<TitleContainer>
@@ -28,6 +34,7 @@ export default function PortfolioPage() {
 			</Container>
 
 			<PricesCalculator />
+			<PricesCalculatorMob />
 
 			<PreFooter />
 		</Page>
