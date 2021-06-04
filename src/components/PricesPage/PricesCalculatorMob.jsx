@@ -13,44 +13,10 @@ const initPriceValues = {
 	days: 0,
 };
 
-const initSelectedButtons = {
-	workingOn: {
-		key: 'businesswebsite',
-		name: 'Business website',
-		planning: 0,
-		design: 0,
-		development: 3000,
-		maintain: 1000,
-		days: 40,
-	},
-	withDesign: {
-		key: 'customdesign',
-		name: 'Custom design',
-		planning: 0,
-		design: 1300,
-		development: 0,
-		maintain: 0,
-		days: 7,
-	},
-	cms: {
-		key: 'opencart',
-		name: 'OpenCart',
-		planning: 0,
-		design: 0,
-		development: 1500,
-		maintain: 0,
-		days: 45,
-	},
-	languages: {
-		key: 'one',
-		name: '1',
-		planning: 0,
-		design: 0,
-		development: 0,
-		maintain: 0,
-		days: 3,
-	},
-};
+const initSelectedButtons = Object.entries(calculationOptionsData).reduce(
+	(acc, [key, value]) => ({ ...acc, [key]: value.buttons[0] }),
+	{}
+);
 
 export const PricesCalculatorMob = () => {
 	const [priceValues, setPriceValues] = useState({
