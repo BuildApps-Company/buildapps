@@ -7,7 +7,7 @@ export const SocialMediaList = () => (
 	<StyledSocialMediaList>
 		{socialMediaListData.map(el => (
 			<li key={el.key}>
-				<a href={el.href}>
+				<a href={el.href} target="_blank">
 					<img src={el.img} alt={el.key} />
 				</a>
 			</li>

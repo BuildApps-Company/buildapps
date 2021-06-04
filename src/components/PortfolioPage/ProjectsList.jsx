@@ -1,10 +1,11 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { Portfolio } from '../../data/projects';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import { allProjects } from '../../data/projects';
+import { colors } from '../../styles/colors';
 
 export const ProjectsList = ({ selectedCategories }) => {
 	const projects = Object.entries(Portfolio).filter(
@@ -20,9 +21,9 @@ export const ProjectsList = ({ selectedCategories }) => {
 			{projects.map(([key, el]) => (
 				<li key={key}>
 					<Link to={`${routes.portfolio}/${key}`} state={{ project: el }}>
-						<ImageContainer>
+						<ImageContainer image={el.longImage} background={el.background}>
 							<h3>{el.title}</h3>
-							<img src={el.longImage} alt={el.title} />
+							{el.longImage && <img src={el.longImage} alt={el.title} />}
 						</ImageContainer>
 
 						<>
@@ -42,75 +43,76 @@ const StyledPortfolioList = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 
-	@media all and (min-width: ${breakpoints.phone}) {
-		display: flex;
-		flex-wrap: wrap;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		flex-direction: row;
 	}
 
 	li {
-		@media all and (min-width: ${breakpoints.phone}) {
+		margin-bottom: 16px;
+		@media all and (min-width: ${breakpoints.tablet}) {
 			width: calc((100% - 16px) / 2);
 		}
 	}
 
-	li:not(:nth-last-child(-n + 2)) {
-		@media all and (min-width: ${breakpoints.phone}) {
-			margin-bottom: 64px;
-		}
-	}
-
-	li:not(:last-child) {
-		@media all and (max-width: ${breakpoints.phone}) {
-			margin-bottom: 16px;
-		}
-	}
-
 	li:nth-child(odd) {
-		@media all and (min-width: ${breakpoints.phone}) {
+		@media all and (min-width: ${breakpoints.tablet}) {
 			margin-right: 16px;
+			margin-bottom: 64px;
 		}
 	}
 
 	a {
 		text-decoration: none;
 	}
-
-	h3 {
-		font-size: 1.25rem;
-		line-height: 160%;
-
-		@media all and (min-width: ${breakpoints.phone}) {
-			font-size: 1.5rem;
-		}
-	}
-
-	img {
-		max-width: 150px;
-		max-height: 130px;
-	}
 `;
 
 const ImageContainer = styled.div`
-	min-height: 200px;
+	min-height: 198px;
 	padding: 20px;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: linear-gradient(88deg, #d0eeff 3.37%, #e3fffd 96.63%);
+	background: ${props =>
+		props.background
+			? props.background
+			: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
+
 	overflow: hidden;
+
 	h3 {
-		font-size: 1rem;
-		margin-right: 10px;
+		font-size: 1.25rem;
+		line-height: 160%;
 		width: 40%;
+
+		@media all and (min-width: ${breakpoints.notebook}) {
+			font-size: 1.5rem;
+			margin-top: auto;
+			color: ${colors.light.white};
+		}
 	}
 	img {
-		max-width: 60%;
+		max-height: 150px;
+		max-width: 168px;
+
+		@media all and (min-width: ${breakpoints.notebook}) {
+			max-width: 100%;
+			max-height: 110%;
+		}
 	}
 
-	@media all and (min-width: ${breakpoints.phone}) {
-		min-height: 325px;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		justify-content: start;
+		min-height: 324px;
+		height: 325px;
+		background: ${props =>
+			props.background
+				? props.background
+				: 'linear-gradient(30deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%);'};
 	}
 `;
 

@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Page } from '../components/shared/Page';
 import { Toolbar } from '../components/shared/Toolbar';
@@ -11,14 +11,6 @@ import { SmallContainer } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
 
 export default function AboutUsPage() {
-	const [width, setWidth] = useState(0);
-
-	useLayoutEffect(() => {
-		window.addEventListener('resize', setWidth(window.innerWidth));
-		return () =>
-			window.removeEventListener('resize', setWidth(window.innerWidth));
-	}, []);
-
 	return (
 		<Page>
 			<Toolbar />
@@ -53,7 +45,7 @@ export default function AboutUsPage() {
 					</TitleContainer>
 					<ContributorsList />
 				</AboutUsWrap>
-				{width > 450 && <ContactUsContainerWrap />}
+				<ContactUsContainerWrap />
 			</StyledContainer>
 			<PreFooter />
 		</Page>
@@ -63,18 +55,24 @@ export default function AboutUsPage() {
 const AboutUsWrap = styled.div`
 	width: 100%;
 	padding-right: 16px;
-	@media all and (min-width: ${breakpoints.tablet}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 50%;
 	}
 `;
 const ContactUsContainerWrap = styled(ContactUsContainer)`
-	@media all and (min-width: ${breakpoints.tablet}) {
+	width: 100%;
+	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 50%;
 	}
 `;
 const StyledContainer = styled(SmallContainer)`
 	display: flex;
 	width: 100%;
+	flex-direction: column;
+
+	@media all and (min-width: ${breakpoints.notebook}) {
+		flex-direction: row;
+	}
 `;
 
 const TitleContainer = styled.div`

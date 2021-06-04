@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { breakpoints } from '../../styles/breakpoints';
+import { colors } from '../../styles/colors';
 import { calculationOptionsData } from '../../data/pricesCalculatorData';
+import { breakpoints } from '../../styles/breakpoints';
+import selectIcon from '../../../static/images/ic_select.svg';
 
 const initPriceValues = {
 	planning: 0,
@@ -10,16 +12,66 @@ const initPriceValues = {
 	maintain: 0,
 	days: 0,
 };
-export const PricesCalculator = () => {
-	const [priceValues, setPriceValues] = useState({ ...initPriceValues });
-	const [selectedButtons, setSelectedButtons] = useState({});
+
+const initSelectedButtons = {
+	workingOn: {
+		key: 'businesswebsite',
+		name: 'Business website',
+		planning: 0,
+		design: 0,
+		development: 3000,
+		maintain: 1000,
+		days: 40,
+	},
+	withDesign: {
+		key: 'customdesign',
+		name: 'Custom design',
+		planning: 0,
+		design: 1300,
+		development: 0,
+		maintain: 0,
+		days: 7,
+	},
+	cms: {
+		key: 'opencart',
+		name: 'OpenCart',
+		planning: 0,
+		design: 0,
+		development: 1500,
+		maintain: 0,
+		days: 45,
+	},
+	languages: {
+		key: 'one',
+		name: '1',
+		planning: 0,
+		design: 0,
+		development: 0,
+		maintain: 0,
+		days: 3,
+	},
+};
+
+export const PricesCalculatorMob = () => {
+	const [priceValues, setPriceValues] = useState({
+		...initPriceValues,
+	});
+	const [selectedButtons, setSelectedButtons] = useState({
+		...initSelectedButtons,
+	});
 	const [totalPrice, setTotalPrice] = useState(0);
 
 	const serviceList = Object.entries(calculationOptionsData);
 
-	const handleServiceSelect = (sectionName, button) => {
-		const newSelectedButtons = { ...selectedButtons, [sectionName]: button };
+	const handleServiceSelect = (target, section, key) => {
+		const selectedButtonKey = target.value;
+		const button = section.buttons.find(el => el.key === selectedButtonKey);
+		const newSelectedButtons = {
+			...selectedButtons,
+			[key]: button,
+		};
 		setSelectedButtons(newSelectedButtons);
+
 		const totalValuesPrice = Object.values(newSelectedButtons).reduce(
 			(acc, el) => {
 				acc.planning += el.planning;
@@ -40,6 +92,27 @@ export const PricesCalculator = () => {
 
 		setTotalPrice(total);
 	};
+	useEffect(() => {
+		const totalValuesPrice = Object.values(selectedButtons).reduce(
+			(acc, el) => {
+				acc.planning += el.planning;
+				acc.design += el.design;
+				acc.development += el.development;
+				acc.maintain += el.maintain;
+				acc.days += el.days;
+				return acc;
+			},
+			{ ...initPriceValues }
+		);
+		setPriceValues(totalValuesPrice);
+		const total =
+			totalValuesPrice.planning +
+			totalValuesPrice.design +
+			totalValuesPrice.development +
+			totalValuesPrice.maintain;
+
+		setTotalPrice(total);
+	}, [selectedButtons]);
 
 	return (
 		<PricesContainer>
@@ -47,22 +120,24 @@ export const PricesCalculator = () => {
 				{serviceList.map(([key, el]) => (
 					<li key={key}>
 						<ServicesTitle>{el.title}</ServicesTitle>
-						{el.buttons.map(el => (
-							<ServicesBtn key={el.key}>
-								<input
-									id={el.key}
-									name={key}
-									type="radio"
-									onClick={() => handleServiceSelect(key, el)}
+						<SelectWrap
+							name={key}
+							value={selectedButtons[key].key}
+							onChange={({ target }) => handleServiceSelect(target, el, key)}
+						>
+							{el.buttons.map(el => (
+								<option
+									value={el.key}
 									data-planning={el.planning}
 									data-design={el.design}
 									data-development={el.development}
 									data-maintain={el.maintain}
 									data-days={el.days}
-								/>
-								<label for={el.key}>{el.name}</label>
-							</ServicesBtn>
-						))}
+								>
+									{el.name}
+								</option>
+							))}
+						</SelectWrap>
 					</li>
 				))}
 			</ServicesList>
@@ -99,22 +174,33 @@ export const PricesCalculator = () => {
 		</PricesContainer>
 	);
 };
-
-const SpanEstimate = styled.span`
-	text-align: end;
+const SelectWrap = styled.select`
+	border: none;
+	width: 100%;
+	font-size: 1.5rem;
+	border-bottom: 2px solid ${colors.grey.dark};
+	appearance: none;
+	background-image: url(${selectIcon});
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+	background-position-y: 5px;
+	padding-bottom: 8px;
 `;
+const SpanEstimate = styled.span``;
 const PricesContainer = styled.div`
-	display: none;
+	width: 100%;
+	padding: 2px 4%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 100%;
-		padding: 64px 6% 64px 11%;
-		display: flex;
-		justify-content: space-between;
+		display: none;
 	}
 `;
 
 const ServicesList = styled.ul`
-	width: 60%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -128,48 +214,17 @@ const ServicesList = styled.ul`
 const ServicesTitle = styled.h3`
 	margin: 0 0 24px 0;
 	padding: 0;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	line-height: 160%;
-`;
-
-const ServicesBtn = styled.div`
-	display: inline-block;
-
-	&:not(:last-child) {
-		margin-right: 16px;
-	}
-
-	input {
-		display: none;
-	}
-
-	label {
-		min-width: 80px;
-		padding: 12px 16px;
-		display: flex;
-		justify-content: center;
-		cursor: pointer;
-		font-size: 1.5rem;
-		line-height: 160%;
-		background-color: transparent;
-		border: 1px solid #313131;
-		user-select: none;
-		margin-bottom: 20px;
-	}
-
-	input:checked + label {
-		color: #ffffff;
-		background: #874aad;
-	}
+	text-transform: uppercase;
 `;
 
 const CostsContainer = styled.div`
-	min-width: 560px;
-	width: 40%;
 	height: fit-content;
 	padding: 40px;
 	background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
 	color: #ffffff;
+	margin-top: 30px;
 `;
 
 const CostsTitle = styled.h3`
@@ -192,7 +247,9 @@ const CostsList = styled.ul`
 		margin: 0 0 16px 0;
 		display: flex;
 		justify-content: space-between;
+		flex-direction: column;
 		color: #ffffff;
+		font-size: 1.5rem;
 	}
 
 	li:nth-child(5) {
@@ -219,7 +276,7 @@ const CostsBtn = styled.button`
 	padding: 12px 32px;
 	cursor: pointer;
 	border: none;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 	line-height: 160%;
 	text-transform: uppercase;
