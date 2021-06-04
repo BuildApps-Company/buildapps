@@ -34,6 +34,7 @@ const Container = styled.div`
 
 const FlexWrap = styled.div`
 	display: flex;
+	align-items: center;
 	white-space: nowrap;
 	padding: 2px 5px 2px 5px;
 `;

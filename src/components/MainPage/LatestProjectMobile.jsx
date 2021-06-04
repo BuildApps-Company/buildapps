@@ -96,6 +96,7 @@ const ImageWrap = styled(Link)`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	text-decoration: none;
 	background: linear-gradient(88deg, #d0eeff 3.37%, #e3fffd 96.63%);
 	&:not(:last-child) {
 		margin-bottom: 16px;
