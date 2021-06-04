@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoints } from '../../styles/breakpoints';
 import { pricesAndServicesTableData } from '../../data/pricesAndServicesTableData';
 import PricesSectionMob from './PricesSectionMob.js';
+
 export const PricesTableMob = () => {
 	return (
 		<StyledPricesTableMob>
@@ -17,4 +19,7 @@ const StyledPricesTableMob = styled.div`
 	width: 100%;
 	font-size: 1.5rem;
 	line-height: 160%;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		display: none;
+	}
 `;

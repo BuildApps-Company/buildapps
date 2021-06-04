@@ -20,7 +20,6 @@ export const PricesCalculator = () => {
 	const handleServiceSelect = (sectionName, button) => {
 		const newSelectedButtons = { ...selectedButtons, [sectionName]: button };
 		setSelectedButtons(newSelectedButtons);
-		console.log(newSelectedButtons);
 		const totalValuesPrice = Object.values(newSelectedButtons).reduce(
 			(acc, el) => {
 				acc.planning += el.planning;
@@ -108,7 +107,7 @@ const PricesContainer = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 100%;
-		padding: 64px 11%;
+		padding: 64px 6% 64px 11%;
 		display: flex;
 		justify-content: space-between;
 	}

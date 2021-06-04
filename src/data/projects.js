@@ -13,6 +13,7 @@ export const allProjects = 'All';
 export const Portfolio = {
 	ppf: {
 		id: 'ppf',
+		background: '',
 		image: ppf,
 		longImage: ppfLong,
 		title: 'Lead management software',
@@ -25,6 +26,7 @@ Integration with third-party services to obtain more complete information about 
 	},
 	sushi: {
 		id: 'sushi',
+		background: '',
 		image: sushi,
 		longImage: sushiLong,
 		title: 'СУШИШОП',
@@ -36,6 +38,7 @@ Integration with third-party services to obtain more complete information about 
 	},
 	prankChat: {
 		id: 'prankChat',
+		background: '',
 		image: prankchat,
 		longImage: prankchatLong,
 		title: 'PrankChat смешные видео',
@@ -45,6 +48,7 @@ Integration with third-party services to obtain more complete information about 
 	},
 	spbProperty: {
 		id: 'spbProperty',
+		background: '',
 		image: spbProperty,
 		longImage: spbLong,
 		title: 'Петербургская Недвижимость',
@@ -59,6 +63,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 	},
 	askod: {
 		id: 'askod',
+		background: '',
 		image: askod,
 		longImage: askod,
 		title: 'Askod Online',

@@ -2,6 +2,7 @@ import React from 'react';
 import Ticker from 'react-ticker';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
+import { breakpoints } from '../../styles/breakpoints';
 
 const Marquee = () => {
 	return (
@@ -29,5 +30,8 @@ const MarqueeStyled = styled.div`
 `;
 
 const MarqueeContainer = styled.div`
-	margin-top: 170px;
+	margin-top: 64px;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		margin-top: 170px;
+	}
 `;

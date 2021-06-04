@@ -31,6 +31,7 @@ const StyledPageContainer = styled.div`
 	@media all and (min-width: ${breakpoints.notebook}) {
 		padding-left: 11%;
 		padding-right: 64px;
+		
 	}
 `;
 

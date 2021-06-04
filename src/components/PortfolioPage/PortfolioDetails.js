@@ -18,8 +18,13 @@ export function PortfolioDetails({ id, children }) {
 			<StyledLink to={routes.portfolio}>GO back to portfolio</StyledLink>
 
 			<ProjectImageContainer>
-				<ImageWrap>
-					<img src={projectValues.longImage} alt={projectValues.title} />
+				<ImageWrap
+					image={projectValues.longImage}
+					background={projectValues.background}
+				>
+					{projectValues.longImage && (
+						<img src={projectValues.longImage} alt={projectValues.title} />
+					)}
 				</ImageWrap>
 			</ProjectImageContainer>
 
@@ -64,8 +69,11 @@ const ImageWrap = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* margin-bottom: 32px; */
-	background: linear-gradient(88deg, #cfd9df 3.37%, #e2ebf0 96.63%);
+
+	background: ${props =>
+		props.background
+			? props.background
+			: 'linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);'};
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		height: 324px;
@@ -73,8 +81,7 @@ const ImageWrap = styled.div`
 	}
 
 	img {
-		/* width: 44%; */
-		/* transform: rotate(-16deg); */
+		transform: rotate3d(-33, 0, 35, -16deg);
 		min-height: 60%;
 		max-height: 90%;
 		@media all and (min-width: ${breakpoints.notebook}) {

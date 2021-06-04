@@ -64,9 +64,6 @@ export const PricesCalculatorMob = () => {
 	const serviceList = Object.entries(calculationOptionsData);
 
 	const handleServiceSelect = (target, section, key) => {
-		// console.log(target);
-		// console.log(section);
-		// console.log(key);
 		const selectedButtonKey = target.value;
 		const button = section.buttons.find(el => el.key === selectedButtonKey);
 		const newSelectedButtons = {
@@ -74,7 +71,7 @@ export const PricesCalculatorMob = () => {
 			[key]: button,
 		};
 		setSelectedButtons(newSelectedButtons);
-		console.log(selectedButtons);
+
 		const totalValuesPrice = Object.values(newSelectedButtons).reduce(
 			(acc, el) => {
 				acc.planning += el.planning;

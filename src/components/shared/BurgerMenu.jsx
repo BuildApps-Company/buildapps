@@ -62,10 +62,6 @@ export function BurgerMenu({ toogleList }) {
 						</a>
 					</SocialLink>
 				))}
-				{/* 				
-				<SocialLink to="/">Linkedin</SocialLink>
-				<SocialLink to="/">DOU</SocialLink>
-				<SocialLink to="/">Instagram</SocialLink> */}
 			</SocialLinksWrap>
 		</StyledBurgerMenu>
 	);
