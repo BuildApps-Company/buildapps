@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { calculationOptionsData } from '../../data/pricesCalculatorData';
@@ -12,19 +12,69 @@ const initPriceValues = {
 	maintain: 0,
 	days: 0,
 };
+
+const initSelectedButtons = {
+	workingOn: {
+		key: 'businesswebsite',
+		name: 'Business website',
+		planning: 0,
+		design: 0,
+		development: 3000,
+		maintain: 1000,
+		days: 40,
+	},
+	withDesign: {
+		key: 'customdesign',
+		name: 'Custom design',
+		planning: 0,
+		design: 1300,
+		development: 0,
+		maintain: 0,
+		days: 7,
+	},
+	cms: {
+		key: 'opencart',
+		name: 'OpenCart',
+		planning: 0,
+		design: 0,
+		development: 1500,
+		maintain: 0,
+		days: 45,
+	},
+	languages: {
+		key: 'one',
+		name: '1',
+		planning: 0,
+		design: 0,
+		development: 0,
+		maintain: 0,
+		days: 3,
+	},
+};
+
 export const PricesCalculatorMob = () => {
-	const [priceValues, setPriceValues] = useState({ ...initPriceValues });
-	const [selectedButtons, setSelectedButtons] = useState({});
+	const [priceValues, setPriceValues] = useState({
+		...initPriceValues,
+	});
+	const [selectedButtons, setSelectedButtons] = useState({
+		...initSelectedButtons,
+	});
 	const [totalPrice, setTotalPrice] = useState(0);
 
 	const serviceList = Object.entries(calculationOptionsData);
 
-	const handleServiceSelect = (sectionName, button) => {
-		console.log(sectionName);
-		console.log(button);
-		const newSelectedButtons = { ...selectedButtons, [sectionName]: button };
+	const handleServiceSelect = (target, section, key) => {
+		// console.log(target);
+		// console.log(section);
+		// console.log(key);
+		const selectedButtonKey = target.value;
+		const button = section.buttons.find(el => el.key === selectedButtonKey);
+		const newSelectedButtons = {
+			...selectedButtons,
+			[key]: button,
+		};
 		setSelectedButtons(newSelectedButtons);
-
+		console.log(selectedButtons);
 		const totalValuesPrice = Object.values(newSelectedButtons).reduce(
 			(acc, el) => {
 				acc.planning += el.planning;
@@ -45,6 +95,27 @@ export const PricesCalculatorMob = () => {
 
 		setTotalPrice(total);
 	};
+	useEffect(() => {
+		const totalValuesPrice = Object.values(selectedButtons).reduce(
+			(acc, el) => {
+				acc.planning += el.planning;
+				acc.design += el.design;
+				acc.development += el.development;
+				acc.maintain += el.maintain;
+				acc.days += el.days;
+				return acc;
+			},
+			{ ...initPriceValues }
+		);
+		setPriceValues(totalValuesPrice);
+		const total =
+			totalValuesPrice.planning +
+			totalValuesPrice.design +
+			totalValuesPrice.development +
+			totalValuesPrice.maintain;
+
+		setTotalPrice(total);
+	}, [selectedButtons]);
 
 	return (
 		<PricesContainer>
@@ -52,12 +123,14 @@ export const PricesCalculatorMob = () => {
 				{serviceList.map(([key, el]) => (
 					<li key={key}>
 						<ServicesTitle>{el.title}</ServicesTitle>
-						<SelectWrap onChange={() => handleServiceSelect(key, el)}>
+						<SelectWrap
+							name={key}
+							value={selectedButtons[key].key}
+							onChange={({ target }) => handleServiceSelect(target, el, key)}
+						>
 							{el.buttons.map(el => (
 								<option
-									id={el.key}
-									key={el.key}
-									value={el.name}
+									value={el.key}
 									data-planning={el.planning}
 									data-design={el.design}
 									data-development={el.development}
@@ -109,15 +182,12 @@ const SelectWrap = styled.select`
 	width: 100%;
 	font-size: 1.5rem;
 	border-bottom: 2px solid ${colors.grey.dark};
-	  appearance:none;
-	   background-image: url(${selectIcon});
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: 5px;
-  padding-bottom:8px;
-	/* option {
-		background-color: ${colors.light.background};
-	} */
+	appearance: none;
+	background-image: url(${selectIcon});
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+	background-position-y: 5px;
+	padding-bottom: 8px;
 `;
 const SpanEstimate = styled.span``;
 const PricesContainer = styled.div`
@@ -150,37 +220,6 @@ const ServicesTitle = styled.h3`
 	font-size: 1rem;
 	line-height: 160%;
 	text-transform: uppercase;
-`;
-
-const ServicesBtn = styled.div`
-	display: inline-block;
-
-	&:not(:last-child) {
-		margin-right: 16px;
-	}
-
-	input {
-		display: none;
-	}
-
-	label {
-		min-width: 80px;
-		padding: 12px 16px;
-		display: flex;
-		justify-content: center;
-		cursor: pointer;
-		font-size: 1.5rem;
-		line-height: 160%;
-		background-color: transparent;
-		border: 1px solid #313131;
-		user-select: none;
-		margin-bottom: 20px;
-	}
-
-	input:checked + label {
-		color: #ffffff;
-		background: #874aad;
-	}
 `;
 
 const CostsContainer = styled.div`

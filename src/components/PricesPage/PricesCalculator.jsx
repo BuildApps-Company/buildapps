@@ -20,7 +20,7 @@ export const PricesCalculator = () => {
 	const handleServiceSelect = (sectionName, button) => {
 		const newSelectedButtons = { ...selectedButtons, [sectionName]: button };
 		setSelectedButtons(newSelectedButtons);
-
+		console.log(newSelectedButtons);
 		const totalValuesPrice = Object.values(newSelectedButtons).reduce(
 			(acc, el) => {
 				acc.planning += el.planning;
