@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import { routes } from '../../utilities/routes';
-import { PrimaryButton } from '../../styles/buttons';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
 import { H4, SubH3, Body2 } from '../../styles/styled-headers';
@@ -65,8 +64,13 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 					{projectsDesktop.map((activeProject, index) => (
 						<ProjectContainer key={index} visible={item === index}>
 							<ProjectWrap>
-								<ImageWrapDesktop>
-									<img src={activeProject.longImage} />
+								<ImageWrapDesktop
+									image={activeProject.longImage}
+									background={activeProject.background}
+								>
+									{activeProject.longImage && (
+										<img src={activeProject.longImage} />
+									)}
 								</ImageWrapDesktop>
 								<DetailsWrap>
 									<SmallLogo src={activeProject.image} />
@@ -188,11 +192,16 @@ const ImageWrapDesktop = styled.div`
 		flex-grow: 0;
 		height: 100%;
 		padding: 10px 20px;
-		background: linear-gradient(88deg, #d0eeff 3.37%, #e3fffd 96.63%);
+		background: ${props =>
+			props.background
+				? props.background
+				: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
+
 		img {
 			max-width: 100%;
 			object-fit: contain;
 			max-height: 100%;
+			/* transform: rotate3d(-33, 0, 35, -16deg); */
 		}
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
@@ -209,12 +218,12 @@ const DetailsWrap = styled.div`
 		width: 50%;
 		flex-shrink: 0;
 		flex-grow: 0;
-		padding: 30px;
+		padding: 0px 11% 0px 9%;
 	}
 `;
 
 const SmallLogo = styled.img`
-	max-height: 80px;
+	max-height: 60px;
 `;
 
 const Tag = styled(SubH3)`
@@ -264,10 +273,11 @@ const Tab = styled.div`
 
 const LinkBtn = styled(Link)`
 	display: inline-block;
+	min-width: 102px;
 	border: 2px solid ${colors.Main};
 	font-size: 1em;
 	text-transform: uppercase;
-	padding: 15px 30px;
+	padding: 8px 20px;
 	margin-top: 32px;
 	color: ${colors.Main};
 	text-decoration: none;

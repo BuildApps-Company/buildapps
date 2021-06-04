@@ -30,6 +30,7 @@ export const Contacts = () => {
 
 const SocialWrap = styled.div`
 	display: flex;
+	flex-direction: column;
 	align-items: baseline;
 `;
 const SocialSpanStyled = styled.span`

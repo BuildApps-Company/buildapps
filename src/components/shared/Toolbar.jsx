@@ -40,10 +40,10 @@ const StyledHeader = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 4px 16px;
+	padding: 4px 6%;
 
-	@media all and (min-width: ${breakpoints.phone}) {
-		padding: 16px 64px 16px 53px;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		padding: 16px 6%;
 	}
 `;
 
