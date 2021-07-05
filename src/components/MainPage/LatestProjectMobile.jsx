@@ -46,6 +46,7 @@ const Button = styled(Link)`
 `;
 
 const LatestProjectsContainer = styled.div`
+	margin-bottom: 64px;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		height: 100vh;
 		overflow: hidden;

@@ -30,8 +30,8 @@ const MarqueeStyled = styled.div`
 `;
 
 const MarqueeContainer = styled.div`
-	margin-top: 64px;
+	/* margin-top: 64px; */
 	@media all and (min-width: ${breakpoints.notebook}) {
-		margin-top: 170px;
+		/* margin-top: 170px; */
 	}
 `;

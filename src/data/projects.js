@@ -66,7 +66,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 		background: '',
 		image: askod,
 		longImage: askod,
-		title: 'Askod Online',
+		title: 'ASKOD Online',
 		description: `ASKOD Online service a is designed to automate the processes of document circulation between legal entities and individuals and provides review, approval, signing, sending, receiving and storing documents in a cloud environment
 `,
 		responsibility: ['Design'],

@@ -57,8 +57,8 @@ const StyledLink = styled(Link)`
 
 const ProjectImageContainer = styled.div`
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding-left: 25%;
-		padding-right: 25%;
+		padding-left: 24%;
+		padding-right: 24%;
 	}
 `;
 
@@ -81,11 +81,9 @@ const ImageWrap = styled.div`
 	}
 
 	img {
-		transform: rotate3d(-33, 0, 35, -16deg);
 		min-height: 60%;
 		max-height: 90%;
 		@media all and (min-width: ${breakpoints.notebook}) {
-			min-height: 80%;
 			max-height: 110%;
 			margin: 20px 0;
 		}
@@ -129,15 +127,15 @@ const StyledDescription = styled.p`
 `;
 
 const ProjectDetailsContainer = styled.div`
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 24px;
 	padding-left: 16px;
 	padding-right: 16px;
-
-	@media all and (min-width: ${breakpoints.phone}) {
-		padding-left: 25%;
-		padding-right: 25%;
-		margin-bottom: 48px;
+	margin-bottom: 48px;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 24px;
+		padding-left: 24%;
+		padding-right: 24%;
+		margin-top: 32px;
 	}
 `;
