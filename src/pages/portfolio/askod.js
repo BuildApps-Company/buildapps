@@ -30,10 +30,9 @@ const Askod = () => {
 	};
 	return (
 		<PortfolioDetails id={'askod'}>
-		
 			<MainImgWrap>
 				<img src={mainImg} alt="mainimg" />
-					<GreyText>
+				<GreyText>
 					Askod is an online electronic document management system that allows
 					you to organize work with electronic documents (creation,
 					modification, search), as well as interaction between employees
@@ -42,135 +41,135 @@ const Askod = () => {
 					Systems).
 				</GreyText>
 			</MainImgWrap>
-				<AskodWrap>
-				<MainPageImg><img src={mainpageImg} alt="mainpage"/></MainPageImg>
-			<ProjectDetailsContainer>
-			
-			
-				<BlockWrap>
-					<AdvantagesDiv>
-						<H3>Advantages</H3>
+			<AskodWrap>
+				<MainPageImg>
+					<img src={mainpageImg} alt="mainpage" />
+				</MainPageImg>
+				<ProjectDetailsContainer>
+					<BlockWrap>
+						<AdvantagesDiv>
+							<H3>Advantages</H3>
+							<p>
+								Transparency of business processes. Due to the system can
+								monitor all the steps in the organization. Business processes
+								become completely transparent for management and they are easier
+								to control.
+							</p>
+						</AdvantagesDiv>
+						<ImgWrap>
+							<img src={detailsImg} alt="detailsImg" />
+						</ImgWrap>
+					</BlockWrap>
+					<div>
+						<H3>Higher performing discipline</H3>
 						<p>
-							Transparency of business processes. Due to the system can monitor
-							all the steps in the organization. Business processes become
-							completely transparent for management and they are easier to
-							control.
+							According to statistics, 20% of the tasks received are not
+							performed by the employees responsible for them. With full control
+							over all stages of work, the ECM system directly affects the
+							performance discipline of employees.
 						</p>
-					</AdvantagesDiv>
-					<ImgWrap>
-						<img src={detailsImg} alt="detailsImg" />
-					</ImgWrap>
-				</BlockWrap>
-				<div>
-					<H3>Higher performing discipline</H3>
-					<p>
-						According to statistics, 20% of the tasks received are not performed
-						by the employees responsible for them. With full control over all
-						stages of work, the ECM system directly affects the performance
-						discipline of employees.
-					</p>
-				</div>
-				<BlockWrap>
-					<ImgWrap>
-						<img src={screenshot_4} alt="screenshot_contract" />
-					</ImgWrap>
-					<LowerDiv>
-						<H3>Lower labor costs for managers and employees</H3>
-						<p>
-							The system reduces the time that employees spend on almost all
-							routine operations with documents: creation, search, approval,
-							etc. Document flow is accelerated. And as a result, all processes
-							in the organization go through faster.
-						</p>
-					</LowerDiv>
-				</BlockWrap>
-				<BlockWrap>
-					<AdvantagesDiv>
-						<H3>Confidentiality of information is ensured</H3>
-						<p>
-							A data breach can cause millions in losses to an organization.
-							Unlike traditional "paper" workflow, the ECM system provides
-							access to documents strictly in accordance with the assigned user
-							rights. All actions on the document (reading, changing, signing)
-							are recorded.
-						</p>
-					</AdvantagesDiv>
-					<ImgWrap>
-						<img src={login} alt="login" />
-					</ImgWrap>
-				</BlockWrap>
-				<BlockWrap>
-					<ImgWrap>
-						<img src={screenshot_contract} alt="screenshot_contract" />
-					</ImgWrap>
-					<LowerDiv>
-						<H3>The requirements of ISO 9000 standards are met</H3>
-						<p>
-							The setting of quality management has now become one of the
-							priority tasks in Russian companies. Among the requirements for
-							the quality management system (QMS) there is a transparently
-							delivered workflow, as well as information interaction between
-							employees.
-						</p>
-					</LowerDiv>
-				</BlockWrap>
-				{isOpen && (
-					<>
-						<BlockWrap>
-							<AdvantagesDiv>
-								<H3>Easily to innovate and to teach beginners</H3>
-								<p>
-									Thanks to the notification system, built on the basis of the
-									ECM system, you can quickly bring the new rules of work to all
-									employees. The training time for new employees is reduced by
-									quickly searching for the necessary information (regulations,
-									instructions, etc.). The routes and templates of documents are
-									easily changed, after which the employees automatically start
-									working in a new way.
-								</p>
-							</AdvantagesDiv>
-							<ImgWrap>
-								<img src={screenshot_contract2} alt="screenshot_contract2" />
-							</ImgWrap>
-						</BlockWrap>
-						<BlockWrap>
-							<ImgWrap>
-								<img src={screenshot_3} alt="screenshot_3" />
-							</ImgWrap>
-							<LowerDiv>
-								<H3>More competitive advantages</H3>
-								<p>
-									The ECM system directly affects the competitive advantages of
-									the company over other market players. The speed and quality
-									of customer service are increased due to the rapid movement of
-									information flows and precise control of all processes. Even
-									the largest enterprise is becoming more mobile and less
-									dependent on some “irreplaceable” employees.
-								</p>
-							</LowerDiv>
-						</BlockWrap>
-					</>
-				)}
-				{!isOpen && (
-					<BtnWrap>
-						<ButtonClick onClick={toogleList}>Find more</ButtonClick>
-					</BtnWrap>
-				)}
-			</ProjectDetailsContainer>
+					</div>
+					<BlockWrap>
+						<ImgWrap>
+							<img src={screenshot_4} alt="screenshot_contract" />
+						</ImgWrap>
+						<LowerDiv>
+							<H3>Lower labor costs for managers and employees</H3>
+							<p>
+								The system reduces the time that employees spend on almost all
+								routine operations with documents: creation, search, approval,
+								etc. Document flow is accelerated. And as a result, all
+								processes in the organization go through faster.
+							</p>
+						</LowerDiv>
+					</BlockWrap>
+					<BlockWrap>
+						<AdvantagesDiv>
+							<H3>Confidentiality of information is ensured</H3>
+							<p>
+								A data breach can cause millions in losses to an organization.
+								Unlike traditional "paper" workflow, the ECM system provides
+								access to documents strictly in accordance with the assigned
+								user rights. All actions on the document (reading, changing,
+								signing) are recorded.
+							</p>
+						</AdvantagesDiv>
+						<ImgWrap>
+							<img src={login} alt="login" />
+						</ImgWrap>
+					</BlockWrap>
+					<BlockWrap>
+						<ImgWrap>
+							<img src={screenshot_contract} alt="screenshot_contract" />
+						</ImgWrap>
+						<LowerDiv>
+							<H3>The requirements of ISO 9000 standards are met</H3>
+							<p>
+								The setting of quality management has now become one of the
+								priority tasks in Russian companies. Among the requirements for
+								the quality management system (QMS) there is a transparently
+								delivered workflow, as well as information interaction between
+								employees.
+							</p>
+						</LowerDiv>
+					</BlockWrap>
+					{isOpen && (
+						<>
+							<BlockWrap>
+								<AdvantagesDiv>
+									<H3>Easily to innovate and to teach beginners</H3>
+									<p>
+										Thanks to the notification system, built on the basis of the
+										ECM system, you can quickly bring the new rules of work to
+										all employees. The training time for new employees is
+										reduced by quickly searching for the necessary information
+										(regulations, instructions, etc.). The routes and templates
+										of documents are easily changed, after which the employees
+										automatically start working in a new way.
+									</p>
+								</AdvantagesDiv>
+								<ImgWrap>
+									<img src={screenshot_contract2} alt="screenshot_contract2" />
+								</ImgWrap>
+							</BlockWrap>
+							<BlockWrap>
+								<ImgWrap>
+									<img src={screenshot_3} alt="screenshot_3" />
+								</ImgWrap>
+								<LowerDiv>
+									<H3>More competitive advantages</H3>
+									<p>
+										The ECM system directly affects the competitive advantages
+										of the company over other market players. The speed and
+										quality of customer service are increased due to the rapid
+										movement of information flows and precise control of all
+										processes. Even the largest enterprise is becoming more
+										mobile and less dependent on some “irreplaceable” employees.
+									</p>
+								</LowerDiv>
+							</BlockWrap>
+						</>
+					)}
+					{!isOpen && (
+						<BtnWrap>
+							<ButtonClick onClick={toogleList}>Find more</ButtonClick>
+						</BtnWrap>
+					)}
+				</ProjectDetailsContainer>
 				<BlockSlider>
 					<div>
-				<Slider {...settings}>
-					<img src={mainImg} alt="mainimg" />
-					<img src={detailsImg} alt="detailsImg" />
-					<img src={screenshot_4} alt="screenshot_contract" />
-					<img src={login} alt="login" />
-					<img src={screenshot_contract} alt="screenshot_contract" />
-					<img src={screenshot_contract2} alt="screenshot_contract2" />
-					<img src={screenshot_3} alt="screenshot_3" />
+						<Slider {...settings}>
+							<img src={mainImg} alt="mainimg" />
+							<img src={detailsImg} alt="detailsImg" />
+							<img src={screenshot_4} alt="screenshot_contract" />
+							<img src={login} alt="login" />
+							<img src={screenshot_contract} alt="screenshot_contract" />
+							<img src={screenshot_contract2} alt="screenshot_contract2" />
+							<img src={screenshot_3} alt="screenshot_3" />
 						</Slider>
-						</div>
+					</div>
 				</BlockSlider>
-				</AskodWrap>
+			</AskodWrap>
 		</PortfolioDetails>
 	);
 };
@@ -178,30 +177,30 @@ const Askod = () => {
 export default Askod;
 
 const AskodWrap = styled.div`
-    padding-left: 16px;
-    padding-right: 16px;
-@media all and (min-width: ${breakpoints.tablet}) {
-padding-left: 24%;
-		padding-right: 24%;}
-	
+	padding-left: 16px;
+	padding-right: 16px;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		padding-left: 24%;
+		padding-right: 24%;
+	}
 `;
 
 const GreyText = styled.p`
-padding:50px 0px;
-margin-bottom: 60px;
-text-align:left;
+	padding: 50px 0px;
+	margin-bottom: 60px;
+	text-align: left;
 `;
 
-
 const MainPageImg = styled.div`
-margin-top:-80px;
-    text-align: center;
+	margin-top: -80px;
+	text-align: center;
 
-img {
-	filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
-width: 100%;
-/* padding: 10px; */
-}`;
+	img {
+		filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
+		width: 100%;
+		/* padding: 10px; */
+	}
+`;
 
 const ImgWrap = styled.div`
 	width: 100%;
@@ -214,10 +213,10 @@ const BlockSlider = styled.div`
 	/* padding: 0 16px; */
 	margin-top: 36px;
 	width: 100%;
-    overflow-y: clip;
+	overflow-y: clip;
 	max-height: 190px;
 	margin-bottom: 70px;
-		@media all and (min-width: ${breakpoints.tablet}) {
+	@media all and (min-width: ${breakpoints.tablet}) {
 		max-height: 432px;
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
@@ -256,16 +255,17 @@ const BlockSlider = styled.div`
 	}
 	.slick-prev:before {
 		@media all and (min-width: ${breakpoints.notebook}) {
-		content: url(${arrowLeftSlider});}
+			content: url(${arrowLeftSlider});
+		}
 	}
 	.slick-next:before {
 		@media all and (min-width: ${breakpoints.notebook}) {
-		content: url(${arrowRightSlider});}
+			content: url(${arrowRightSlider});
+		}
 	}
 
 	img {
 		width: 100%;
-		
 	}
 `;
 

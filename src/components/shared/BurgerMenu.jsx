@@ -36,7 +36,9 @@ export function BurgerMenu({ toogleList }) {
 			<BurgerMenuWrap>
 				<BurgerWrapDesktop>
 					<BurgerTitle>Ready to get started?</BurgerTitle>
-					<ContactUsLink to={routes.contactForm}>Contact Us</ContactUsLink>
+					<ContactUsLink href={routes.contactForm} target="_blank">
+						Contact Us
+					</ContactUsLink>
 				</BurgerWrapDesktop>
 
 				<WrapMob>
