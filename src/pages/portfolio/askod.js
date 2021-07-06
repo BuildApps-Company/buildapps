@@ -12,6 +12,7 @@ import login from '../../../static/images/askod/login.png';
 import screenshot_contract from '../../../static/images/askod/screenshot_contract.png';
 import screenshot_contract2 from '../../../static/images/askod/screenshot_contract2.png';
 import screenshot_3 from '../../../static/images/askod/screenshot_3.png';
+import mainpageImg from '../../../static/images/askod/mainpage.png';
 import arrowLeftSlider from '../../../static/images/arrowLeftSlider.svg';
 import arrowLeftSliderHover from '../../../static/images/arrowLeftSliderHover.svg';
 import arrowRightSliderHover from '../../../static/images/arrowRightSliderHover.svg';
@@ -29,18 +30,23 @@ const Askod = () => {
 	};
 	return (
 		<PortfolioDetails id={'askod'}>
+		
 			<MainImgWrap>
 				<img src={mainImg} alt="mainimg" />
-			</MainImgWrap>
-			<ProjectDetailsContainer>
-				<p>
+					<GreyText>
 					Askod is an online electronic document management system that allows
 					you to organize work with electronic documents (creation,
 					modification, search), as well as interaction between employees
 					(transfer of documents, issuing tasks, sending notifications, etc.).
 					Also, such a system is called EDMS (Electronic Document Management
 					Systems).
-				</p>
+				</GreyText>
+			</MainImgWrap>
+				<AskodWrap>
+				<MainPageImg><img src={mainpageImg} alt="mainpage"/></MainPageImg>
+			<ProjectDetailsContainer>
+			
+			
 				<BlockWrap>
 					<AdvantagesDiv>
 						<H3>Advantages</H3>
@@ -151,7 +157,8 @@ const Askod = () => {
 					</BtnWrap>
 				)}
 			</ProjectDetailsContainer>
-			<BlockSlider>
+				<BlockSlider>
+					<div>
 				<Slider {...settings}>
 					<img src={mainImg} alt="mainimg" />
 					<img src={detailsImg} alt="detailsImg" />
@@ -160,13 +167,41 @@ const Askod = () => {
 					<img src={screenshot_contract} alt="screenshot_contract" />
 					<img src={screenshot_contract2} alt="screenshot_contract2" />
 					<img src={screenshot_3} alt="screenshot_3" />
-				</Slider>
-			</BlockSlider>
+						</Slider>
+						</div>
+				</BlockSlider>
+				</AskodWrap>
 		</PortfolioDetails>
 	);
 };
 
 export default Askod;
+
+const AskodWrap = styled.div`
+    padding-left: 16px;
+    padding-right: 16px;
+@media all and (min-width: ${breakpoints.tablet}) {
+padding-left: 24%;
+		padding-right: 24%;}
+	
+`;
+
+const GreyText = styled.p`
+padding:50px 0px;
+margin-bottom: 60px;
+text-align:left;
+`;
+
+
+const MainPageImg = styled.div`
+margin-top:-80px;
+    text-align: center;
+
+img {
+	filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
+width: 100%;
+/* padding: 10px; */
+}`;
 
 const ImgWrap = styled.div`
 	width: 100%;
@@ -176,26 +211,26 @@ const ImgWrap = styled.div`
 `;
 
 const BlockSlider = styled.div`
-	padding: 0 16px;
+	/* padding: 0 16px; */
 	margin-top: 36px;
 	width: 100%;
-	overflow: hidden;
+    overflow-y: clip;
 	max-height: 190px;
 	margin-bottom: 70px;
 		@media all and (min-width: ${breakpoints.tablet}) {
 		max-height: 432px;
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
-		padding: 0 20%;
+		/* padding: 0 10%; */
 		margin-top: 128px;
-		max-height: 498px;
+		/* max-height: 498px; */
 		margin-bottom: 100px;
 	}
 	.slick-prev {
 		left: 0%;
-		top: 90%;
+		top: 86%;
 		@media all and (min-width: ${breakpoints.notebook}) {
-			left: -11%;
+			left: -27%;
 			top: 32%;
 			&:hover,
 			&:focus {
@@ -206,10 +241,10 @@ const BlockSlider = styled.div`
 		}
 	}
 	.slick-next {
-		right: 14%;
-		top: 90%;
+		right: 10%;
+		top: 86%;
 		@media all and (min-width: ${breakpoints.notebook}) {
-			right: -5%;
+			right: -19%;
 			top: 32%;
 			&:hover,
 			&:focus {
@@ -220,14 +255,17 @@ const BlockSlider = styled.div`
 		}
 	}
 	.slick-prev:before {
-		content: url(${arrowLeftSlider});
+		@media all and (min-width: ${breakpoints.notebook}) {
+		content: url(${arrowLeftSlider});}
 	}
 	.slick-next:before {
-		content: url(${arrowRightSlider});
+		@media all and (min-width: ${breakpoints.notebook}) {
+		content: url(${arrowRightSlider});}
 	}
 
 	img {
 		width: 100%;
+		
 	}
 `;
 
@@ -290,12 +328,12 @@ const BlockWrap = styled.div`
 const MainImgWrap = styled.div`
 	background: ${colors.grey.background};
 	text-align: center;
-	padding: 16px 36px;
+	padding: 16px;
 
-	@media all and (min-width: ${breakpoints.notebook}) {
+	@media all and (min-width: ${breakpoints.tablet}) {
 		padding-top: 36px;
-		padding-left: 22%;
-		padding-right: 22%;
+		padding-left: 24%;
+		padding-right: 24%;
 	}
 	img {
 		width: 100%;
@@ -303,16 +341,16 @@ const MainImgWrap = styled.div`
 `;
 const ProjectDetailsContainer = styled.div`
 	font-size: 1rem;
-	padding-left: 16px;
-	padding-right: 16px;
+	/* padding-left: 16px;
+	padding-right: 16px; */
 	margin-bottom: 48px;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		font-size: 1.5rem;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 24px;
-		padding-left: 24%;
-		padding-right: 24%;
+		/* padding-left: 24%;
+		padding-right: 24%; */
 		margin-top: 32px;
 	}
 `;
