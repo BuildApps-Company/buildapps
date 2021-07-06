@@ -1,6 +1,8 @@
+import React from 'react';
+import styled from 'styled-components';
 import spbProperty from '../../static/images/portfolio/spbProperty.jpg';
 import spbLong from '../../static/images/portfolio/spb_long.png';
-import viol from '../../static/images/portfolio/viol.jpg';
+// import viol from '../../static/images/portfolio/viol.jpg';
 import askod from '../../static/images/portfolio/askod.jpg';
 import prankchat from '../../static/images/portfolio/prankchat.png';
 import prankchatLong from '../../static/images/portfolio/prankchat_long.png';
@@ -16,7 +18,7 @@ export const Portfolio = {
 		background: '',
 		image: ppf,
 		longImage: ppfLong,
-		title: 'Lead management software',
+		title: () => <>Lead management software</>,
 		description: `A CRM that covers most of the organization's processes related to business lending. A full cycle of processing an application - from the moment of an obtaining to the issuance of a loan.
 Integration with third-party services to obtain more complete information about the loan - credit history, information from registries for legal entities or individuals.
 `,
@@ -29,7 +31,7 @@ Integration with third-party services to obtain more complete information about 
 		background: '',
 		image: sushi,
 		longImage: sushiLong,
-		title: 'СУШИШОП',
+		title: () => <>СУШИШОП</>,
 		description: `Online service for ordering sushi. The SushiShop system automatically determines your geolocation for the nearest sushi store to make the delivery time more comfortable for the user. The system also provides a bonus program, an accumulative system and various discounts for different holidays or seasons.
 `,
 		responsibility: ['Mobile'],
@@ -41,7 +43,7 @@ Integration with third-party services to obtain more complete information about 
 		background: '',
 		image: prankchat,
 		longImage: prankchatLong,
-		title: 'PrankChat смешные видео',
+		title: () => <>PrankChat смешные видео</>,
 		description:
 			'PrankChat is a social video network where users shoot and post very funny and absolutely unique videos.',
 		responsibility: ['Mobile'],
@@ -51,7 +53,7 @@ Integration with third-party services to obtain more complete information about 
 		background: '',
 		image: spbProperty,
 		longImage: spbLong,
-		title: 'Петербургская Недвижимость',
+		title: () => <>Петербургская Недвижимость</>,
 		description: `Mobile client for finding an apartment in residential complex in St. Petersburg and Moscow. The system allows you to book apartments, make pre-orders and find apartments at competitive prices
 `,
 		responsibility: ['Mobile'],
@@ -66,7 +68,11 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 		background: '',
 		image: askod,
 		longImage: askod,
-		title: 'ASKOD Online',
+		title: () => (
+			<>
+				ASKOD <SpanAskodOnline>Online</SpanAskodOnline>
+			</>
+		),
 		description: `ASKOD Online service a is designed to automate the processes of document circulation between legal entities and individuals and provides review, approval, signing, sending, receiving and storing documents in a cloud environment
 `,
 		responsibility: ['Design'],
@@ -76,8 +82,12 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 	// viol: {
 	// 	image: viol,
 	// 	longImage: viol,
-	// 	title: 'VIOL Commander',
+	// 	title: () => <>VIOL Commander</>,
 	// 	description: `Semper porta viverra arcu, pharetra. Scelerisque consectetur faucibus nibh dictum mi sodales ac ornare. Mauris maecenas dignissim enim, pharetra, tortor, sed. Adipiscing felis et sit dolor volutpat nulla volutpat, at etiam.`,
 	// 	responsibility: ['Desktop'],
 	// },
 };
+
+const SpanAskodOnline = styled.span`
+	color: #32c178;
+`;

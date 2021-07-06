@@ -23,7 +23,7 @@ export const OurTeamList = () => {
 	);
 };
 const TeamListWrap = styled.div`
-	margin-right: 9%;
+	margin-right: 18%;
 	white-space: nowrap;
 `;
 const TitleWrap = styled.div`

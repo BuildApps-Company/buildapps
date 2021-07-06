@@ -20,7 +20,7 @@ export function MainPage() {
 	return (
 		<>
 			<MainBanner />
-			<Clients />
+			{/* <Clients /> */}
 			<LatestProjectDesktopContainer>
 				<LatestProjectDesktop projectsDesktop={latestProjectsDesktop} />
 			</LatestProjectDesktopContainer>

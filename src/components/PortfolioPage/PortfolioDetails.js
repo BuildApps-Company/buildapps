@@ -11,6 +11,7 @@ import { Portfolio } from '../../data/projects';
 export function PortfolioDetails({ id, children }) {
 	const projectsValues = Object.values(Portfolio);
 	const projectValues = projectsValues.find(el => el.id === id);
+	const TitleValue = projectValues.title;
 	return (
 		<Page>
 			<Toolbar />
@@ -29,7 +30,9 @@ export function PortfolioDetails({ id, children }) {
 			</ProjectImageContainer>
 
 			<ProjectDetailsContainer>
-				<Title>{projectValues.title}</Title>
+				<Title>
+					<TitleValue></TitleValue>
+				</Title>
 
 				{projectValues.responsibility.map(res => (
 					<StyledResponsibility>{res}</StyledResponsibility>
@@ -42,6 +45,7 @@ export function PortfolioDetails({ id, children }) {
 		</Page>
 	);
 }
+
 
 const StyledLink = styled(Link)`
 	display: inline-block;

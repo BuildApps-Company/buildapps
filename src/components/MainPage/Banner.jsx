@@ -177,6 +177,8 @@ const ButtonsWrap = styled.div`
 
 const StyledButton = styled(Link)`
 	position: relative;
+	display: flex;
+	align-items: center;
 	display: inline-block;
 	padding: 16px 26px;
 	text-transform: uppercase;

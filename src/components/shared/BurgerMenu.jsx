@@ -148,7 +148,7 @@ const StyledBurgerHeader = styled.div`
 	padding: 4px 16px;
 
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding: 16px 64px 16px 53px;
+		padding: 16px 6%;
 	}
 `;
 
@@ -214,7 +214,6 @@ const BurgerTitle = styled.h2`
 `;
 
 const ContactUsLink = styled(Link)`
-	display: inline-block;
 	font-size: 4rem;
 	line-height: 160%;
 	text-decoration: none;

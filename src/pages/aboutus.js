@@ -57,11 +57,13 @@ const AboutUsWrap = styled.div`
 	padding-right: 16px;
 	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 50%;
+		padding-right: 1px;
 	}
 `;
 const ContactUsContainerWrap = styled(ContactUsContainer)`
 	width: 100%;
 	@media all and (min-width: ${breakpoints.notebook}) {
+		min-width: 637px;
 		width: 50%;
 	}
 `;
@@ -72,6 +74,7 @@ const StyledContainer = styled(SmallContainer)`
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		flex-direction: row;
+		justify-content: space-around;
 	}
 `;
 

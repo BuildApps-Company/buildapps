@@ -8,7 +8,7 @@ export const ourContributorsData = [
 	{
 		key: 'vladyslavhulin',
 		name: 'Vladyslav Hulin',
-		position: 'Web designer',
+		position: 'UI/UX Designer / Product Designer',
 		img: vladImg,
 	},
 	{
