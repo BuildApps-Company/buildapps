@@ -15,7 +15,6 @@ export const ProjectsList = ({ selectedCategories }) => {
 				x[1].responsibility.some(res => res === category)
 			)
 	);
-	console.log(projects);
 	return (
 		<StyledPortfolioList>
 			{projects.map(([key, el]) => {
