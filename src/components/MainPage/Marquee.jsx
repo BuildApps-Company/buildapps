@@ -7,7 +7,7 @@ import { breakpoints } from '../../styles/breakpoints';
 const Marquee = () => {
 	return (
 		<MarqueeContainer>
-			<Ticker speed={2}>
+			<Ticker speed={3}>
 				{() => (
 					<>
 						<MarqueeStyled>BUILDAPPS </MarqueeStyled>
@@ -30,8 +30,6 @@ const MarqueeStyled = styled.div`
 `;
 
 const MarqueeContainer = styled.div`
-	/* margin-top: 64px; */
 	@media all and (min-width: ${breakpoints.notebook}) {
-		/* margin-top: 170px; */
 	}
 `;

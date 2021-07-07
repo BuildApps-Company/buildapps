@@ -214,6 +214,7 @@ const BurgerTitle = styled.h2`
 `;
 
 const ContactUsLink = styled(Link)`
+	display: inline-block;
 	font-size: 4rem;
 	line-height: 160%;
 	text-decoration: none;

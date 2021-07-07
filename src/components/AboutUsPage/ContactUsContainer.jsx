@@ -25,7 +25,6 @@ export const ContactUsContainer = () => {
 };
 
 const ContactUsBtnWrap = styled.div`
-	text-align: left;
 	display: flex;
 	text-align: center;
 	margin-top: 24px;
@@ -45,7 +44,6 @@ const ContactUsWrap = styled.div`
 
 const StyledText = styled.a`
 	display: block;
-	/* margin: 0 0 28px 0; */
 	padding: 0;
 	line-height: 160%;
 	color: #ffffff;

@@ -13,13 +13,12 @@ export const LatestProjectMobile = ({ projectsMobile }) => {
 			</TitleWrap>
 
 			<ProjectWrap>
-				{projectsMobile.map(project => (
-					<ImageWrap
-						key={project.title}
-						to={`${routes.portfolio}/${project.id}`}
-					>
-						<h3>{project.title}</h3>
-						<img src={project.longImage} />
+				{projectsMobile.map(({ id, longImage, title: ProjectTitle }) => (
+					<ImageWrap key={id} to={`${routes.portfolio}/${id}`}>
+						<h3>
+							<ProjectTitle></ProjectTitle>
+						</h3>
+						<img src={longImage} alt={id} />
 					</ImageWrap>
 				))}
 			</ProjectWrap>
