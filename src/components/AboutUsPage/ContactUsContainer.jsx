@@ -25,7 +25,9 @@ export const ContactUsContainer = () => {
 };
 
 const ContactUsBtnWrap = styled.div`
+	display: flex;
 	text-align: center;
+	margin-top: 24px;
 `;
 
 const ContactUsWrap = styled.div`
@@ -34,6 +36,7 @@ const ContactUsWrap = styled.div`
 		display: block;
 		margin-top: 36px;
 		padding: 40px;
+		padding-right: 60px;
 		height: fit-content;
 		background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
 	}
@@ -41,7 +44,6 @@ const ContactUsWrap = styled.div`
 
 const StyledText = styled.a`
 	display: block;
-	margin: 0 0 28px 0;
 	padding: 0;
 	line-height: 160%;
 	color: #ffffff;
@@ -50,17 +52,17 @@ const StyledText = styled.a`
 `;
 
 const StyledAdress = styled(StyledText)`
-	font-size: 2rem;
+	font-size: 1.5rem;
 `;
 
 const StyledEmail = styled(StyledText)`
-	font-size: 3.125rem;
+	font-size: 2rem;
 `;
 
 const StyledLink = styled(Link)`
 	padding: 12px 32px;
 	display: inline-block;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 160%;
 	text-decoration: none;
 	text-transform: uppercase;

@@ -15,26 +15,30 @@ export const ProjectsList = ({ selectedCategories }) => {
 				x[1].responsibility.some(res => res === category)
 			)
 	);
-
 	return (
 		<StyledPortfolioList>
-			{projects.map(([key, el]) => (
-				<li key={key}>
-					<Link to={`${routes.portfolio}/${key}`} state={{ project: el }}>
-						<ImageContainer image={el.longImage} background={el.background}>
-							<h3>{el.title}</h3>
-							{el.longImage && <img src={el.longImage} alt={el.title} />}
-						</ImageContainer>
+			{projects.map(([key, el]) => {
+				const TitleValue = el.title;
+				return (
+					<li key={key}>
+						<Link to={`${routes.portfolio}/${key}`} state={{ project: el }}>
+							<ImageContainer image={el.longImage} background={el.background}>
+								<h3>
+									<TitleValue></TitleValue>
+								</h3>
+								{el.longImage && <img src={el.longImage} alt={el.title} />}
+							</ImageContainer>
 
-						<>
-							{el.responsibility.map(el => (
-								<StyledResponsibility key={el}>{el}</StyledResponsibility>
-							))}
-							<StyledDescription>{el.description}</StyledDescription>
-						</>
-					</Link>
-				</li>
-			))}
+							<>
+								{el.responsibility.map(el => (
+									<StyledResponsibility key={el}>{el}</StyledResponsibility>
+								))}
+								<StyledDescription>{el.description}</StyledDescription>
+							</>
+						</Link>
+					</li>
+				);
+			})}
 		</StyledPortfolioList>
 	);
 };

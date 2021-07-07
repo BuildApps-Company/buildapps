@@ -185,7 +185,7 @@ const CostsList = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 160%;
 
 	li {
@@ -215,11 +215,13 @@ const CostsBtnWrap = styled.div`
 `;
 
 const CostsBtn = styled.button`
+	display: flex;
+	align-items: center;
 	margin: 0 auto;
 	padding: 12px 32px;
 	cursor: pointer;
 	border: none;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 	line-height: 160%;
 	text-transform: uppercase;

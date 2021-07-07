@@ -89,7 +89,7 @@ const TermsOfUseContainerDesktop = styled.p`
 		text-align: center;
 		margin: 0;
 		padding: 0;
-		font-size: 1.25rem;
+		font-size: 1rem;
 		line-height: 160%;
 		color: rgba(255, 255, 255, 0.5);
 
@@ -109,7 +109,7 @@ const StyledLinkTitle = styled(Link)`
 	display: block;
 	margin: 0;
 	padding: 0 0 16px 0;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: 700;
 	line-height: 160%;
 	text-transform: uppercase;
@@ -139,7 +139,7 @@ const TermsOfUseContainerMobile = styled.p`
 	justify-content: space-between;
 	margin: 0;
 	padding: 0;
-	font-size: 1.25rem;
+	font-size: 1.2rem;
 	line-height: 160%;
 	color: rgba(255, 255, 255, 0.5);
 

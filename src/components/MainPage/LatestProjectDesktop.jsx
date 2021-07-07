@@ -97,6 +97,7 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 
 const ContainerParent = styled.div`
 	margin-top: 46px;
+	margin-bottom: 170px;
 `;
 const LatestProjectsContainer = styled.div`
 	@media all and (min-width: ${breakpoints.tablet}) {

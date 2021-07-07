@@ -9,6 +9,7 @@ export const PrimaryButton = styled.a`
 	text-transform: uppercase;
 	color: ${colors.Main};
 	text-decoration: none;
+	cursor: pointer;
 	&:hover,
 	&:visited {
 		color: ${colors.Main};

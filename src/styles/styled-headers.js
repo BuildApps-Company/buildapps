@@ -15,9 +15,12 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
-	font-size: 2rem;
+	font-size: 1.5rem;
 	margin: 0;
 	line-height: 160%;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		font-size: 2rem;
+	}
 `;
 
 export const H4 = styled.h4`
