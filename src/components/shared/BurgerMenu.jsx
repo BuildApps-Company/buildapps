@@ -36,7 +36,9 @@ export function BurgerMenu({ toogleList }) {
 			<BurgerMenuWrap>
 				<BurgerWrapDesktop>
 					<BurgerTitle>Ready to get started?</BurgerTitle>
-					<ContactUsLink to={routes.contactForm}>Contact Us</ContactUsLink>
+					<ContactUsLink href={routes.contactForm} target="_blank">
+						Contact Us
+					</ContactUsLink>
 				</BurgerWrapDesktop>
 
 				<WrapMob>
@@ -146,7 +148,7 @@ const StyledBurgerHeader = styled.div`
 	padding: 4px 16px;
 
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding: 16px 64px 16px 53px;
+		padding: 16px 6%;
 	}
 `;
 

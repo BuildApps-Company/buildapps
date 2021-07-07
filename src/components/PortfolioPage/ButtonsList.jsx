@@ -56,6 +56,7 @@ const StyledButtonsList = styled.ul`
 	margin: 0 0 16px 0;
 	padding: 0;
 	display: flex;
+	align-items:center;
 	list-style: none;
 
 `;

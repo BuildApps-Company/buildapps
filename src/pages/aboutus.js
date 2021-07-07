@@ -72,6 +72,7 @@ const StyledContainer = styled(SmallContainer)`
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		flex-direction: row;
+		justify-content: space-around;
 	}
 `;
 
