@@ -113,23 +113,23 @@ export const PricesCalculatorMob = () => {
 
 				<CostsList>
 					<li>
-						<span>Planning</span> $ {priceValues.planning}
+						<StyledSpan>Planning</StyledSpan> $ {priceValues.planning}
 					</li>
 					<li>
-						<span>Design</span> $ {priceValues.design}
+						<StyledSpan>Design</StyledSpan> $ {priceValues.design}
 					</li>
 					<li>
-						<span>Development</span> $ {priceValues.development}
+						<StyledSpan>Development</StyledSpan> $ {priceValues.development}
 					</li>
 					<li>
-						<span>Maintain</span> $ {priceValues.maintain}
+						<StyledSpan>Maintain</StyledSpan> $ {priceValues.maintain}
 					</li>
 					<li>
-						<span>Estimated time</span>
+						<StyledSpan>Estimated time</StyledSpan>
 						<SpanEstimate>from {priceValues.days} working days</SpanEstimate>
 					</li>
 					<li>
-						<span>Total cost </span> from $ {totalPrice}
+						<StyledSpan>Total cost </StyledSpan> from $ {totalPrice}
 					</li>
 				</CostsList>
 
@@ -140,6 +140,10 @@ export const PricesCalculatorMob = () => {
 		</PricesContainer>
 	);
 };
+
+const StyledSpan = styled.span`
+	line-height: 120%;
+`;
 const SelectWrap = styled.select`
 	border: none;
 	width: 100%;
@@ -170,7 +174,6 @@ const ServicesList = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	/* margin-right: 4%; */
 
 	li:not(:last-child) {
 		margin-bottom: 32px;
@@ -187,6 +190,7 @@ const ServicesTitle = styled.h3`
 
 const CostsContainer = styled.div`
 	height: fit-content;
+	border-radius: 8px;
 	padding: 40px;
 	background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
 	color: #ffffff;
@@ -239,7 +243,10 @@ const CostsBtnWrap = styled.div`
 
 const CostsBtn = styled.button`
 	margin: 0 auto;
+	display: flex;
+	align-items: center;
 	padding: 12px 32px;
+	border-radius: 4px;
 	cursor: pointer;
 	border: none;
 	font-size: 1.5rem;
@@ -248,4 +255,10 @@ const CostsBtn = styled.button`
 	text-transform: uppercase;
 	color: #874aad;
 	background-color: #ffffff;
+	&:hover,
+	&:focus {
+		color: #ffffff;
+		background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
+		transition: 2s;
+	}
 `;

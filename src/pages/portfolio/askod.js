@@ -282,6 +282,7 @@ const ButtonClick = styled.button`
 	&:focus {
 		color: #ffffff;
 		background: #874aad;
+		transition: 2s;
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 2rem;
@@ -336,7 +337,7 @@ const MainImgWrap = styled.div`
 		padding-right: 24%;
 	}
 	img {
-		width: 100%;
+		max-width: 100%;
 	}
 `;
 const ProjectDetailsContainer = styled.div`
