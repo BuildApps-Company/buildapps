@@ -6,17 +6,16 @@ import oleksiiImg from '../../static/images/team/oleksii.jpg';
 
 export const ourContributorsData = [
 	{
+		key: 'alexbudyakov',
+		name: 'Aleksandr Budyakov',
+		position: 'Head of mobile app development',
+		img: sashaImg,
+	},
+	{
 		key: 'ivankolosinskyi',
 		name: 'Ivan Kolosinskyi',
-		position: 'Chief of web-development department',
+		position: 'Head of web app development',
 		img: ivanImg,
-	},
-
-	{
-		key: 'alexbudyakov',
-		name: 'Alex Budyakov',
-		position: 'Chief of mobile-development department',
-		img: sashaImg,
 	},
 	{
 		key: 'vadimrybalko',

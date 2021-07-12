@@ -198,7 +198,6 @@ const MainPageImg = styled.div`
 	img {
 		filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
 		width: 100%;
-		/* padding: 10px; */
 	}
 `;
 
@@ -210,7 +209,6 @@ const ImgWrap = styled.div`
 `;
 
 const BlockSlider = styled.div`
-	/* padding: 0 16px; */
 	margin-top: 36px;
 	width: 100%;
 	overflow-y: clip;
@@ -220,15 +218,15 @@ const BlockSlider = styled.div`
 		max-height: 432px;
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
-		/* padding: 0 10%; */
 		margin-top: 128px;
-		/* max-height: 498px; */
 		margin-bottom: 100px;
 	}
 	.slick-prev {
-		left: 0%;
-		top: 86%;
+		/* left: 0%;
+		top: 86%; */
+		display: none !important;
 		@media all and (min-width: ${breakpoints.notebook}) {
+			display: block !important;
 			left: -27%;
 			top: 32%;
 			&:hover,
@@ -240,9 +238,11 @@ const BlockSlider = styled.div`
 		}
 	}
 	.slick-next {
-		right: 10%;
-		top: 86%;
+		/* right: 10%;
+		top: 86%; */
+		display: none !important;
 		@media all and (min-width: ${breakpoints.notebook}) {
+			display: block !important;
 			right: -19%;
 			top: 32%;
 			&:hover,
@@ -342,16 +342,12 @@ const MainImgWrap = styled.div`
 `;
 const ProjectDetailsContainer = styled.div`
 	font-size: 1rem;
-	/* padding-left: 16px;
-	padding-right: 16px; */
 	margin-bottom: 48px;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		font-size: 1.5rem;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 24px;
-		/* padding-left: 24%;
-		padding-right: 24%; */
 		margin-top: 32px;
 	}
 `;
