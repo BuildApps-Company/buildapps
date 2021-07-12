@@ -19,14 +19,14 @@ export const ourContributorsData = [
 	},
 	{
 		key: 'vadimrybalko',
-		name: 'Vadim Rybalko',
-		position: 'Chief of sales and marketing department',
+		name: 'Vadym Rybalko',
+		position: 'Head of sales and marketing',
 		img: vadimImg,
 	},
 	{
 		key: 'vladyslavhulin',
 		name: 'Vladyslav Hulin',
-		position: 'UI/UX Designer / Product Designer',
+		position: 'Product Designer',
 		img: vladImg,
 	},
 	// {
@@ -37,14 +37,38 @@ export const ourContributorsData = [
 	// },
 	// {
 	// 	key: 'vladislavkyrychenko',
-	// 	name: 'Vladislav Kyrychenko',
+	// 	name: 'Vladyslav Kyrychenko',
 	// 	position: 'Full-stack Team Lead dev',
 	// 	img: '',
 	// },
 	// {
-	// 	key: 'slavavituyk',
-	// 	name: 'Slava Vituyk',
-	// 	position: 'Middle Full-stack web dev',
+	// 	key: 'vyacheslavvituyk',
+	// 	name: 'Vyacheslav Vituyk',
+	// 	position: 'Full-stack web dev',
+	// 	img: '',
+	// },
+	// {
+	// 	key: 'romankolesnyk',
+	// 	name: 'Roman Kolesnyk',
+	// 	position: 'Full-stack dev',
+	// 	img: '',
+	// },
+	// {
+	// 	key: 'andriylavruk',
+	// 	name: 'Andriy Lavruk',
+	// 	position: 'Full-stack web dev',
+	// 	img: '',
+	// },
+	// {
+	// 	key: 'michaelnovikov',
+	// 	name: 'Michael Novikov',
+	// 	position: 'Full-stack Xamarin dev',
+	// 	img: '',
+	// },
+	// {
+	// 	key: 'vladislavkhasenevich',
+	// 	name: 'Vladislav Khasenevich',
+	// 	position: 'Full-stack Team Lead Xamarin dev',
 	// 	img: '',
 	// },
 	{
