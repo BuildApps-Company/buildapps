@@ -17,17 +17,17 @@ export const SocialMediaList = () => (
 
 const StyledSocialMediaList = styled.ul`
 	display: flex;
+	align-items: center;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 
 	li:not(:last-child) {
-		margin-right: 30px;
+		margin-right: 28px;
 	}
 
 	@media all and (max-width: ${breakpoints.phone}) {
 		justify-content: center;
-		align-items: center;
 		padding: 32px 0 32px 0;
 	}
 

@@ -160,12 +160,14 @@ const StyledBtn = styled.button`
 	text-transform: uppercase;
 	color: #874aad;
 	border: 2px solid #874aad;
+	border-radius: 4px;
 	background: transparent;
 	cursor: pointer;
 	&:hover,
 	&:focus {
 		color: #ffffff;
 		background: #874aad;
+		transition: 2s;
 
 		${SpanStyledArrow} {
 			color: #ffffff;

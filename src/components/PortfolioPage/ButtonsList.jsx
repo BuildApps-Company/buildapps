@@ -33,6 +33,7 @@ export const ButtonsList = ({ selectedCategories, onSelectCategory }) => {
 const StyledLi = styled.li`
 	margin-right: 16px;
 	display: block;
+	border-radius: 4px;
 	white-space: nowrap;
 	padding: 12px 16px;
 	font-weight: 700;
@@ -56,7 +57,6 @@ const StyledButtonsList = styled.ul`
 	margin: 0 0 16px 0;
 	padding: 0;
 	display: flex;
-	align-items:center;
+	align-items: center;
 	list-style: none;
-
 `;

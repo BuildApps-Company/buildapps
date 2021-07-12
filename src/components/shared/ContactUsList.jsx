@@ -26,7 +26,6 @@ export const ContactUsList = () => {
 	);
 };
 
-
 const ContactFormContainer = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
@@ -56,5 +55,6 @@ const ContuctUsListStyle = styled.ul`
 
 const StyledLink = styled(Link)`
 	text-decoration: none;
+	font-size: 1.2rem;
 	color: inherit;
 `;

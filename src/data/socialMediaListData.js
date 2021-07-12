@@ -1,10 +1,15 @@
-import instagramIcon from '../../static/images/ic_instagram.svg';
+import instagramIcon from '../../static/images/socialicons/Inst.svg';
 // import facebookIcon from '../../static/images/ic_facebook.svg';
-import linkedinIcon from '../../static/images/ic_linkedin.svg';
-import douIcon from '../../static/images/ic_dou.svg';
-import clutchIcon from '../../static/images/ic_clutch.svg';
+import linkedinIcon from '../../static/images/socialicons/Linkedin.svg';
+import douIcon from '../../static/images/socialicons/Dou.svg';
+import clutchIcon from '../../static/images/socialicons/Clutch.svg';
 
 export const socialMediaListData = [
+	{
+		key: 'clutch',
+		img: clutchIcon,
+		href: 'https://clutch.co/profile/buildapps',
+	},
 	{
 		key: 'instagram',
 		img: instagramIcon,
@@ -24,10 +29,5 @@ export const socialMediaListData = [
 		key: 'dou',
 		img: douIcon,
 		href: 'https://jobs.dou.ua/companies/buildapps/',
-	},
-	{
-		key: 'clutch',
-		img: clutchIcon,
-		href: 'https://clutch.co/profile/buildapps',
 	},
 ];
