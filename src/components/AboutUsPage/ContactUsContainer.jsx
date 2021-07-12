@@ -34,6 +34,7 @@ const ContactUsWrap = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
+		border-radius: 8px;
 		margin-top: 36px;
 		padding: 40px;
 		padding-right: 60px;
@@ -62,10 +63,17 @@ const StyledEmail = styled(StyledText)`
 const StyledLink = styled(Link)`
 	padding: 12px 32px;
 	display: inline-block;
+	border-radius: 4px;
 	font-size: 1.5rem;
 	line-height: 160%;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #874aad;
 	background: #ffffff;
+	&:hover,
+	&:focus {
+		color: #ffffff;
+		background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
+		transition: 2s;
+	}
 `;

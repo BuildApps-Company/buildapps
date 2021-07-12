@@ -31,7 +31,7 @@ export const H4 = styled.h4`
 `;
 
 export const SubH1 = styled.h1`
-	font-size: 1.25rem;
+	font-size: 1.2rem;
 	line-height: 160%;
 `;
 
@@ -76,7 +76,7 @@ export const ListTitle = styled.h3`
 	padding: 0;
 	max-width: 600px;
 
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	line-height: 160%;
 	color: ${colors.light.white};
 

@@ -39,6 +39,7 @@ const SocialSpanStyled = styled.span`
 const ContactsWrap = styled.div`
 	width: 100%;
 	height: fit-content;
+	border-radius: 8px;
 	padding: 32px;
 	background: #eff0f3;
 	font-size: 2rem;

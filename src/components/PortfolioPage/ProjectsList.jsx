@@ -76,6 +76,7 @@ const StyledPortfolioList = styled.ul`
 
 const ImageContainer = styled.div`
 	min-height: 198px;
+	border-radius: 4px;
 	padding: 20px;
 	width: 100%;
 	display: flex;
@@ -111,6 +112,7 @@ const ImageContainer = styled.div`
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		justify-content: start;
+		border-radius: 8px;
 		min-height: 324px;
 		height: 325px;
 		background: ${props =>

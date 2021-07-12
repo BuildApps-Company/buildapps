@@ -39,7 +39,7 @@ const OurTeamListStyle = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	font-size: 1.25rem;
+	font-size: 1.2rem;
 	line-height: 160%;
 
 	li {
@@ -53,5 +53,6 @@ const OurTeamListStyle = styled.ul`
 
 const StyledLink = styled(Link)`
 	text-decoration: none;
+	font-size: 1.2rem;
 	color: ${colors.light.white};
 `;

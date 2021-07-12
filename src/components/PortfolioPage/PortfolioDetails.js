@@ -46,7 +46,6 @@ export function PortfolioDetails({ id, children }) {
 	);
 }
 
-
 const StyledLink = styled(Link)`
 	display: inline-block;
 	margin: 0 0 16px 0;
@@ -73,6 +72,7 @@ const ImageWrap = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-radius: 8px;
 
 	background: ${props =>
 		props.background

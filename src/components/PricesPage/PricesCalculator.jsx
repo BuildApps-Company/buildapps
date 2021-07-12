@@ -60,7 +60,7 @@ export const PricesCalculator = () => {
 									data-maintain={el.maintain}
 									data-days={el.days}
 								/>
-								<label for={el.key}>{el.name}</label>
+								<StyledLabel for={el.key}>{el.name}</StyledLabel>
 							</ServicesBtn>
 						))}
 					</li>
@@ -100,6 +100,9 @@ export const PricesCalculator = () => {
 	);
 };
 
+const StyledLabel = styled.label`
+	border-radius: 4px;
+`;
 const SpanEstimate = styled.span`
 	text-align: end;
 `;
@@ -118,7 +121,6 @@ const ServicesList = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	/* margin-right: 4%; */
 
 	li:not(:last-child) {
 		margin-bottom: 32px;
@@ -166,6 +168,7 @@ const ServicesBtn = styled.div`
 const CostsContainer = styled.div`
 	min-width: 560px;
 	width: 40%;
+	border-radius: 8px;
 	height: fit-content;
 	padding: 40px;
 	background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
@@ -217,6 +220,7 @@ const CostsBtnWrap = styled.div`
 const CostsBtn = styled.button`
 	display: flex;
 	align-items: center;
+	border-radius: 4px;
 	margin: 0 auto;
 	padding: 12px 32px;
 	cursor: pointer;
@@ -227,4 +231,10 @@ const CostsBtn = styled.button`
 	text-transform: uppercase;
 	color: #874aad;
 	background-color: #ffffff;
+	&:hover,
+	&:focus {
+		color: #ffffff;
+		background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
+		transition: 2s;
+	}
 `;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { Link } from 'gatsby';
 import { OurTeamList } from './OurTeamList';
 import { ContactUsList } from './ContactUsList';
@@ -65,6 +66,7 @@ export function BurgerMenu({ toogleList }) {
 					</SocialLink>
 				))}
 			</SocialLinksWrap>
+			<GlobalStyle></GlobalStyle>
 		</StyledBurgerMenu>
 	);
 }
@@ -102,6 +104,7 @@ const ContactUsWrap = styled.div`
 	background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
 	text-align: center;
 	max-width: 360px;
+	border-radius: 4px;
 `;
 const StyledLink = styled(Link)`
 	white-space: nowrap;
@@ -129,11 +132,17 @@ const BurgerWrapDesktop = styled.div`
 		margin-right: 6%;
 	}
 `;
+
+const GlobalStyle = createGlobalStyle`
+  body {
+   overflow:hidden;
+  }
+`;
 const StyledBurgerMenu = styled.div`
 	display: flex;
 	flex-direction: column;
 	z-index: 999;
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
@@ -220,6 +229,7 @@ const ContactUsLink = styled(Link)`
 	text-decoration: none;
 	border-bottom: 6px solid #874aad;
 	color: #ffffff;
+	border-radius: 4px;
 `;
 
 const SocialLinksWrap = styled.div`

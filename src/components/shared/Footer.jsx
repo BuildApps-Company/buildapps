@@ -139,7 +139,7 @@ const TermsOfUseContainerMobile = styled.p`
 	justify-content: space-between;
 	margin: 0;
 	padding: 0;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	line-height: 160%;
 	color: rgba(255, 255, 255, 0.5);
 

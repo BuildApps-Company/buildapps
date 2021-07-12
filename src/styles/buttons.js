@@ -13,6 +13,7 @@ export const PrimaryButton = styled.a`
 	&:hover,
 	&:visited {
 		color: ${colors.Main};
+		transition: 2s;
 	}
 `;
 
@@ -26,5 +27,6 @@ export const PrimaryButtonOutline = styled.a`
 	&:hover,
 	&:visited {
 		color: ${colors.light.white};
+		transition: 2s;
 	}
 `;

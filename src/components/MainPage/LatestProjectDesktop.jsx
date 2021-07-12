@@ -81,10 +81,22 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 										))}
 									</TagContainer>
 									<Description>{activeProject.description}</Description>
-
-									<LinkBtn to={`${routes.portfolio}/${activeProject.id}`}>
+									{/* <LinkBtn to={`${routes.portfolio}/${activeProject.id}`}>
 										Details
-									</LinkBtn>
+									</LinkBtn> */}
+
+									<StyledButton to={`${routes.portfolio}/${activeProject.id}`}>
+										<svg>
+											<rect
+												x="0"
+												y="0"
+												fill="none"
+												width="100%"
+												height="100%"
+											/>
+										</svg>
+										Details
+									</StyledButton>
 								</DetailsWrap>
 							</ProjectWrap>
 						</ProjectContainer>
@@ -94,6 +106,50 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 		</ContainerParent>
 	);
 };
+const StyledButton = styled(Link)`
+	min-width: 102px;
+	font-size: 1em;
+	padding: 8px 20px;
+	margin-top: 32px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #874aad;
+
+	&:not(:last-child) {
+		margin-right: 16px;
+	}
+
+	svg {
+		position: absolute;
+		border-radius: 4px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	rect {
+		fill: none;
+		stroke: #874aad;
+		stroke-width: 3;
+		stroke-dasharray: 422, 0;
+		transition: all 0.35s linear;
+	}
+
+	&:hover rect {
+		stroke-width: 6;
+		stroke-dasharray: 15, 310;
+		stroke-dashoffset: 48;
+		transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	&:first-of-type:hover rect {
+		stroke-dasharray: 15, 415;
+	}
+`;
 
 const ContainerParent = styled.div`
 	margin-top: 46px;
@@ -188,6 +244,7 @@ const ImageWrapDesktop = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		border-radius: 0px 16px 16px 0px;
 		width: 50%;
 		flex-shrink: 0;
 		flex-grow: 0;
@@ -202,7 +259,6 @@ const ImageWrapDesktop = styled.div`
 			max-width: 100%;
 			object-fit: contain;
 			max-height: 100%;
-			/* transform: rotate3d(-33, 0, 35, -16deg); */
 		}
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
@@ -269,6 +325,7 @@ const Tab = styled.div`
 		content: '';
 		display: block;
 		background: ${colors.Main};
+		border-radius: 2px;
 	}
 `;
 
