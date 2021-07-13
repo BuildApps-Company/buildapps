@@ -67,6 +67,7 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 								<ImageWrapDesktop
 									image={activeProject.longImage}
 									background={activeProject.background}
+									visible={item === index}
 								>
 									{activeProject.longImage && (
 										<img src={activeProject.longImage} />
@@ -107,13 +108,12 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 	);
 };
 const StyledButton = styled(Link)`
-	min-width: 102px;
+	display: flex;
+	align-items: center;
 	font-size: 1em;
 	padding: 8px 20px;
 	margin-top: 32px;
 	position: relative;
-	display: flex;
-	align-items: center;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #874aad;
@@ -134,6 +134,25 @@ const StyledButton = styled(Link)`
 	rect {
 		fill: none;
 		stroke: #874aad;
+		stroke-width: 3.5;
+		stroke-dasharray: 227, 0;
+		transition: all 0.35s linear;
+	}
+
+	&:hover rect {
+		stroke-width: 5;
+		stroke-dasharray: 15, 115;
+		stroke-dashoffset: 48;
+		transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	&:first-of-type:hover rect {
+		stroke-dasharray: 15, 220;
+	}
+`;
+/* rect {
+		fill: none;
+		stroke: #874aad;
 		stroke-width: 3;
 		stroke-dasharray: 422, 0;
 		transition: all 0.35s linear;
@@ -148,9 +167,7 @@ const StyledButton = styled(Link)`
 
 	&:first-of-type:hover rect {
 		stroke-dasharray: 15, 415;
-	}
-`;
-
+	}*/
 const ContainerParent = styled.div`
 	margin-top: 46px;
 	margin-bottom: 170px;
@@ -214,11 +231,16 @@ const TitlePage = styled.h2`
 const StyledLink = styled(Link)`
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
+		opacity: 0.75;
 		font-size: 1.5rem;
 		line-height: 160%;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: ${colors.Main};
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
 	}
 `;
 
@@ -250,17 +272,22 @@ const ImageWrapDesktop = styled.div`
 		flex-grow: 0;
 		height: 100%;
 		padding: 10px 20px;
-		background: ${props =>
-			props.background
-				? props.background
-				: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
-
-		img {
-			max-width: 100%;
-			object-fit: contain;
-			max-height: 100%;
-		}
+		transition: opacity 0.3s;
 	}
+
+	${({ visible }) => (visible ? 'opacity: 1;' : 'opacity: 0;')};
+
+	background: ${props =>
+		props.background
+			? props.background
+			: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
+
+	img {
+		max-width: 100%;
+		object-fit: contain;
+		max-height: 100%;
+	}
+
 	@media all and (min-width: ${breakpoints.notebook}) {
 		padding: 30px 70px;
 	}
@@ -275,7 +302,7 @@ const DetailsWrap = styled.div`
 		width: 50%;
 		flex-shrink: 0;
 		flex-grow: 0;
-		padding: 0px 11% 0px 9%;
+		padding: 0px 11% 0px 7%;
 	}
 `;
 

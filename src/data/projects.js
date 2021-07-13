@@ -15,7 +15,7 @@ export const allProjects = 'All';
 export const Portfolio = {
 	ppf: {
 		id: 'ppf',
-		background: '',
+		background: 'linear-gradient(88deg, #7E7CEB 3.37%, #57C3FF 96.63%);',
 		image: ppf,
 		longImage: ppfLong,
 		title: () => <>Lead management software</>,
@@ -28,7 +28,7 @@ Integration with third-party services to obtain more complete information about 
 	},
 	sushi: {
 		id: 'sushi',
-		background: '',
+		background: 'linear-gradient(88deg, #57C3FF 3.37%, #FF57BC 96.63%);',
 		image: sushi,
 		longImage: sushiLong,
 		title: () => <>СУШИШОП</>,
@@ -38,19 +38,19 @@ Integration with third-party services to obtain more complete information about 
 		fullDescription: `Today a mobile application for delivery is the most effective, least expensive, and relevant way to attract new customers, increase their level of loyalty, and receive real feedback. As well as increasing sales and profits.
 `,
 	},
-	prankChat: {
-		id: 'prankChat',
-		background: '',
-		image: prankchat,
-		longImage: prankchatLong,
-		title: () => <>PrankChat смешные видео</>,
-		description:
-			'PrankChat is a social video network where users shoot and post very funny and absolutely unique videos.',
-		responsibility: ['Mobile'],
-	},
+	// prankChat: {
+	// 	id: 'prankChat',
+	// 	background: 'linear-gradient(88deg, #FF57BC 3.37%, #F9CA9E 96.63%);',
+	// 	image: prankchat,
+	// 	longImage: prankchatLong,
+	// 	title: () => <>PrankChat смешные видео</>,
+	// 	description:
+	// 		'PrankChat is a social video network where users shoot and post very funny and absolutely unique videos.',
+	// 	responsibility: ['Mobile'],
+	// },
 	spbProperty: {
 		id: 'spbProperty',
-		background: '',
+		background: 'linear-gradient(88deg, #FF57BC 3.37%, #F9CA9E 96.63%);',
 		image: spbProperty,
 		longImage: spbLong,
 		title: () => <>Петербургская Недвижимость</>,
@@ -65,7 +65,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 	},
 	askod: {
 		id: 'askod',
-		background: '',
+		background: 'linear-gradient(88deg, #F9CA9E 3.37%, #F37A7A 96.63%);',
 		image: askod,
 		longImage: askod,
 		title: () => (

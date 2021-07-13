@@ -175,6 +175,7 @@ const ButtonsWrap = styled.div`
 	margin-bottom: 64px;
 `;
 
+
 const StyledButton = styled(Link)`
 	position: relative;
 	display: flex;
@@ -194,6 +195,7 @@ const StyledButton = styled(Link)`
 		top: 0;
 		width: 100%;
 		height: 100%;
+		border-radius: 4px;
 	}
 
 	rect {
