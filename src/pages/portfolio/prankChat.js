@@ -1,8 +1,8 @@
-import React from 'react';
-import { PortfolioDetails } from '../../components/PortfolioPage/index';
+// import React from 'react';
+// import { PortfolioDetails } from '../../components/PortfolioPage/index';
 
-const prankChat = () => {
-	return <PortfolioDetails id={'prankChat'}></PortfolioDetails>;
-};
+// const prankChat = () => {
+// 	return <PortfolioDetails id={'prankChat'}></PortfolioDetails>;
+// };
 
-export default prankChat;
+// export default prankChat;
