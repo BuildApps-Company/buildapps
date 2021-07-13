@@ -38,16 +38,16 @@ Integration with third-party services to obtain more complete information about 
 		fullDescription: `Today a mobile application for delivery is the most effective, least expensive, and relevant way to attract new customers, increase their level of loyalty, and receive real feedback. As well as increasing sales and profits.
 `,
 	},
-	prankChat: {
-		id: 'prankChat',
-		background: '',
-		image: prankchat,
-		longImage: prankchatLong,
-		title: () => <>PrankChat смешные видео</>,
-		description:
-			'PrankChat is a social video network where users shoot and post very funny and absolutely unique videos.',
-		responsibility: ['Mobile'],
-	},
+	// prankChat: {
+	// 	id: 'prankChat',
+	// 	background: '',
+	// 	image: prankchat,
+	// 	longImage: prankchatLong,
+	// 	title: () => <>PrankChat смешные видео</>,
+	// 	description:
+	// 		'PrankChat is a social video network where users shoot and post very funny and absolutely unique videos.',
+	// 	responsibility: ['Mobile'],
+	// },
 	spbProperty: {
 		id: 'spbProperty',
 		background: '',

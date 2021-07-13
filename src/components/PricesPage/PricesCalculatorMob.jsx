@@ -148,6 +148,7 @@ const SelectWrap = styled.select`
 	border: none;
 	width: 100%;
 	font-size: 1.5rem;
+	background: transparent;
 	border-bottom: 2px solid ${colors.grey.dark};
 	appearance: none;
 	background-image: url(${selectIcon});

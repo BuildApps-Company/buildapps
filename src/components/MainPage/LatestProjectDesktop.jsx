@@ -214,11 +214,16 @@ const TitlePage = styled.h2`
 const StyledLink = styled(Link)`
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
+		opacity: 0.75;
 		font-size: 1.5rem;
 		line-height: 160%;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: ${colors.Main};
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
 	}
 `;
 
