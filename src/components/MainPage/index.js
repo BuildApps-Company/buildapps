@@ -17,6 +17,7 @@ export function MainPage() {
 		() => Object.values(Portfolio).slice(0, 2),
 		[Portfolio]
 	);
+
 	return (
 		<>
 			<MainBanner />

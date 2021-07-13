@@ -5,14 +5,14 @@ import { breakpoints } from '../../styles/breakpoints';
 import { H3 } from '../../styles/styled-headers';
 import { PortfolioDetails } from '../../components/PortfolioPage/index';
 import { colors } from '../../styles/colors';
-import mainImg from '../../../static/images/askod/main.png';
-import detailsImg from '../../../static/images/askod/details.png';
-import screenshot_4 from '../../../static/images/askod/screenshot_4.png';
-import login from '../../../static/images/askod/login.png';
-import screenshot_contract from '../../../static/images/askod/screenshot_contract.png';
-import screenshot_contract2 from '../../../static/images/askod/screenshot_contract2.png';
-import screenshot_3 from '../../../static/images/askod/screenshot_3.png';
-import mainpageImg from '../../../static/images/askod/mainpage.png';
+import mainImg from '../../../static/images/projects/askod/main.png';
+import detailsImg from '../../../static/images/projects/askod/details.png';
+import screenshot_4 from '../../../static/images/projects/askod/screenshot_4.png';
+import login from '../../../static/images/projects/askod/login.png';
+import screenshot_contract from '../../../static/images/projects/askod/screenshot_contract.png';
+import screenshot_contract2 from '../../../static/images/projects/askod/screenshot_contract2.png';
+import screenshot_3 from '../../../static/images/projects/askod/screenshot_3.png';
+import mainpageImg from '../../../static/images/projects/askod/mainpage.png';
 import arrowLeftSlider from '../../../static/images/arrowLeftSlider.svg';
 import arrowLeftSliderHover from '../../../static/images/arrowLeftSliderHover.svg';
 import arrowRightSliderHover from '../../../static/images/arrowRightSliderHover.svg';
@@ -180,8 +180,8 @@ const AskodWrap = styled.div`
 	padding-left: 16px;
 	padding-right: 16px;
 	@media all and (min-width: ${breakpoints.tablet}) {
-		padding-left: 24%;
-		padding-right: 24%;
+		padding-left: 22%;
+		padding-right: 22%;
 	}
 `;
 
@@ -333,8 +333,8 @@ const MainImgWrap = styled.div`
 
 	@media all and (min-width: ${breakpoints.tablet}) {
 		padding-top: 36px;
-		padding-left: 24%;
-		padding-right: 24%;
+		padding-left:22%;
+		padding-right: 22%;
 	}
 	img {
 		max-width: 100%;

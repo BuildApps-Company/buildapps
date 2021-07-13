@@ -106,8 +106,8 @@ const ProjectDetailsContainer = styled.div`
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 24px;
-		padding-left: 24%;
-		padding-right: 24%;
+		padding-left: 22%;
+		padding-right: 22%;
 		margin-top: 32px;
 	}
 `;

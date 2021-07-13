@@ -60,8 +60,8 @@ const StyledLink = styled(Link)`
 
 const ProjectImageContainer = styled.div`
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding-left: 24%;
-		padding-right: 24%;
+		padding-left: 22%;
+		padding-right: 22%;
 	}
 `;
 
@@ -85,7 +85,7 @@ const ImageWrap = styled.div`
 	}
 
 	img {
-		min-height: 60%;
+		/* min-height: 60%; */
 		max-height: 90%;
 		@media all and (min-width: ${breakpoints.notebook}) {
 			max-height: 110%;
@@ -138,8 +138,8 @@ const ProjectDetailsContainer = styled.div`
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 24px;
-		padding-left: 24%;
-		padding-right: 24%;
+		padding-left: 22%;
+		padding-right: 22%;
 		margin-top: 32px;
 	}
 `;
