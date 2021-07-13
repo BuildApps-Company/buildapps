@@ -175,6 +175,7 @@ const ButtonsWrap = styled.div`
 	margin-bottom: 64px;
 `;
 
+
 const StyledButton = styled(Link)`
 	position: relative;
 	display: flex;

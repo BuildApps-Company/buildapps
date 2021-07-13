@@ -246,6 +246,7 @@ const CostsBtn = styled.button`
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
+	opacity: 1;
 	padding: 12px 32px;
 	border-radius: 4px;
 	cursor: pointer;
@@ -258,8 +259,7 @@ const CostsBtn = styled.button`
 	background-color: #ffffff;
 	&:hover,
 	&:focus {
-		color: #ffffff;
-		background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
-		transition: 2s;
+		opacity: 0.85;
+		transition: 1s;
 	}
 `;

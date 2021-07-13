@@ -15,7 +15,7 @@ export const allProjects = 'All';
 export const Portfolio = {
 	ppf: {
 		id: 'ppf',
-		background: '',
+		background: 'linear-gradient(88deg, #7E7CEB 3.37%, #57C3FF 96.63%);',
 		image: ppf,
 		longImage: ppfLong,
 		title: () => <>Lead management software</>,
@@ -28,7 +28,7 @@ Integration with third-party services to obtain more complete information about 
 	},
 	sushi: {
 		id: 'sushi',
-		background: '',
+		background: 'linear-gradient(88deg, #57C3FF 3.37%, #FF57BC 96.63%);',
 		image: sushi,
 		longImage: sushiLong,
 		title: () => <>СУШИШОП</>,
@@ -40,7 +40,7 @@ Integration with third-party services to obtain more complete information about 
 	},
 	// prankChat: {
 	// 	id: 'prankChat',
-	// 	background: '',
+	// 	background: 'linear-gradient(88deg, #FF57BC 3.37%, #F9CA9E 96.63%);',
 	// 	image: prankchat,
 	// 	longImage: prankchatLong,
 	// 	title: () => <>PrankChat смешные видео</>,
@@ -50,7 +50,7 @@ Integration with third-party services to obtain more complete information about 
 	// },
 	spbProperty: {
 		id: 'spbProperty',
-		background: '',
+		background: 'linear-gradient(88deg, #FF57BC 3.37%, #F9CA9E 96.63%);',
 		image: spbProperty,
 		longImage: spbLong,
 		title: () => <>Петербургская Недвижимость</>,
@@ -65,7 +65,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 	},
 	askod: {
 		id: 'askod',
-		background: '',
+		background: 'linear-gradient(88deg, #F9CA9E 3.37%, #F37A7A 96.63%);',
 		image: askod,
 		longImage: askod,
 		title: () => (

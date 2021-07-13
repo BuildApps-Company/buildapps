@@ -62,18 +62,20 @@ const StyledEmail = styled(StyledText)`
 
 const StyledLink = styled(Link)`
 	padding: 12px 32px;
-	display: inline-block;
+	opacity: 1;
+	display: flex;
+	align-items: center;
 	border-radius: 4px;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	line-height: 160%;
+	font-weight: 600;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #874aad;
 	background: #ffffff;
 	&:hover,
 	&:focus {
-		color: #ffffff;
-		background: linear-gradient(88deg, #874aad 3.37%, #e19bb4 96.63%);
-		transition: 2s;
+		opacity: 0.85;
+		transition: 1s;
 	}
 `;

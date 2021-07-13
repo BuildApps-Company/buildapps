@@ -67,6 +67,7 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 								<ImageWrapDesktop
 									image={activeProject.longImage}
 									background={activeProject.background}
+									visible={item === index}
 								>
 									{activeProject.longImage && (
 										<img src={activeProject.longImage} />
@@ -107,13 +108,12 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 	);
 };
 const StyledButton = styled(Link)`
-	min-width: 102px;
+	display: flex;
+	align-items: center;
 	font-size: 1em;
 	padding: 8px 20px;
 	margin-top: 32px;
 	position: relative;
-	display: flex;
-	align-items: center;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #874aad;
@@ -135,19 +135,19 @@ const StyledButton = styled(Link)`
 		fill: none;
 		stroke: #874aad;
 		stroke-width: 3;
-		stroke-dasharray: 422, 0;
+		stroke-dasharray: 422, 320;
 		transition: all 0.35s linear;
 	}
 
 	&:hover rect {
 		stroke-width: 6;
-		stroke-dasharray: 15, 310;
+		stroke-dasharray: 15, 800;
 		stroke-dashoffset: 48;
-		transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+		transition: all 2.35s cubic-bezier(0.19, 1, 0.22, 1);
 	}
 
 	&:first-of-type:hover rect {
-		stroke-dasharray: 15, 415;
+		stroke-dasharray: 15, 300;
 	}
 `;
 
@@ -255,17 +255,25 @@ const ImageWrapDesktop = styled.div`
 		flex-grow: 0;
 		height: 100%;
 		padding: 10px 20px;
-		background: ${props =>
-			props.background
-				? props.background
-				: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
-
-		img {
-			max-width: 100%;
-			object-fit: contain;
-			max-height: 100%;
-		}
+		transition: opacity 0.3s;
 	}
+
+	${({ visible }) =>
+		visible
+			? 'opacity: 1;'
+			: 'opacity: 0;'};
+
+	background: ${props =>
+		props.background
+			? props.background
+			: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
+
+	img {
+		max-width: 100%;
+		object-fit: contain;
+		max-height: 100%;
+	}
+
 	@media all and (min-width: ${breakpoints.notebook}) {
 		padding: 30px 70px;
 	}

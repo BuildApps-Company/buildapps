@@ -57,7 +57,10 @@ const StyledLink = styled(Link)`
 	text-decoration: none;
 	border-bottom: 3px solid #874aad;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 2rem;
+	}
+	&:hover {
+		color: #874aad;
 	}
 `;
