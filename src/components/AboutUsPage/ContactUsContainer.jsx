@@ -54,6 +54,7 @@ const StyledText = styled.a`
 
 const StyledAdress = styled(StyledText)`
 	font-size: 1.5rem;
+	
 `;
 
 const StyledEmail = styled(StyledText)`

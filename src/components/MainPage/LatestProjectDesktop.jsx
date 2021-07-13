@@ -134,23 +134,40 @@ const StyledButton = styled(Link)`
 	rect {
 		fill: none;
 		stroke: #874aad;
+		stroke-width: 3.5;
+		stroke-dasharray: 227, 0;
+		transition: all 0.35s linear;
+	}
+
+	&:hover rect {
+		stroke-width: 5;
+		stroke-dasharray: 15, 115;
+		stroke-dashoffset: 48;
+		transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	&:first-of-type:hover rect {
+		stroke-dasharray: 15, 220;
+	}
+`;
+/* rect {
+		fill: none;
+		stroke: #874aad;
 		stroke-width: 3;
-		stroke-dasharray: 422, 320;
+		stroke-dasharray: 422, 0;
 		transition: all 0.35s linear;
 	}
 
 	&:hover rect {
 		stroke-width: 6;
-		stroke-dasharray: 15, 800;
+		stroke-dasharray: 15, 310;
 		stroke-dashoffset: 48;
-		transition: all 2.35s cubic-bezier(0.19, 1, 0.22, 1);
+		transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 	}
 
 	&:first-of-type:hover rect {
-		stroke-dasharray: 15, 300;
-	}
-`;
-
+		stroke-dasharray: 15, 415;
+	}*/
 const ContainerParent = styled.div`
 	margin-top: 46px;
 	margin-bottom: 170px;
@@ -258,10 +275,7 @@ const ImageWrapDesktop = styled.div`
 		transition: opacity 0.3s;
 	}
 
-	${({ visible }) =>
-		visible
-			? 'opacity: 1;'
-			: 'opacity: 0;'};
+	${({ visible }) => (visible ? 'opacity: 1;' : 'opacity: 0;')};
 
 	background: ${props =>
 		props.background
@@ -288,7 +302,7 @@ const DetailsWrap = styled.div`
 		width: 50%;
 		flex-shrink: 0;
 		flex-grow: 0;
-		padding: 0px 11% 0px 9%;
+		padding: 0px 11% 0px 7%;
 	}
 `;
 

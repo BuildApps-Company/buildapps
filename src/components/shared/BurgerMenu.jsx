@@ -87,6 +87,7 @@ const OurTeamListDesktop = styled(OurTeamList)`
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
 	}
+	
 `;
 const StyledEmail = styled.a`
 	display: block;
