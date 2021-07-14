@@ -5,9 +5,10 @@ import { routes } from '../../utilities/routes';
 import { email, address } from '../../data/contactUsListData';
 import { breakpoints } from '../../styles/breakpoints';
 
-export const ContactUsContainer = () => {
+export const ContactUsContainer = ({ ...rest }) => {
+	console.log(rest);
 	return (
-		<ContactUsWrap>
+		<ContactUsWrap {...rest}>
 			<StyledAdress
 				href={`http://maps.google.com/?q=${address}`}
 				target="_blank"
@@ -56,7 +57,7 @@ const StyledText = styled.a`
 `;
 
 const StyledAdress = styled(StyledText)`
-	font-size: 2rem;
+	font-size: 1.5rem;
 `;
 
 const StyledEmail = styled(StyledText)`
@@ -69,7 +70,7 @@ const StyledLink = styled(Link)`
 	display: flex;
 	align-items: center;
 	border-radius: 4px;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 160%;
 	font-weight: 600;
 	text-decoration: none;

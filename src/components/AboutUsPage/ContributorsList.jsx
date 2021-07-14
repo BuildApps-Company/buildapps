@@ -27,14 +27,14 @@ const StyledImg = styled.img`
 const ContributorsTitle = styled.h2`
 	margin: 0 0 24px 0;
 	padding: 0;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	line-height: 160%;
 	text-transform: uppercase;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		margin-bottom: 40px;
 		font-size: 4rem;
-		white-space: nowrap;
+		/* white-space: nowrap; */
 	}
 `;
 
