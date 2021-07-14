@@ -222,8 +222,6 @@ const BlockSlider = styled.div`
 		margin-bottom: 100px;
 	}
 	.slick-prev {
-		/* left: 0%;
-		top: 86%; */
 		display: none !important;
 		@media all and (min-width: ${breakpoints.notebook}) {
 			display: block !important;
@@ -238,8 +236,6 @@ const BlockSlider = styled.div`
 		}
 	}
 	.slick-next {
-		/* right: 10%;
-		top: 86%; */
 		display: none !important;
 		@media all and (min-width: ${breakpoints.notebook}) {
 			display: block !important;

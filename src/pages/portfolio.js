@@ -100,7 +100,6 @@ const AboutPage = styled.p`
 	line-height: 160%;
 
 	@media all and (min-width: ${breakpoints.tablet}) {
-		/* max-width: 900px; */
 		font-size: 1.5rem;
 	}
 `;

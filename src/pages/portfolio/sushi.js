@@ -2,7 +2,7 @@ import React from 'react';
 import { PortfolioDetails } from '../../components/PortfolioPage/index';
 import { breakpoints } from '../../styles/breakpoints';
 import styled from 'styled-components';
-import { H3, H4 } from '../../styles/styled-headers';
+import { H3 } from '../../styles/styled-headers';
 import picture1 from '../../../static/images/projects/sushiproject/picture1.png';
 import picture2 from '../../../static/images/projects/sushiproject/picture2.png';
 import picture3 from '../../../static/images/projects/sushiproject/picture3.png';
