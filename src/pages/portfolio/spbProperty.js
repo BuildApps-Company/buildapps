@@ -144,6 +144,7 @@ const ProjectDetailsContainer = styled.div`
 		display: inline-block;
 	}
 	img {
+		max-width: 100%;
 		@media all and (min-width: ${breakpoints.notebook}) {
 			margin-right: 18px;
 		}

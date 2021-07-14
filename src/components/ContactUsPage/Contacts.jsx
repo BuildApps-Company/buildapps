@@ -7,7 +7,7 @@ import { breakpoints } from '../../styles/breakpoints';
 export const Contacts = () => {
 	return (
 		<ContactsWrap>
-			<h3>Contacts</h3>
+			<Title>Contacts</Title>
 			<ContactsList>
 				<ContactsListItem>
 					<span>Phone number</span>
@@ -27,6 +27,10 @@ export const Contacts = () => {
 		</ContactsWrap>
 	);
 };
+
+const Title = styled.div`
+	font-size: 2rem;
+`;
 
 const SocialWrap = styled.div`
 	display: flex;
@@ -52,7 +56,7 @@ const ContactsWrap = styled.div`
 		padding: 0;
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 50%;
+		width: 30%;
 		margin-top: -24px;
 	}
 `;
