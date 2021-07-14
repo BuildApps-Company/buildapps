@@ -50,8 +50,7 @@ const StyledText = styled.a`
 	color: #ffffff;
 	text-decoration: none;
 	cursor: pointer;
-	&:hover,
-	&:focus {
+	&:hover {
 		opacity: 1;
 	}
 `;
@@ -77,8 +76,7 @@ const StyledLink = styled(Link)`
 	text-transform: uppercase;
 	color: #874aad;
 	background: #ffffff;
-	&:hover,
-	&:focus {
+	&:hover {
 		opacity: 0.85;
 		transition: 1s;
 	}

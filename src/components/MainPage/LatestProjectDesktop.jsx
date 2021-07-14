@@ -70,7 +70,7 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 									visible={item === index}
 								>
 									{activeProject.longImage && (
-										<img src={activeProject.longImage} />
+										<img src={activeProject.longImage} alt="longImg" />
 									)}
 								</ImageWrapDesktop>
 								<DetailsWrap>

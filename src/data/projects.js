@@ -33,7 +33,11 @@ Integration with third-party services to obtain more complete information about 
 			'linear-gradient(88deg, rgba(87, 195, 255, 0.5) 3.37%, rgba(255, 87, 188, 0.5) 96.63%);',
 		image: sushi,
 		longImage: sushiLong,
-		title: () => <>СУШИШОП</>,
+		title: () => (
+			<>
+				SUSHI <SpanSushi>SHOP</SpanSushi>
+			</>
+		),
 		description: `Online service for ordering sushi. The SushiShop system automatically determines your geolocation for the nearest sushi store to make the delivery time more comfortable for the user. The system also provides a bonus program, an accumulative system and various discounts for different holidays or seasons.
 `,
 		responsibility: ['Mobile'],
@@ -47,7 +51,11 @@ Integration with third-party services to obtain more complete information about 
 			'linear-gradient(88deg, rgba(255, 87, 188, 0.5) 3.37%, rgba(249, 202, 158, 0.5) 96.63%);',
 		image: spbProperty,
 		longImage: spbLong,
-		title: () => <>Петербургская Недвижимость</>,
+		title: () => (
+			<>
+				Petersburg <SpanSpb>real estate</SpanSpb>
+			</>
+		),
 		description: `Mobile client for finding an apartment in residential complex in St. Petersburg and Moscow. The system allows you to book apartments, make pre-orders and find apartments at competitive prices
 `,
 		responsibility: ['Mobile'],
@@ -97,4 +105,12 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 
 const SpanAskodOnline = styled.span`
 	color: #32c178;
+`;
+const SpanSpb = styled.span`
+	color: #fd233c;
+	display: block;
+`;
+
+const SpanSushi = styled.span`
+	color: rgba(255, 87, 188, 0.5);
 `;

@@ -93,10 +93,14 @@ const ImageContainer = styled.div`
 		font-size: 1.25rem;
 		line-height: 160%;
 		width: 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
 		@media all and (min-width: ${breakpoints.notebook}) {
 			font-size: 1.5rem;
-			margin-top: auto;
+			/* margin-top: auto; */
 			color: ${colors.light.white};
 		}
 	}

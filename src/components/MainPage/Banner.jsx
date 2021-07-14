@@ -22,7 +22,7 @@ export function MainBanner() {
 	return (
 		<HeroWrap>
 			<VideoHeader playsInline autoPlay loop muted poster={headerBackground}>
-				<source src={video} type="video/mp4" />
+				<source src={video} alt="video" type="video/mp4" />
 			</VideoHeader>
 			<Toolbar isWhite />
 
@@ -174,7 +174,6 @@ const ButtonsWrap = styled.div`
 	display: flex;
 	margin-bottom: 64px;
 `;
-
 
 const StyledButton = styled(Link)`
 	position: relative;

@@ -12,6 +12,7 @@ export function PortfolioDetails({ id, children }) {
 	const projectsValues = Object.values(Portfolio);
 	const projectValues = projectsValues.find(el => el.id === id);
 	const TitleValue = projectValues.title;
+
 	return (
 		<Page>
 			<Toolbar />
@@ -24,7 +25,7 @@ export function PortfolioDetails({ id, children }) {
 					background={projectValues.background}
 				>
 					{projectValues.longImage && (
-						<img src={projectValues.longImage} alt={projectValues.title} />
+						<img src={projectValues.longImage} alt="projecttitle" />
 					)}
 				</ImageWrap>
 			</ProjectImageContainer>
@@ -35,7 +36,7 @@ export function PortfolioDetails({ id, children }) {
 				</Title>
 
 				{projectValues.responsibility.map(res => (
-					<StyledResponsibility>{res}</StyledResponsibility>
+					<StyledResponsibility key={res}>{res}</StyledResponsibility>
 				))}
 
 				<StyledDescription>{projectValues.description}</StyledDescription>
@@ -60,8 +61,8 @@ const StyledLink = styled(Link)`
 
 const ProjectImageContainer = styled.div`
 	@media all and (min-width: ${breakpoints.phone}) {
-		padding-left: 22%;
-		padding-right: 22%;
+		padding-left: 18%;
+		padding-right: 18%;
 	}
 `;
 
@@ -95,13 +96,16 @@ const ImageWrap = styled.div`
 `;
 
 const Title = styled.h1`
-	font-size: 3rem;
+	font-size: 2rem;
 	line-height: 160%;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		font-size: 4rem;
+		font-size: 3rem;
 		margin: 0 0 8px 0;
 		padding: 0;
+		span {
+			display: inline;
+		}
 	}
 `;
 
@@ -133,13 +137,13 @@ const StyledDescription = styled.p`
 const ProjectDetailsContainer = styled.div`
 	padding-left: 16px;
 	padding-right: 16px;
-	margin-bottom: 48px;
+	margin-bottom: 26px;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 24px;
-		padding-left: 22%;
-		padding-right: 22%;
+		padding-left: 18%;
+		padding-right: 18%;
 		margin-top: 32px;
 	}
 `;

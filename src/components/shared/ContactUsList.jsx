@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { contactUsListData } from '../../data/contactUsListData';
 import { colors } from '../../styles/colors';
@@ -53,13 +53,12 @@ const ContuctUsListStyle = styled.ul`
 	}
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
 	text-decoration: none;
 	font-size: 1.2rem;
 	color: inherit;
 	opacity: 0.75;
-	&:hover,
-	&:focus {
+	&:hover {
 		opacity: 1;
 	}
 `;
