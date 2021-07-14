@@ -6,7 +6,6 @@ import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
 
 export const LatestProjectMobile = ({ projectsMobile }) => {
-	console.log(projectsMobile);
 	return (
 		<LatestProjectsContainer>
 			<TitleWrap>

@@ -6,7 +6,6 @@ import { email, address } from '../../data/contactUsListData';
 import { breakpoints } from '../../styles/breakpoints';
 
 export const ContactUsContainer = ({ ...rest }) => {
-	console.log(rest);
 	return (
 		<ContactUsWrap {...rest}>
 			<StyledAdress
