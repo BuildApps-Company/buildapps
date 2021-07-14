@@ -13,39 +13,54 @@ export const LatestProjectMobile = ({ projectsMobile }) => {
 			</TitleWrap>
 
 			<ProjectWrap>
-				{projectsMobile.map(({ id, longImage, title: ProjectTitle }) => (
-					<ImageWrap key={id} to={`${routes.portfolio}/${id}`}>
-						<h3>
-							<ProjectTitle></ProjectTitle>
-						</h3>
-						<img src={longImage} alt="longimg" />
-					</ImageWrap>
-				))}
+				{projectsMobile.map(
+					({ id, longImage, title: ProjectTitle, background }) => (
+						<ImageWrap
+							key={id}
+							to={`${routes.portfolio}/${id}`}
+							background={background}
+						>
+							<h3>
+								<ProjectTitle></ProjectTitle>
+							</h3>
+							<img src={longImage} alt="longimg" />
+						</ImageWrap>
+					)
+				)}
 			</ProjectWrap>
 			<BtnConteiner>
-				<Button to={routes.portfolio}>More projects</Button>
+				<StyledButton to={routes.portfolio}>
+					<svg>
+						<rect x="0" y="0" fill="none" width="100%" height="100%" />
+					</svg>
+					More projects
+				</StyledButton>
+				{/* <Button to={routes.portfolio}>More projects</Button> */}
 			</BtnConteiner>
 		</LatestProjectsContainer>
 	);
 };
 
 const BtnConteiner = styled.div`
-	text-align: center;
+	/* text-align: center; */
 	margin-top: 44px;
+	display: flex;
+	justify-content: center;
 `;
-const Button = styled(Link)`
-	text-transform: uppercase;
-	color: ${colors.Main};
-	border: 2px solid ${colors.Main};
-	background: transparent;
-	cursor: pointer;
-	padding: 10px 27px;
-	text-decoration: none;
-	margin-top: 14px;
-`;
+// const Button = styled(Link)`
+// 	text-transform: uppercase;
+// 	color: ${colors.Main};
+// 	border: 2px solid ${colors.Main};
+// 	background: transparent;
+// 	cursor: pointer;
+// 	padding: 10px 27px;
+// 	text-decoration: none;
+// 	margin-top: 14px;
+// `;
 
 const LatestProjectsContainer = styled.div`
 	margin-bottom: 64px;
+
 	@media all and (min-width: ${breakpoints.tablet}) {
 		height: 100vh;
 		overflow: hidden;
@@ -97,7 +112,10 @@ const ImageWrap = styled(Link)`
 	align-items: center;
 	justify-content: space-between;
 	text-decoration: none;
-	background: linear-gradient(88deg, #d0eeff 3.37%, #e3fffd 96.63%);
+	background: ${props =>
+		props.background
+			? props.background
+			: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
 	&:not(:last-child) {
 		margin-bottom: 16px;
 	}
@@ -113,5 +131,52 @@ const ImageWrap = styled(Link)`
 	}
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: none;
+	}
+`;
+
+const StyledButton = styled(Link)`
+	width: 196px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1em;
+	position: relative;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: ${colors.Main};
+	cursor: pointer;
+	background: transparent;
+
+	&:not(:last-child) {
+		margin-right: 16px;
+	}
+
+	svg {
+		position: absolute;
+		border-radius: 4px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	rect {
+		fill: none;
+		stroke: #874aad;
+		stroke-width: 3.5;
+		stroke-dasharray: 227, 0;
+		transition: all 0.35s linear;
+	}
+
+	&:hover rect {
+		stroke-width: 5;
+		stroke-dasharray: 15, 179;
+		stroke-dashoffset: 48;
+		transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	&:first-of-type:hover rect {
+		stroke-dasharray: 15, 220;
 	}
 `;

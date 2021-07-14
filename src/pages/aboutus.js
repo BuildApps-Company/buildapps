@@ -45,30 +45,32 @@ export default function AboutUsPage() {
 					</TitleContainer>
 					<ContributorsList />
 				</AboutUsWrap>
-				<ContactUsContainerWrap />
+				<ContactUsVerticalStretch>
+					<ContactUsContainerWrap />
+				</ContactUsVerticalStretch>
 			</StyledContainer>
 			<PreFooter />
 		</Page>
 	);
 }
+const ContactUsVerticalStretch = styled.div``;
 
 const AboutUsWrap = styled.div`
 	width: 100%;
 	padding-right: 16px;
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 50%;
+		width: 65%;
 	}
 `;
 const ContactUsContainerWrap = styled(ContactUsContainer)`
-	width: 100%;
-	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 50%;
-	}
+	position: sticky;
+	top: 20px;
 `;
 const StyledContainer = styled(SmallContainer)`
 	display: flex;
 	width: 100%;
 	flex-direction: column;
+	align-items: stretch;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		flex-direction: row;

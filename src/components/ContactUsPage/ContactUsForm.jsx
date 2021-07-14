@@ -145,11 +145,11 @@ const StyledContactUsForm = styled.form`
 		}
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 50%;
+		width: 68%;
 		font-size: 2rem;
 	}
 	@media all and (min-width: 1480px) {
-		width: 50%;
+		width: 60%;
 	}
 `;
 
@@ -167,7 +167,7 @@ const StyledBtn = styled.button`
 	&:focus {
 		color: #ffffff;
 		background: #874aad;
-		transition: 2s;
+		opacity: 0.5;
 
 		${SpanStyledArrow} {
 			color: #ffffff;
