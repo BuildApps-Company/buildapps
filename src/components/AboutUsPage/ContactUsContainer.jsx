@@ -50,11 +50,14 @@ const StyledText = styled.a`
 	color: #ffffff;
 	text-decoration: none;
 	cursor: pointer;
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
 `;
 
 const StyledAdress = styled(StyledText)`
-	font-size: 1.5rem;
-	
+	font-size: 2rem;
 `;
 
 const StyledEmail = styled(StyledText)`

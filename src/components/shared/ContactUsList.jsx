@@ -45,7 +45,7 @@ const ContuctUsListStyle = styled.ul`
 	}
 
 	li:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 14px;
 	}
 
 	li:not(:first-child) {
@@ -58,7 +58,8 @@ const StyledLink = styled(Link)`
 	font-size: 1.2rem;
 	color: inherit;
 	opacity: 0.75;
-	&:hover {
+	&:hover,
+	&:focus {
 		opacity: 1;
 	}
 `;

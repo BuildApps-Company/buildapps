@@ -12,8 +12,9 @@ import burgerClose from '../../../static/images/burger/burgerClose.svg';
 import { email } from '../../data/contactUsListData';
 import { socialMediaListData } from '../../data/socialMediaListData';
 import { colors } from '../../styles/colors';
+// import StyledBurger from '../StyledBurger/StyledBurger';
 
-export function BurgerMenu({ toogleList }) {
+export function BurgerMenu({ toogleList, active }) {
 	return (
 		<StyledBurgerMenu>
 			<StyledBurgerHeader>
@@ -26,6 +27,7 @@ export function BurgerMenu({ toogleList }) {
 				</Link>
 
 				<Burger src={burgerClose} onClick={toogleList} />
+				{/* <StyledBurger toogleList={toogleList} active={active}></StyledBurger> */}
 			</StyledBurgerHeader>
 
 			{/* <LanguagesWrap>
@@ -87,7 +89,6 @@ const OurTeamListDesktop = styled(OurTeamList)`
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
 	}
-	
 `;
 const StyledEmail = styled.a`
 	display: block;
