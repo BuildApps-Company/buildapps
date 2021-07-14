@@ -29,9 +29,13 @@ export function Toolbar({ isWhite }) {
 				/>
 			</Link>
 
-			<Burger src={isWhite ? burgerWhite : burgerBlack} onClick={toogleList} />
+			<Burger
+				src={isWhite ? burgerWhite : burgerBlack}
+				onClick={toogleList}
+				active={isOpen}
+			/>
 
-			{isOpen && <BurgerMenu toogleList={toogleList} />}
+			{isOpen && <BurgerMenu toogleList={toogleList} active={isOpen} />}
 		</StyledHeader>
 	);
 }

@@ -50,11 +50,13 @@ const StyledText = styled.a`
 	color: #ffffff;
 	text-decoration: none;
 	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
 `;
 
 const StyledAdress = styled(StyledText)`
-	font-size: 1.5rem;
-	
+	font-size: 2rem;
 `;
 
 const StyledEmail = styled(StyledText)`
@@ -74,8 +76,7 @@ const StyledLink = styled(Link)`
 	text-transform: uppercase;
 	color: #874aad;
 	background: #ffffff;
-	&:hover,
-	&:focus {
+	&:hover {
 		opacity: 0.85;
 		transition: 1s;
 	}

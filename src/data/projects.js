@@ -4,8 +4,8 @@ import spbProperty from '../../static/images/portfolio/spbProperty.jpg';
 import spbLong from '../../static/images/portfolio/spb_long.png';
 // import viol from '../../static/images/portfolio/viol.jpg';
 import askod from '../../static/images/portfolio/askod.jpg';
-import prankchat from '../../static/images/portfolio/prankchat.png';
-import prankchatLong from '../../static/images/portfolio/prankchat_long.png';
+// import prankchat from '../../static/images/portfolio/prankchat.png';
+// import prankchatLong from '../../static/images/portfolio/prankchat_long.png';
 import sushi from '../../static/images/portfolio/sushi.png';
 import sushiLong from '../../static/images/portfolio/sushi_long.png';
 import ppf from '../../static/images/portfolio/ppf.png';
@@ -15,7 +15,8 @@ export const allProjects = 'All';
 export const Portfolio = {
 	ppf: {
 		id: 'ppf',
-		background: 'linear-gradient(88deg, #7E7CEB 3.37%, #57C3FF 96.63%);',
+		background:
+			'linear-gradient(88deg, rgba(126, 124, 235, 0.5) 3.37%, rgba(87, 195, 255, 0.5) 96.63%);',
 		image: ppf,
 		longImage: ppfLong,
 		title: () => <>Lead management software</>,
@@ -28,32 +29,33 @@ Integration with third-party services to obtain more complete information about 
 	},
 	sushi: {
 		id: 'sushi',
-		background: 'linear-gradient(88deg, #57C3FF 3.37%, #FF57BC 96.63%);',
+		background:
+			'linear-gradient(88deg, rgba(87, 195, 255, 0.5) 3.37%, rgba(255, 87, 188, 0.5) 96.63%);',
 		image: sushi,
 		longImage: sushiLong,
-		title: () => <>СУШИШОП</>,
+		title: () => (
+			<>
+				SUSHI <SpanSushi>SHOP</SpanSushi>
+			</>
+		),
 		description: `Online service for ordering sushi. The SushiShop system automatically determines your geolocation for the nearest sushi store to make the delivery time more comfortable for the user. The system also provides a bonus program, an accumulative system and various discounts for different holidays or seasons.
 `,
 		responsibility: ['Mobile'],
 		fullDescription: `Today a mobile application for delivery is the most effective, least expensive, and relevant way to attract new customers, increase their level of loyalty, and receive real feedback. As well as increasing sales and profits.
 `,
 	},
-	// prankChat: {
-	// 	id: 'prankChat',
-	// 	background: 'linear-gradient(88deg, #FF57BC 3.37%, #F9CA9E 96.63%);',
-	// 	image: prankchat,
-	// 	longImage: prankchatLong,
-	// 	title: () => <>PrankChat смешные видео</>,
-	// 	description:
-	// 		'PrankChat is a social video network where users shoot and post very funny and absolutely unique videos.',
-	// 	responsibility: ['Mobile'],
-	// },
+
 	spbProperty: {
 		id: 'spbProperty',
-		background: 'linear-gradient(88deg, #FF57BC 3.37%, #F9CA9E 96.63%);',
+		background:
+			'linear-gradient(88deg, rgba(255, 87, 188, 0.5) 3.37%, rgba(249, 202, 158, 0.5) 96.63%);',
 		image: spbProperty,
 		longImage: spbLong,
-		title: () => <>Петербургская Недвижимость</>,
+		title: () => (
+			<>
+				Petersburg <SpanSpb>real estate</SpanSpb>
+			</>
+		),
 		description: `Mobile client for finding an apartment in residential complex in St. Petersburg and Moscow. The system allows you to book apartments, make pre-orders and find apartments at competitive prices
 `,
 		responsibility: ['Mobile'],
@@ -65,7 +67,8 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 	},
 	askod: {
 		id: 'askod',
-		background: 'linear-gradient(88deg, #F9CA9E 3.37%, #F37A7A 96.63%);',
+		background:
+			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
 		image: askod,
 		longImage: askod,
 		title: () => (
@@ -80,14 +83,34 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 `,
 	},
 	// viol: {
+	// 	id: 'viol',
+	// 	background:	'linear-gradient(88deg, rgba(126, 124, 235, 0.5) 3.37%, rgba(87, 195, 255, 0.5) 96.63%);',
 	// 	image: viol,
 	// 	longImage: viol,
 	// 	title: () => <>VIOL Commander</>,
 	// 	description: `Semper porta viverra arcu, pharetra. Scelerisque consectetur faucibus nibh dictum mi sodales ac ornare. Mauris maecenas dignissim enim, pharetra, tortor, sed. Adipiscing felis et sit dolor volutpat nulla volutpat, at etiam.`,
 	// 	responsibility: ['Desktop'],
 	// },
+	// prankChat: {
+	// 	id: 'prankChat',
+	// 	background:'linear-gradient(88deg, rgba(87, 195, 255, 0.5) 3.37%, rgba(255, 87, 188, 0.5) 96.63%);',
+	// 	image: prankchat,
+	// 	longImage: prankchatLong,
+	// 	title: () => <>PrankChat смешные видео</>,
+	// 	description:
+	// 		'PrankChat is a social video network where users shoot and post very funny and absolutely unique videos.',
+	// 	responsibility: ['Mobile'],
+	// },
 };
 
 const SpanAskodOnline = styled.span`
 	color: #32c178;
+`;
+const SpanSpb = styled.span`
+	color: #fd233c;
+	display: block;
+`;
+
+const SpanSushi = styled.span`
+	color: #f8d343;
 `;

@@ -89,6 +89,7 @@ export const ListTitle = styled.h3`
 
 export const ListTitleWithUnderline = styled(ListTitle)`
 	text-transform: uppercase;
+	white-space: nowrap;
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		:after {
