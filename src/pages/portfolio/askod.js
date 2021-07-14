@@ -180,8 +180,8 @@ const AskodWrap = styled.div`
 	padding-left: 16px;
 	padding-right: 16px;
 	@media all and (min-width: ${breakpoints.tablet}) {
-		padding-left: 22%;
-		padding-right: 22%;
+		padding-left: 18%;
+		padding-right: 18%;
 	}
 `;
 
@@ -222,12 +222,10 @@ const BlockSlider = styled.div`
 		margin-bottom: 100px;
 	}
 	.slick-prev {
-		/* left: 0%;
-		top: 86%; */
 		display: none !important;
 		@media all and (min-width: ${breakpoints.notebook}) {
 			display: block !important;
-			left: -27%;
+			left: -12%;
 			top: 32%;
 			&:hover,
 			&:focus {
@@ -238,12 +236,10 @@ const BlockSlider = styled.div`
 		}
 	}
 	.slick-next {
-		/* right: 10%;
-		top: 86%; */
 		display: none !important;
 		@media all and (min-width: ${breakpoints.notebook}) {
 			display: block !important;
-			right: -19%;
+			right: -6%;
 			top: 32%;
 			&:hover,
 			&:focus {
@@ -293,7 +289,7 @@ const BtnWrap = styled.div`
 	text-align: center;
 `;
 const AdvantagesDiv = styled.div`
-	margin: 32px 0;
+	margin-top: 22px;
 	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 50%;
 		padding-right: 40px;
@@ -301,7 +297,7 @@ const AdvantagesDiv = styled.div`
 	}
 `;
 const LowerDiv = styled.div`
-	margin: 32px 0;
+	margin-top: 22px;
 	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 50%;
 		padding-left: 40px;
@@ -333,8 +329,8 @@ const MainImgWrap = styled.div`
 
 	@media all and (min-width: ${breakpoints.tablet}) {
 		padding-top: 36px;
-		padding-left:22%;
-		padding-right: 22%;
+		padding-left: 18%;
+		padding-right: 18%;
 	}
 	img {
 		max-width: 100%;
@@ -342,7 +338,7 @@ const MainImgWrap = styled.div`
 `;
 const ProjectDetailsContainer = styled.div`
 	font-size: 1rem;
-	margin-bottom: 48px;
+	margin-bottom: 26px;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		font-size: 1.5rem;
 		margin-left: auto;
