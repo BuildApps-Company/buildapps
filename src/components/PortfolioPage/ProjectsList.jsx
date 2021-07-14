@@ -148,5 +148,6 @@ const StyledDescription = styled.p`
 		margin: 0;
 		padding: 0;
 		line-height: 160%;
+		/* font-size: 1.5rem; */
 	}
 `;

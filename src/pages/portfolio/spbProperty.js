@@ -1,7 +1,6 @@
 import React from 'react';
 import { PortfolioDetails } from '../../components/PortfolioPage/index';
 import { breakpoints } from '../../styles/breakpoints';
-import { H3, H4 } from '../../styles/styled-headers';
 import styled from 'styled-components';
 import gif1 from '../../../static/images/projects/realestate/pn0.gif';
 import gif2 from '../../../static/images/projects/realestate/pn2.gif';
@@ -102,13 +101,13 @@ const spbProperty = () => {
 						clients, surprise them with your efficiency and competence. AgentPN
 						is your mobile sales tool;
 					</li>
-					<li>
-						- Our team took part in the initial stages of development and the
-						first release versions together with the company Notisimus
-						<a href="https://notissimus.com/" target="_blank" />
-						(https://notissimus.com/).
-					</li>
 				</ul>
+				<p>
+					* Our team took part in the initial stages of development and the
+					first release versions together with the company Notisimus
+					<a href="https://notissimus.com/" target="_blank" />
+					(https://notissimus.com/).
+				</p>
 			</ProjectDetailsContainer>
 		</PortfolioDetails>
 	);

@@ -128,8 +128,8 @@ const StyledDescription = styled.p`
 	padding: 0;
 	line-height: 160%;
 
-	@media all and (min-width: ${breakpoints.phone}) {
-		max-width: 900px;
+	@media all and (min-width: ${breakpoints.tablet}) {
+		/* max-width: 900px; */
 		font-size: 1.5rem;
 	}
 `;

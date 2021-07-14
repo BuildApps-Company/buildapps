@@ -112,5 +112,5 @@ const SpanSpb = styled.span`
 `;
 
 const SpanSushi = styled.span`
-	color: rgba(255, 87, 188, 0.5);
+	color: #f8d343;
 `;
