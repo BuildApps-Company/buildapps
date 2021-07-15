@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../styles/breakpoints';
+import { sendContactForm } from '../../api/email.js';
 
 export const ContactUsForm = () => {
 	const [isActive, setIsActive] = useState(true);
@@ -23,13 +24,18 @@ export const ContactUsForm = () => {
 	const handleSubmit = useCallback(
 		e => {
 			e.preventDefault();
+			const message = `From contact us form:\nName: ${inputValues.name}\nNumber: ${inputValues.number}\nEmail: ${inputValues.email}\nType of work: ${inputValues.typeOfWork}\nDetails: ${inputValues.details} `;
 
-			setInputValues({
-				name: '',
-				number: '',
-				email: '',
-				typeOfWork: '',
-				details: '',
+			sendContactForm(message).then(response => {
+				if (response.status === 200) {
+					setInputValues({
+						name: '',
+						number: '',
+						email: '',
+						typeOfWork: '',
+						details: '',
+					});
+				}
 			});
 		},
 		[inputValues]
@@ -78,7 +84,8 @@ export const ContactUsForm = () => {
 				</option>
 				<option value="Business website">Business website</option>
 				<option value="Landing page">Landing page</option>
-				<option value="Test3">E-commerce</option>
+				<option value="E-commerce">E-commerce</option>
+				<option value="Mobile application">Mobile application</option>
 			</select>
 
 			<label>
