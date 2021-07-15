@@ -123,6 +123,9 @@ const GifWrap = styled.div`
 		flex-direction: row;
 		justify-content: space-between;
 	}
+	@media all and (min-width: 1480px) {
+		justify-content: space-around;
+	}
 `;
 
 const ImgWrap = styled.div`
@@ -133,6 +136,9 @@ const ImgWrap = styled.div`
 	@media all and (min-width: ${breakpoints.notebook}) {
 		flex-direction: row;
 		justify-content: space-between;
+	}
+	@media all and (min-width: 1480px) {
+		justify-content: space-around;
 	}
 `;
 
@@ -147,6 +153,9 @@ const ProjectDetailsContainer = styled.div`
 		max-width: 100%;
 		@media all and (min-width: ${breakpoints.notebook}) {
 			margin-right: 18px;
+		}
+		@media all and (min-width: 1480px) {
+			margin-right: 0px;
 		}
 	}
 	ul {

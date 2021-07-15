@@ -149,4 +149,8 @@ const StyledDescription = styled.p`
 		padding: 0;
 		line-height: 160%;
 	}
+	@media all and (min-width: 1480px) {
+		font-size: 1.2rem;
+		line-height: 160%;
+	}
 `;
