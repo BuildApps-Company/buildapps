@@ -113,7 +113,8 @@ const StyledLink = styled(Link)`
 	padding: 12px 32px;
 	border-radius: 4px;
 	font-size: 1.5rem;
-	background: transparent;
+	line-height: 160%;
+	font-weight: 600;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #874aad;
