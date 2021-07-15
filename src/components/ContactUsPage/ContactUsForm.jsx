@@ -124,9 +124,6 @@ const StyledContactUsForm = styled.form`
 		border: none;
 		border-bottom: 2px solid #110322;
 		opacity: 0.5;
-		@media all and (min-width: 1480px) {
-			font-size: 2rem;
-		}
 	}
 
 	select {
@@ -174,6 +171,6 @@ const StyledBtn = styled.button`
 		}
 	}
 	@media all and (min-width: 1480px) {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 `;
