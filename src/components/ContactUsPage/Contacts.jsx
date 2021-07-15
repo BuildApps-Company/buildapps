@@ -10,7 +10,7 @@ export const Contacts = () => {
 			<Title>Contacts</Title>
 			<ContactsList>
 				<ContactsListItem>
-					<span>Phone number</span>
+					<span>Phone</span>
 					<a href={`tel:${tel}`}>{tel}</a>
 				</ContactsListItem>
 				<ContactsListItem>
@@ -30,6 +30,7 @@ export const Contacts = () => {
 
 const Title = styled.div`
 	font-size: 2rem;
+	margin-bottom: 28px;
 `;
 
 const SocialWrap = styled.div`
@@ -41,14 +42,14 @@ const SocialSpanStyled = styled.span`
 	margin-right: 10px;
 `;
 const ContactsWrap = styled.div`
-	width: 100%;
+	/* width: 100%; */
 	height: fit-content;
 	border-radius: 8px;
-	padding: 32px;
+	padding: 28px;
 	background: #eff0f3;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 160%;
-	white-space: nowrap;
+	/* white-space: nowrap; */
 	margin-top: 32px;
 
 	h3 {
@@ -74,6 +75,7 @@ const ContactsListItem = styled.li`
 	justify-content: space-between;
 	align-items: baseline;
 	flex-direction: column;
+	flex-wrap: wrap;
 
 	&:last-child {
 		padding-top: 10px;
@@ -96,10 +98,10 @@ const ContactsListItem = styled.li`
 
 	@media all and (min-width: 1480px) {
 		a {
-			font-size: 2rem;
+			font-size: 1.5rem;
 		}
 		span {
-			font-size: 2rem;
+			font-size: 1.5rem;
 		}
 		flex-direction: row;
 		margin-top: 0px;

@@ -150,24 +150,7 @@ const StyledButton = styled(Link)`
 		stroke-dasharray: 15, 220;
 	}
 `;
-/* rect {
-		fill: none;
-		stroke: #874aad;
-		stroke-width: 3;
-		stroke-dasharray: 422, 0;
-		transition: all 0.35s linear;
-	}
 
-	&:hover rect {
-		stroke-width: 6;
-		stroke-dasharray: 15, 310;
-		stroke-dashoffset: 48;
-		transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-	}
-
-	&:first-of-type:hover rect {
-		stroke-dasharray: 15, 415;
-	}*/
 const ContainerParent = styled.div`
 	margin-top: 46px;
 	margin-bottom: 170px;
@@ -330,6 +313,10 @@ const TagContainer = styled.div`
 
 const Description = styled(Body2)`
 	margin-top: 16px;
+	@media all and (min-width: 1480px) {
+		font-size: 1.2rem;
+		line-height: 160%;
+	}
 `;
 
 const Tab = styled.div`

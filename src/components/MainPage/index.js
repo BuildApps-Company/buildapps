@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { breakpoints } from '../../styles/breakpoints';
 import styled from 'styled-components';
 import { MainBanner } from './Banner';
-import { Clients } from './Clients';
+// import { Clients } from './Clients';
 import { LatestProjectDesktop } from './LatestProjectDesktop';
 import { LatestProjectMobile } from './LatestProjectMobile';
 import { Portfolio } from '../../data/projects';
