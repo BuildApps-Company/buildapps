@@ -106,7 +106,7 @@ const spbProperty = () => {
 					* Our team took part in the initial stages of development and the
 					first release versions together with the company{' '}
 					<a href="https://notissimus.com/" target="_blank">
-						Notisimus
+						Notissimus
 					</a>
 				</p>
 			</ProjectDetailsContainer>
