@@ -99,6 +99,14 @@ const sushi = () => {
 						</li>
 					</ul>
 				</p>
+				<p>
+					* Our team took part in the initial stages of development and the
+					first release versions together with the company{' '}
+					<a href="https://notissimus.com/" target="_blank">
+						Notissimus
+					</a>
+					.
+				</p>
 			</ProjectDetailsContainer>
 		</PortfolioDetails>
 	);
