@@ -12,7 +12,7 @@ import { breakpoints } from '../styles/breakpoints';
 
 export default function AboutUsPage() {
 	return (
-		<Page>
+		<Page pageName="About Us">
 			<Toolbar />
 
 			<StyledContainer>

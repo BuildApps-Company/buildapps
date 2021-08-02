@@ -38,7 +38,7 @@ export default function PortfolioPage() {
 	};
 
 	return (
-		<Page>
+		<Page pageName="Portfolio">
 			<Toolbar />
 			<ContainerWrap>
 				<TitleContainer>
