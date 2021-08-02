@@ -7,7 +7,7 @@ import { breakpoints } from '../styles/breakpoints';
 
 export default function ContactFormPage() {
 	return (
-		<Page>
+		<Page pageName={'Contact Us'}>
 			<Toolbar />
 			<StyledPageContainer>
 				<SubTitle>Build apps - Contact form</SubTitle>

@@ -14,7 +14,7 @@ import { breakpoints } from '../styles/breakpoints';
 
 export default function PortfolioPage() {
 	return (
-		<Page>
+		<Page pageName="Price Calculation">
 			<Toolbar />
 
 			<Container>
