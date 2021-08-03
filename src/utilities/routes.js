@@ -1,8 +1,8 @@
 export const routes = {
 	home: '/',
-	portfolio: '/portfolio',
+	portfolio: '/portfolio/',
 	// portfolioDetails: '/portfoliodetails',
-	aboutUs: '/aboutus',
-	prices: '/prices',
-	contactForm: '/contactform',
+	aboutUs: '/about-us/',
+	prices: '/prices/',
+	contactForm: '/contact-us/',
 };
