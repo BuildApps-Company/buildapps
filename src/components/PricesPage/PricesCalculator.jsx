@@ -1,9 +1,8 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../styles/breakpoints';
 import { calculationOptionsData } from '../../data/pricesCalculatorData';
 import { sendContactForm } from '../../api/email.js';
-import { useEffect } from 'react';
 
 const initPriceValues = {
 	planning: 0,
