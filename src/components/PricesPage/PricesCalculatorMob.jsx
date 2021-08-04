@@ -110,7 +110,7 @@ export const PricesCalculatorMob = () => {
 
 			sendContactForm(message).then(response => {
 				if (response.status === 200) {
-					setSelectedButtons({});
+					setSelectedButtons({ ...initSelectedButtons });
 					setInputValues({
 						email: '',
 					});
