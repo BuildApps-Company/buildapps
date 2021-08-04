@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../styles/breakpoints';
 import { calculationOptionsData } from '../../data/pricesCalculatorData';
+import { sendContactForm } from '../../api/email.js';
 
 const initPriceValues = {
 	planning: 0,
@@ -14,13 +15,32 @@ export const PricesCalculator = () => {
 	const [priceValues, setPriceValues] = useState({ ...initPriceValues });
 	const [selectedButtons, setSelectedButtons] = useState({});
 	const [totalPrice, setTotalPrice] = useState(0);
+	const [inputValues, setInputValues] = useState({
+		email: '',
+	});
+	const handleChange = useCallback(
+		({ target }) => {
+			setInputValues({
+				...inputValues,
+				[target.name]: target.value,
+			});
+		},
+
+		[inputValues]
+	);
 
 	const serviceList = Object.entries(calculationOptionsData);
 
 	const handleServiceSelect = (sectionName, button) => {
-		const newSelectedButtons = { ...selectedButtons, [sectionName]: button };
+		const newSelectedButtons = {
+			...selectedButtons,
+			[sectionName]: button,
+		};
 		setSelectedButtons(newSelectedButtons);
-		const totalValuesPrice = Object.values(newSelectedButtons).reduce(
+	};
+
+	useEffect(() => {
+		const totalValuesPrice = Object.values(selectedButtons).reduce(
 			(acc, el) => {
 				acc.planning += el.planning;
 				acc.design += el.design;
@@ -39,8 +59,35 @@ export const PricesCalculator = () => {
 			totalValuesPrice.maintain;
 
 		setTotalPrice(total);
-	};
+	}, [selectedButtons]);
 
+	const handleSubmit = useCallback(
+		e => {
+			e.preventDefault();
+
+			const message = `From price list:\nWhat are you working on?: ${JSON.stringify(
+				selectedButtons.workingOn
+			)}\nWith design?: ${JSON.stringify(
+				selectedButtons.withDesign
+			)}\nCMS?: ${JSON.stringify(
+				selectedButtons.cms
+			)}\nMultiple languages?: ${JSON.stringify(
+				selectedButtons.languages
+			)}\nEmail: ${inputValues.email} `;
+
+			sendContactForm(message).then(response => {
+				if (response.status === 200) {
+					setSelectedButtons({});
+					setInputValues({
+						email: '',
+					});
+				}
+			});
+		},
+		[inputValues, selectedButtons]
+	);
+
+	const selectedButtonValues = Object.values(selectedButtons);
 	return (
 		<PricesContainer>
 			<ServicesList>
@@ -59,6 +106,7 @@ export const PricesCalculator = () => {
 									data-development={el.development}
 									data-maintain={el.maintain}
 									data-days={el.days}
+									checked={selectedButtonValues.some(x => x.key === el.key)}
 								/>
 								<StyledLabel for={el.key}>{el.name}</StyledLabel>
 							</ServicesBtn>
@@ -90,16 +138,44 @@ export const PricesCalculator = () => {
 					<li>
 						<span>Total cost </span> from $ {totalPrice}
 					</li>
+					<li>
+						<SendForm onSubmit={handleSubmit} id="calculator-form">
+							<input
+								required
+								type="email"
+								name="email"
+								value={inputValues.email}
+								placeholder="Enter your e-mail ..."
+								onChange={handleChange}
+							/>
+							<CostsBtnWrap>
+								<CostsBtn for="calculator-form" type="submit">
+									Send request
+								</CostsBtn>
+							</CostsBtnWrap>
+						</SendForm>
+					</li>
 				</CostsList>
-
-				<CostsBtnWrap>
-					<CostsBtn>Send request</CostsBtn>
-				</CostsBtnWrap>
 			</CostsContainer>
 		</PricesContainer>
 	);
 };
 
+const SendForm = styled.form`
+	width: 100%;
+	input {
+		width: 100%;
+		padding: 6px;
+		font-size: 1.5rem;
+		border: none;
+		opacity: 0.5;
+		margin-bottom: 32px;
+		::placeholder {
+			color: #874aad;
+			font-size: 1.5rem;
+		}
+	}
+`;
 const StyledLabel = styled.label`
 	border-radius: 4px;
 `;

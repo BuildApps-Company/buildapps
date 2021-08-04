@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { calculationOptionsData } from '../../data/pricesCalculatorData';
 import { breakpoints } from '../../styles/breakpoints';
 import selectIcon from '../../../static/images/ic_select.svg';
+import { sendContactForm } from '../../api/email.js';
 
 const initPriceValues = {
 	planning: 0,
@@ -26,6 +27,19 @@ export const PricesCalculatorMob = () => {
 		...initSelectedButtons,
 	});
 	const [totalPrice, setTotalPrice] = useState(0);
+	const [inputValues, setInputValues] = useState({
+		email: '',
+	});
+	const handleChange = useCallback(
+		({ target }) => {
+			setInputValues({
+				...inputValues,
+				[target.name]: target.value,
+			});
+		},
+
+		[inputValues]
+	);
 
 	const serviceList = Object.entries(calculationOptionsData);
 
@@ -80,6 +94,33 @@ export const PricesCalculatorMob = () => {
 		setTotalPrice(total);
 	}, [selectedButtons]);
 
+	const handleSubmit = useCallback(
+		e => {
+			e.preventDefault();
+
+			const message = `From price list:\nWhat are you working on?: ${JSON.stringify(
+				selectedButtons.workingOn
+			)}\nWith design?: ${JSON.stringify(
+				selectedButtons.withDesign
+			)}\nCMS?: ${JSON.stringify(
+				selectedButtons.cms
+			)}\nMultiple languages?: ${JSON.stringify(
+				selectedButtons.languages
+			)}\nEmail: ${inputValues.email} `;
+
+			sendContactForm(message).then(response => {
+				if (response.status === 200) {
+					setSelectedButtons({});
+					setInputValues({
+						email: '',
+					});
+				}
+			});
+		},
+		[inputValues, selectedButtons]
+	);
+
+	// const selectedButtonValues = Object.values(selectedButtons);
 	return (
 		<PricesContainer>
 			<ServicesList>
@@ -88,7 +129,7 @@ export const PricesCalculatorMob = () => {
 						<ServicesTitle>{el.title}</ServicesTitle>
 						<SelectWrap
 							name={key}
-							value={selectedButtons[key].key}
+							value={selectedButtons[key]?.key}
 							onChange={({ target }) => handleServiceSelect(target, el, key)}
 						>
 							{el.buttons.map(el => (
@@ -131,15 +172,43 @@ export const PricesCalculatorMob = () => {
 					<li>
 						<StyledSpan>Total cost </StyledSpan> from $ {totalPrice}
 					</li>
+					<li>
+						<SendForm onSubmit={handleSubmit} id="calculator-form">
+							<input
+								required
+								type="email"
+								name="email"
+								value={inputValues.email}
+								placeholder="Enter your e-mail ..."
+								onChange={handleChange}
+							/>
+							<CostsBtnWrap>
+								<CostsBtn for="calculator-form" type="submit">
+									Send request
+								</CostsBtn>
+							</CostsBtnWrap>
+						</SendForm>
+					</li>
 				</CostsList>
-
-				<CostsBtnWrap>
-					<CostsBtn>Send request</CostsBtn>
-				</CostsBtnWrap>
 			</CostsContainer>
 		</PricesContainer>
 	);
 };
+const SendForm = styled.form`
+	width: 100%;
+	input {
+		width: 100%;
+		padding: 6px;
+		font-size: 1.5rem;
+		border: none;
+		opacity: 0.5;
+		margin-bottom: 32px;
+		::placeholder {
+			color: #874aad;
+			font-size: 1.5rem;
+		}
+	}
+`;
 
 const StyledSpan = styled.span`
 	line-height: 120%;
