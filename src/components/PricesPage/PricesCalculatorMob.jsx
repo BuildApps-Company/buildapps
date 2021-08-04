@@ -203,6 +203,7 @@ const SendForm = styled.form`
 		border: none;
 		opacity: 0.5;
 		margin-bottom: 32px;
+		border-radius: 4px;
 		::placeholder {
 			color: #874aad;
 			font-size: 1.5rem;
