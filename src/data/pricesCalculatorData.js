@@ -4,12 +4,12 @@ export const calculationOptionsData = {
 		buttons: [
 			{
 				key: 'landingwebsite',
-				name: 'Business website',
+				name: 'Landing page',
 				planning: 0,
 				design: 0,
 				development: 1000,
 				maintain: 100,
-				days: 20,
+				days: 21,
 			},
 			{
 				key: 'businesswebsite',
