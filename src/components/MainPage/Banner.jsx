@@ -32,7 +32,7 @@ export function MainBanner() {
 						<Title>Web</Title>
 						<Title>Mobile</Title>
 						<Title>Desktop</Title>
-						<SubTitle>Design & Development</SubTitle>
+						<SubTitle>Design & Development company</SubTitle>
 					</div>
 
 					{width > 450 && (

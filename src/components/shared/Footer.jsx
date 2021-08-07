@@ -20,8 +20,8 @@ export const Footer = () => {
 			<FlexContainerDesktop>
 				<ListTitleWrap>
 					<ListTitle>
-						A close-knit team with extensive experience and understanding of
-						what is necessary for you
+						A close-knit software development team with extensive experience and
+						understanding of what is necessary for you
 					</ListTitle>
 
 					<SocialMediaList />

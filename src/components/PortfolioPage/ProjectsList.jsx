@@ -21,7 +21,7 @@ export const ProjectsList = ({ selectedCategories }) => {
 				const TitleValue = el.title;
 				return (
 					<li key={key}>
-						<Link to={`${routes.portfolio}/${key}`} state={{ project: el }}>
+						<Link to={`${routes.portfolio}${key}/`} state={{ project: el }}>
 							<ImageContainer image={el.longImage} background={el.background}>
 								<h3>
 									<TitleValue></TitleValue>
