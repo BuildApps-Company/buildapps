@@ -17,7 +17,7 @@ export const LatestProjectMobile = ({ projectsMobile }) => {
 					({ id, longImage, title: ProjectTitle, background }) => (
 						<ImageWrap
 							key={id}
-							to={`${routes.portfolio}/${id}`}
+							to={`${routes.portfolio}${id}/`}
 							background={background}
 						>
 							<h3>
@@ -35,7 +35,6 @@ export const LatestProjectMobile = ({ projectsMobile }) => {
 					</svg>
 					More projects
 				</StyledButton>
-				{/* <Button to={routes.portfolio}>More projects</Button> */}
 			</BtnConteiner>
 		</LatestProjectsContainer>
 	);

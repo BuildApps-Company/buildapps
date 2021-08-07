@@ -76,7 +76,7 @@ export const ListTitle = styled.h3`
 	padding: 0;
 	max-width: 600px;
 
-	font-size: 1.2rem;
+	font-size: 1rem;
 	line-height: 160%;
 	color: ${colors.light.white};
 

@@ -82,11 +82,7 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 										))}
 									</TagContainer>
 									<Description>{activeProject.description}</Description>
-									{/* <LinkBtn to={`${routes.portfolio}/${activeProject.id}`}>
-										Details
-									</LinkBtn> */}
-
-									<StyledButton to={`${routes.portfolio}/${activeProject.id}`}>
+									<StyledButton to={`${routes.portfolio}${activeProject.id}/`}>
 										<svg>
 											<rect
 												x="0"
