@@ -14,7 +14,7 @@ export function PortfolioDetails({ id, children }) {
 	const TitleValue = projectValues.title;
 
 	return (
-		<Page pageName="Portfolio">
+		<Page pageName={projectValues.pageTitle}>
 			<Toolbar />
 
 			<StyledLink to={routes.portfolio}>GO back to portfolio</StyledLink>
