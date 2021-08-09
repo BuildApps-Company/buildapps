@@ -7,12 +7,12 @@ export function Page({ children, pageName }) {
 		<>
 			<Helmet>
 				<title>
-					{pageName ? `${pageName} | ` : ''}Websites and mobile applications
-					development agency | BuildApps
+					{pageName ? `${pageName} | ` : ''}Website and Mobile Application
+					Development Agency | BuildApps
 				</title>
 				<meta
 					name="description"
-					content="We specialize in developing applications for various platforms and services. BuildApps creates mobile, websites, desktop applications using the of best approaches."
+					content="Software development agency that deals with website creation, mobile application creation, ui/ux design, ios/android multiplatform application development, e-commerce website and application development."
 				/>
 				<meta http-equiv="Content-Language" content="en"></meta>
 			</Helmet>
