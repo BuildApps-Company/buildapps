@@ -13,7 +13,7 @@ import picture7 from '../../../static/images/projects/sushiproject/picture7.png'
 import picture8 from '../../../static/images/projects/sushiproject/picture8.png';
 import picture9 from '../../../static/images/projects/sushiproject/picture9.png';
 import picture10 from '../../../static/images/projects/sushiproject/picture10.png';
-import { ProjectDetailsContainer } from './shared';
+import { ProjectDetailsContainer } from '../../styles/portfolio';
 
 const sushi = () => {
 	return (

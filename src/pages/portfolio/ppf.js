@@ -1,7 +1,7 @@
 import React from 'react';
 import { PortfolioDetails } from '../../components/PortfolioPage/index';
 import { H3, H4 } from '../../styles/styled-headers';
-import { ProjectDetailsContainer } from './shared';
+import { ProjectDetailsContainer } from '../../styles/portfolio';
 
 const ppf = () => {
 	return (
