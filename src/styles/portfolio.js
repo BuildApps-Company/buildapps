@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoints } from '../../styles/breakpoints';
+import { breakpoints } from './breakpoints';
 
 export const ProjectDetailsContainer = styled.div`
 	padding-left: 16px;
