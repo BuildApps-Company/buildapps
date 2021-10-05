@@ -71,10 +71,10 @@ export const ourContributorsData = [
 	// 	position: 'Full-stack Team Lead Xamarin dev',
 	// 	img: '',
 	// },
-	{
-		key: 'oleksiisemelit',
-		name: 'Oleksii Semelit',
-		position: 'Senior Xamarin dev',
-		img: oleksiiImg,
-	},
+	// {
+	// 	key: 'oleksiisemelit',
+	// 	name: 'Oleksii Semelit',
+	// 	position: 'Senior Xamarin dev',
+	// 	img: oleksiiImg,
+	// },
 ];
