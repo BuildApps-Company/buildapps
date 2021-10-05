@@ -6,7 +6,7 @@ import { breakpoints } from '../../styles/breakpoints';
 export const ContributorsList = () => {
 	return (
 		<>
-			<ContributorsTitle>Our contributors</ContributorsTitle>
+			<ContributorsTitle>Leadership team</ContributorsTitle>
 
 			<StyledContributorsList>
 				{ourContributorsData.map(el => (
