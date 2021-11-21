@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../styles/breakpoints';
 import { sendContactForm } from '../../api/email.js';
-import { usePricesAndServicesTableData } from '../../data';
+import { useCalculationOptionsData } from '../../data';
 
 const initPriceValues = {
 	planning: 0,
@@ -12,7 +12,7 @@ const initPriceValues = {
 	days: 0,
 };
 export const PricesCalculator = () => {
-	const calculationOptionsData = usePricesAndServicesTableData();
+	const calculationOptionsData = useCalculationOptionsData();
 	const [priceValues, setPriceValues] = useState({ ...initPriceValues });
 	const [selectedButtons, setSelectedButtons] = useState({});
 	const [totalPrice, setTotalPrice] = useState(0);

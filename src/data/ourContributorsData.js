@@ -3,7 +3,7 @@ import sashaImg from '../../static/images/team/sasha.jpg';
 import vadimImg from '../../static/images/team/vadim.jpg';
 import ivanImg from '../../static/images/team/ivan.jpg';
 
-const ru = [
+const en = [
 	{
 		key: 'alexbudyakov',
 		name: 'Aleksandr Budyakov',
@@ -31,4 +31,4 @@ const ru = [
 ];
 
 
-export const ourContributorsData = { ru };
+export const ourContributorsData = { en };
