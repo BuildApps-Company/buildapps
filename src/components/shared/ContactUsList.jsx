@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { Link } from 'gatsby';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
-import { contactUsListData } from '../../data/contactUsListData';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
+import { useContactInformation } from '../../data';
 
 export const ContactUsList = () => {
+	const contactUsListData = useContactInformation();
+
 	return (
 		<div>
 			<ContactFormContainer>
 				<ListTitleWithUnderline>Contact Us</ListTitleWithUnderline>
 
 				<ContuctUsListStyle>
-					{contactUsListData.map(el => (
+					{contactUsListData.list.map(el => (
 						<li key={el.key}>
 							<StyledLink href={el.href} target="_blank">
 								{el.title}

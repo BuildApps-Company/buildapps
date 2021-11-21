@@ -1,7 +1,7 @@
 import papafinance from '../../static/images/clients/papafinance.svg';
 import notissimus from '../../static/images/clients/notissimus.png';
 
-export const clients = [
+export const en = [
 	{
 		name: 'ПапаФинанс',
 		url: papafinance,
@@ -11,3 +11,6 @@ export const clients = [
 		url: notissimus,
 	},
 ];
+
+
+export const clients = { en };

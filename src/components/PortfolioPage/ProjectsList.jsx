@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { Portfolio } from '../../data/projects';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
-import { allProjects } from '../../data/projects';
 import { colors } from '../../styles/colors';
+import { Link } from 'gatsby-plugin-react-i18next';
+import { usePortfolio } from '../../data';
+import { allProjects } from '../../types/projects';
 
 export const ProjectsList = ({ selectedCategories }) => {
-	const projects = Object.entries(Portfolio).filter(
-		x =>
-			selectedCategories.includes(allProjects) ||
-			selectedCategories.some(category =>
-				x[1].responsibility.some(res => res === category)
-			)
+	const portfolio = usePortfolio();
+	const projects = useMemo(
+		() =>
+			Object.entries(portfolio).filter(
+				x =>
+					selectedCategories.includes(allProjects) ||
+					selectedCategories.some(category =>
+						x[1].responsibility.some(res => res === category)
+					)
+			),
+		[portfolio]
 	);
+
 	return (
 		<StyledPortfolioList>
 			{projects.map(([key, el]) => {

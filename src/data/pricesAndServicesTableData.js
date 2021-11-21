@@ -1,4 +1,4 @@
-export const pricesAndServicesTableData = [
+const en = [
 	{
 		name: 'Landing page',
 		price: 'from 1000 $',
@@ -15,3 +15,6 @@ export const pricesAndServicesTableData = [
 		estimate: 'from 35 working days',
 	},
 ];
+
+
+export const pricesAndServicesTableData = { en };

@@ -4,7 +4,6 @@ import { breakpoints } from '../../styles/breakpoints';
 import { sendContactForm } from '../../api/email.js';
 
 export const ContactUsForm = () => {
-	const [isActive, setIsActive] = useState(true);
 	const [inputValues, setInputValues] = useState({
 		name: '',
 		number: '',

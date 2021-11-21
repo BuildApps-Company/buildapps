@@ -1,19 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSocialMediaListData } from '../../data';
 import { breakpoints } from '../../styles/breakpoints';
-import { socialMediaListData } from '../../data/socialMediaListData';
 
-export const SocialMediaList = () => (
-	<StyledSocialMediaList>
-		{socialMediaListData.map(el => (
-			<li key={el.key}>
-				<a href={el.href} target="_blank">
-					<img src={el.img} alt={el.key} />
-				</a>
-			</li>
-		))}
-	</StyledSocialMediaList>
-);
+export const SocialMediaList = () => {
+	const socialMediaListData = useSocialMediaListData();
+
+	return (
+		<StyledSocialMediaList>
+			{socialMediaListData.map(el => (
+				<li key={el.key}>
+					<a href={el.href} target="_blank">
+						<img src={el.img} alt={el.key} />
+					</a>
+				</li>
+			))}
+		</StyledSocialMediaList>
+	);
+};
 
 const StyledSocialMediaList = styled.ul`
 	display: flex;

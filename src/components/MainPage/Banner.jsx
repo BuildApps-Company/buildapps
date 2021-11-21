@@ -1,6 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import Typewriter from 'typewriter-effect';
 import { Toolbar } from '../shared/Toolbar';
 import { routes } from '../../utilities/routes';
@@ -9,6 +8,8 @@ import { colors } from '../../styles/colors';
 import headerBackground from '../../../static/images/headerBackground.jpeg';
 import video from '../../../static/images/videosHeader.mp4';
 import '../../styles/typewriter.css';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 export function MainBanner() {
 	const [width, setWidth] = useState(0);
@@ -19,27 +20,33 @@ export function MainBanner() {
 			window.removeEventListener('resize', setWidth(window.innerWidth));
 	}, []);
 
+	const { t } = useTranslation();
+
 	return (
 		<HeroWrap>
 			<VideoHeader playsInline autoPlay loop muted poster={headerBackground}>
 				<source src={video} alt="video" type="video/mp4" />
 			</VideoHeader>
 			<Toolbar isWhite />
-
 			<StyledPageContainer>
 				<TitlesWrap>
 					<div>
-						<Title>Web</Title>
-						<Title>Mobile</Title>
-						<Title>Desktop</Title>
-						<SubTitle>Design & Development company</SubTitle>
+						<Title>{t('banner.web')}</Title>
+						<Title>{t('banner.mobile')}</Title>
+						<Title>{t('banner.desktop')}</Title>
+						<SubTitle>{t('banner.designAndDevelopmentCompany')}</SubTitle>
 					</div>
 
 					{width > 450 && (
 						<Typewriter
 							style
 							options={{
-								strings: ['Design', 'Develop', 'Launch', 'Maintain'],
+								strings: [
+									t('banner.design'),
+									t('banner.develop'),
+									t('banner.launch'),
+									t('banner.maintain'),
+								],
 								autoStart: true,
 								loop: true,
 							}}
@@ -52,14 +59,14 @@ export function MainBanner() {
 						<svg>
 							<rect x="0" y="0" fill="none" width="100%" height="100%" />
 						</svg>
-						Сontact us
+						{t('banner.contactUs')}
 					</StyledButton>
 
 					<StyledButton to={routes.prices}>
 						<svg>
 							<rect x="0" y="0" fill="none" width="100%" height="100%" />
 						</svg>
-						Prices
+						{t('banner.prices')}
 					</StyledButton>
 				</ButtonsWrap>
 

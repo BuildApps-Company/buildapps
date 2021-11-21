@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { BurgerMenu } from './BurgerMenu';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
@@ -10,6 +9,7 @@ import logoBlack from '../../../static/images/logo/logoBlack.svg';
 import logoBlackHover from '../../../static/images/logo/logoBlackHover.svg';
 import burgerWhite from '../../../static/images/burger/burgerWhite.svg';
 import burgerBlack from '../../../static/images/burger/burgerBlack.svg';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 export function Toolbar({ isWhite }) {
 	const [isOpen, setIsOpen] = useState(false);

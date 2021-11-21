@@ -2,26 +2,27 @@ import React, { useMemo } from 'react';
 import { breakpoints } from '../../styles/breakpoints';
 import styled from 'styled-components';
 import { MainBanner } from './Banner';
-// import { Clients } from './Clients';
 import { LatestProjectDesktop } from './LatestProjectDesktop';
 import { LatestProjectMobile } from './LatestProjectMobile';
-import { Portfolio } from '../../data/projects';
 import { PreFooter } from './PreFooter';
+import { usePortfolio } from '../../data';
 
 export function MainPage() {
+	const projects = usePortfolio();
+
 	const latestProjectsDesktop = useMemo(
-		() => Object.values(Portfolio).slice(0, 4),
-		[Portfolio]
+		() => Object.values(projects).slice(0, 4),
+		[projects]
 	);
+
 	const latestProjectsMobile = useMemo(
-		() => Object.values(Portfolio).slice(0, 2),
-		[Portfolio]
+		() => Object.values(projects).slice(0, 2),
+		[projects]
 	);
 
 	return (
 		<>
 			<MainBanner />
-			{/* <Clients /> */}
 			<LatestProjectDesktopContainer>
 				<LatestProjectDesktop projectsDesktop={latestProjectsDesktop} />
 			</LatestProjectDesktopContainer>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { routes } from '../../utilities/routes';
 import { OurTeamList } from './OurTeamList';
 import { ContactUsList } from './ContactUsList';
@@ -11,6 +10,7 @@ import { colors } from '../../styles/colors';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import plusIcon from '../../../static/images/ic_plus.svg';
 import minusIcon from '../../../static/images/ic_minus.svg';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 export const Footer = () => {
 	const [isOpen, setIsOpen] = useState(false);

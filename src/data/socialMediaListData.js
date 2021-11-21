@@ -1,10 +1,9 @@
 import instagramIcon from '../../static/images/socialicons/Inst.svg';
-// import facebookIcon from '../../static/images/ic_facebook.svg';
 import linkedinIcon from '../../static/images/socialicons/Linkedin.svg';
 import douIcon from '../../static/images/socialicons/Dou.svg';
 import clutchIcon from '../../static/images/socialicons/Clutch.svg';
 
-export const socialMediaListData = [
+const en = [
 	{
 		key: 'clutch',
 		img: clutchIcon,
@@ -15,11 +14,6 @@ export const socialMediaListData = [
 		img: instagramIcon,
 		href: 'https://www.instagram.com/buildapps.pro',
 	},
-	// {
-	// 	key: 'facebook',
-	// 	img: facebookIcon,
-	// 	href: '',
-	// },
 	{
 		key: 'linkedin',
 		img: linkedinIcon,
@@ -31,3 +25,6 @@ export const socialMediaListData = [
 		href: 'https://jobs.dou.ua/companies/buildapps/',
 	},
 ];
+
+
+export const socialMediaListData = { en };
