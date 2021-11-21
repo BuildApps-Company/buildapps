@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ourContributorsData } from '../../data/ourContributorsData';
+import { useContributorsData } from '../../data';
 import { breakpoints } from '../../styles/breakpoints';
 
 export const ContributorsList = () => {
+	const ourContributorsData = useContributorsData();
 	return (
 		<>
 			<ContributorsTitle>Leadership team</ContributorsTitle>

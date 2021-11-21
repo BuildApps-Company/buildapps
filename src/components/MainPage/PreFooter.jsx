@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Marquee from './Marquee';
-import { Link } from 'gatsby';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 export const PreFooter = () => {
 	return (

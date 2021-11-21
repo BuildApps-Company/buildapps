@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { usePricesAndServicesTableData } from '../../data';
 import { breakpoints } from '../../styles/breakpoints';
-import { pricesAndServicesTableData } from '../../data/pricesAndServicesTableData';
 
 export const PricesTable = () => {
+	const calculationOptionsData = usePricesAndServicesTableData();
 	return (
 		<StyledPricesTable>
 			<thead>
@@ -14,7 +15,7 @@ export const PricesTable = () => {
 				</tr>
 			</thead>
 			<tbody>
-				{pricesAndServicesTableData.map(el => (
+				{calculationOptionsData.map(el => (
 					<tr key={el.name}>
 						<td>{el.name}</td>
 						<td>{el.price}</td>

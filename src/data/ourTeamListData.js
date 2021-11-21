@@ -1,6 +1,6 @@
 import { routes } from '../utilities/routes';
 
-export const ourTeamListData = [
+const en = [
 	{
 		key: 'portfolio',
 		title: 'Portfolio',
@@ -16,9 +16,7 @@ export const ourTeamListData = [
 		title: 'About us',
 		href: routes.aboutUs,
 	},
-	// {
-	// 	key: 'blog',
-	// 	title: 'Blog',
-	// 	href: '',
-	// },
 ];
+
+
+export const ourTeamListData = { en };

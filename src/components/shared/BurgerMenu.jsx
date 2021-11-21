@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import { Link } from 'gatsby';
 import { OurTeamList } from './OurTeamList';
 import { ContactUsList } from './ContactUsList';
 import { routes } from '../../utilities/routes';
@@ -9,12 +8,14 @@ import { breakpoints } from '../../styles/breakpoints';
 import logoWhite from '../../../static/images/logo/logoWhite.svg';
 import logoWhiteHover from '../../../static/images/logo/logoWhiteHover.svg';
 import burgerClose from '../../../static/images/burger/burgerClose.svg';
-import { email } from '../../data/contactUsListData';
-import { socialMediaListData } from '../../data/socialMediaListData';
 import { colors } from '../../styles/colors';
-// import StyledBurger from '../StyledBurger/StyledBurger';
+import { Link, useI18next } from 'gatsby-plugin-react-i18next';
+import { useContactInformation, useSocialMediaListData } from '../../data';
 
-export function BurgerMenu({ toogleList, active }) {
+export function BurgerMenu({ toogleList }) {
+	const { languages, changeLanguage, language, originalPath } = useI18next();
+	const socialMediaListData = useSocialMediaListData();
+	const { email } = useContactInformation();
 	return (
 		<StyledBurgerMenu>
 			<StyledBurgerHeader>
@@ -27,14 +28,24 @@ export function BurgerMenu({ toogleList, active }) {
 				</Link>
 
 				<Burger src={burgerClose} onClick={toogleList} />
-				{/* <StyledBurger toogleList={toogleList} active={active}></StyledBurger> */}
 			</StyledBurgerHeader>
 
-			{/* <LanguagesWrap>
-				<p>EN</p>
-				<p>RU</p>
-				<p>UA</p>
-			</LanguagesWrap> */}
+			<LanguagesWrap>
+				{languages.map(lang => (
+					<Language
+						key={lang}
+						to={originalPath}
+						language={lang}
+						isActive={lang === language}
+						onClick={event => {
+							event.preventDefault();
+							changeLanguage(lang);
+						}}
+					>
+						{lang}
+					</Language>
+				))}
+			</LanguagesWrap>
 
 			<BurgerMenuWrap>
 				<BurgerWrapDesktop>
@@ -162,9 +173,9 @@ const StyledBurgerHeader = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 4px 16px;
+	padding: 4px 6%;
 
-	@media all and (min-width: ${breakpoints.phone}) {
+	@media all and (min-width: ${breakpoints.notebook}) {
 		padding: 16px 6%;
 	}
 `;
@@ -190,22 +201,27 @@ const Burger = styled.img`
 	}
 `;
 
+const Language = styled(Link)`
+	line-height: 160%;
+	color: #ffffff;
+	opacity: 0.5;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 5px 0;
+
+	${({ isActive }) => isActive && `opacity: 0.8;`}
+
+	&:hover {
+		opacity: 1;
+	}
+`;
+
 const LanguagesWrap = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	padding-right: 85px;
-
-	p {
-		line-height: 160%;
-		color: #ffffff;
-		opacity: 0.5;
-		cursor: pointer;
-	}
-
-	p:hover {
-		opacity: 1;
-	}
+	padding: 0 6%;
 `;
 
 const BurgerMenuWrap = styled.div`

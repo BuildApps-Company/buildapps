@@ -1,17 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SocialMediaList } from '../shared/SocialMediaList';
-import { email, tel } from '../../data/contactUsListData.js';
 import { breakpoints } from '../../styles/breakpoints';
+import { useContactInformation } from '../../data';
 
 export const Contacts = () => {
+	const { email, phone } = useContactInformation();
+
 	return (
 		<ContactsWrap>
 			<Title>Contacts</Title>
 			<ContactsList>
 				<ContactsListItem>
 					<span>Phone</span>
-					<a href={`tel:${tel}`}>{tel}</a>
+					<a href={`tel:${phone}`}>{phone}</a>
 				</ContactsListItem>
 				<ContactsListItem>
 					<span> E-mail</span>

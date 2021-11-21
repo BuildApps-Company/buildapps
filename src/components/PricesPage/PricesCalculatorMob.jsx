@@ -1,10 +1,10 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
-import { calculationOptionsData } from '../../data/pricesCalculatorData';
 import { breakpoints } from '../../styles/breakpoints';
 import selectIcon from '../../../static/images/ic_select.svg';
 import { sendContactForm } from '../../api/email.js';
+import { useCalculationOptionsData } from '../../data';
 
 const initPriceValues = {
 	planning: 0,
@@ -14,15 +14,19 @@ const initPriceValues = {
 	days: 0,
 };
 
-const initSelectedButtons = Object.entries(calculationOptionsData).reduce(
-	(acc, [key, value]) => ({ ...acc, [key]: value.buttons[0] }),
-	{}
-);
-
 export const PricesCalculatorMob = () => {
 	const [priceValues, setPriceValues] = useState({
 		...initPriceValues,
 	});
+	const calculationOptionsData = useCalculationOptionsData();
+	const initSelectedButtons = useMemo(
+		() =>
+			Object.entries(calculationOptionsData).reduce(
+				(acc, [key, value]) => ({ ...acc, [key]: value.buttons[0] }),
+				{}
+			),
+		[calculationOptionsData]
+	);
 	const [selectedButtons, setSelectedButtons] = useState({
 		...initSelectedButtons,
 	});

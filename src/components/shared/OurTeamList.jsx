@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { ourTeamListData } from '../../data/ourTeamListData';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
+import { Link } from 'gatsby-plugin-react-i18next';
+import { useOurTeamListData } from '../../data';
 
 export const OurTeamList = () => {
+	const ourTeamListData = useOurTeamListData();
+
 	return (
 		<TeamListWrap>
 			<TitleWrap>

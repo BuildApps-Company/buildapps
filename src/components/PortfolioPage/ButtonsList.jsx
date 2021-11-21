@@ -1,18 +1,20 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
-import { Portfolio } from '../../data/projects';
-import { allProjects } from '../../data/projects';
+import { usePortfolio } from '../../data';
+import { allProjects } from '../../types/projects';
 
 export const ButtonsList = ({ selectedCategories, onSelectCategory }) => {
+	const projects = usePortfolio();
+
 	const buttons = useMemo(
 		() => [
 			allProjects,
-			...Object.entries(Portfolio)
+			...Object.entries(projects)
 				.map(([_, el]) => el.responsibility)
 				.flat()
 				.filter((el, index, self) => self.indexOf(el) === index),
 		],
-		[Portfolio]
+		[projects]
 	);
 
 	return (

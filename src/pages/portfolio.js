@@ -6,7 +6,7 @@ import { ButtonsList, ProjectsList } from '../components/PortfolioPage';
 import { PreFooter } from '../components/MainPage/PreFooter';
 import { Container } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
-import { allProjects } from '../data/projects';
+import { allProjects } from '../types/projects';
 
 export default function PortfolioPage() {
 	const [selectedCategories, setSelectedCategories] = useState([allProjects]);

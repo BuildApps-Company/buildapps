@@ -1,14 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
-import { Link } from 'gatsby';
 import { routes } from '../../utilities/routes';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
 import { H4, SubH3, Body2 } from '../../styles/styled-headers';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 export const LatestProjectDesktop = ({ projectsDesktop }) => {
 	const [item, setItem] = useState(0);
 	const containerRef = useRef();
+
+	const { t } = useTranslation();
 
 	const scrollHandler = event => {
 		if (!containerRef.current) {
@@ -35,13 +38,15 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 	return (
 		<ContainerParent
 			ref={containerRef}
-			style={{ 'min-height': `${projectsDesktop.length * 100}vh` }}
+			style={{ minHeight: `${projectsDesktop.length * 100}vh` }}
 		>
 			<LatestProjectsContainer>
 				<Container>
 					<TitleWrap>
-						<TitlePage>Latest Projects</TitlePage>
-						<StyledLink to={routes.portfolio}>All</StyledLink>
+						<TitlePage>{t('latestProjects.latestProjects')}</TitlePage>
+						<StyledLink to={routes.portfolio}>
+							{t('latestProjects.all')}
+						</StyledLink>
 					</TitleWrap>
 					<Pagination>
 						{projectsDesktop.map((_, i) => (
@@ -75,7 +80,7 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 								</ImageWrapDesktop>
 								<DetailsWrap>
 									<SmallLogo src={activeProject.image} />
-									<Title>{activeProject.title}</Title>
+									<Title>{activeProject.pageTitle}</Title>
 									<TagContainer>
 										{activeProject.responsibility.map(res => (
 											<Tag key={res}>{res}</Tag>
@@ -336,22 +341,6 @@ const Tab = styled.div`
 		display: block;
 		background: ${colors.Main};
 		border-radius: 2px;
-	}
-`;
-
-const LinkBtn = styled(Link)`
-	display: inline-block;
-	min-width: 102px;
-	border: 2px solid ${colors.Main};
-	font-size: 1em;
-	text-transform: uppercase;
-	padding: 8px 20px;
-	margin-top: 32px;
-	color: ${colors.Main};
-	text-decoration: none;
-	&:hover,
-	&:visited {
-		color: ${colors.Main};
 	}
 `;
 

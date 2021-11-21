@@ -1,4 +1,4 @@
-export const calculationOptionsData = {
+const en = {
 	workingOn: {
 		title: 'What are you working on?',
 		buttons: [
@@ -138,3 +138,5 @@ export const calculationOptionsData = {
 		],
 	},
 };
+
+export const calculationOptionsData = { en };
