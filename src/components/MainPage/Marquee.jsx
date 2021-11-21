@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Ticker from 'react-ticker';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
 import PageVisibility from 'react-page-visibility';
+import FastMarquee from 'react-fast-marquee';
 
 const Marquee = () => {
 	const [pageIsVisible, setPageIsVisible] = useState(true);
@@ -16,13 +16,50 @@ const Marquee = () => {
 		<MarqueeContainer>
 			<PageVisibility onChange={handleVisibilityChange}>
 				{pageIsVisible && (
-					<Ticker speed={3}>
-						{({ index }) => (
-							<>
-								<MarqueeStyled>BUILDAPPS </MarqueeStyled>
-							</>
-						)}
-					</Ticker>
+					<FastMarquee>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+						<MarqueeStyled>BUILDAPPS</MarqueeStyled>
+					</FastMarquee>
 				)}
 			</PageVisibility>
 		</MarqueeContainer>
