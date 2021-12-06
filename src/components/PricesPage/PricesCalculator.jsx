@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { breakpoints } from '../../styles/breakpoints';
 import { sendContactForm } from '../../api/email.js';
 import { useCalculationOptionsData } from '../../data';
-import { useTranslation } from 'react-i18next';
 
 const initPriceValues = {
 	planning: 0,
@@ -12,7 +11,6 @@ const initPriceValues = {
 	maintain: 0,
 	days: 0,
 };
-
 export const PricesCalculator = () => {
 	const calculationOptionsData = useCalculationOptionsData();
 	const [priceValues, setPriceValues] = useState({ ...initPriceValues });
@@ -21,8 +19,6 @@ export const PricesCalculator = () => {
 	const [inputValues, setInputValues] = useState({
 		email: '',
 	});
-  const { t } = useTranslation();
-
 	const handleChange = useCallback(
 		({ target }) => {
 			setInputValues({
@@ -121,27 +117,27 @@ export const PricesCalculator = () => {
 			</ServicesList>
 
 			<CostsContainer>
-				<CostsTitle>{t('prices.costTitle')}</CostsTitle>
+				<CostsTitle>Development costs</CostsTitle>
 
 				<CostsList>
 					<li>
-						<span>{t('prices.planning')}</span> $ {priceValues.planning}
+						<span>Planning</span> $ {priceValues.planning}
 					</li>
 					<li>
-						<span>{t('prices.design')}</span> $ {priceValues.design}
+						<span>Design</span> $ {priceValues.design}
 					</li>
 					<li>
-						<span>{t('prices.development')}</span> $ {priceValues.development}
+						<span>Development</span> $ {priceValues.development}
 					</li>
 					<li>
-						<span>{t('prices.maintain')}</span> $ {priceValues.maintain}
+						<span>Maintain</span> $ {priceValues.maintain}
 					</li>
 					<li>
-						<span>{t('prices.time')}</span>
-						<SpanEstimate>{t('prices.estimateFrom')}{priceValues.days}{t('prices.estimateEnd')}</SpanEstimate>
+						<span>Estimated time</span>
+						<SpanEstimate>from {priceValues.days} working days</SpanEstimate>
 					</li>
 					<li>
-						<span>{t('prices.totalCost')}</span>{t('prices.totalCostFrom')}{totalPrice}
+						<span>Total cost </span> from $ {totalPrice}
 					</li>
 					<li>
 						<SendForm onSubmit={handleSubmit} id="calculator-form">
@@ -150,12 +146,12 @@ export const PricesCalculator = () => {
 								type="email"
 								name="email"
 								value={inputValues.email}
-								placeholder={t('prices.mailPlaceholder')}
+								placeholder="Enter your e-mail ..."
 								onChange={handleChange}
 							/>
 							<CostsBtnWrap>
 								<CostsBtn for="calculator-form" type="submit">
-                  {t('prices.submitBtn')}
+									Send request
 								</CostsBtn>
 							</CostsBtnWrap>
 						</SendForm>

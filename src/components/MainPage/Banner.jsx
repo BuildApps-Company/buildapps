@@ -13,13 +13,14 @@ import { Link } from 'gatsby-plugin-react-i18next';
 
 export function MainBanner() {
 	const [width, setWidth] = useState(0);
-  const { t } = useTranslation();
 
 	useLayoutEffect(() => {
 		window.addEventListener('resize', setWidth(window.innerWidth));
 		return () =>
 			window.removeEventListener('resize', setWidth(window.innerWidth));
 	}, []);
+
+	const { t } = useTranslation();
 
 	return (
 		<HeroWrap>
@@ -29,14 +30,12 @@ export function MainBanner() {
 			<Toolbar isWhite />
 			<StyledPageContainer>
 				<TitlesWrap>
-        <div>
-          <Title>{t('banner.web')}</Title>
-          <Title>{t('banner.mobile')}</Title>
-          <Title>{t('banner.desktop')}</Title>
-          <SubTitle>
-            {t('banner.designAndDevelopmentCompany')}
-          </SubTitle>
-        </div>
+					<div>
+						<Title>{t('banner.web')}</Title>
+						<Title>{t('banner.mobile')}</Title>
+						<Title>{t('banner.desktop')}</Title>
+						<SubTitle>{t('banner.designAndDevelopmentCompany')}</SubTitle>
+					</div>
 
 					{width > 450 && (
 						<Typewriter

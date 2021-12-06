@@ -2,11 +2,8 @@ import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../styles/breakpoints';
 import { sendContactForm } from '../../api/email.js';
-import { useTranslation } from 'react-i18next';
 
 export const ContactUsForm = () => {
-  const { t } = useTranslation();
-
 	const [inputValues, setInputValues] = useState({
 		name: '',
 		number: '',
@@ -50,7 +47,7 @@ export const ContactUsForm = () => {
 					type="text"
 					name="name"
 					value={inputValues.name}
-					placeholder={t('contactUs.PlaceholderName')}
+					placeholder="Your name*"
 					onChange={handleChange}
 				/>
 			</label>
@@ -60,7 +57,7 @@ export const ContactUsForm = () => {
 					type="text"
 					name="number"
 					value={inputValues.number}
-					placeholder={t('contactUs.PlaceholderPhone')}
+					placeholder="Phone number*"
 					onChange={handleChange}
 				/>
 			</label>
@@ -70,7 +67,7 @@ export const ContactUsForm = () => {
 					type="email"
 					name="email"
 					value={inputValues.email}
-					placeholder={t('contactUs.PlaceholderMail')}
+					placeholder="E-mail*"
 					onChange={handleChange}
 				/>
 			</label>
@@ -82,12 +79,12 @@ export const ContactUsForm = () => {
 				onChange={handleChange}
 			>
 				<option value="" disabled selected>
-					{t('contactUs.PlaceholderWorkType')}
+					Type of work
 				</option>
-				<option value="Business website">{t('contactUs.workType1')}</option>
-				<option value="Landing page">{t('contactUs.workType2')}</option>
-				<option value="E-commerce">{t('contactUs.workType3')}</option>
-				<option value="Mobile application">{t('contactUs.workType4')}</option>
+				<option value="Business website">Business website</option>
+				<option value="Landing page">Landing page</option>
+				<option value="E-commerce">E-commerce</option>
+				<option value="Mobile application">Mobile application</option>
 			</select>
 
 			<label>
@@ -95,13 +92,13 @@ export const ContactUsForm = () => {
 					type="text"
 					name="details"
 					value={inputValues.details}
-					placeholder={t('contactUs.PlaceholderDetails')}
+					placeholder="Details"
 					onChange={handleChange}
 				/>
 			</label>
 			<BtnWrap>
 				<StyledBtn type="submit">
-					{t('contactUs.SubmitBtn')}<SpanStyledArrow>&rarr;</SpanStyledArrow>
+					Send<SpanStyledArrow>&rarr;</SpanStyledArrow>
 				</StyledBtn>
 			</BtnWrap>
 		</StyledContactUsForm>

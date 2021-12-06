@@ -43,9 +43,7 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 			<LatestProjectsContainer>
 				<Container>
 					<TitleWrap>
-            <TitlePage>
-              {t('latestProjects.latestProjects')}
-            </TitlePage>
+						<TitlePage>{t('latestProjects.latestProjects')}</TitlePage>
 						<StyledLink to={routes.portfolio}>
 							{t('latestProjects.all')}
 						</StyledLink>
@@ -71,18 +69,16 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 					{projectsDesktop.map((activeProject, index) => (
 						<ProjectContainer key={index} visible={item === index}>
 							<ProjectWrap>
-                <ImageWrapDesktop
-                    image={activeProject.longImage}
-                    background={activeProject.background}
-                    visible={item === index}
-                  >
-                    {activeProject.longImage && (
-                      <img
-                        src={activeProject.longImage}
-                        alt="longImg" />
-                    )}
-                </ImageWrapDesktop>
-								<DetailsWrap data-aos="fade-up" data-aos-delay="200">
+								<ImageWrapDesktop
+									image={activeProject.longImage}
+									background={activeProject.background}
+									visible={item === index}
+								>
+									{activeProject.longImage && (
+										<img src={activeProject.longImage} alt="longImg" />
+									)}
+								</ImageWrapDesktop>
+								<DetailsWrap>
 									<SmallLogo src={activeProject.image} />
 									<Title>{activeProject.pageTitle}</Title>
 									<TagContainer>
@@ -101,7 +97,7 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 												height="100%"
 											/>
 										</svg>
-										{t('latestProjects.detailsButton')}
+										Details
 									</StyledButton>
 								</DetailsWrap>
 							</ProjectWrap>
@@ -260,7 +256,7 @@ const ImageWrapDesktop = styled.div`
 		flex-grow: 0;
 		height: 100%;
 		padding: 10px 20px;
-		transition: opacity 0.4s;
+		transition: opacity 0.3s;
 	}
 
 	${({ visible }) => (visible ? 'opacity: 1;' : 'opacity: 0;')};

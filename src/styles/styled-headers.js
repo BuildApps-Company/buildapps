@@ -88,16 +88,14 @@ export const ListTitle = styled.h3`
 `;
 
 export const ListTitleWithUnderline = styled(ListTitle)`
-  display: inline-block;
 	text-transform: uppercase;
 	white-space: nowrap;
-  cursor: default;
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		:after {
 			content: '';
 			width: 32px;
-      height: 3px;
+			height: 3px;
 			display: block;
 			background: ${colors.Main};
 		}

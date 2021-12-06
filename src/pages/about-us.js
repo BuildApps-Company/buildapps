@@ -9,12 +9,8 @@ import {
 import { PreFooter } from '../components/MainPage/PreFooter';
 import { SmallContainer } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
-import { useTranslation } from 'react-i18next';
-import { graphql } from 'gatsby';
 
 export default function AboutUsPage() {
-  const { t } = useTranslation();
-
 	return (
 		<Page pageName="About Us">
 			<Toolbar />
@@ -22,18 +18,28 @@ export default function AboutUsPage() {
 			<StyledContainer>
 				<AboutUsWrap>
 					<TitleContainer>
-						<SubTitle>{t('aboutUsPage.subTitle')}</SubTitle>
-						<Title>{t('aboutUsPage.mainTitle')}</Title>
+						<SubTitle>Build apps - About us</SubTitle>
+						<Title>About us</Title>
 						<AboutPage>
 							<p>
-                {t('aboutUsPage.paragraph1')}
+								The BuildApps company has been operating since 2019 and
+								specializes in the development of web-projects that can solve
+								and automate tasks for small and medium-sized businesses.
 							</p>
 
 							<p>
-                {t('aboutUsPage.paragraph2')}
+								Our most valuable resource is our team. We constantly invest in
+								the training and development of our employees, and we do
+								everything to make BuildApps not just an agency, but a lifestyle
+								and way of thinking. Our experts have a deep understaning of the
+								specifics of various solutions and software products: from the
+								right website interface to modern technologies in online
+								projects.
 							</p>
 							<p>
-                {t('aboutUsPage.paragraph3')}
+								We love what we do and do it perfectly well, enjoying every
+								project. Our products always solve the task at hand and bring
+								advantages and benefits to our customers.
 							</p>
 						</AboutPage>
 					</TitleContainer>
@@ -47,7 +53,6 @@ export default function AboutUsPage() {
 		</Page>
 	);
 }
-
 const ContactUsVerticalStretch = styled.div``;
 
 const AboutUsWrap = styled.div`
@@ -103,19 +108,5 @@ const AboutPage = styled.p`
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 1.5rem;
-	}
-`;
-
-export const query = graphql`
-	query($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language } }) {
-			edges {
-				node {
-					ns
-					data
-					language
-				}
-			}
-		}
 	}
 `;

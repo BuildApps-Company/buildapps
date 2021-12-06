@@ -1,12 +1,12 @@
 {
-	"banner.design": "Дизайн",
+	"banner.design": "Design",
 	"banner.web": "Web",
-	"banner.develop": "Разработка",
-	"banner.launch": "Запуск",
-	"banner.maintain": "Поддержка",
+	"banner.develop": "Develop",
+	"banner.launch": "Launch",
+	"banner.maintain": "Maintain",
 	"banner.mobile": "Mobile",
 	"banner.desktop": "Desktop",
-	"banner.designAndDevelopmentCompany": "Компания разработки и дизайна",
-	"banner.contactUs": "Связаться с нами",
+	"banner.designAndDevelopmentCompany": "Design & Development company",
+	"banner.contactUs": "Свяжитесь с нами",
 	"banner.prices": "Стоимость проекта"
 }

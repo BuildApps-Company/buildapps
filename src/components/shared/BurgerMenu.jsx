@@ -9,7 +9,6 @@ import logoWhite from '../../../static/images/logo/logoWhite.svg';
 import logoWhiteHover from '../../../static/images/logo/logoWhiteHover.svg';
 import burgerClose from '../../../static/images/burger/burgerClose.svg';
 import { colors } from '../../styles/colors';
-import { useTranslation } from 'react-i18next';
 import { Link, useI18next } from 'gatsby-plugin-react-i18next';
 import { useContactInformation, useSocialMediaListData } from '../../data';
 
@@ -17,9 +16,6 @@ export function BurgerMenu({ toogleList }) {
 	const { languages, changeLanguage, language, originalPath } = useI18next();
 	const socialMediaListData = useSocialMediaListData();
 	const { email } = useContactInformation();
-
-  const { t } = useTranslation();
-
 	return (
 		<StyledBurgerMenu>
 			<StyledBurgerHeader>
@@ -53,9 +49,9 @@ export function BurgerMenu({ toogleList }) {
 
 			<BurgerMenuWrap>
 				<BurgerWrapDesktop>
-					<BurgerTitle>{t('burgerMenu.question')}</BurgerTitle>
+					<BurgerTitle>Ready to get started?</BurgerTitle>
 					<ContactUsLink href={routes.contactForm} target="_blank">
-            {t('burgerMenu.contactUsButton')}
+						Contact Us
 					</ContactUsLink>
 				</BurgerWrapDesktop>
 
@@ -65,7 +61,7 @@ export function BurgerMenu({ toogleList }) {
 						<StyledEmail href={`mailto:${email}`} target="_blank">
 							{email}
 						</StyledEmail>
-						<StyledLink to={routes.contactForm}>{t('burgerMenu.contactUsButton')}</StyledLink>
+						<StyledLink to={routes.contactForm}>Contact us</StyledLink>
 					</ContactUsWrap>
 				</WrapMob>
 				<WrapDesktop>

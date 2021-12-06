@@ -11,19 +11,16 @@ import {
 import { PreFooter } from '../components/MainPage/PreFooter';
 import { Container } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
-import { useTranslation } from 'react-i18next';
-import { graphql } from 'gatsby';
 
 export default function PortfolioPage() {
-  const { t } = useTranslation();
 	return (
-		<Page pageName={t('prices.pageName')}>
+		<Page pageName="Price Calculation">
 			<Toolbar />
 
 			<Container>
 				<TitleContainer>
-					<SubTitle>{t('prices.subTitle')}</SubTitle>
-					<Title>{t('prices.mainTitle')}</Title>
+					<SubTitle>Build apps - Prices and services</SubTitle>
+					<Title>Prices and services</Title>
 				</TitleContainer>
 			</Container>
 
@@ -32,7 +29,7 @@ export default function PortfolioPage() {
 
 			<Container>
 				<TitleContainer>
-					<Title>{t('prices.calcTitle')}</Title>
+					<Title>Prices calculator</Title>
 				</TitleContainer>
 			</Container>
 
@@ -67,19 +64,5 @@ const Title = styled.h1`
 	@media all and (min-width: ${breakpoints.notebook}) {
 		margin-bottom: 24px;
 		font-size: 4rem;
-	}
-`;
-
-export const query = graphql`
-	query($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language } }) {
-			edges {
-				node {
-					ns
-					data
-					language
-				}
-			}
-		}
 	}
 `;

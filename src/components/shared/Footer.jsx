@@ -10,21 +10,18 @@ import { colors } from '../../styles/colors';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import plusIcon from '../../../static/images/ic_plus.svg';
 import minusIcon from '../../../static/images/ic_minus.svg';
-import { useTranslation } from 'react-i18next';
 import { Link } from 'gatsby-plugin-react-i18next';
 
 export const Footer = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toogleList = () => setIsOpen(prevState => !prevState);
-
-  const { t } = useTranslation();
-
 	return (
 		<StyledFooter>
 			<FlexContainerDesktop>
 				<ListTitleWrap>
 					<ListTitle>
-						{t('footer.description')}
+						A close-knit software development team with extensive experience and
+						understanding of what is necessary for you
 					</ListTitle>
 
 					<SocialMediaList />
@@ -37,9 +34,7 @@ export const Footer = () => {
 			</SocialMediaListWrapTablet>
 			<FlexContainerMob>
 				<OurTeamWrapMob>
-					<ListTitleWithUnderline>
-            {t('footer.ourTeamTitle')}
-          </ListTitleWithUnderline>
+					<ListTitleWithUnderline>Our Team</ListTitleWithUnderline>
 					{isOpen ? (
 						<img src={minusIcon} alt="Minus Icon" onClick={toogleList} />
 					) : (
@@ -47,19 +42,17 @@ export const Footer = () => {
 					)}
 				</OurTeamWrapMob>
 				{isOpen && <OurTeamList />}
-				<StyledLinkTitle to={routes.contactForm}>
-          {t('footer.contactUsTitle')}
-        </StyledLinkTitle>
+				<StyledLinkTitle to={routes.contactForm}>Contact Us</StyledLinkTitle>
 
 				<SocialMediaList />
 			</FlexContainerMob>
 
 			<TermsOfUseContainerMobile>
-				<span>Build Apps</span> {t('footer.copyright')}
+				<span>Build Apps</span> © 2021 BuildApps
 			</TermsOfUseContainerMobile>
 
 			<TermsOfUseContainerDesktop>
-				Copyright {t('footer.copyright')} {t('footer.termsOfUse')}
+				Copyright © 2021 BuildApps. Design and development company.
 			</TermsOfUseContainerDesktop>
 		</StyledFooter>
 	);

@@ -3,28 +3,25 @@ import styled from 'styled-components';
 import { SocialMediaList } from '../shared/SocialMediaList';
 import { breakpoints } from '../../styles/breakpoints';
 import { useContactInformation } from '../../data';
-import { useTranslation } from 'react-i18next';
 
 export const Contacts = () => {
-  const { t } = useTranslation();
-
 	const { email, phone } = useContactInformation();
 
 	return (
 		<ContactsWrap>
-			<Title>{t('contactUs.contactWrapTitle')}</Title>
+			<Title>Contacts</Title>
 			<ContactsList>
 				<ContactsListItem>
-					<span>{t('contactUs.contactWrapPhone')}</span>
+					<span>Phone</span>
 					<a href={`tel:${phone}`}>{phone}</a>
 				</ContactsListItem>
 				<ContactsListItem>
-					<span>{t('contactUs.contactWrapMail')}</span>
+					<span> E-mail</span>
 					<a href={`mailto:${email}`}>{email}</a>
 				</ContactsListItem>
 				<ContactsListItem>
 					<SocialWrap>
-						<SocialSpanStyled>{t('contactUs.contactWrapSocials')}</SocialSpanStyled>
+						<SocialSpanStyled>Social medias</SocialSpanStyled>
 						<SocialMediaList />
 					</SocialWrap>
 				</ContactsListItem>

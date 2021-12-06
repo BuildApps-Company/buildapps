@@ -5,7 +5,6 @@ import { breakpoints } from '../../styles/breakpoints';
 import selectIcon from '../../../static/images/ic_select.svg';
 import { sendContactForm } from '../../api/email.js';
 import { useCalculationOptionsData } from '../../data';
-import { useTranslation } from 'react-i18next';
 
 const initPriceValues = {
 	planning: 0,
@@ -45,6 +44,7 @@ export const PricesCalculatorMob = () => {
 
 		[inputValues]
 	);
+
 	const serviceList = Object.entries(calculationOptionsData);
 
 	const handleServiceSelect = (target, section, key) => {
@@ -124,8 +124,6 @@ export const PricesCalculatorMob = () => {
 		[inputValues, selectedButtons]
 	);
 
-  const { t } = useTranslation();
-
 	// const selectedButtonValues = Object.values(selectedButtons);
 	return (
 		<PricesContainer>
@@ -156,27 +154,27 @@ export const PricesCalculatorMob = () => {
 			</ServicesList>
 
 			<CostsContainer>
-				<CostsTitle>{t('prices.costTitle')}</CostsTitle>
+				<CostsTitle>Development costs</CostsTitle>
 
 				<CostsList>
 					<li>
-						<StyledSpan>{t('prices.planning')}</StyledSpan> $ {priceValues.planning}
+						<StyledSpan>Planning</StyledSpan> $ {priceValues.planning}
 					</li>
 					<li>
-						<StyledSpan>{t('prices.design')}</StyledSpan> $ {priceValues.design}
+						<StyledSpan>Design</StyledSpan> $ {priceValues.design}
 					</li>
 					<li>
-						<StyledSpan>{t('prices.development')}</StyledSpan> $ {priceValues.development}
+						<StyledSpan>Development</StyledSpan> $ {priceValues.development}
 					</li>
 					<li>
-						<StyledSpan>{t('prices.maintain')}</StyledSpan> $ {priceValues.maintain}
+						<StyledSpan>Maintain</StyledSpan> $ {priceValues.maintain}
 					</li>
 					<li>
-						<StyledSpan>{t('prices.time')}</StyledSpan>
-						<SpanEstimate>{t('prices.estimateFrom')}{priceValues.days}{t('prices.estimateEnd')}</SpanEstimate>
+						<StyledSpan>Estimated time</StyledSpan>
+						<SpanEstimate>from {priceValues.days} working days</SpanEstimate>
 					</li>
 					<li>
-						<StyledSpan>{t('prices.totalCost')}</StyledSpan>{t('prices.totalCostFrom')}{totalPrice}
+						<StyledSpan>Total cost </StyledSpan> from $ {totalPrice}
 					</li>
 					<li>
 						<SendForm onSubmit={handleSubmit} id="calculator-form">
@@ -185,12 +183,12 @@ export const PricesCalculatorMob = () => {
 								type="email"
 								name="email"
 								value={inputValues.email}
-								placeholder={t('prices.mailPlaceholder')}
+								placeholder="Enter your e-mail ..."
 								onChange={handleChange}
 							/>
 							<CostsBtnWrap>
 								<CostsBtn for="calculator-form" type="submit">
-                  {t('prices.submitBtn')}
+									Send request
 								</CostsBtn>
 							</CostsBtnWrap>
 						</SendForm>
