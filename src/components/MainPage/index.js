@@ -11,7 +11,7 @@ export function MainPage() {
 	const projects = usePortfolio();
 
 	const latestProjectsDesktop = useMemo(
-		() => Object.values(projects).slice(0, 4),
+		() => Object.values(projects).slice(0, 6),
 		[projects]
 	);
 

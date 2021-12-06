@@ -4,14 +4,17 @@ import { Page } from '../components/shared/Page';
 import { Toolbar } from '../components/shared/Toolbar';
 import { ContactUsForm, Contacts } from '../components/ContactUsPage';
 import { breakpoints } from '../styles/breakpoints';
+import { useTranslation } from 'react-i18next';
+import { graphql } from 'gatsby';
 
 export default function ContactFormPage() {
+  const { t } = useTranslation();
 	return (
 		<Page pageName={'Contact Us'}>
 			<Toolbar />
 			<StyledPageContainer>
-				<SubTitle>Build apps - Contact form</SubTitle>
-				<Title>Contact form</Title>
+				<SubTitle>{t('contactUs.subTitle')}</SubTitle>
+				<Title>{t('contactUs.mainTitle')}</Title>
 				<FlexContainer>
 					<ContactUsForm />
 					<Contacts />
@@ -59,5 +62,19 @@ const FlexContainer = styled.div`
 	flex-direction: column;
 	@media all and (min-width: ${breakpoints.notebook}) {
 		flex-direction: row;
+	}
+`;
+
+export const query = graphql`
+	query($language: String!) {
+		locales: allLocale(filter: { language: { eq: $language } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
+			}
+		}
 	}
 `;

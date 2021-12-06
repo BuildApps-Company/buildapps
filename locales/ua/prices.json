@@ -1,0 +1,21 @@
+{
+  "prices.pageName": "Розрахунок вартості",
+  "prices.mainTitle": "Ціни та послуги",
+  "prices.subTitle": "Build Apps - Ціни та послуги",
+  "prices.calcTitle": "Калькулятор цін",
+	"prices.costTitle": "Вартість розробки",
+  "prices.planning": "Планування",
+  "prices.design": "Дизайн",
+  "prices.development": "Розробка",
+  "prices.maintain": "Підтримка",
+  "prices.time": "Розрахунковий час",
+  "prices.estimateFrom": "від ",
+  "prices.estimateEnd": " робочих днів",
+  "prices.totalCost": "Загальна вартість ",
+  "prices.totalCostFrom": " від $ ",
+  "prices.mailPlaceholder": "Введіть Ваш e-mail ...",
+  "prices.tableType": "Тип веб-сайту",
+  "prices.tablePrice": "Ціна",
+  "prices.tableTime": "Оцінка часу",
+  "prices.submitBtn": "Розрахувати"
+}
