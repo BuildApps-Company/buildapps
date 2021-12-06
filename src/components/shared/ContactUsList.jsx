@@ -4,14 +4,16 @@ import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
 import { useContactInformation } from '../../data';
+import { useTranslation } from 'react-i18next';
 
 export const ContactUsList = () => {
 	const contactUsListData = useContactInformation();
 
+  const { t } = useTranslation();
 	return (
 		<div>
 			<ContactFormContainer>
-				<ListTitleWithUnderline>Contact Us</ListTitleWithUnderline>
+				<ListTitleWithUnderline>{t('contactUsList.title')}</ListTitleWithUnderline>
 
 				<ContuctUsListStyle>
 					{contactUsListData.list.map(el => (
@@ -55,11 +57,13 @@ const ContuctUsListStyle = styled.ul`
 `;
 
 const StyledLink = styled.a`
+  display: inline-block;
 	text-decoration: none;
 	font-size: 1.2rem;
 	color: inherit;
 	opacity: 0.75;
-	&:hover {
-		opacity: 1;
-	}
+
+  &:hover {
+    opacity: 1;
+  }
 `;

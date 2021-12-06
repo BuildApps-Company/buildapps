@@ -18,6 +18,11 @@ export const ProjectDetailsContainer = styled.div`
 			margin-right: 18px;
 		}
 	}
+
+  .iphonediscount {
+		max-width: 100%;
+  }
+
 	margin-bottom: 48px;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		margin-left: auto;

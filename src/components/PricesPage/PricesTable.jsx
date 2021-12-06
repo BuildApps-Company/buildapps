@@ -2,16 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { usePricesAndServicesTableData } from '../../data';
 import { breakpoints } from '../../styles/breakpoints';
+import { useTranslation } from 'react-i18next';
 
 export const PricesTable = () => {
 	const calculationOptionsData = usePricesAndServicesTableData();
+  const { t } = useTranslation();
+
 	return (
 		<StyledPricesTable>
 			<thead>
 				<tr>
-					<th>Type of website</th>
-					<th>Price</th>
-					<th>Time estimate</th>
+					<th>{t('prices.tableType')}</th>
+					<th>{t('prices.tablePrice')}</th>
+					<th>{t('prices.tableTime')}</th>
 				</tr>
 			</thead>
 			<tbody>

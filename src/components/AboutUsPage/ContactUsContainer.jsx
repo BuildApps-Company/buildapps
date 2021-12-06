@@ -4,9 +4,13 @@ import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import { Link } from 'gatsby-plugin-react-i18next';
 import { useContactInformation } from '../../data';
+import { useTranslation } from 'react-i18next';
+
+
 
 export const ContactUsContainer = ({ ...rest }) => {
 	const contactInformation = useContactInformation();
+  const { t } = useTranslation();
 
 	return (
 		<ContactUsWrap {...rest}>
@@ -20,7 +24,7 @@ export const ContactUsContainer = ({ ...rest }) => {
 				{contactInformation.email}
 			</StyledEmail>
 			<ContactUsBtnWrap>
-				<StyledLink to={routes.contactForm}>Contact us</StyledLink>
+				<StyledLink to={routes.contactForm}>{t('contactUs.contactWrapLink')}</StyledLink>
 			</ContactUsBtnWrap>
 		</ContactUsWrap>
 	);

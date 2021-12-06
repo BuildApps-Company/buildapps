@@ -3,14 +3,16 @@ import styled from 'styled-components';
 import spbProperty from '../../../static/images/portfolio/spbProperty.jpg';
 import spbLong from '../../../static/images/portfolio/spb_long.png';
 import askod from '../../../static/images/portfolio/askod.jpg';
+import askodLong from '../../../static/images/portfolio/askod.jpg';
 import sushi from '../../../static/images/portfolio/sushi.png';
 import sushiLong from '../../../static/images/portfolio/sushi_long.png';
 import ppf from '../../../static/images/portfolio/ppf.png';
 import ppfLong from '../../../static/images/portfolio/ppf_long.png';
-import { PpfDetailsEn } from './PpfDetails';
-import { SushiDetailsEn } from './SushiDetails';
-import { SpbPropertyEn } from './SpbProperty';
-import { AskodDetailsEn } from './AskodDetails';
+import { PpfDetailsEn, PpfDetailsRu, PpfDetailsUa } from './PpfDetails';
+import { SushiDetailsEn, SushiDetailsRu, SushiDetailsUa } from './SushiDetails';
+import { SpbPropertyEn, SpbPropertyRu, SpbPropertyUa } from './SpbProperty';
+import { AskodDetailsEn, AskodDetailsRu, AskodDetailsUa } from './AskodDetails';
+
 
 export const en = {
 	ppf: {
@@ -45,7 +47,6 @@ Integration with third-party services to obtain more complete information about 
 		fullDescription: `Today a mobile application for delivery is the most effective, least expensive, and relevant way to attract new customers, increase their level of loyalty, and receive real feedback. As well as increasing sales and profits.`,
 		pageContent: SushiDetailsEn,
 	},
-
 	spbProperty: {
 		id: 'spbProperty',
 		background:
@@ -65,13 +66,18 @@ Who would be asked more often for help in these matters? To someone who can solv
 AgentPN is a professional application only for real estate agencies - partners of Petersburg Real Estate. Search and booking of apartments in the largest database of new buildings in St. Petersburg and the Leningrad region. A login to the application is by a phone number.
 Use your favorite work tool wherever you are. Conduct consultations remotely in a place convenient for the client. Access to apartments, mortgage calculator, apartment reservations, as well as a convenient database of your clients - in one application.`,
 		pageContent: SpbPropertyEn,
+    links: {
+      web: null,
+      appStore: 'https://apps.apple.com/ru/app/id1466597730',
+      playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.AgentPn',
+    },
 	},
 	askod: {
 		id: 'askod',
 		background:
 			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
 		image: askod,
-		longImage: askod,
+		longImage: askodLong,
 		title: () => (
 			<>
 				ASKOD <SpanAskodOnline>Online</SpanAskodOnline>
@@ -82,6 +88,146 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 		responsibility: ['Design'],
 		fullDescription: `Askod is an online electronic document management system that allows you to organize work with electronic documents (creation, modification, search), as well as interaction between employees (transfer of documents, issuing tasks, sending notifications, etc.). Also, such a system is called EDMS (Electronic Document Management Systems).`,
 		pageContent: AskodDetailsEn,
+	},
+};
+
+export const ru = {
+	ppf: {
+		id: 'ppf',
+		background:
+			'linear-gradient(88deg, rgba(126, 124, 235, 0.5) 3.37%, rgba(87, 195, 255, 0.5) 96.63%);',
+		image: ppf,
+		longImage: ppfLong,
+		title: () => <>ПО для управления лидами</>,
+		pageTitle: 'ПО для управления лидами',
+		description: `CRM, охватывающая большинство процессов организации, связанных с кредитованием бизнеса. Полный цикл обработки заявки - от момента получения до выдачи кредита. Интеграция со сторонними сервисами для получения более полной информации о кредите - кредитной истории, информации из реестров для юридических и физических лиц.`,
+		responsibility: ['Веб', 'Программа'],
+		fullDescription: `В связи с высокой конкуренцией на рынке кредитования и высоким спросом на кредиты для бизнес-целей очень ценятся скорость и качество работы с клиентами, и, что не менее важно, автоматизация работы с каждым приложением. Именно здесь в игру вступает программное обеспечение в форме CRM.`,
+		pageContent: PpfDetailsRu,
+	},
+	sushi: {
+		id: 'sushi',
+		background:
+			'linear-gradient(88deg, rgba(87, 195, 255, 0.5) 3.37%, rgba(255, 87, 188, 0.5) 96.63%);',
+		image: sushi,
+		longImage: sushiLong,
+		title: () => (
+			<>
+				SUSHI <SpanSushi>SHOP</SpanSushi>
+			</>
+		),
+		pageTitle: 'SUSHI SHOP',
+		description: `Онлайн-сервис заказа суши. Система SushiShop автоматически определяет вашу геолокацию для ближайшего суши-магазина, чтобы время доставки было более удобным для пользователя. Также в системе предусмотрена бонусная программа, накопительная система и различные скидки для разных праздников и сезонов.`,
+		responsibility: ['Приложение'],
+		fullDescription: `Сегодня мобильное приложение для доставки - самый эффективный, наименее затратный и актуальный способ привлечь новых клиентов, повысить их уровень лояльности и получить реальную обратную связь. А также увеличение продаж и прибыли.`,
+		pageContent: SushiDetailsRu,
+	},
+	spbProperty: {
+		id: 'spbProperty',
+		background:
+			'linear-gradient(88deg, rgba(255, 87, 188, 0.5) 3.37%, rgba(249, 202, 158, 0.5) 96.63%);',
+		image: spbProperty,
+		pageTitle: 'Petersburg real estate',
+		longImage: spbLong,
+		title: () => (
+			<>
+				Petersburg <SpanSpb>real estate</SpanSpb>
+			</>
+		),
+		description: `Мобильный клиент для поиска квартиры в ЖК в Санкт-Петербурге и Москве. Система позволяет бронировать квартиры, делать предварительные заказы и находить квартиры по выгодным ценам.`,
+		responsibility: ['Приложение'],
+		fullDescription: `Сотни людей регулярно ищут квартиры, заключают договоры аренды с риелторами, покупают новую недвижимость или продают старую. Растущий спрос и ускоренный темп жизни оставляют у людей все меньше и меньше времени для личного решения подобных проблем.
+    К кому бы чаще обращались за помощью в этих вопросах? Кому-то, кто сможет их решить не только качественно, но и быстрее других. Мобильное приложение по недвижимости даст вашему бизнесу конкурентное преимущество.
+    AgentPN - профессиональное приложение только для агентств недвижимости - партнеров компании «Петербургская недвижимость». Поиск и бронирование квартир в крупнейшей базе новостроек Санкт-Петербурга и Ленинградской области. Вход в приложение осуществляется по номеру телефона.
+    Используйте свой любимый рабочий инструмент, где бы вы ни находились. Консультации проводим удаленно в удобном для клиента месте. Доступ к квартирам, ипотечному калькулятору, бронированию квартир, а также удобная база данных ваших клиентов - в одном приложении.`,
+		pageContent: SpbPropertyRu,
+	},
+	askod: {
+		id: 'askod',
+		background:
+			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
+		image: askod,
+		longImage: askodLong,
+		title: () => (
+			<>
+				ASKOD <SpanAskodOnline>Online</SpanAskodOnline>
+			</>
+		),
+		pageTitle: 'ASKOD Online',
+		description: `Онлайн-сервис АСКОД предназначен для автоматизации процессов документооборота между юридическими и физическими лицами и обеспечивает просмотр, согласование, подписание, отправку, получение и хранение документов в облачной среде.`,
+		responsibility: ['Дизайн'],
+		fullDescription: `Askod - это онлайн-система электронного документооборота, позволяющая организовать работу с электронными документами (создание, изменение, поиск), а также взаимодействие между сотрудниками (передача документов, выдача задач, отправка уведомлений и т. Д.). Также такая система называется СЭД (Системы электронного документооборота).`,
+		pageContent: AskodDetailsRu,
+	},
+};
+
+export const ua = {
+	ppf: {
+		id: 'ppf',
+		background:
+			'linear-gradient(88deg, rgba(126, 124, 235, 0.5) 3.37%, rgba(87, 195, 255, 0.5) 96.63%);',
+		image: ppf,
+		longImage: ppfLong,
+		title: () => <>Lead management software</>,
+		pageTitle: 'Програмне забезпечення для керування потенційними клієнтами',
+		description: `CRM, що охоплює більшість процесів організації, пов’язаних із кредитуванням бізнесу. Повний цикл обробки заявки - від моменту отримання до видачі кредиту. Інтеграція із сторонніми сервісами для отримання більш повної інформації про кредит – кредитна історія, інформація з реєстрів для юридичних або фізичних осіб.`,
+		responsibility: ['Веб', 'ПК'],
+		fullDescription: `Завдяки високій конкуренції на ринку кредитування та високому попиту на кредити для бізнес-цілей дуже цінується швидкість та якість роботи з клієнтами, і, не в останню чергу, автоматизація роботи з кожною заявкою. Ось тут і вступає в гру програмне забезпечення у вигляді CRM.`,
+		pageContent: PpfDetailsUa,
+	},
+	sushi: {
+		id: 'sushi',
+		background:
+			'linear-gradient(88deg, rgba(87, 195, 255, 0.5) 3.37%, rgba(255, 87, 188, 0.5) 96.63%);',
+		image: sushi,
+		longImage: sushiLong,
+		title: () => (
+			<>
+				SUSHI <SpanSushi>SHOP</SpanSushi>
+			</>
+		),
+		pageTitle: 'SUSHI SHOP',
+		description: `Онлайн-сервіс замовлення суші. Система SushiShop автоматично визначає ваше геолокацію для найближчого магазину суші, щоб зробити час доставки зручнішим для користувача. У системі також передбачена бонусна програма, накопичувальна система та різноманітні знижки на різні свята чи сезони.`,
+		responsibility: ['Застосунок'],
+		fullDescription: `Сьогодні мобільний додаток для доставки є найефективнішим, найдешевшим і актуальним способом залучення нових клієнтів, підвищення рівня їх лояльності та отримання реальних відгуків. А також збільшення продажів і прибутку.`,
+		pageContent: SushiDetailsUa,
+	},
+	spbProperty: {
+		id: 'spbProperty',
+		background:
+			'linear-gradient(88deg, rgba(255, 87, 188, 0.5) 3.37%, rgba(249, 202, 158, 0.5) 96.63%);',
+		image: spbProperty,
+		pageTitle: 'Petersburg real estate',
+		longImage: spbLong,
+		title: () => (
+			<>
+				Petersburg <SpanSpb>real estate</SpanSpb>
+			</>
+		),
+		description: `Мобільний додаток для пошуку квартири в ЖК в Санкт-Петербурзі та Москві. Система дозволяє бронювати квартири, робити попередні замовлення та знаходити квартири за вигідними цінами`,
+		responsibility: ['Застосунок'],
+		fullDescription: `Сотні людей регулярно шукають квартири, укладають договори оренди з ріелторами, купують нову нерухомість або продають стару. Зростаючий попит і прискорений темп життя залишають у людей все менше часу на особисте вирішення подібних проблем.
+    До кого частіше звертатимуться за допомогою в цих справах? Тому, хто може вирішити їх не тільки якісно, а й швидше за інших. Мобільний додаток для нерухомості дасть вашому бізнесу конкурентну перевагу.
+    AgentPN - це професійний додаток тільки для агентств нерухомості - партнерів Petersburg Real Estate. Пошук та бронювання квартир у найбільшій базі новобудов Санкт-Петербурга та Ленінградської області. Вхід до програми здійснюється за номером телефону.
+    Використовуйте свій улюблений робочий інструмент, де б ви не були. Проводити консультації дистанційно в зручному для клієнта місці. Доступ до квартир, іпотечного калькулятора, бронювання квартир, а також зручної бази даних ваших клієнтів - в одному додатку.`,
+		pageContent: SpbPropertyUa,
+	},
+	askod: {
+		id: 'askod',
+		background:
+			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
+		image: askod,
+		longImage: askodLong,
+		title: () => (
+			<>
+				ASKOD <SpanAskodOnline>Online</SpanAskodOnline>
+			</>
+		),
+		pageTitle: 'ASKOD Online',
+		description: `Сервіс ASKOD Online a призначений для автоматизації процесів документообігу між юридичними та фізичними особами та забезпечує перегляд, погодження, підписання, надсилання, отримання та зберігання документів у хмарному середовищі.`,
+		responsibility: ['Дизайн'],
+		fullDescription: `Askod - это онлайн-система электронного документооборота, позволяющая организовать работу с электронными документами (создание, изменение, поиск), а также взаимодействие между сотрудниками (передача документов, выдача задач, отправка уведомлений и т. Д.). Также такая система называется СЭД (Системы электронного документооборота).`,
+		pageContent: AskodDetailsUa,
 	},
 };
 
@@ -97,4 +243,4 @@ const SpanSushi = styled.span`
 	color: #f8d343;
 `;
 
-export const portfolio = { en };
+export const portfolio = { en, ru, ua };

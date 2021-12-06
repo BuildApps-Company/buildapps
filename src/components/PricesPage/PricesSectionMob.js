@@ -3,10 +3,13 @@ import styled from 'styled-components';
 import plusIcon from '../../../static/images/ic_plus_grey.svg';
 import minusIcon from '../../../static/images/ic_minus_grey.svg';
 import { colors } from '../../styles/colors';
+import { useTranslation } from 'react-i18next';
 
 const PricesSectionMob = ({ el }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toogleList = () => setIsOpen(prevState => !prevState);
+
+  const { t } = useTranslation();
 	return (
 		<>
 			<div key={el.name}>
@@ -25,11 +28,11 @@ const PricesSectionMob = ({ el }) => {
 				<TableWrap>
 					<tbody>
 						<tr>
-							<TdTitle>Price</TdTitle>
+							<TdTitle>{t('tablePrice')}</TdTitle>
 							<DetailWrap>{el.price}</DetailWrap>
 						</tr>
 						<tr>
-							<TdTitle>Time estimate</TdTitle>
+							<TdTitle>{t('tableTime')}</TdTitle>
 							<DetailWrap>{el.estimate}</DetailWrap>
 						</tr>
 					</tbody>
