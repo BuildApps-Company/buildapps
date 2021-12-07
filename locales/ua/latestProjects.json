@@ -1,4 +1,6 @@
 {
 	"latestProjects.latestProjects": "Проекти",
-	"latestProjects.all": "Більше"
+	"latestProjects.all": "Переглянути всі",
+  "latestProjects.detailsButton": "Детальніше",
+  "latestProjects.mobileMoreButton": "Быльше проектів"
 }

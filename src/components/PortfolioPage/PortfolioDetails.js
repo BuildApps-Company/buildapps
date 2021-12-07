@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Page } from '../../components/shared/Page';
 import { Toolbar } from '../../components/shared/Toolbar';
+
 import { PreFooter } from '../../components/MainPage/PreFooter';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import { Link } from 'gatsby-plugin-react-i18next';
 import { usePortfolio } from '../../data';
+import { useTranslation } from 'react-i18next';
 
 export function PortfolioDetails({ id }) {
 	const projects = usePortfolio();
@@ -15,11 +17,13 @@ export function PortfolioDetails({ id }) {
 	const TitleValue = project.title;
 	const Details = project.pageContent;
 
+  const { t } = useTranslation();
+
 	return (
 		<Page pageName={project.pageTitle}>
 			<Toolbar />
 
-			<StyledLink to={routes.portfolio}>GO back to portfolio</StyledLink>
+			<StyledLink to={routes.portfolio}>{t('portfolio.goBack')}</StyledLink>
 
 			<ProjectImageContainer>
 				<ImageWrap

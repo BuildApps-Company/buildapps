@@ -12,5 +12,27 @@ export const en = [
 	},
 ];
 
+export const ru = [
+	{
+		name: 'ПапаФинанс',
+		url: papafinance,
+	},
+	{
+		name: 'Notissimus',
+		url: notissimus,
+	},
+];
 
-export const clients = { en };
+export const ua = [
+	{
+		name: 'ПапаФінанс',
+		url: papafinance,
+	},
+	{
+		name: 'Notissimus',
+		url: notissimus,
+	},
+];
+
+
+export const clients = { en, ru, ua };

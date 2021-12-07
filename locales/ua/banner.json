@@ -1,12 +1,12 @@
 {
-	"banner.design": "Design",
+	"banner.design": "Дизайн",
 	"banner.web": "Web",
-	"banner.develop": "Develop",
-	"banner.launch": "Launch",
-	"banner.maintain": "Maintain",
+	"banner.develop": "Розробка",
+	"banner.launch": "Запуск",
+	"banner.maintain": "Підтримка",
 	"banner.mobile": "Mobile",
 	"banner.desktop": "Desktop",
-	"banner.designAndDevelopmentCompany": "Design & Development company",
-	"banner.contactUs": "Зв'яжіться з нами",
+	"banner.designAndDevelopmentCompany": "Компанія розробки та дизайну",
+	"banner.contactUs": "Зв'язатися з нами",
 	"banner.prices": "Калькулятор проекту"
 }

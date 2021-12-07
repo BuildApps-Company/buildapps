@@ -1,4 +1,5 @@
 import { useI18next } from "gatsby-plugin-react-i18next";
+import i18next from 'i18next';
 import { clients } from "./clients";
 import { contactUsListData } from "./contactUsListData";
 import { ourContributorsData } from "./ourContributorsData";

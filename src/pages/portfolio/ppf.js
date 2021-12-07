@@ -1,6 +1,6 @@
 import React from 'react';
 import { PortfolioDetails } from '../../components/PortfolioPage/index';
-import { usePortfolio } from '../../data';
+import { graphql } from 'gatsby';
 
 const Ppf = () => {
 	return (
@@ -9,3 +9,17 @@ const Ppf = () => {
 };
 
 export default Ppf;
+
+export const query = graphql`
+	query($language: String!) {
+		locales: allLocale(filter: { language: { eq: $language } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
+			}
+		}
+	}
+`;
