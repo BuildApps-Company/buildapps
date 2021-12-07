@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import spbProperty from '../../../static/images/portfolio/spbProperty.jpg';
 import spbLong from '../../../static/images/portfolio/spb_long.png';
 import askod from '../../../static/images/portfolio/askod.jpg';
-import askodLong from '../../../static/images/portfolio/askod.jpg';
+import askodLong from '../../../static/images/portfolio/askod-long.png';
 import sushi from '../../../static/images/portfolio/sushi.png';
 import sushiLong from '../../../static/images/portfolio/sushi_long.png';
 import ppf from '../../../static/images/portfolio/ppf.png';

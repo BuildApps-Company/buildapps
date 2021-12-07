@@ -63,7 +63,19 @@ const StyledLink = styled.a`
 	color: inherit;
 	opacity: 0.75;
 
+  &:after {
+    content: '';
+    width: 0px;
+    height: 3px;
+    display: block;
+    background: ${colors.Main};
+    transition: width 0.25s;
+  }
+
   &:hover {
     opacity: 1;
+  }
+  &:hover:after {
+    width: 100%;
   }
 `;
