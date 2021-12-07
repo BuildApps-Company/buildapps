@@ -29,6 +29,11 @@ Integration with third-party services to obtain more complete information about 
 		responsibility: ['Web', 'Desktop'],
 		fullDescription: `Due to the high competition in the lending market and the high demand for loans for business purposes, the speed and the quality of working with clients are much appreciated, and, last but not least, the automation of work with each application. This is where software in the form of CRM comes into play.`,
 		pageContent: PpfDetailsEn,
+    links: {
+      web: 'https://papafinance.ru/',
+      appStore: null,
+      playMarket: null,
+    },
 	},
 	sushi: {
 		id: 'sushi',
@@ -46,6 +51,11 @@ Integration with third-party services to obtain more complete information about 
 		responsibility: ['Mobile'],
 		fullDescription: `Today a mobile application for delivery is the most effective, least expensive, and relevant way to attract new customers, increase their level of loyalty, and receive real feedback. As well as increasing sales and profits.`,
 		pageContent: SushiDetailsEn,
+    links: {
+      web: null,
+      appStore: 'https://apps.apple.com/ru/app/id1537535113',
+      playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.sushishop',
+    },
 	},
 	spbProperty: {
 		id: 'spbProperty',
@@ -88,6 +98,11 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 		responsibility: ['Design'],
 		fullDescription: `Askod is an online electronic document management system that allows you to organize work with electronic documents (creation, modification, search), as well as interaction between employees (transfer of documents, issuing tasks, sending notifications, etc.). Also, such a system is called EDMS (Electronic Document Management Systems).`,
 		pageContent: AskodDetailsEn,
+    links: {
+      web: 'https://askod.online/',
+      appStore: 'https://apps.apple.com/app/id1560671518',
+      playMarket: 'https://play.google.com/store/apps/details?id=com.infoplus.askod.online',
+    },
 	},
 };
 
@@ -104,6 +119,11 @@ export const ru = {
 		responsibility: ['Веб', 'Программа'],
 		fullDescription: `В связи с высокой конкуренцией на рынке кредитования и высоким спросом на кредиты для бизнес-целей очень ценятся скорость и качество работы с клиентами, и, что не менее важно, автоматизация работы с каждым приложением. Именно здесь в игру вступает программное обеспечение в форме CRM.`,
 		pageContent: PpfDetailsRu,
+    links: {
+      web: 'https://papafinance.ru/',
+      appStore: null,
+      playMarket: null,
+    },
 	},
 	sushi: {
 		id: 'sushi',
@@ -121,6 +141,11 @@ export const ru = {
 		responsibility: ['Приложение'],
 		fullDescription: `Сегодня мобильное приложение для доставки - самый эффективный, наименее затратный и актуальный способ привлечь новых клиентов, повысить их уровень лояльности и получить реальную обратную связь. А также увеличение продаж и прибыли.`,
 		pageContent: SushiDetailsRu,
+    links: {
+      web: null,
+      appStore: 'https://apps.apple.com/ru/app/id1537535113',
+      playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.sushishop',
+    },
 	},
 	spbProperty: {
 		id: 'spbProperty',
@@ -141,6 +166,11 @@ export const ru = {
     AgentPN - профессиональное приложение только для агентств недвижимости - партнеров компании «Петербургская недвижимость». Поиск и бронирование квартир в крупнейшей базе новостроек Санкт-Петербурга и Ленинградской области. Вход в приложение осуществляется по номеру телефона.
     Используйте свой любимый рабочий инструмент, где бы вы ни находились. Консультации проводим удаленно в удобном для клиента месте. Доступ к квартирам, ипотечному калькулятору, бронированию квартир, а также удобная база данных ваших клиентов - в одном приложении.`,
 		pageContent: SpbPropertyRu,
+    links: {
+      web: null,
+      appStore: 'https://apps.apple.com/ru/app/id1466597730',
+      playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.AgentPn',
+    },
 	},
 	askod: {
 		id: 'askod',
@@ -158,6 +188,11 @@ export const ru = {
 		responsibility: ['Дизайн'],
 		fullDescription: `Askod - это онлайн-система электронного документооборота, позволяющая организовать работу с электронными документами (создание, изменение, поиск), а также взаимодействие между сотрудниками (передача документов, выдача задач, отправка уведомлений и т. Д.). Также такая система называется СЭД (Системы электронного документооборота).`,
 		pageContent: AskodDetailsRu,
+    links: {
+      web: 'https://askod.online/',
+      appStore: 'https://apps.apple.com/app/id1560671518',
+      playMarket: 'https://play.google.com/store/apps/details?id=com.infoplus.askod.online',
+    },
 	},
 };
 
@@ -174,6 +209,11 @@ export const ua = {
 		responsibility: ['Веб', 'ПК'],
 		fullDescription: `Завдяки високій конкуренції на ринку кредитування та високому попиту на кредити для бізнес-цілей дуже цінується швидкість та якість роботи з клієнтами, і, не в останню чергу, автоматизація роботи з кожною заявкою. Ось тут і вступає в гру програмне забезпечення у вигляді CRM.`,
 		pageContent: PpfDetailsUa,
+    links: {
+      web: 'https://papafinance.ru/',
+      appStore: null,
+      playMarket: null,
+    },
 	},
 	sushi: {
 		id: 'sushi',
@@ -191,6 +231,11 @@ export const ua = {
 		responsibility: ['Застосунок'],
 		fullDescription: `Сьогодні мобільний додаток для доставки є найефективнішим, найдешевшим і актуальним способом залучення нових клієнтів, підвищення рівня їх лояльності та отримання реальних відгуків. А також збільшення продажів і прибутку.`,
 		pageContent: SushiDetailsUa,
+    links: {
+      web: null,
+      appStore: 'https://apps.apple.com/ru/app/id1537535113',
+      playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.sushishop',
+    },
 	},
 	spbProperty: {
 		id: 'spbProperty',
@@ -211,6 +256,11 @@ export const ua = {
     AgentPN - це професійний додаток тільки для агентств нерухомості - партнерів Petersburg Real Estate. Пошук та бронювання квартир у найбільшій базі новобудов Санкт-Петербурга та Ленінградської області. Вхід до програми здійснюється за номером телефону.
     Використовуйте свій улюблений робочий інструмент, де б ви не були. Проводити консультації дистанційно в зручному для клієнта місці. Доступ до квартир, іпотечного калькулятора, бронювання квартир, а також зручної бази даних ваших клієнтів - в одному додатку.`,
 		pageContent: SpbPropertyUa,
+    links: {
+      web: null,
+      appStore: 'https://apps.apple.com/ru/app/id1466597730',
+      playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.AgentPn',
+    },
 	},
 	askod: {
 		id: 'askod',
@@ -228,6 +278,11 @@ export const ua = {
 		responsibility: ['Дизайн'],
 		fullDescription: `Askod - это онлайн-система электронного документооборота, позволяющая организовать работу с электронными документами (создание, изменение, поиск), а также взаимодействие между сотрудниками (передача документов, выдача задач, отправка уведомлений и т. Д.). Также такая система называется СЭД (Системы электронного документооборота).`,
 		pageContent: AskodDetailsUa,
+    links: {
+      web: 'https://askod.online/',
+      appStore: 'https://apps.apple.com/app/id1560671518',
+      playMarket: 'https://play.google.com/store/apps/details?id=com.infoplus.askod.online',
+    },
 	},
 };
 
