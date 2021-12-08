@@ -1,10 +1,6 @@
 {
 	"latestProjects.latestProjects": "Latest Projects",
-<<<<<<< HEAD
 	"latestProjects.all": "View All",
-=======
-	"latestProjects.all": "All",
->>>>>>> develop
   "latestProjects.detailsButton": "Details",
   "latestProjects.mobileMoreButton": "More Projects"
 }
