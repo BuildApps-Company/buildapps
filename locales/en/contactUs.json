@@ -1,0 +1,21 @@
+{
+  "contactUs.mainTitle": "Contact form",
+  "contactUs.subTitle": "Build apps - Contact form",
+	"contactUs.contactWrapTitle": "Contacts",
+  "contactUs.contactWrapPhone": "Phone",
+  "contactUs.contactWrapMail": "E-mail",
+  "contactUs.contactWrapSocials": "Social medias",
+  "contactUs.contactWrapLink": "Contact Us",
+  "contactUs.formTitle": "Contacts",
+  "contactUs.PlaceholderName": "Your name*",
+  "contactUs.PlaceholderPhone": "Phone number*",
+  "contactUs.PlaceholderMail": "E-mail*",
+  "contactUs.PlaceholderWorkType": "Type of work",
+  "contactUs.workType1": "Business website",
+  "contactUs.workType2": "Landing page",
+  "contactUs.workType3": "E-commerce",
+  "contactUs.workType4": "Mobile application",
+  "contactUs.PlaceholderDetails": "Details",
+  "contactUs.SubmitBtn": "Send",
+  "contactUsList.title": "Contact Us"
+}

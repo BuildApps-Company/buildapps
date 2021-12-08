@@ -1,16 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { ourTeamListData } from '../../data/ourTeamListData';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'gatsby-plugin-react-i18next';
+import { useOurTeamListData } from '../../data';
 
 export const OurTeamList = () => {
+	const ourTeamListData = useOurTeamListData();
+
+  const { t } = useTranslation();
+
 	return (
 		<TeamListWrap>
 			<TitleWrap>
-				<ListTitleWithUnderline>Our Team</ListTitleWithUnderline>
+				<ListTitleWithUnderline>{t('footer.ourTeamTitle')}</ListTitleWithUnderline>
 			</TitleWrap>
 			<OurTeamListStyle>
 				{ourTeamListData.map(el => (
@@ -52,11 +57,13 @@ const OurTeamListStyle = styled.ul`
 `;
 
 const StyledLink = styled(Link)`
+  display: inline-block;
 	text-decoration: none;
 	font-size: 1.2rem;
 	color: ${colors.light.white};
 	opacity: 0.75;
-	&:hover {
-		opacity: 1;
-	}
+
+  &:hover {
+    opacity: 1;
+  }
 `;

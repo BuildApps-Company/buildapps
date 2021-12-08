@@ -1,19 +1,23 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Marquee from './Marquee';
-import { Link } from 'gatsby';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 export const PreFooter = () => {
+
+  const { t } = useTranslation();
+
 	return (
 		<>
 			<Marquee />
 			<Container>
 				<FlexWrap>
-					<StyledText>Ready to get started?</StyledText>
-					<StyledLink to={routes.contactForm}>Contact Us</StyledLink>
+					<StyledText>{t('preFooter.title')}</StyledText>
+					<StyledLink to={routes.contactForm}>{t('preFooter.contactButton')}</StyledLink>
 				</FlexWrap>
 			</Container>
 		</>

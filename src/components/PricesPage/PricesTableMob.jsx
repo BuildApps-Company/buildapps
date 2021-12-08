@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoints } from '../../styles/breakpoints';
-import { pricesAndServicesTableData } from '../../data/pricesAndServicesTableData';
 import PricesSectionMob from './PricesSectionMob.js';
+import { usePricesAndServicesTableData } from '../../data';
 
 export const PricesTableMob = () => {
+	const pricesAndServicesTableData = usePricesAndServicesTableData();
 	return (
 		<StyledPricesTableMob>
 			{pricesAndServicesTableData.map(el => (

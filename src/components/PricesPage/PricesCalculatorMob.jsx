@@ -1,10 +1,11 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
-import { calculationOptionsData } from '../../data/pricesCalculatorData';
 import { breakpoints } from '../../styles/breakpoints';
 import selectIcon from '../../../static/images/ic_select.svg';
 import { sendContactForm } from '../../api/email.js';
+import { useCalculationOptionsData } from '../../data';
+import { useTranslation } from 'react-i18next';
 
 const initPriceValues = {
 	planning: 0,
@@ -14,15 +15,19 @@ const initPriceValues = {
 	days: 0,
 };
 
-const initSelectedButtons = Object.entries(calculationOptionsData).reduce(
-	(acc, [key, value]) => ({ ...acc, [key]: value.buttons[0] }),
-	{}
-);
-
 export const PricesCalculatorMob = () => {
 	const [priceValues, setPriceValues] = useState({
 		...initPriceValues,
 	});
+	const calculationOptionsData = useCalculationOptionsData();
+	const initSelectedButtons = useMemo(
+		() =>
+			Object.entries(calculationOptionsData).reduce(
+				(acc, [key, value]) => ({ ...acc, [key]: value.buttons[0] }),
+				{}
+			),
+		[calculationOptionsData]
+	);
 	const [selectedButtons, setSelectedButtons] = useState({
 		...initSelectedButtons,
 	});
@@ -40,7 +45,6 @@ export const PricesCalculatorMob = () => {
 
 		[inputValues]
 	);
-
 	const serviceList = Object.entries(calculationOptionsData);
 
 	const handleServiceSelect = (target, section, key) => {
@@ -120,6 +124,8 @@ export const PricesCalculatorMob = () => {
 		[inputValues, selectedButtons]
 	);
 
+  const { t } = useTranslation();
+
 	// const selectedButtonValues = Object.values(selectedButtons);
 	return (
 		<PricesContainer>
@@ -150,27 +156,27 @@ export const PricesCalculatorMob = () => {
 			</ServicesList>
 
 			<CostsContainer>
-				<CostsTitle>Development costs</CostsTitle>
+				<CostsTitle>{t('prices.costTitle')}</CostsTitle>
 
 				<CostsList>
 					<li>
-						<StyledSpan>Planning</StyledSpan> $ {priceValues.planning}
+						<StyledSpan>{t('prices.planning')}</StyledSpan> $ {priceValues.planning}
 					</li>
 					<li>
-						<StyledSpan>Design</StyledSpan> $ {priceValues.design}
+						<StyledSpan>{t('prices.design')}</StyledSpan> $ {priceValues.design}
 					</li>
 					<li>
-						<StyledSpan>Development</StyledSpan> $ {priceValues.development}
+						<StyledSpan>{t('prices.development')}</StyledSpan> $ {priceValues.development}
 					</li>
 					<li>
-						<StyledSpan>Maintain</StyledSpan> $ {priceValues.maintain}
+						<StyledSpan>{t('prices.maintain')}</StyledSpan> $ {priceValues.maintain}
 					</li>
 					<li>
-						<StyledSpan>Estimated time</StyledSpan>
-						<SpanEstimate>from {priceValues.days} working days</SpanEstimate>
+						<StyledSpan>{t('prices.time')}</StyledSpan>
+						<SpanEstimate>{t('prices.estimateFrom')}{priceValues.days}{t('prices.estimateEnd')}</SpanEstimate>
 					</li>
 					<li>
-						<StyledSpan>Total cost </StyledSpan> from $ {totalPrice}
+						<StyledSpan>{t('prices.totalCost')}</StyledSpan>{t('prices.totalCostFrom')}{totalPrice}
 					</li>
 					<li>
 						<SendForm onSubmit={handleSubmit} id="calculator-form">
@@ -179,12 +185,12 @@ export const PricesCalculatorMob = () => {
 								type="email"
 								name="email"
 								value={inputValues.email}
-								placeholder="Enter your e-mail ..."
+								placeholder={t('prices.mailPlaceholder')}
 								onChange={handleChange}
 							/>
 							<CostsBtnWrap>
 								<CostsBtn for="calculator-form" type="submit">
-									Send request
+                  {t('prices.submitBtn')}
 								</CostsBtn>
 							</CostsBtnWrap>
 						</SendForm>

@@ -1,31 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { Page } from '../../components/shared/Page';
 import { Toolbar } from '../../components/shared/Toolbar';
+
 import { PreFooter } from '../../components/MainPage/PreFooter';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
-import { Portfolio } from '../../data/projects';
+import { Link } from 'gatsby-plugin-react-i18next';
+import { usePortfolio } from '../../data';
+import { useTranslation } from 'react-i18next';
 
-export function PortfolioDetails({ id, children }) {
-	const projectsValues = Object.values(Portfolio);
-	const projectValues = projectsValues.find(el => el.id === id);
-	const TitleValue = projectValues.title;
+export function PortfolioDetails({ id }) {
+	const projects = usePortfolio();
+	const projectsValues = Object.values(projects);
+	const project = projectsValues.find(el => el.id === id);
+	const TitleValue = project.title;
+	const Details = project.pageContent;
+
+  const { t } = useTranslation();
 
 	return (
-		<Page pageName={projectValues.pageTitle}>
+		<Page pageName={project.pageTitle}>
 			<Toolbar />
 
-			<StyledLink to={routes.portfolio}>GO back to portfolio</StyledLink>
+			<StyledLink to={routes.portfolio}>{t('portfolio.goBack')}</StyledLink>
 
 			<ProjectImageContainer>
 				<ImageWrap
-					image={projectValues.longImage}
-					background={projectValues.background}
+					image={project.longImage}
+					background={project.background}
 				>
-					{projectValues.longImage && (
-						<img src={projectValues.longImage} alt="projecttitle" />
+					{project.longImage && (
+						<img src={project.longImage} alt="projecttitle" />
 					)}
 				</ImageWrap>
 			</ProjectImageContainer>
@@ -35,13 +41,13 @@ export function PortfolioDetails({ id, children }) {
 					<TitleValue></TitleValue>
 				</Title>
 
-				{projectValues.responsibility.map(res => (
+				{project.responsibility.map(res => (
 					<StyledResponsibility key={res}>{res}</StyledResponsibility>
 				))}
 
-				<StyledDescription>{projectValues.description}</StyledDescription>
+				<StyledDescription>{project.description}</StyledDescription>
 			</ProjectDetailsContainer>
-			{children}
+			<Details />
 			<PreFooter />
 		</Page>
 	);

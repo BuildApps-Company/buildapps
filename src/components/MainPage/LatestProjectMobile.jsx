@@ -1,15 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { routes } from '../../utilities/routes';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 export const LatestProjectMobile = ({ projectsMobile }) => {
+	const { t } = useTranslation();
+
 	return (
 		<LatestProjectsContainer>
 			<TitleWrap>
-				<TitlePage>Latest Projects</TitlePage>
+				<TitlePage>{t('latestProjects.latestProjects')}</TitlePage>
 			</TitleWrap>
 
 			<ProjectWrap>
@@ -33,7 +36,7 @@ export const LatestProjectMobile = ({ projectsMobile }) => {
 					<svg>
 						<rect x="0" y="0" fill="none" width="100%" height="100%" />
 					</svg>
-					More projects
+					{t('latestProjects.mobileMoreButton')}
 				</StyledButton>
 			</BtnConteiner>
 		</LatestProjectsContainer>
@@ -46,16 +49,6 @@ const BtnConteiner = styled.div`
 	display: flex;
 	justify-content: center;
 `;
-// const Button = styled(Link)`
-// 	text-transform: uppercase;
-// 	color: ${colors.Main};
-// 	border: 2px solid ${colors.Main};
-// 	background: transparent;
-// 	cursor: pointer;
-// 	padding: 10px 27px;
-// 	text-decoration: none;
-// 	margin-top: 14px;
-// `;
 
 const LatestProjectsContainer = styled.div`
 	margin-bottom: 64px;

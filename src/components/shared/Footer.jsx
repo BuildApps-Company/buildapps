@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { routes } from '../../utilities/routes';
 import { OurTeamList } from './OurTeamList';
 import { ContactUsList } from './ContactUsList';
@@ -11,17 +10,21 @@ import { colors } from '../../styles/colors';
 import { ListTitleWithUnderline } from '../../styles/styled-headers';
 import plusIcon from '../../../static/images/ic_plus.svg';
 import minusIcon from '../../../static/images/ic_minus.svg';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 export const Footer = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toogleList = () => setIsOpen(prevState => !prevState);
+
+  const { t } = useTranslation();
+
 	return (
 		<StyledFooter>
 			<FlexContainerDesktop>
 				<ListTitleWrap>
 					<ListTitle>
-						A close-knit software development team with extensive experience and
-						understanding of what is necessary for you
+						{t('footer.description')}
 					</ListTitle>
 
 					<SocialMediaList />
@@ -34,7 +37,9 @@ export const Footer = () => {
 			</SocialMediaListWrapTablet>
 			<FlexContainerMob>
 				<OurTeamWrapMob>
-					<ListTitleWithUnderline>Our Team</ListTitleWithUnderline>
+					<ListTitleWithUnderline>
+            {t('footer.ourTeamTitle')}
+          </ListTitleWithUnderline>
 					{isOpen ? (
 						<img src={minusIcon} alt="Minus Icon" onClick={toogleList} />
 					) : (
@@ -42,17 +47,19 @@ export const Footer = () => {
 					)}
 				</OurTeamWrapMob>
 				{isOpen && <OurTeamList />}
-				<StyledLinkTitle to={routes.contactForm}>Contact Us</StyledLinkTitle>
+				<StyledLinkTitle to={routes.contactForm}>
+          {t('footer.contactUsTitle')}
+        </StyledLinkTitle>
 
 				<SocialMediaList />
 			</FlexContainerMob>
 
 			<TermsOfUseContainerMobile>
-				<span>Build Apps</span> © 2021 BuildApps
+				<span>Build Apps</span> {t('footer.copyright')}
 			</TermsOfUseContainerMobile>
 
 			<TermsOfUseContainerDesktop>
-				Copyright © 2021 BuildApps. Design and development company.
+				Copyright {t('footer.copyright')} {t('footer.termsOfUse')}
 			</TermsOfUseContainerDesktop>
 		</StyledFooter>
 	);

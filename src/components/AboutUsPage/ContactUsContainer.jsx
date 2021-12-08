@@ -1,24 +1,30 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { routes } from '../../utilities/routes';
-import { email, address } from '../../data/contactUsListData';
 import { breakpoints } from '../../styles/breakpoints';
+import { Link } from 'gatsby-plugin-react-i18next';
+import { useContactInformation } from '../../data';
+import { useTranslation } from 'react-i18next';
+
+
 
 export const ContactUsContainer = ({ ...rest }) => {
+	const contactInformation = useContactInformation();
+  const { t } = useTranslation();
+
 	return (
 		<ContactUsWrap {...rest}>
 			<StyledAdress
-				href={`http://maps.google.com/?q=${address}`}
+				href={`http://maps.google.com/?q=${contactInformation.address}`}
 				target="_blank"
 			>
-				{address}
+				{contactInformation.address}
 			</StyledAdress>
-			<StyledEmail href={`mailto:${email}`} target="_blank">
-				{email}
+			<StyledEmail href={`mailto:${contactInformation.email}`} target="_blank">
+				{contactInformation.email}
 			</StyledEmail>
 			<ContactUsBtnWrap>
-				<StyledLink to={routes.contactForm}>Contact us</StyledLink>
+				<StyledLink to={routes.contactForm}>{t('contactUs.contactWrapLink')}</StyledLink>
 			</ContactUsBtnWrap>
 		</ContactUsWrap>
 	);

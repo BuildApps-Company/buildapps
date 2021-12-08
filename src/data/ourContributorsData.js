@@ -2,9 +2,8 @@ import vladImg from '../../static/images/team/vlad.jpg';
 import sashaImg from '../../static/images/team/sasha.jpg';
 import vadimImg from '../../static/images/team/vadim.jpg';
 import ivanImg from '../../static/images/team/ivan.jpg';
-import oleksiiImg from '../../static/images/team/oleksii.jpg';
 
-export const ourContributorsData = [
+const en = [
 	{
 		key: 'alexbudyakov',
 		name: 'Aleksandr Budyakov',
@@ -29,52 +28,62 @@ export const ourContributorsData = [
 		position: 'Product Designer',
 		img: vladImg,
 	},
-	// {
-	// 	key: 'alonakolomiiets',
-	// 	name: 'Alona Kolomiiets',
-	// 	position: 'Project manager',
-	// 	img: '',
-	// },
-	// {
-	// 	key: 'vladislavkyrychenko',
-	// 	name: 'Vladyslav Kyrychenko',
-	// 	position: 'Full-stack Team Lead dev',
-	// 	img: '',
-	// },
-	// {
-	// 	key: 'vyacheslavvituyk',
-	// 	name: 'Vyacheslav Vituyk',
-	// 	position: 'Full-stack web dev',
-	// 	img: '',
-	// },
-	// {
-	// 	key: 'romankolesnyk',
-	// 	name: 'Roman Kolesnyk',
-	// 	position: 'Full-stack dev',
-	// 	img: '',
-	// },
-	// {
-	// 	key: 'andriylavruk',
-	// 	name: 'Andriy Lavruk',
-	// 	position: 'Full-stack web dev',
-	// 	img: '',
-	// },
-	// {
-	// 	key: 'michaelnovikov',
-	// 	name: 'Michael Novikov',
-	// 	position: 'Full-stack Xamarin dev',
-	// 	img: '',
-	// },
-	// {
-	// 	key: 'vladislavkhasenevich',
-	// 	name: 'Vladislav Khasenevich',
-	// 	position: 'Full-stack Team Lead Xamarin dev',
-	// 	img: '',
-	// },
-	// {
-	// 	key: 'oleksiisemelit',
-	// 	name: 'Oleksii Semelit',
-	// 	position: 'Senior Xamarin dev',
-	// 	img: oleksiiImg,
-	// },
 ];
+
+const ru = [
+	{
+		key: 'alexbudyakov',
+		name: 'Александр Будяков',
+		position: 'Руководитель разработки мобильных приложений',
+		img: sashaImg,
+	},
+	{
+		key: 'ivankolosinskyi',
+		name: 'Иван Колосинский',
+		position: 'Руководитель разработки веб-приложений',
+		img: ivanImg,
+	},
+	{
+		key: 'vadimrybalko',
+		name: 'Вадим Рибалко',
+		position: 'Руководитель отдела продаж и маркетинга',
+		img: vadimImg,
+	},
+	{
+		key: 'vladyslavhulin',
+		name: 'Владислав Хулин',
+		position: 'Дизайнер проектов',
+		img: vladImg,
+	},
+];
+
+const ua = [
+	{
+		key: 'alexbudyakov',
+		name: 'Олександр Будяков',
+		position: 'Керівсник розробки мобільних додатків',
+		img: sashaImg,
+	},
+	{
+		key: 'ivankolosinskyi',
+		name: 'Іван Колосинський',
+		position: 'Керівник розробки веб-додатків',
+		img: ivanImg,
+	},
+	{
+		key: 'vadimrybalko',
+		name: 'Вадим Рибалко',
+		position: 'Керівник відділу продажу та маркетингу',
+		img: vadimImg,
+	},
+	{
+		key: 'vladyslavhulin',
+		name: 'Владислав Хулін',
+		position: 'Дизайнер проектів',
+		img: vladImg,
+	},
+];
+
+
+
+export const ourContributorsData = { en, ru, ua };

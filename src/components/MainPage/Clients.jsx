@@ -1,16 +1,17 @@
 import React, { useState, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import { clients } from '../../data/clients';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
 import navLeft from '../../../static/images/navLeft.svg';
 import navRight from '../../../static/images/navRight.svg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useClients } from '../../data';
 
 export function Clients() {
 	const [width, setWidth] = useState(0);
+	const clients = useClients();
 
 	useLayoutEffect(() => {
 		window.addEventListener('resize', setWidth(window.innerWidth));
@@ -26,9 +27,11 @@ export function Clients() {
 		slidesToScroll: 1,
 	};
 
+	const { t } = useTranslation();
+
 	return (
 		<BlockWrapper>
-			{width > 450 && <Title>Clients</Title>}
+			{width > 450 && <Title>{t('clients.clients')}</Title>}
 
 			<Slider {...settings}>
 				{clients.map(client => (

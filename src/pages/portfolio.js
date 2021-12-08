@@ -6,10 +6,13 @@ import { ButtonsList, ProjectsList } from '../components/PortfolioPage';
 import { PreFooter } from '../components/MainPage/PreFooter';
 import { Container } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
-import { allProjects } from '../data/projects';
+import { allProjects } from '../types/projects';
+import { useTranslation } from 'react-i18next';
+import { graphql } from 'gatsby';
 
 export default function PortfolioPage() {
 	const [selectedCategories, setSelectedCategories] = useState([allProjects]);
+  const { t } = useTranslation();
 
 	const onSelectCategory = newCategory => {
 		if (newCategory === allProjects) {
@@ -42,14 +45,10 @@ export default function PortfolioPage() {
 			<Toolbar />
 			<ContainerWrap>
 				<TitleContainer>
-					<SubTitle>Build apps - Portfolio</SubTitle>
-					<Title>Portfolio</Title>
+					<SubTitle>{t('portfolio.subTitle')}</SubTitle>
+					<Title>{t('portfolio.mainTitle')}</Title>
 					<AboutPage>
-						BuildApps is an actively developing IT company that provides a wide
-						range of high quality products, solutions and services in the field
-						of information technology. The main areas of our activity are the
-						development of Internet projects of various levels of complexity,
-						the creation of business automation systems and IT consulting.
+            {t('portfolio.about')}
 					</AboutPage>
 				</TitleContainer>
 				<ButtonsList
@@ -108,5 +107,19 @@ const ContainerWrap = styled(Container)`
 	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
 		padding-left: 56px;
 		padding-right: 56px;
+	}
+`;
+
+export const query = graphql`
+	query($language: String!) {
+		locales: allLocale(filter: { language: { eq: $language } }) {
+			edges {
+				node {
+					ns
+					data
+					language
+				}
+			}
+		}
 	}
 `;

@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ourContributorsData } from '../../data/ourContributorsData';
+import { useContributorsData } from '../../data';
 import { breakpoints } from '../../styles/breakpoints';
+import { useTranslation } from 'react-i18next';
 
 export const ContributorsList = () => {
+	const ourContributorsData = useContributorsData();
+
+  const { t } = useTranslation();
 	return (
 		<>
-			<ContributorsTitle>Leadership team</ContributorsTitle>
+			<ContributorsTitle>{t('aboutUsPage.contributorsTitle')}</ContributorsTitle>
 
 			<StyledContributorsList>
 				{ourContributorsData.map(el => (
