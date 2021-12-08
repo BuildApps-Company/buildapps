@@ -1,7 +1,7 @@
-import vladImg from '../../static/images/team/vlad.jpg';
-import sashaImg from '../../static/images/team/sasha.jpg';
-import vadimImg from '../../static/images/team/vadim.jpg';
-import ivanImg from '../../static/images/team/ivan.jpg';
+import vladImg from '../../static/images/team/hulin-vlad.jpg';
+import sashaImg from '../../static/images/team/budiakov-sasha.jpg';
+import vadimImg from '../../static/images/team/rybalko-vadim.jpg';
+import ivanImg from '../../static/images/team/kolosinskiy-ivan.jpg';
 
 const en = [
 	{
