@@ -14,6 +14,11 @@ const getOrDefault = (obj, i18n) => {
     return obj[language] || obj[defaultLanguage];
 }
 
+export const useActiveLanguage = () => {
+  const obj = useI18next();
+  return obj.language;
+}
+
 export const useClients = () => {
     const i18n = useI18next();
     return getOrDefault(clients, i18n);

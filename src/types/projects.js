@@ -1,1 +1,1 @@
-export const allProjects = 'ALL';
+export const allProjects = 'X';
