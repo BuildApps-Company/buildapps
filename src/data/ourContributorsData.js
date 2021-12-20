@@ -51,7 +51,7 @@ const ru = [
 	},
 	{
 		key: 'vladyslavhulin',
-		name: 'Владислав Хулин',
+		name: 'Владислав Гулин',
 		position: 'Дизайнер проектов',
 		img: vladImg,
 	},
@@ -78,7 +78,7 @@ const ua = [
 	},
 	{
 		key: 'vladyslavhulin',
-		name: 'Владислав Хулін',
+		name: 'Владислав Гулін',
 		position: 'Дизайнер проектів',
 		img: vladImg,
 	},
