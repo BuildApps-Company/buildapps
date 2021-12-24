@@ -8,7 +8,6 @@ import { usePortfolio } from '../../data';
 import { allProjects } from '../../types/projects';
 
 export const ProjectsList = ({ selectedCategories }) => {
-
 	const portfolio = usePortfolio();
 	const projects = useMemo(
 		() =>

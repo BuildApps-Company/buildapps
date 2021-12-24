@@ -15,7 +15,10 @@ export const PreFooter = () => {
 		<>
 			<Marquee />
 			<Container>
-				<FlexWrap data-aos="fade-down" data-aos-anchor-placement="bottom-bottom">
+				<FlexWrap
+          data-aos="fade-down"
+          data-aos-anchor-placement="bottom-bottom"
+        >
 					<StyledText>{t('preFooter.title')}</StyledText>
 					<StyledLink to={routes.contactForm}>{t('preFooter.contactButton')}</StyledLink>
 				</FlexWrap>
