@@ -6,10 +6,8 @@ import { colors } from '../../styles/colors';
 import { Link } from 'gatsby-plugin-react-i18next';
 import { usePortfolio } from '../../data';
 import { allProjects } from '../../types/projects';
-import Aos from 'aos';
 
 export const ProjectsList = ({ selectedCategories }) => {
-  Aos.init({});
 
 	const portfolio = usePortfolio();
 	const projects = useMemo(
