@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { breakpoints } from '../../styles/breakpoints';
 import styled from 'styled-components';
 import { MainBanner } from './Banner';
@@ -11,7 +11,6 @@ import 'aos/dist/aos.css';
 
 export function MainPage() {
 	const projects = usePortfolio();
-  Aos.init({});
 
 	const latestProjectsDesktop = useMemo(
 		() => Object.values(projects).slice(0, 6),
@@ -22,6 +21,10 @@ export function MainPage() {
 		() => Object.values(projects).slice(0, 2),
 		[projects]
 	);
+
+  useEffect(() => {
+    Aos.init({});
+	}, []);
 
 	return (
 		<>
