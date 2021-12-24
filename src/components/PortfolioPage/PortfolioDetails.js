@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Page } from '../../components/shared/Page';
 import { Toolbar } from '../../components/shared/Toolbar';
-
+import { LinksList } from '../shared/ProjectLinksList';
 import { PreFooter } from '../../components/MainPage/PreFooter';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
@@ -16,6 +16,7 @@ export function PortfolioDetails({ id }) {
 	const project = projectsValues.find(el => el.id === id);
 	const TitleValue = project.title;
 	const Details = project.pageContent;
+  const Links = project.links;
 
   const { t } = useTranslation();
 
@@ -46,8 +47,10 @@ export function PortfolioDetails({ id }) {
 				))}
 
 				<StyledDescription>{project.description}</StyledDescription>
+        <LinksList links={Links} />
 			</ProjectDetailsContainer>
 			<Details />
+      <LinksList links={Links} />
 			<PreFooter />
 		</Page>
 	);
