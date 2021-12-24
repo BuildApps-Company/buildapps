@@ -15,6 +15,8 @@ import arrowLeftSliderHover from '../../../static/images/arrowLeftSliderHover.sv
 import arrowRightSliderHover from '../../../static/images/arrowRightSliderHover.svg';
 import arrowRightSlider from '../../../static/images/arrowRightSlider.svg';
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { colors } from '../../styles/colors';
 
 export const AskodDetailsEn = () => {
@@ -330,12 +332,12 @@ export const AskodDetailsUa = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toogleList = () => setIsOpen(prevState => !prevState);
 	const settings = {
-		dots: false,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-	};
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
 	return (
 		<>
@@ -464,17 +466,29 @@ export const AskodDetailsUa = () => {
 					)}
 				</ProjectDetailsContainer>
 				<BlockSlider>
-					<div>
-						<Slider {...settings}>
-							<img src={mainImg} alt="mainimg" />
-							<img src={detailsImg} alt="detailsImg" />
-							<img src={screenshot_4} alt="screenshot_contract" />
-							<img src={login} alt="login" />
-							<img src={screenshot_contract} alt="screenshot_contract" />
-							<img src={screenshot_contract2} alt="screenshot_contract2" />
-							<img src={screenshot_3} alt="screenshot_3" />
-						</Slider>
-					</div>
+					<Slider {...settings}>
+						<div>
+              <img src={mainImg} alt="mainimg" />
+            </div>
+						<div>
+              <img src={detailsImg} alt="detailsImg" />
+            </div>
+						<div>
+              <img src={screenshot_4} alt="screenshot_contract" />
+            </div>
+						<div>
+              <img src={login} alt="login" />
+            </div>
+						<div>
+              <img src={screenshot_contract} alt="screenshot_contract" />
+            </div>
+						<div>
+              <img src={screenshot_contract2} alt="screenshot_contract2" />
+            </div>
+						<div>
+              <img src={screenshot_3} alt="screenshot_3" />
+            </div>
+					</Slider>
 				</BlockSlider>
 			</AskodWrap>
 		</>
@@ -520,7 +534,7 @@ const BlockSlider = styled.div`
 	max-height: 190px;
 	margin-bottom: 70px;
 	@media all and (min-width: ${breakpoints.tablet}) {
-		max-height: 432px;
+		max-height: 612px;
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
 		margin-top: 128px;
