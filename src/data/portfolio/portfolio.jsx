@@ -14,7 +14,7 @@ import { PpfDetailsEn, PpfDetailsRu, PpfDetailsUa } from './PpfDetails';
 import { SushiDetailsEn, SushiDetailsRu, SushiDetailsUa } from './SushiDetails';
 import { SpbPropertyEn, SpbPropertyRu, SpbPropertyUa } from './SpbProperty';
 import { AskodDetailsEn, AskodDetailsRu, AskodDetailsUa } from './AskodDetails';
-import { IPhoneDiscountEn, IPhoneDiscountRu, IPhoneDiscountUa } from './iphoneDiscountDetails';
+import { IPhoneDiscountEn, IPhoneDiscountRu, IPhoneDiscountUa } from './IphoneDiscountDetails';
 
 
 export const en = {
