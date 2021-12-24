@@ -8,8 +8,6 @@ const IphoneDiscount = () => {
 	);
 };
 
-export default IphoneDiscount;
-
 export const query = graphql`
 	query($language: String!) {
 		locales: allLocale(filter: { language: { eq: $language } }) {
@@ -23,3 +21,5 @@ export const query = graphql`
 		}
 	}
 `;
+
+export default IphoneDiscount;

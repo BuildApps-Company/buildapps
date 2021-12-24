@@ -23,10 +23,18 @@ export const ProjectsList = ({ selectedCategories }) => {
 
 	return (
 		<StyledPortfolioList>
-			{projects.map(([key, el]) => {
+			{projects.map(([key, el], index) => {
 				const TitleValue = el.title;
 				return (
-					<li key={key}>
+          <li
+          key={key}
+          data-aos-delay="130"
+          data-aos={
+            index % 2 === 0
+              ? "fade-right"
+              : "fade-left"
+            }
+          >
 						<Link to={`${routes.portfolio}${key}/`} state={{ project: el }}>
 							<ImageContainer image={el.longImage} background={el.background}>
 								<h3>
