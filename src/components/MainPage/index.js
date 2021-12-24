@@ -6,9 +6,12 @@ import { LatestProjectDesktop } from './LatestProjectDesktop';
 import { LatestProjectMobile } from './LatestProjectMobile';
 import { PreFooter } from './PreFooter';
 import { usePortfolio } from '../../data';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export function MainPage() {
 	const projects = usePortfolio();
+  Aos.init({});
 
 	const latestProjectsDesktop = useMemo(
 		() => Object.values(projects).slice(0, 6),

@@ -30,9 +30,9 @@ export function MainBanner() {
 			<StyledPageContainer>
 				<TitlesWrap>
         <div>
-          <Title>{t('banner.web')}</Title>
-          <Title>{t('banner.mobile')}</Title>
-          <Title>{t('banner.desktop')}</Title>
+          <Title data-aos="fade-down" data-aos-duration="1000">{t('banner.web')}</Title>
+          <Title data-aos="fade-down" data-aos-delay="200" data-aos-duration="1200">{t('banner.mobile')}</Title>
+          <Title data-aos="fade-down" data-aos-delay="400" data-aos-duration="1300">{t('banner.desktop')}</Title>
           <SubTitle>
             {t('banner.designAndDevelopmentCompany')}
           </SubTitle>

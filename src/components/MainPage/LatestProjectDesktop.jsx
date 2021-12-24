@@ -43,10 +43,15 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 			<LatestProjectsContainer>
 				<Container>
 					<TitleWrap>
-            <TitlePage>
+            <TitlePage
+              data-aos="fade-right"
+            >
               {t('latestProjects.latestProjects')}
             </TitlePage>
-						<StyledLink to={routes.portfolio}>
+						<StyledLink
+              data-aos="fade-up"
+              to={routes.portfolio}
+            >
 							{t('latestProjects.all')}
 						</StyledLink>
 					</TitleWrap>
@@ -195,7 +200,7 @@ const ProjectContainer = styled(Container)`
 		${({ visible }) =>
 			visible
 				? 'opacity: 1; '
-				: 'opacity: 0; position: absolute; top: 0; left: 0; height: 100%; z-index: -1; overflow: hidden;'}
+				: 'opacity: 0; position: absolute; top: 0; left: 0; height: 100%; z-index: -1; overflow: hidden;'};
 	}
 `;
 
@@ -274,6 +279,8 @@ const ImageWrapDesktop = styled.div`
 		max-width: 100%;
 		object-fit: contain;
 		max-height: 100%;
+    transition: transform 0.8s;
+    ${({ visible }) => (visible ? 'transform: translateX(0)' : 'transform: translateX(-150%)')};
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {
