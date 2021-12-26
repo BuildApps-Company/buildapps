@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import styled from 'styled-components';
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
@@ -6,6 +6,8 @@ import { colors } from '../../styles/colors';
 import { Link } from 'gatsby-plugin-react-i18next';
 import { usePortfolio } from '../../data';
 import { allProjects } from '../../types/projects';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export const ProjectsList = ({ selectedCategories }) => {
 	const portfolio = usePortfolio();
@@ -20,6 +22,10 @@ export const ProjectsList = ({ selectedCategories }) => {
 			),
 		[portfolio]
 	);
+
+  useEffect(() => {
+    Aos.init({});
+	}, []);
 
 	return (
 		<StyledPortfolioList>
