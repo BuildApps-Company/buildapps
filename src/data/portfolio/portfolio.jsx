@@ -116,7 +116,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 		title: () => <>Iphone <SpanIphoneDiscount>Dicount</SpanIphoneDiscount></>,
 		pageTitle: 'IPhone Discount',
 		description: `Developing an online store is a serious task that requires a deep understanding of online business processes. It becomes more complicated when it comes to creating a reselling platform that offers products from a well-known brand. The iPhone Discount startup contacted us to solve this problem. We helped them build a technological foundation for the further development and scaling of their online business.`,
-		responsibility: ['E-commerce'],
+		responsibility: ['E-commerce', 'Web'],
 		fullDescription: `Developing an online store is a serious task that requires a deep understanding of online business processes. It becomes more complicated when it comes to creating a reselling platform that offers products from a well-known brand. The iPhone Discount startup contacted us to solve this problem. We helped them build a technological foundation for the further development and scaling of their online business.`,
 		pageContent: IPhoneDiscountEn,
     links: {
@@ -224,7 +224,7 @@ export const ru = {
 		title: () => <>Iphone <SpanIphoneDiscount>Dicount</SpanIphoneDiscount></>,
 		pageTitle: 'IPhone Discount',
 		description: `Разработка интернет-магазина — серьезная задача, требующая глубокого понимания процессов онлайн-бизнеса. Эта задача усложняется, если дело касается создания платформы для реселлинга, когда сайт предлагает продукцию известного бренда. Именно в такой ситуации к нам обратился стартап Iphone Discount. Мы помогли ему построить технологический фундамент для дальнейшего развития и масштабирования онлайн-бизнеса.`,
-		responsibility: ['E-commerce'],
+		responsibility: ['E-commerce', 'Web'],
 		fullDescription: `Разработка интернет-магазина — серьезная задача, требующая глубокого понимания процессов онлайн-бизнеса. Эта задача усложняется, если дело касается создания платформы для реселлинга, когда сайт предлагает продукцию известного бренда. Именно в такой ситуации к нам обратился стартап Iphone Discount. Мы помогли ему построить технологический фундамент для дальнейшего развития и масштабирования онлайн-бизнеса.`,
 		pageContent: IPhoneDiscountRu,
     links: {
@@ -332,7 +332,7 @@ export const ua = {
 		title: () => <>Iphone <SpanIphoneDiscount>Dicount</SpanIphoneDiscount></>,
 		pageTitle: 'IPhone Discount',
 		description: `Розробка інтернет-магазину — серйозне завдання, яке потребує глибокого розуміння процесів онлайн-бізнесу. Це завдання ускладнюється, якщо справа стосується створення платформи для реселінгу, коли сайт пропонує продукцію відомого бренду. Саме у такій ситуації до нас звернувся стартап Iphone Discount. Ми допомогли йому побудувати технологічний фундамент для подальшого розвитку та масштабування онлайн-бізнесу.`,
-		responsibility: ['E-commerce'],
+		responsibility: ['E-commerce', 'Web'],
 		fullDescription: `Розробка інтернет-магазину — серйозне завдання, яке потребує глибокого розуміння процесів онлайн-бізнесу. Це завдання ускладнюється, якщо справа стосується створення платформи для реселінгу, коли сайт пропонує продукцію відомого бренду. Саме у такій ситуації до нас звернувся стартап Iphone Discount. Ми допомогли йому побудувати технологічний фундамент для подальшого розвитку та масштабування онлайн-бізнесу.`,
 		pageContent: IPhoneDiscountUa,
     links: {
