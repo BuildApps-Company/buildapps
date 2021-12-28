@@ -14,9 +14,9 @@ export const LinksList = ({ links }) => {
           {t('projectsLinks.mainTitle')}
         </GreyText>
             <StoreContainer>
-              {web && <Link>{t('projectsLinks.webSite')}</Link>}
-              {playMarket && <Link>Google Play</Link>}
-              {appStore && <Link>Apple Store</Link>}
+              {web && <Link href={ web } target="_blank">{t('projectsLinks.webSite')}</Link>}
+              {playMarket && <Link href={ playMarket } target="_blank">Google Play</Link>}
+              {appStore && <Link href={ appStore } target="_blank">Apple Store</Link>}
             </StoreContainer>
       </LinksContainer>
     </>
@@ -51,6 +51,7 @@ const Link = styled.a`
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
 
   &:before {
     display: block;
