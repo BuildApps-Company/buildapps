@@ -5,6 +5,7 @@ export const ProjectDetailsContainer = styled.div`
 	padding-left: 16px;
 	padding-right: 16px;
 	p {
+    text-align: justify;
 		font-size: 1rem;
 		line-height: 160%;
 	}

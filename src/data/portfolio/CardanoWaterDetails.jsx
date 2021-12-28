@@ -25,7 +25,7 @@ export const CardanoWaterEn = () => (
       Tasks the client delegated to us
 		</H3>
 		<p>
-      The BuildApp team dealt with similar tasks before. Having extensive knowledge in the development of websites and blockchain technology, we prepared for work in advance, smoothing out all the rough edges that usually arise in such projects.
+      The BuildApps team dealt with similar tasks before. Having extensive knowledge in the development of websites and blockchain technology, we prepared for work in advance, smoothing out all the rough edges that usually arise in such projects.
 		</p>
     <p>
       So, the tasks included:
@@ -140,7 +140,7 @@ export const CardanoWaterRu = () => (
       Задачи, которые делегировал нам клиент
 		</H3>
 		<p>
-      Поставленные перед нами задачи уже не раз выполнялись командой BuildApp. Имея обширные познания в разработке сайтов и применении технологии блокчейн, мы заранее подготовились к реализации, сгладив все острые углы, обычно возникающие в таких проектах.
+      Поставленные перед нами задачи уже не раз выполнялись командой BuildApps. Имея обширные познания в разработке сайтов и применении технологии блокчейн, мы заранее подготовились к реализации, сгладив все острые углы, обычно возникающие в таких проектах.
 		</p>
     <p>
       Итак, задачи:
@@ -240,114 +240,114 @@ export const CardanoWaterRu = () => (
 export const CardanoWaterUa = () => (
 	<ProjectDetailsContainer>
 		<H3>
-      Cardano-Water: drinking water problems that the customer wanted to solve by charging commissions from the 10,000 NFT trade for the purchase of clean liquid for people in need
+      Cardano-Water: проблеми питної води, які замовник захотів вирішити, відраховуючи комісію від торгівлі 10000 NFT на закупівлю чистої води для тих, хто її потребує
 		</H3>
 		<p>
-      Cardano-Water is a multi-platform company operating in several business lines. Their new project aims to implement blockchain technology and NFT collections and draw public attention to global problems regarding drinking water. The idea is based on charitable contributions from each sold token for the needs of underdeveloped countries.
+      Зараз як ніколи актуальною є проблема нестачі чистої питної води в деяких слаборозвинених країнах. Всесвітні організації просувають ідею її економії та дбайливого ставлення до цінного природного ресурсу, але водночас сидять склавши руки, не займаючись прямим вирішенням цієї несправедливості. На відміну від них, є компанії, які так чи інакше допомагають населенню, частково інвестуючи комісійні відрахування на потреби малозабезпечених людей. У даному кейсі ви дізнаєтеся про одного з подібних героїв, а саме про компанію Cardano-Water.
 		</p>
     <p>
-      Our customer came to us from the UpWork platform, hoping that we would cope with the project and implement it 100%. And we actually did it.
+      Наш замовник прийшов до нас із платформи UpWork. Він сподівався, що ми впораємося з проектом та реалізуємо його на всі 100%. Що, власне, і сталося.
 		</p>
     <ImageWrap>
       <img class="iphonediscount" src={mainImg} alt="picture1" />
     </ImageWrap>
 		<H3>
-      Tasks the client delegated to us
+      Завдання, що делегував нам клієнт:
 		</H3>
 		<p>
-      The BuildApp team dealt with similar tasks before. Having extensive knowledge in the development of websites and blockchain technology, we prepared for work in advance, smoothing out all the rough edges that usually arise in such projects.
+      Поставлені перед нами завдання вже неодноразово виконувались командою BuildApps. Маючи широкі знання у створенні сайтів і застосуванні технології блокчейн, ми заздалегідь підготувалися до реалізації, згладивши всі гострі кути, які зазвичай виникають у таких проектах.
 		</p>
     <p>
-      So, the tasks included:
+      Отже, наші завдання включали:
 		</p>
 		<ol>
-      <li>Create a website with a landing page.</li>
-      <li>Add analytical and administrative tools.</li>
+      <li>Створити сайт із лендингом.</li>
+      <li>Додати аналітичні та адміністраторські інструменти.</li>
     </ol>
     <p>
-      Each transaction for the sale/purchase of goods in the collection has a small commission. This percentage is credited to an account from which the charitable foundation is formed. Upon accumulating a certain amount, it is automatically transferred to volunteers in the target country involved in the water supply to low-income society segments. The goals of the project are based on the following:
+      Кожна угода з продажу/купівлі товару до колекції має невелику комісію. Цей відсоток зараховується на спеціальний рахунок, із якого формується благодійний фонд. За накопиченням певної суми вона автоматично перераховується волонтерам у цільовій країні, які займаються водопостачанням малозабезпечених верств суспільства. З цього виходять цілі проекту:
 		</p>
     <ul>
-      <li>To draw the attention of people to the problem of drinking water.</li>
-      <li>Create a fundraising tool for selling NFTs.</li>
-      <li>To create a user-friendly website with integrated blockchain technology.</li>
-      <li>Add a water indicator to visualize progress.</li>
+      <li>Привернути увагу мас до проблеми питної води.</li>
+      <li>Створити інструмент для збирання коштів шляхом продажу NFT.</li>
+      <li>Зробити зручний веб-сайт із впровадженою технологією блокчейн.</li>
+      <li>Реалізувати лічильник накопиченої води для візуалізації прогресу.</li>
     </ul>
     <p>
-      Since the ToR was correctly written and we had experience developing websites, we started to implement the project with no delays.
+      Оскільки ТЗ було грамотно сформовано, а досвід розробки веб-сайтів ми мали — юуло розпочато безпосередньо реалізацію проекту.
 		</p>
 		<ImageWrap>
 			<img class="iphonediscount" src={detailsImg1} alt="picture3" />
     </ImageWrap>
-		<H4>Brainstorming: ideas for developing the product and the first steps towards the goal</H4>
+		<H4>Мозковий штурм: ідеї для реалізації продукту та перші кроки до поставленої мети</H4>
 		<p>
-      Having gotten acquainted with the idea and understanding it, we assembled a team to agree on the project roadmap. As a result, we concluded that the primary tool for attracting the target audience to the problem would be a landing page and a convenient and fast website with FAQ sections and a description of the idea. It is the best advertising tool that increases the awareness of a brand's digital resource on the Internet. So it became a central task to implement.
+      Ознайомившись з ідеєю і перейнявшись їй, ми зібрали команду для попереднього узгодження дорожньої карти проекту. В результаті дійшли загального висновку, що основним інструментом залучення ЦА до проблеми є лендинг та зручний швидкий сайт із розділами FAQ та повним описом ідеї. Це найкращий рекламний інструмент, який підвищує впізнання цифрового ресурсу бренду на просторах Інтернету. На її реалізацію ми й кинули свої основні сили.
 		</p>
 		<ImageWrap>
 			<img class="iphonediscount" src={detailsImg2} alt="picture4" />
     </ImageWrap>
-		<H4>Problem solutions: 2 experts and 1 week for implementation</H4>
+		<H4>Розв'язання задач: 2 експерти та тиждень часу на реалізацію</H4>
 		<p>
-      Having discussed the layout and agreed with the customer, we started working on the project. We involved 2 web development experts. The workflow included the following:
+      Обговоривши макет та погодивши його із замовником, ми приступили до роботи над проектом. У процесі брали участь 2 експерти веб-розробки. Ми розпочали роботу, в процесі якої:
 		</p>
     <ul>
 			<li>
-        Preparing the design by hand and creating the interface.
+        Намалювали вручну дизайн та скомпонували інтерфейс.
 			</li>
 			<li>
-        Marking up the SPA page and splitting it into blocks.
+        Розмітили сторінку SPA та розбили її на блоки.
 			</li>
 			<li>
-        Adapting the website for different devices using React.js.
+        Адаптували сайт під різні пристрої за допомогою React.js.
 			</li>
 		</ul>
     <p>
-      The result is a responsive cross-platform interface with a modern design and smooth animation. Thanks to good texts and other page content, we managed to bring the website to the top of Google search results. Since the project is currently in development, it is too early to evaluate its efficiency. We will re-engage to create mobile apps and other resources in the near future.
+      У результаті вийшов адаптивний кросплатформний інтерфейс із сучасним дизайном та плавною анімацією. Завдяки грамотним текстам та правильному наповненню сторінки вдалося вивести її в топ пошукової видачі Google. Оскільки проект зараз перебуває у розробці, то судити про його ефективність рано. Найближчим часом ми підключимося до розробки повторно для створення мобільних додатків та додаткових ресурсів.
 		</p>
-		<H4>What we achieved working on this promising project</H4>
+		<H4>Чого ми досягли, працюючи над перспективним проектом</H4>
     <p>
-      Our experience helped us immediately focus on the final version and bypass the problem areas of the blockchain landing page. We completed the tasks in less than a month, creating a unique and essential web solution for the customer. As a result, we got:
+      Наш досвід дозволив одразу зосередитись на фінальній версії, обійшовши стороною проблемні місця лендингу з блокчейном. Із завданнями ми впоралися за неповний місяць, створивши унікальне та важливе веб-рішення для замовника. У результаті вийшло:
 		</p>
     <ul>
 			<li>
-        MVP with basic functionality and potential for further development.
+        MVP з базовим функціоналом та закладеним потенціалом на подальший розвиток проекту.
 			</li>
 			<li>
-        Attractive design with visualization of the purchase process and charging commission to pay for water.
+        Привабливий дизайн з повною візуалізацією процесу купівлі та відрахування комісії на оплату води.
 			</li>
 			<li>
-        Professional landing page with correct markup and robots.txt settings.
+        Професійний лендинг із правильною розміткою, налаштуванням robots.txt.
 			</li>
       <li>
-        High-quality technical support and cooperation in the future.
+        Якісна технічна підтримка та співпраця з подальшою перспективою.
 			</li>
 		</ul>
     <p>
-      The client received the best solution on the market that helps to develop a philanthropic NFT startup. The page design draws attention to the pressing problem, and the competent text catches users with thoughtful CTA and descriptions.
+      Клієнт отримав найкраще на ринку рішення та функціональний продукт для розвитку NFT стартапу з філантропічним ухилом. Дизайн сторінки привертає увагу до насущної проблеми, а грамотний текст чіпляє користувачів продуманими СТА та описами.
 		</p>
-    <H4>Improvements for the client's business: platform upgrade in a month</H4>
+    <H4>Поліпшення для бізнесу клієнта: апгрейд платформи за місяць</H4>
     <p>
-      Since the project is still under development, it is too early to assess it objectively. Вespite this, the idea attracts investors worldwide, providing the startup with the financing for its development. By implementing this part of the IT product, the client received:
+      Оскільки проект ще знаходиться у розробці, то поки що важко об'єктивно оцінювати ефективність. Але, незважаючи на це, ідея вже приваблює інвесторів з усього світу, забезпечуючи стартап необхідним для розвитку фінансуванням. Від виконання цієї частини IT-продукту, клієнт отримав:
 		</p>
     <ul>
 			<li>
-        Convenient and fast tool for attracting the target audience.
+        Зручний та швидкий інструмент для залучення ЦА.
 			</li>
 			<li>
-        Efficient landing page with bright and catchy CTAs.
+        Правильний лендинг з яскравими та чіпляючими СТА.
 			</li>
 			<li>
-        The influx of new customers to the target web resource.
+        Приток нових клієнтів на цільовий веб-ресурс.
 			</li>
       <li>
-        Funding the startup from various sources.
+        Фінансування стартапу з різних джерел.
 			</li>
 		</ul>
     <p>
-      The roadmap for the project is far from complete, but the goals set by the company deserve respect. One day, Cardano Water will complete its mission and provide the population with clean drinking water. In the meantime, we continue cooperation, developing other components and introducing the customer's idea in the IT world. We are proud that BuildApps plays a significant part in this project.
+      Дорожня карта проекту далека від завершення, але ті цілі, що встановила собі компанія заслуговують на повагу. Згодом Cardano Water досягне свого і забезпечить населення чистою питною водою. А поки що ми продовжуємо активну співпрацю, розробляючи інші елементи, реалізуючи ідею замовника в IT-світі. Ми пишаємося, що BuildApps є вагомою частиною цього проекту.
 		</p>
     <H3>
-      Looking to optimize your homepage, launch a SPA, or implement a complex project? Have a creative idea but no development resources? Contact the BuildApps manager for advice and get a high-quality IT product in a short time!
+      Бажаєте оптимізувати свою головну сторінку, запустити SPA чи реалізувати комплексний проект? Ви маєте креативну ідею, але немає ресурсів для розробки? Звертайтеся за консультацією до менеджера BuildApps та отримайте якісний IT-продукт за короткий термін!
     </H3>
 	</ProjectDetailsContainer>
 );
