@@ -10,11 +10,14 @@ import ppf from '../../../static/images/portfolio/ppf.png';
 import ppfLong from '../../../static/images/portfolio/ppf_long.png';
 import iphone from '../../../static/images/portfolio/iphone-discount.png';
 import iphoneLong from '../../../static/images/portfolio/iphone-discount-long.png';
+import cardanoLogo from '../../../static/images/portfolio/CW_logo.jpg';
+import cardanoImg from '../../../static/images/portfolio/CW_long.png';
 import { PpfDetailsEn, PpfDetailsRu, PpfDetailsUa } from './PpfDetails';
 import { SushiDetailsEn, SushiDetailsRu, SushiDetailsUa } from './SushiDetails';
 import { SpbPropertyEn, SpbPropertyRu, SpbPropertyUa } from './SpbProperty';
 import { AskodDetailsEn, AskodDetailsRu, AskodDetailsUa } from './AskodDetails';
 import { IPhoneDiscountEn, IPhoneDiscountRu, IPhoneDiscountUa } from './IPhoneDiscountDetails';
+import { CardanoWaterEn, CardanoWaterRu, CardanoWaterUa } from './CardanoWaterDetails';
 
 
 export const en = {
@@ -121,6 +124,24 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 		pageContent: IPhoneDiscountEn,
     links: {
       web: 'https://iphone-discount.ru',
+      appStore: null,
+      playMarket: null,
+    },
+	},
+  cardanowater: {
+		id: 'cardanowater',
+		background:
+			'linear-gradient( 135deg, #465EFB 10%, #C2FFD8 100%);',
+		image: cardanoLogo,
+		longImage: cardanoImg,
+		title: () => <>Cardano <SpanCardano>Water</SpanCardano></>,
+		pageTitle: 'Cardano Water',
+		description: `Cardano-Water is a multi-platform company operating in several business lines. Their new project aims to implement blockchain technology and NFT collections and draw public attention to global problems regarding drinking water. The idea is based on charitable contributions from each sold token for the needs of underdeveloped countries.`,
+		responsibility: ['E-commerce'],
+		fullDescription: `Today, the problem of the lack of clean drinking water in some countries is more urgent than ever. World organizations promote the idea of economy and respect for a valuable natural resource, but at the same time, they sit on their hands and do not look for a solution to this injustice. In contrast, some companies help the population, partially investing commissions for the needs of low-income people. In this case study, you will learn about one of these heroes, Cardano-Water.`,
+		pageContent: CardanoWaterEn,
+    links: {
+      web: 'https://cardano-water.io',
       appStore: null,
       playMarket: null,
     },
@@ -233,6 +254,24 @@ export const ru = {
       playMarket: null,
     },
 	},
+  cardanowater: {
+		id: 'cardanowater',
+		background:
+			'linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%);',
+		image: cardanoLogo,
+		longImage: cardanoImg,
+		title: () => <>Cardano <SpanCardano> Water</SpanCardano></>,
+		pageTitle: 'Cardano Water',
+		description: `Cardano-Water — мультиплатформенная компания, ведущая деятельность в нескольких направлениях бизнеса. В своем новом проекте она хотела реализовать не только блокчейн технологию и NFT-коллекции, но и привлечь внимание общественности к глобальным проблемам с питьевой водой. Собственно идея и строится вокруг благотворительных отчислениях с каждого проданного токена на нужды населения стран третьего эшелона.`,
+		responsibility: ['E-commerce'],
+		fullDescription: `Сейчас как никогда актуальна проблема недостатка чистой питьевой воды в некоторых слаборазвитых странах. Всемирные организации продвигают идею ее экономии и бережного отношения к ценному природному ресурсу, но в то же время сидят сложа руки, не занимаясь прямым решением этой несправедливости. В отличие от них, существуют компании, которые так или иначе помогают населению, частично инвестируя комиссионные отчисления на нужды малообеспеченных людей. В данном кейсе вы узнаете об одном из подобных героев, а именно — о компании Cardano-Water.`,
+		pageContent: CardanoWaterRu,
+    links: {
+      web: 'https://cardano-water.io',
+      appStore: null,
+      playMarket: null,
+    },
+	},
 };
 
 export const ua = {
@@ -341,7 +380,29 @@ export const ua = {
       playMarket: null,
     },
 	},
+  cardanowater: {
+		id: 'cardanowater',
+		background:
+			'linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%);',
+		image: cardanoLogo,
+		longImage: cardanoImg,
+		title: () => <>Cardano <SpanCardano> Water</SpanCardano></>,
+		pageTitle: 'Cardano Water',
+		description: `Cardano-Water - мультиплатформенна компанія, що веде діяльність у кількох напрямках бізнесу. У своєму новому проекті вона хотіла реалізувати не лише блокчейн технологію та NFT-колекції, а й привернути увагу громадськості до глобальних проблем із питною водою. Власне, ідея і будується навколо благодійних відрахувань з кожного проданого токену на потреби населення країн третього ешелону.`,
+		responsibility: ['E-commerce'],
+		fullDescription: `Зараз як ніколи актуальною є проблема нестачі чистої питної води в деяких слаборозвинених країнах. Всесвітні організації просувають ідею її економії та дбайливого ставлення до цінного природного ресурсу, але водночас сидять склавши руки, не займаючись прямим вирішенням цієї несправедливості. На відміну від них, є компанії, які так чи інакше допомагають населенню, частково інвестуючи комісійні відрахування на потреби малозабезпечених людей. У даному кейсі ви дізнаєтеся про одного з подібних героїв, а саме про компанію Cardano-Water.`,
+		pageContent: CardanoWaterUa,
+    links: {
+      web: 'https://cardano-water.io',
+      appStore: null,
+      playMarket: null,
+    },
+	},
 };
+
+const SpanCardano = styled.span`
+	color: ##35258d;
+`;
 
 const SpanIphoneDiscount = styled.span`
 	color: #ee6363;

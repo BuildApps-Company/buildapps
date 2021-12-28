@@ -15,8 +15,8 @@ export const LinksList = ({ links }) => {
         </GreyText>
             <StoreContainer>
               {web && <Link>{t('projectsLinks.webSite')}</Link>}
-              {appStore && <Link>Google Play</Link>}
-              {playMarket && <Link>Apple Store</Link>}
+              {playMarket && <Link>Google Play</Link>}
+              {appStore && <Link>Apple Store</Link>}
             </StoreContainer>
       </LinksContainer>
     </>
