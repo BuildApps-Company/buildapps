@@ -172,7 +172,7 @@ const ru = {
 			},
 			{
 				key: 'mobileapp',
-				name: 'Мобильное прилодение',
+				name: 'Мобильное приложение',
 				planning: 500,
 				design: 0,
 				development: 6000,
