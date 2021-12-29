@@ -135,6 +135,7 @@ const StyledDescription = styled.p`
 	margin: 0;
 	padding: 0;
 	line-height: 160%;
+  text-align: justify;
 
 	@media all and (min-width: ${breakpoints.tablet}) {
 		font-size: 1.5rem;
