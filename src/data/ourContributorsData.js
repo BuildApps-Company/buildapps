@@ -66,7 +66,7 @@ const ua = [
 	},
 	{
 		key: 'ivankolosinskyi',
-		name: 'Іван Колосинський',
+		name: 'Іван Колосінський',
 		position: 'Керівник розробки веб-додатків',
 		img: ivanImg,
 	},
