@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import Marquee from './Marquee';
 import { routes } from '../../utilities/routes';
@@ -6,10 +7,16 @@ import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'gatsby-plugin-react-i18next';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export const PreFooter = () => {
 
   const { t } = useTranslation();
+
+  useEffect(() => {
+    Aos.init({});
+	}, []);
 
 	return (
 		<>

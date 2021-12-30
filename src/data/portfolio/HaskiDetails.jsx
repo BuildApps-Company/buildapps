@@ -458,223 +458,223 @@ export const HaskiRu = () => (
 export const HaskiUa = () => (
 	<ProjectDetailsContainer>
 		<H3>
-      Applications for optimizing work with customers of the Haski company
+      Додатки для оптимізації роботи з клієнтами компанії Haski
 		</H3>
 		<p>
-      User loyalty is a priority for most business people. There is a statement that a satisfied customer is the best service consumer. That’s why it is essential to implement the best aspects of the user experience in the client's products. Apps and web resources should solve the tasks assigned, look neat, and be easy to use. We will talk about such an IT product in this case study.
+      Лояльність користувачів є пріоритетом для більшості бізнесменів. Існує твердження, що задоволений клієнт – найкращий споживач послуг. Тому важливо впровадити найкращі аспекти користувацького досвіду в продукти клієнта. Програми та веб-ресурси мають вирішувати поставлені завдання, виглядати акуратно та бути простими у використанні. Про такий ІТ-продукт ми поговоримо в даному кейс-стаді.
 		</p>
     <ImageWrap>
 			<img class="iphonediscount" src={mainImg} alt="picture1" />
     </ImageWrap>
 
 		<H3>
-      Haski: HR and legacy design issues that we had to fix
+      Хаскі: проблеми з кадрами та застарілим дизайном, які нам довелося виправити
 		</H3>
 		<p>
-      Organic ads worked great since all of our previous clients were happy with the work. Representatives of Haski, an outsourcing service operator, contacted our manager and ordered a project. It turned out to be quite challenging for BuildApps because there were some problems with the confusing data exchange system and the lack of structure and documentation. Before starting, we needed to organize the existing data and then develop apps for convenient management of logistics processes.
+      Органічні оголошення працювали чудово, оскільки всі наші попередні клієнти були задоволені роботою. Представники аутсорсингового оператора Haski зв’язалися з нашим менеджером і замовили проект. Це виявилося досить складним для BuildApps, оскільки були певні проблеми із заплутаною системою обміну даними та відсутністю структури та документації. Перш ніж почати, нам потрібно було впорядкувати наявні дані, а потім розробити додатки для зручного управління логістичними процесами.
 		</p>
     <p>
-      Haski is a leading outsourcing service provider. It has been operating on the market since 2008 and has already firmly established itself in the niche. The company implemented effective personnel management and managed to introduce a structured training of employees, certification of specialists, and scheduled briefings on standards and work methods. The only problem was mediocre software that could not provide the proper level of service for clients and had limited managerial functionality and an inconvenient administrative panel.
+      Haski є провідним постачальником послуг аутсорсингу. Він працює на ринку з 2008 року і вже міцно закріпився в ніші. На підприємстві впроваджено ефективне управління персоналом, вдалося запровадити структуроване навчання працівників, атестацію спеціалістів, планові інструктажі щодо стандартів та методів роботи. Єдиною проблемою було посереднє програмне забезпечення, яке не могло забезпечити належний рівень обслуговування клієнтів і мало обмежені управлінські функції та незручну адміністративну панель.
 		</p>
     <ImageWrap>
 			<img class="iphonediscount" src={detailsImg1} alt="picture3" />
     </ImageWrap>
 
-		<H4>Key tasks that the customer entrusted to us</H4>
+		<H4>Ключові завдання, які замовник довірив нам</H4>
 		<p>
-      The customer decided to scale, so the existing functionality became insufficient. Therefore, it was decided to expand it. Initially, we had little technical documentation and scripts, which made it difficult to precisely understand how to perform the management activities in the app. Communication with clients was also hampered due to the lack of necessary tools. To understand the technical aspects and implement them correctly, we constantly kept in touch with the customer. We were assigned specific tasks:
+      Замовник вирішив масштабувати, тому наявної функціональності стало недостатньо. Тому було вирішено його розширити. Спочатку у нас було мало технічної документації та сценаріїв, через що було важко точно зрозуміти, як виконувати управлінські дії в додатку. Спілкування з клієнтами також ускладнювалося через відсутність необхідних інструментів. Щоб зрозуміти технічні аспекти та правильно їх реалізувати, ми постійно підтримували зв’язок із замовником. Нам поставили конкретні завдання:
 		</p>
 		<ul>
 			<li>
-        Implement a full-fledged IT product with accounts division for three main roles: client, manager, and administrator.
+        Впровадити повноцінний ІТ-продукт із підрозділом облікових записів на три основні ролі: клієнт, менеджер та адміністратор.
 			</li>
 			<li>
-        Develop a unique solution to increase brand awareness.
+        Розробити унікальне рішення для підвищення впізнаваності бренду.
 			</li>
 			<li>
-        Implement functionality for the management apparatus, CRM system, and other tools.
+        Впровадити функціональні можливості для апарату управління, CRM-системи та інших інструментів.
 			</li>
 		</ul>
 		<p>
-    Solving these tasks, we must achieve the following results:
+      Вирішуючи ці завдання, ми повинні досягти наступних результатів:
 		</p>
     <ul>
 			<li>
-        Improve the quality of customer service.
+        Підвищити якість обслуговування клієнтів.
 			</li>
 			<li>
-        Improve user experience.
+        Покращте користувацький досвід.
 			</li>
 			<li>
-        Delineate functionality.
+        Розмежуйте функціональність.
 			</li>
       <li>
-        Link users to a service provider.
+        Зв’яжіть користувачів із постачальником послуг.
 			</li>
 		</ul>
     <p>
-      Having accepted the assignment, we assembled a team to analyze the customer's finished product and plan further actions.
+      Прийнявши завдання, ми зібрали команду для аналізу готового продукту замовника та планування подальших дій.
 		</p>
     <ImageWrap>
       <img class="iphonediscount" src={detailsImg2} alt="picture4" />
     </ImageWrap>
 
-		<H4>4 months deadline and technical problems: rebuilding the database structure and developing software for work</H4>
+		<H4>Термін виконання 4 місяці та технічні проблеми: перебудова структури бази даних та розробка програмного забезпечення для роботи</H4>
 		<p>
-      Having examined the client's solution, we detected a lot of problems to be urgently resolved. The project was built with a tech stack that did not quite match the customer's business objectives, which affected the product’s viability negatively. Here are some points:
+      Вивчивши рішення клієнта, ми виявили багато проблем, які потребують термінового вирішення. Проект був побудований з використанням технологічного стека, який не повністю відповідав бізнес-цілям замовника, що негативно вплинуло на життєздатність продукту. Ось деякі моменти:
 		</p>
     <ul>
 			<li>
-        Poor implementation of data exchange with 1C DB via Odata. The essence of the problem is that routing and the workflow are not optimized and take more resources than they must. 
+        Погана реалізація обміну даними з 1С БД через Odata. Суть проблеми полягає в тому, що маршрутизація і робочий процес не оптимізовані і забирають більше ресурсів, ніж потрібно.
 			</li>
 			<li>
-        Inconsistency of the finished management system with new tasks. The implemented administrative panel needs to be improved or even reworked from scratch.
+        Невідповідність готової системи управління новим завданням. Впроваджену адміністративну панель потрібно покращити або навіть переробити з нуля.
 			</li>
 			<li>
-        Unstructured information coming from the database. After the analysis, we found that some of the information received upon request is irrelevant.
+        Неструктурована інформація, що надходить з бази даних. Після аналізу ми виявили, що деяка інформація, отримана на запит, не має значення.
 			</li>
 			<li>
-        Blurred technical specification. The customer explained the goal but did not know how to achieve it. There was no list of required functions, interaction models, etc.
+        Розмита технічна специфікація. Замовник пояснив мету, але не знав, як її досягти. Не було списку необхідних функцій, моделей взаємодії тощо.
 			</li>
 		</ul>
     <p>
-      After analyzing the current situation, we decided to fix all the shortcomings of the previous system to build a completely new IT product.
+      Проаналізувавши поточну ситуацію, ми вирішили виправити всі недоліки попередньої системи, щоб створити абсолютно новий ІТ-продукт.
 		</p>
 
-		<H4>Brainstorming: Our approach to planning the perfect product</H4>
+		<H4>Мозковий штурм: наш підхід до планування ідеального продукту</H4>
     <p>
-      Faced with a number of challenges, we gathered a team to brainstorm. Having processed dozens of options, we selected the most promising ideas and came up with the concept of the perfect IT product:
+      Зіткнувшись із низкою проблем, ми зібрали команду для мозкового штурму. Опрацювавши десятки варіантів, ми відібрали найперспективніші ідеї та прийшли до концепції ідеального IT-продукту:
 		</p>
     <ul>
 			<li>
-        A mobile app for Android and iOS.
+        Мобільний додаток для Android та iOS.
 			</li>
 			<li>
-        Structured API with the integration of multiple services.
+        Структурований API з інтеграцією кількох сервісів.
 			</li>
 			<li>
-        Built-in functionality for working with the OData protocol.
+        Вбудований функціонал для роботи з протоколом OData.
 			</li>
 			<li>
-        Filter system for sorting employees.
+        Система фільтрації для сортування працівників.
 			</li>
       <li>
-        Modern design with a new interface.
+        Сучасний дизайн з новим інтерфейсом.
 			</li>
       <li>
-        Rest API architecture or in-app base.
+        Архітектура API решти або база в програмі.
 			</li>
 		</ul>
     <p>
-      We believe that all of the above points fit perfectly into the concept and objectives of the project. Having offered this list to the customer, we received approval for its implementation. Having built a roadmap and dividing the process into sprints, we proceeded to the development.
+      Ми вважаємо, що всі вищезазначені моменти ідеально вписуються в концепцію та цілі проекту. Запропонувавши цей перелік замовнику, ми отримали погодження на його впровадження. Побудувавши дорожню карту та розділивши процес на спринти, ми приступили до розробки.
 		</p>
 
-    <H4>4 experts and 4 months of work: how we dealt with the project</H4>
+    <H4>4 експерти і 4 місяці роботи: як ми впоралися з проектом</H4>
     <p>
-    After assessing the complexity of the project, we divided tasks into stages and started working. 4 people were engaged to solve urgent problems:
+      Оцінивши складність проекту, ми розділили завдання на етапи та приступили до роботи. Для вирішення нагальних проблем залучено 4 особи:
 		</p>
     <ul>
 			<li>
-        Involved a 1C expert in assessing the state of the system and design fixes
+        Залучив експерта 1С до оцінки стану системи та виправлень проектування
 			</li>
 			<li>
-        Investigated the tasks and adjusted the functionality, displaying it in the layout graphically.
+        Дослідив завдання та налагодив функціонал, відобразивши його в макеті графічно.
 			</li>
 			<li>
-        Analyzed the text content and corrected it with new information.
+        Проаналізував зміст тексту та виправив його новою інформацією.
 			</li>
 			<li>
-        Split the project into sprints and defined the MVP functionality for testing.
+        Розділіть проект на спринти та визначте функціональність MVP для тестування.
 			</li>
 		</ul>
     <p>
-      After we agreed on the layout with the customer, the team proceeded to development, focusing on the project’s main features. The entire path to the finished IT product took us about four months, during which we did the following:
+      Після того, як ми узгодили макет із замовником, команда приступила до розробки, зосередившись на основних характеристиках проекту. Весь шлях до готового IT-продукту зайняв у нас близько чотирьох місяців, протягом яких ми зробили наступне:
 		</p>
     <ul>
 			<li>
-        Developed a cross-platform mobile app using Xamarin.Forms and C#.
+        Розробив кросплатформний мобільний додаток за допомогою Xamarin.Forms і C#.
 			</li>
 			<li>
-        Implemented 3-level access to the program tools.
+        Реалізовано 3-рівневий доступ до інструментів програми.
 			</li>
 			<li>
-        Connected third-party services via API.
+        Підключені сторонні сервіси через API.
 			</li>
 			<li>
-        Introduced a system of filters to speed up the work of the staff.
+        Запроваджено систему фільтрів для прискорення роботи персоналу.
 			</li>
       <li>
-        Optimized and structured data exchange with 1C.
+        Оптимізований і структурований обмін даними з 1С.
 			</li>
       <li>
-        Increased revenue by attracting new customers and retaining old ones.
+        Збільшення доходу за рахунок залучення нових клієнтів і утримання старих.
 			</li>
 		</ul>
     <p>
-      The workflow turned out to be surprisingly interesting and varied but complex and unusual in technical implementation. During development, we created a new product, transferred old data to a new environment, integrated it with a ready-made database, and ensured the exchange of information between them.
+    Робочий процес виявився напрочуд цікавим і різноманітним, але складним і незвичайним у технічному виконанні. Під час розробки ми створили новий продукт, перенесли старі дані в нове середовище, інтегрували їх з готовою базою даних, забезпечили обмін інформацією між ними.
 		</p>
 
-    <H4>What the customer received after the complete development cycle</H4>
+    <H4>Що отримав замовник після повного циклу розробки</H4>
     <p>
-      Despite the “raw” initial idea, we managed to achieve the result, spending a lot of time and a minimum of BuildApp resources. The customer highly appreciated the quality of the final IT product and became our regular client. Here’s what we got at the release:
+      Незважаючи на «сиру» початкову ідею, нам вдалося досягти результату, витративши багато часу та мінімум ресурсів BuildApp. Замовник високо оцінив якість кінцевого ІТ-продукту і став нашим постійним клієнтом. Ось що ми отримали під час випуску:
 		</p>
     <ul>
 			<li>
-        Apps for two top mobile operating systems.
+        Програми для двох провідних мобільних операційних систем.
 			</li>
 			<li>
-        User-friendly UI and optimized UX.
+        Зручний інтерфейс користувача та оптимізований UX.
 			</li>
 			<li>
-        Three levels of access: client, employee, and manager.
+        Три рівні доступу: клієнт, співробітник і менеджер.
 			</li>
 			<li>
-        Social network features: order notifications and company news.
+        Функції соціальних мереж: повідомлення про замовлення та новини компанії.
 			</li>
       <li>
-        A filter system with customer information.
+        Система фільтрів з інформацією про клієнта.
 			</li>
       <li>
-        Database of employees and personnel.
+        База даних працівників та персоналу.
 			</li>
       <li>
-        Hybrid shift management complex, etc.
+        Гібридний комплекс управління зміною та ін.
 			</li>
 		</ul>
     <p>
-      We implemented all the tasks set by the customer. Based on the priority software model, our specialists made a unique product that compensates for the shortcomings of the old version.
+      Ми виконали всі поставлені замовником завдання. На основі пріоритетної моделі програмного забезпечення наші фахівці створили унікальний продукт, який компенсує недоліки старої версії.
 		</p>
 
-    <H4>How the client’s business performance increased thanks to our product</H4>
+    <H4>Як підвищилася ефективність бізнесу клієнта завдяки нашому продукту</H4>
     <p>
-      The project’s goals were achieved fully, and the customer received the necessary IT product, which revived communication with customers and the software’s functionality. Thus, Haski got:
+      Цілі проекту були досягнуті повністю, а замовник отримав необхідний ІТ-продукт, який пожвавив комунікацію із замовниками та функціональність програмного забезпечення. Таким чином, Хаскі отримав:
 		</p>
     <ul>
 			<li>
-        Better user interaction.
+        Краща взаємодія з користувачем.
 			</li>
 			<li>
-        Average check increased by 20%.
+        Середній чек збільшився на 20%.
 			</li>
 			<li>
-        The number of regular customers and the influx of new ones.
+        Кількість постійних клієнтів і приплив нових.
 			</li>
 			<li>
-        Visual and operational components of the business.
+        Візуальні та операційні складові бізнесу.
 			</li>
       <li>
-        Application security and interface.
+        Безпека програми та інтерфейс.
 			</li>
       <li>
-        High positions on the market of outsourcing service operators.
+        Високі позиції на ринку операторів аутсорсингових послуг.
 			</li>
 		</ul>
     <p>
-      The project is still under development but has already been completed on 6/9. We are preparing to work on the next phase of the product for the client.
+      Проект все ще знаходиться на стадії розробки, але вже був завершений 6/9. Ми готуємось до роботи над наступною фазою продукту для клієнта.
 		</p>
 
     <H3>
-      Do you want to implement your business tool for leading mobile platforms? Contact the BuildApps manager for a consultation!
+      Бажаєте впровадити свій бізнес-інструмент для провідних мобільних платформ? Зв’яжіться з менеджером BuildApps для консультації!
     </H3>
 	</ProjectDetailsContainer>
 );
