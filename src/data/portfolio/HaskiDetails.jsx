@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { H3, H4 } from '../../styles/styled-headers';
-import mainImg from '../../../static/images/projects/iphonediscount/main.png';
-import detailsImg1 from '../../../static/images/projects/iphonediscount/details1.png';
-import detailsImg2 from '../../../static/images/projects/iphonediscount/details2.png';
+import mainImg from '../../../static/images/projects/haski/main.png';
+import detailsImg1 from '../../../static/images/projects/haski/details1.png';
+import detailsImg2 from '../../../static/images/projects/haski/details2.png';
 import { ProjectDetailsContainer } from '../../styles/portfolio';
 
 export const HaskiEn = () => (
