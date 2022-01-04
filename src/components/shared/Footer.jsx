@@ -12,22 +12,21 @@ import plusIcon from '../../../static/images/ic_plus.svg';
 import minusIcon from '../../../static/images/ic_minus.svg';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'gatsby-plugin-react-i18next';
+import { LanguageSelector } from './LanguageSelector';
 
 export const Footer = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toogleList = () => setIsOpen(prevState => !prevState);
 
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	return (
 		<StyledFooter>
 			<FlexContainerDesktop>
 				<ListTitleWrap>
-					<ListTitle>
-						{t('footer.description')}
-					</ListTitle>
-
+					<ListTitle>{t('footer.description')}</ListTitle>
 					<SocialMediaList />
+					<LanguageSelector />
 				</ListTitleWrap>
 				<OurTeamList />
 				<ContactUsList />
@@ -38,8 +37,8 @@ export const Footer = () => {
 			<FlexContainerMob>
 				<OurTeamWrapMob>
 					<ListTitleWithUnderline>
-            {t('footer.ourTeamTitle')}
-          </ListTitleWithUnderline>
+						{t('footer.ourTeamTitle')}
+					</ListTitleWithUnderline>
 					{isOpen ? (
 						<img src={minusIcon} alt="Minus Icon" onClick={toogleList} />
 					) : (
@@ -48,8 +47,8 @@ export const Footer = () => {
 				</OurTeamWrapMob>
 				{isOpen && <OurTeamList />}
 				<StyledLinkTitle to={routes.contactForm}>
-          {t('footer.contactUsTitle')}
-        </StyledLinkTitle>
+					{t('footer.contactUsTitle')}
+				</StyledLinkTitle>
 
 				<SocialMediaList />
 			</FlexContainerMob>

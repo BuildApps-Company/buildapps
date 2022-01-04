@@ -35,7 +35,7 @@ export function Toolbar({ isWhite }) {
 				active={isOpen}
 			/>
 
-			{isOpen && <BurgerMenu toogleList={toogleList} active={isOpen} />}
+			{isOpen && <BurgerMenu toogleList={toogleList} />}
 		</StyledHeader>
 	);
 }
