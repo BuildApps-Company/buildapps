@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 const trackId = process.env.googleTrackId;
-const siteUrl = 'https://buildapps.pro/' || `http://localhost:8000`;
+const siteUrl = 'https://buildapps.pro' || `http://localhost:8000`;
 
 module.exports = {
 	siteMetadata: {
@@ -27,6 +27,7 @@ module.exports = {
 			options: {
 				localeJsonSourceName: `locale`,
 				languages: [`en`, `ua`, `ru`],
+				redirect: false,
 				defaultLanguage: `en`,
 				siteUrl,
 				i18nextOptions: {
