@@ -22,8 +22,6 @@ export const ProjectsList = ({ selectedCategories }) => {
 			), [portfolio, selectedCategories]
 	);
 
-  console.log(portfolio);
-
   useEffect(() => {
     Aos.init({});
 	}, []);
