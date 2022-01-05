@@ -13,7 +13,7 @@ import iphoneLong from '../../../static/images/portfolio/iphone-discount-long.pn
 import cardanoLogo from '../../../static/images/portfolio/CW_logo.jpg';
 import cardanoImg from '../../../static/images/portfolio/CW_long.png';
 import haskiLogo from '../../../static/images/portfolio/haski_logo.png';
-import haskiImg from '../../../static/images/portfolio/haski_long.jpg';
+import haskiImg from '../../../static/images/portfolio/haski_long.png';
 import { PpfDetailsEn, PpfDetailsRu, PpfDetailsUa } from './PpfDetails';
 import { SushiDetailsEn, SushiDetailsRu, SushiDetailsUa } from './SushiDetails';
 import { SpbPropertyEn, SpbPropertyRu, SpbPropertyUa } from './SpbProperty';

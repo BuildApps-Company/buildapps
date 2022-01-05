@@ -2,9 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { H3, H4 } from '../../styles/styled-headers';
-import mainImg from '../../../static/images/projects/haski/main.png';
-import detailsImg1 from '../../../static/images/projects/haski/details1.png';
-import detailsImg2 from '../../../static/images/projects/haski/details2.png';
+import worker1 from '../../../static/images/projects/haski/1_Worker.png';
+import worker2 from '../../../static/images/projects/haski/1_Worker_News.png';
+import worker3 from '../../../static/images/projects/haski/1_Worker_salary.png';
+import orders1 from '../../../static/images/projects/haski/2_orders.png';
+import orders2 from '../../../static/images/projects/haski/2_orders_details.png';
+import client1 from '../../../static/images/projects/haski/3_Client_details.png';
+import client2 from '../../../static/images/projects/haski/3_Client_objects.png';
+import pm1 from '../../../static/images/projects/haski/4_1_PM_Clients.png';
+import pm2 from '../../../static/images/projects/haski/4_PM_Profile.png';
 import { ProjectDetailsContainer } from '../../styles/portfolio';
 
 export const HaskiEn = () => (
@@ -16,7 +22,8 @@ export const HaskiEn = () => (
       User loyalty is a priority for most business people. There is a statement that a satisfied customer is the best service consumer. That’s why it is essential to implement the best aspects of the user experience in the client's products. Apps and web resources should solve the tasks assigned, look neat, and be easy to use. We will talk about such an IT product in this case study.
 		</p>
     <ImageWrap>
-			<img class="iphonediscount" src={mainImg} alt="picture1" />
+			<img class="haski" src={worker1} alt="picture1" />
+      <img class="haski" src={worker2} alt="picture2" />
     </ImageWrap>
 
 		<H3>
@@ -29,7 +36,8 @@ export const HaskiEn = () => (
       Haski is a leading outsourcing service provider. It has been operating on the market since 2008 and has already firmly established itself in the niche. The company implemented effective personnel management and managed to introduce a structured training of employees, certification of specialists, and scheduled briefings on standards and work methods. The only problem was mediocre software that could not provide the proper level of service for clients and had limited managerial functionality and an inconvenient administrative panel.
 		</p>
     <ImageWrap>
-			<img class="iphonediscount" src={detailsImg1} alt="picture3" />
+			<img class="haski" src={worker3} alt="picture3" />
+      <img class="haski" src={worker1} alt="picture4" />
     </ImageWrap>
 
 		<H4>Key tasks that the customer entrusted to us</H4>
@@ -68,7 +76,8 @@ export const HaskiEn = () => (
       Having accepted the assignment, we assembled a team to analyze the customer's finished product and plan further actions.
 		</p>
     <ImageWrap>
-      <img class="iphonediscount" src={detailsImg2} alt="picture4" />
+      <img class="haski" src={orders1} alt="picture5" />
+      <img class="haski" src={orders2} alt="picture6" />
     </ImageWrap>
 
 		<H4>4 months deadline and technical problems: rebuilding the database structure and developing software for work</H4>
@@ -167,6 +176,10 @@ export const HaskiEn = () => (
 		</p>
 
     <H4>What the customer received after the complete development cycle</H4>
+      <ImageWrap>
+        <img class="haski" src={client1} alt="picture7" />
+        <img class="haski" src={client2} alt="picture8" />
+      </ImageWrap>
     <p>
       Despite the “raw” initial idea, we managed to achieve the result, spending a lot of time and a minimum of BuildApp resources. The customer highly appreciated the quality of the final IT product and became our regular client. Here’s what we got at the release:
 		</p>
@@ -196,6 +209,11 @@ export const HaskiEn = () => (
     <p>
       We implemented all the tasks set by the customer. Based on the priority software model, our specialists made a unique product that compensates for the shortcomings of the old version.
 		</p>
+
+      <ImageWrap>
+        <img class="haski" src={pm1} alt="picture7" />
+        <img class="haski" src={pm2} alt="picture8" />
+      </ImageWrap>
 
     <H4>How the client’s business performance increased thanks to our product</H4>
     <p>
@@ -240,7 +258,8 @@ export const HaskiRu = () => (
       Лояльность пользователей является приоритетом для большинства представителей бизнеса. Есть выражение, что довольный клиент — лучший потребитель услуг. Именно поэтому важно реализовать лучшие аспекты пользовательского опыта в продуктах клиента. Приложения и веб-ресурсы должны справляться с возложенными на них задачами, опрятно выглядеть и быть простыми в освоении. Именно о таком IT-продукте мы расскажем в данном кейсе.
 		</p>
     <ImageWrap>
-			<img class="iphonediscount" src={mainImg} alt="picture1" />
+			<img class="haski" src={worker1} alt="picture1" />
+      <img class="haski" src={worker2} alt="picture2" />
     </ImageWrap>
 
 		<H3>
@@ -253,7 +272,8 @@ export const HaskiRu = () => (
       Хаски — ведущий оператор услуг аутсорсинга. На нашем рынке он работает с 2008 года и уже прочно укрепился в своей нише. Компания внедрила в свой бизнес эффективное управление персоналом, благодаря которому смогла: ввести структурированный процесс обучения сотрудников, аттестацию специалистов и плановые брифинги по стандартам и методикам работы. Единственная проблема группы — довольно посредственное ПО, которое не могло обеспечить должный уровень сервиса для клиентов, имело ограниченный менеджерский функционал и административную панель.
 		</p>
     <ImageWrap>
-			<img class="iphonediscount" src={detailsImg1} alt="picture3" />
+      <img class="haski" src={worker3} alt="picture3" />
+      <img class="haski" src={worker1} alt="picture4" />
     </ImageWrap>
 
 		<H4>Ключевые задачи, которые поручил нам заказчик</H4>
@@ -292,7 +312,8 @@ export const HaskiRu = () => (
       Приняв задание, мы сформировали команду для анализа готового продукта заказчика и планирования дальнейших действий.
 		</p>
     <ImageWrap>
-      <img class="iphonediscount" src={detailsImg2} alt="picture4" />
+      <img class="haski" src={orders1} alt="picture5" />
+      <img class="haski" src={orders2} alt="picture6" />
     </ImageWrap>
 
 		<H4>Срок в 4 месяца и технические проблемы: перестраиваем структуру БД и разрабатываем по для работы</H4>
@@ -391,6 +412,10 @@ export const HaskiRu = () => (
 		</p>
 
     <H4>Что получил заказчик после полного цикла разработки</H4>
+      <ImageWrap>
+        <img class="haski" src={client1} alt="picture7" />
+        <img class="haski" src={client2} alt="picture8" />
+      </ImageWrap>
     <p>
       Несмотря на изначальную сырость идеи мы смогли добиться желаемого результата, потратив на это много времени и минимум ресурсов BuildApp. Заказчик высоко оценил качество финального IT-продукта и стал нашим постоянным клиентом. На релизе мы получили:
 		</p>
@@ -420,6 +445,11 @@ export const HaskiRu = () => (
     <p>
       Мы реализовали все задачи, поставленные заказчиком. Отталкиваясь от приоритетной модели ПО, наши специалисты сделали уникальный продукт, компенсирующий недочеты старой версии.
 		</p>
+
+    <ImageWrap>
+      <img class="haski" src={pm1} alt="picture7" />
+      <img class="haski" src={pm2} alt="picture8" />
+    </ImageWrap>
 
     <H4>Как повысилась эффективность работы благодаря нашему продукту</H4>
     <p>
@@ -464,7 +494,8 @@ export const HaskiUa = () => (
       Лояльність користувачів є пріоритетом для більшості бізнесменів. Існує твердження, що задоволений клієнт – найкращий споживач послуг. Тому важливо впровадити найкращі аспекти користувацького досвіду в продукти клієнта. Програми та веб-ресурси мають вирішувати поставлені завдання, виглядати акуратно та бути простими у використанні. Про такий ІТ-продукт ми поговоримо в даному кейс-стаді.
 		</p>
     <ImageWrap>
-			<img class="iphonediscount" src={mainImg} alt="picture1" />
+			<img class="haski" src={worker1} alt="picture1" />
+      <img class="haski" src={worker2} alt="picture2" />
     </ImageWrap>
 
 		<H3>
@@ -477,7 +508,8 @@ export const HaskiUa = () => (
       Haski є провідним постачальником послуг аутсорсингу. Він працює на ринку з 2008 року і вже міцно закріпився в ніші. На підприємстві впроваджено ефективне управління персоналом, вдалося запровадити структуроване навчання працівників, атестацію спеціалістів, планові інструктажі щодо стандартів та методів роботи. Єдиною проблемою було посереднє програмне забезпечення, яке не могло забезпечити належний рівень обслуговування клієнтів і мало обмежені управлінські функції та незручну адміністративну панель.
 		</p>
     <ImageWrap>
-			<img class="iphonediscount" src={detailsImg1} alt="picture3" />
+      <img class="haski" src={worker3} alt="picture3" />
+      <img class="haski" src={worker1} alt="picture4" />
     </ImageWrap>
 
 		<H4>Ключові завдання, які замовник довірив нам</H4>
@@ -516,7 +548,8 @@ export const HaskiUa = () => (
       Прийнявши завдання, ми зібрали команду для аналізу готового продукту замовника та планування подальших дій.
 		</p>
     <ImageWrap>
-      <img class="iphonediscount" src={detailsImg2} alt="picture4" />
+      <img class="haski" src={orders1} alt="picture5" />
+      <img class="haski" src={orders2} alt="picture6" />
     </ImageWrap>
 
 		<H4>Термін виконання 4 місяці та технічні проблеми: перебудова структури бази даних та розробка програмного забезпечення для роботи</H4>
@@ -615,6 +648,10 @@ export const HaskiUa = () => (
 		</p>
 
     <H4>Що отримав замовник після повного циклу розробки</H4>
+    <ImageWrap>
+      <img class="haski" src={client1} alt="picture7" />
+      <img class="haski" src={client2} alt="picture8" />
+    </ImageWrap>
     <p>
       Незважаючи на «сиру» початкову ідею, нам вдалося досягти результату, витративши багато часу та мінімум ресурсів BuildApp. Замовник високо оцінив якість кінцевого ІТ-продукту і став нашим постійним клієнтом. Ось що ми отримали під час релізу:
 		</p>
@@ -644,6 +681,11 @@ export const HaskiUa = () => (
     <p>
       Ми виконали всі поставлені замовником завдання. На основі пріоритетної моделі програмного забезпечення наші фахівці створили унікальний продукт, який компенсує недоліки старої версії.
 		</p>
+
+    <ImageWrap>
+      <img class="haski" src={pm1} alt="picture7" />
+      <img class="haski" src={pm2} alt="picture8" />
+    </ImageWrap>
 
     <H4>Як підвищилася ефективність бізнесу клієнта завдяки нашому продукту</H4>
     <p>
@@ -682,7 +724,6 @@ export const HaskiUa = () => (
 const ImageWrap = styled.div`
 	display: flex;
 	justify-content: center;
-	flex-direction: column;
 	overflow: hidden;
 	align-items: center;
 `;
