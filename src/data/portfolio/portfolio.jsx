@@ -12,13 +12,15 @@ import iphone from '../../../static/images/portfolio/iphone-discount.png';
 import iphoneLong from '../../../static/images/portfolio/iphone-discount-long.png';
 import cardanoLogo from '../../../static/images/portfolio/CW_logo.jpg';
 import cardanoImg from '../../../static/images/portfolio/CW_long.png';
+import haskiLogo from '../../../static/images/portfolio/haski_logo.png';
+import haskiImg from '../../../static/images/portfolio/haski_long.png';
 import { PpfDetailsEn, PpfDetailsRu, PpfDetailsUa } from './PpfDetails';
 import { SushiDetailsEn, SushiDetailsRu, SushiDetailsUa } from './SushiDetails';
 import { SpbPropertyEn, SpbPropertyRu, SpbPropertyUa } from './SpbProperty';
 import { AskodDetailsEn, AskodDetailsRu, AskodDetailsUa } from './AskodDetails';
 import { IPhoneDiscountEn, IPhoneDiscountRu, IPhoneDiscountUa } from './IPhoneDiscountDetails';
 import { CardanoWaterEn, CardanoWaterRu, CardanoWaterUa } from './CardanoWaterDetails';
-
+import { HaskiEn, HaskiRu, HaskiUa } from './HaskiDetails';
 
 export const en = {
 	ppf: {
@@ -144,6 +146,24 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
       web: 'https://cardano-water.io',
       appStore: null,
       playMarket: null,
+    },
+	},
+  haski: {
+		id: 'haski',
+		background:
+			`linear-gradient(90deg,#f5abd7,#59c4cd);`,
+		image: haskiLogo,
+		longImage: haskiImg,
+		title: () => <SpanHaski>HASKI</SpanHaski>,
+		pageTitle: 'Haski',
+		description: `Haski is a leading outsourcing service provider. It has been operating on the market since 2008 and has already firmly established itself in the niche. The customer decided to scale, so the existing functionality became insufficient. Having accepted the assignment, we assembled a team to analyze the customer's finished product and plan further actions. The workflow turned out to be surprisingly interesting and varied but complex and unusual in technical implementation. During development, we created a new product, transferred old data to a new environment, integrated it with a ready-made database, and ensured the exchange of information between them.`,
+		responsibility: ['Application','Design'],
+		fullDescription: `Haski is a leading outsourcing service provider. It has been operating on the market since 2008 and has already firmly established itself in the niche. The customer decided to scale, so the existing functionality became insufficient. Having accepted the assignment, we assembled a team to analyze the customer's finished product and plan further actions. The workflow turned out to be surprisingly interesting and varied but complex and unusual in technical implementation. During development, we created a new product, transferred old data to a new environment, integrated it with a ready-made database, and ensured the exchange of information between them.`,
+		pageContent: HaskiEn,
+    links: {
+      web: 'https://haski.ua',
+      appStore: 'https://haski.ua',
+      playMarket: 'https://haski.ua',
     },
 	},
 };
@@ -272,6 +292,24 @@ export const ru = {
       playMarket: null,
     },
 	},
+  haski: {
+		id: 'haski',
+		background:
+			`linear-gradient(90deg,#f5abd7,#59c4cd);`,
+    image: haskiLogo,
+    longImage: haskiImg,
+		title: () => <SpanHaski>HASKI</SpanHaski>,
+		pageTitle: 'Haski',
+		description: `Haski - ведущий поставщик аутсорсинговых услуг. Он работает на рынке с 2008 года и уже прочно занял свою нишу. Заказчик принял решение о масштабировании, поэтому существующей функциональности стало недостаточно. Приняв задание, мы собрали команду для анализа готового продукта заказчика и планирования дальнейших действий. Рабочий процесс оказался на удивление интересным и разнообразным, но сложным и необычным в технической реализации. В процессе разработки мы создали новый продукт, перенесли старые данные в новую среду, интегрировали с готовой базой данных и обеспечили обмен информацией между ними.`,
+		responsibility: ['Application','Design'],
+		fullDescription: `Haski - ведущий поставщик аутсорсинговых услуг. Он работает на рынке с 2008 года и уже прочно занял свою нишу. Заказчик принял решение о масштабировании, поэтому существующей функциональности стало недостаточно. Приняв задание, мы собрали команду для анализа готового продукта заказчика и планирования дальнейших действий. Рабочий процесс оказался на удивление интересным и разнообразным, но сложным и необычным в технической реализации. В процессе разработки мы создали новый продукт, перенесли старые данные в новую среду, интегрировали с готовой базой данных и обеспечили обмен информацией между ними.`,
+		pageContent: HaskiRu,
+    links: {
+      web: 'https://haski.ua',
+      appStore: 'https://haski.ua',
+      playMarket: 'https://haski.ua',
+    },
+	},
 };
 
 export const ua = {
@@ -389,7 +427,7 @@ export const ua = {
 		title: () => <>Cardano <SpanCardano> Water</SpanCardano></>,
 		pageTitle: 'Cardano Water',
 		description: `Cardano-Water - мультиплатформенна компанія, що веде діяльність у кількох напрямках бізнесу. У своєму новому проекті вона хотіла реалізувати не лише блокчейн технологію та NFT-колекції, а й привернути увагу громадськості до глобальних проблем з питною водою. Власне, ідея і будується навколо благодійних відрахувань з кожного проданого токену на потреби населення країн третього ешелону.`,
-		responsibility: ['web'],
+		responsibility: ['Web'],
 		fullDescription: `Зараз як ніколи актуальною є проблема нестачі чистої питної води в деяких слаборозвинених країнах. Всесвітні організації просувають ідею її економії та дбайливого ставлення до цінного природного ресурсу, але водночас сидять склавши руки, не займаючись прямим вирішенням цієї несправедливості. На відміну від них, є компанії, які так чи інакше допомагають населенню, частково інвестуючи комісійні відрахування на потреби малозабезпечених людей. У даному кейсі ви дізнаєтеся про одного з подібних героїв, а саме про компанію Cardano-Water.`,
 		pageContent: CardanoWaterUa,
     links: {
@@ -398,10 +436,32 @@ export const ua = {
       playMarket: null,
     },
 	},
+  haski: {
+		id: 'haski',
+		background:
+			`linear-gradient(90deg,#f5abd7,#59c4cd);`,
+    image: haskiLogo,
+    longImage: haskiImg,
+		title: () => <SpanHaski>HASKI</SpanHaski>,
+		pageTitle: 'Haski',
+		description: `Haski є провідним постачальником послуг аутсорсингу. Він працює на ринку з 2008 року і вже міцно закріпився в ніші. Замовник вирішив масштабувати, тому наявної функціональності стало недостатньо. Прийнявши завдання, ми зібрали команду для аналізу готового продукту замовника та планування подальших дій. Робочий процес виявився напрочуд цікавим і різноманітним, але складним і незвичайним у технічному виконанні. Під час розробки ми створили новий продукт, перенесли старі дані в нове середовище, інтегрували їх з готовою базою даних, забезпечили обмін інформацією між ними.`,
+		responsibility: ['Application','Design'],
+		fullDescription: `Haski є провідним постачальником послуг аутсорсингу. Він працює на ринку з 2008 року і вже міцно закріпився в ніші. Замовник вирішив масштабувати, тому наявної функціональності стало недостатньо. Прийнявши завдання, ми зібрали команду для аналізу готового продукту замовника та планування подальших дій. Робочий процес виявився напрочуд цікавим і різноманітним, але складним і незвичайним у технічному виконанні. Під час розробки ми створили новий продукт, перенесли старі дані в нове середовище, інтегрували їх з готовою базою даних, забезпечили обмін інформацією між ними.`,
+		pageContent: HaskiUa,
+    links: {
+      web: 'https://haski.ua',
+      appStore: 'https://haski.ua',
+      playMarket: 'https://haski.ua',
+    },
+	},
 };
 
+const SpanHaski = styled.span`
+	color: #00a3e3;
+`;
+
 const SpanCardano = styled.span`
-	color: ##35258d;
+	color: #35258d;
 `;
 
 const SpanIphoneDiscount = styled.span`
