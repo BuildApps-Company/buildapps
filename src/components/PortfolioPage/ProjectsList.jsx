@@ -19,8 +19,10 @@ export const ProjectsList = ({ selectedCategories }) => {
 					selectedCategories.some(category =>
 						x[1].responsibility.some(res => res === category)
 					)
-			), [selectedCategories]
+			), [portfolio, selectedCategories]
 	);
+
+  console.log(portfolio);
 
   useEffect(() => {
     Aos.init({});
