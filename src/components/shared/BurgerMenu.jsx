@@ -54,7 +54,7 @@ export function BurgerMenu({ toogleList }) {
 			<BurgerMenuWrap>
 				<BurgerWrapDesktop>
 					<BurgerTitle>{t('burgerMenu.question')}</BurgerTitle>
-					<ContactUsLink href={routes.contactForm} target="_blank">
+					<ContactUsLink to={routes.contactForm} target="_blank">
             {t('burgerMenu.contactUsButton')}
 					</ContactUsLink>
 				</BurgerWrapDesktop>
