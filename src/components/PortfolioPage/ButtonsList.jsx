@@ -37,7 +37,7 @@ const StyledLi = styled.li`
 	display: block;
 	border-radius: 4px;
 	white-space: nowrap;
-	padding: 12px 16px;
+	padding: 16px 16px 12px;
 	font-weight: 700;
 	line-height: 160%;
 	text-transform: uppercase;

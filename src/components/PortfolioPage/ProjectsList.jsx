@@ -11,17 +11,13 @@ import 'aos/dist/aos.css';
 
 export const ProjectsList = ({ selectedCategories }) => {
 	const portfolio = usePortfolio();
-	const projects = useMemo(
-		() =>
-			Object.entries(portfolio).filter(
+	const projects = Object.entries(portfolio).filter(
 				x =>
 					selectedCategories.includes(allProjects) ||
 					selectedCategories.some(category =>
 						x[1].responsibility.some(res => res === category)
 					)
-			),
-		[portfolio]
-	);
+			);
 
   useEffect(() => {
     Aos.init({});
