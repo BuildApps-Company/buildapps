@@ -19,7 +19,7 @@ export const ProjectsList = ({ selectedCategories }) => {
 					selectedCategories.some(category =>
 						x[1].responsibility.some(res => res === category)
 					)
-			),
+			), [selectedCategories]
 	);
 
   useEffect(() => {
