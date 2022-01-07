@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useI18next } from 'gatsby-plugin-react-i18next';
 import { useContactInformation, useSocialMediaListData } from '../../data';
 
-export function BurgerMenu({ toogleList }) {
+export function BurgerMenu({ toogleList, isOpen }) {
 	const { languages, changeLanguage, language, originalPath } = useI18next();
 	const socialMediaListData = useSocialMediaListData();
 	const { email } = useContactInformation();
@@ -21,7 +21,13 @@ export function BurgerMenu({ toogleList }) {
   const { t } = useTranslation();
 
 	return (
-		<StyledBurgerMenu>
+		<StyledBurgerMenu
+      style={
+        isOpen
+        ? {transform: "translateY(0%)"}
+        : {transform: "translateY(-100%)"}
+      }
+    >
 			<StyledBurgerHeader>
 				<Link to={routes.home}>
 					<Logo
@@ -83,7 +89,7 @@ export function BurgerMenu({ toogleList }) {
 					</SocialLink>
 				))}
 			</SocialLinksWrap>
-			<GlobalStyle></GlobalStyle>
+			<GlobalStyle isOpen={isOpen}></GlobalStyle>
 		</StyledBurgerMenu>
 	);
 }
@@ -158,9 +164,10 @@ const BurgerWrapDesktop = styled.div`
 
 const GlobalStyle = createGlobalStyle`
   body {
-   overflow:hidden;
+    overflow: ${props => (props.isOpen ? 'hidden' : 'auto')};
   }
 `;
+
 const StyledBurgerMenu = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -171,6 +178,7 @@ const StyledBurgerMenu = styled.div`
 	width: 100%;
 	height: 100%;
 	background: #110322;
+  transition: transform 0.4s;
 `;
 
 const StyledBurgerHeader = styled.div`
