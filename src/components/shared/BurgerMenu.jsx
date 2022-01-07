@@ -158,7 +158,6 @@ const BurgerWrapDesktop = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
-		margin-right: 6%;
 	}
 `;
 
@@ -188,7 +187,7 @@ const StyledBurgerHeader = styled.div`
 	padding: 4px 6%;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		padding: 16px 6%;
+		padding: 16px 96px;
 	}
 `;
 
@@ -233,14 +232,18 @@ const LanguagesWrap = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	padding: 0 6%;
+	padding: 0 8%;
+
+	@media all and (min-width: ${breakpoints.notebook}) {
+		padding: 16px 115px;
+	}
 `;
 
 const BurgerMenuWrap = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 0 11%;
-	margin-top: auto;
+	margin-top: 15vh;
 
 	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
 		flex-direction: column;
