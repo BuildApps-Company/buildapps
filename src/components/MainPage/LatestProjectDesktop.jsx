@@ -121,7 +121,8 @@ const StyledButton = styled(Link)`
 	display: flex;
 	align-items: center;
 	font-size: 1em;
-	padding: 8px 20px;
+  font-weight: 600;
+	padding: 10px 20px 8px;
 	margin-top: 32px;
 	position: relative;
 	text-transform: uppercase;
@@ -226,6 +227,7 @@ const StyledLink = styled(Link)`
 		display: block;
 		opacity: 0.75;
 		font-size: 1.5rem;
+    font-weight: 600;
 		line-height: 160%;
 		text-transform: uppercase;
 		text-decoration: none;

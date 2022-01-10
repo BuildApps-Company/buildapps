@@ -77,7 +77,7 @@ Integration with third-party services to obtain more complete information about 
 				Petersburg <SpanSpb>real estate</SpanSpb>
 			</>
 		),
-		description: `Mobile client for finding an apartment in residential complex in St. Petersburg and Moscow. The system allows you to book apartments, make pre-orders and find apartments at competitive prices`,
+		description: `Mobile client for finding an apartment in residential complex in St. Petersburg and Moscow. The system allows you to book apartments, make pre-orders and find apartments at competitive prices.`,
 		responsibility: ['Mobile'],
 		fullDescription: `Hundreds of people regularly search for apartments, conclude lease agreements with realtors, buy new properties or sell old ones. The growing demand and the accelerated pace of life leave people with less and less time to personally solve such problems.
 Who would be asked more often for help in these matters? To someone who can solve them not only qualitatively, but also faster than others. A real estate mobile app will give your business a competitive advantage.
@@ -102,7 +102,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 			</>
 		),
 		pageTitle: 'ASKOD Online',
-		description: `ASKOD Online service a is designed to automate the processes of document circulation between legal entities and individuals and provides review, approval, signing, sending, receiving and storing documents in a cloud environment`,
+		description: `ASKOD Online service is designed to automate the processes of document circulation between legal entities and individuals and provides review, approval, signing, sending, receiving and storing documents in a cloud environment.`,
 		responsibility: ['Design'],
 		fullDescription: `Askod is an online electronic document management system that allows you to organize work with electronic documents (creation, modification, search), as well as interaction between employees (transfer of documents, issuing tasks, sending notifications, etc.). Also, such a system is called EDMS (Electronic Document Management Systems).`,
 		pageContent: AskodDetailsEn,
@@ -162,8 +162,8 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 		pageContent: HaskiEn,
     links: {
       web: 'https://haski.ua',
-      appStore: 'https://haski.ua',
-      playMarket: 'https://haski.ua',
+      appStore: null,
+      playMarket: null,
     },
 	},
 };
@@ -365,7 +365,7 @@ export const ua = {
 				Petersburg <SpanSpb>real estate</SpanSpb>
 			</>
 		),
-		description: `Мобільний додаток для пошуку квартири в ЖК в Санкт-Петербурзі та Москві. Система дозволяє бронювати квартири, робити попередні замовлення та знаходити квартири за вигідними цінами`,
+		description: `Мобільний додаток для пошуку квартири в ЖК в Санкт-Петербурзі та Москві. Система дозволяє бронювати квартири, робити попередні замовлення та знаходити квартири за вигідними цінами.`,
 		responsibility: ['Mobile'],
 		fullDescription: `Сотні людей регулярно шукають квартири, укладають договори оренди з ріелторами, купують нову нерухомість або продають стару. Зростаючий попит і прискорений темп життя залишають у людей все менше часу на особисте вирішення подібних проблем.
     До кого частіше звертатимуться за допомогою в цих питаннях? До тих, хто може вирішити їх не тільки якісно, а й швидше за інших. Мобільний додаток для нерухомості дасть вашому бізнесу конкурентну перевагу.
