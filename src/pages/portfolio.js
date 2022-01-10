@@ -23,7 +23,7 @@ export default function PortfolioPage() {
 		let newCategories = [];
 		const index = selectedCategories.indexOf(newCategory);
 		if (index < 0) {
-			newCategories = [...selectedCategories, newCategory];
+			newCategories = [newCategory];
 		} else {
 			newCategories = [...selectedCategories];
 			newCategories.splice(index, 1);
