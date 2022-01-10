@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import { usePortfolio } from '../../data';
-import { allProjects } from '../../types/projects';
+import { breakpoints } from '../../styles/breakpoints';
 import { useTranslation } from 'react-i18next';
 
 export const ButtonsList = ({ selectedCategories, onSelectCategory }) => {
@@ -34,18 +34,24 @@ export const ButtonsList = ({ selectedCategories, onSelectCategory }) => {
 };
 
 const StyledLi = styled.li`
-	margin-right: 16px;
-	display: block;
+  display: block;
+	margin-right: 8px;
 	border-radius: 4px;
 	white-space: nowrap;
-	padding: 16px 16px 12px;
+	padding: 12px 10px 8px;
 	font-weight: 700;
-	line-height: 160%;
+	line-height: 120%;
 	text-transform: uppercase;
 	background-color: transparent;
 	border: 1px solid #d9dbe4;
 	word-wrap: break-word;
 	cursor: pointer;
+
+  @media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
+    padding: 16px 16px 12px;
+    font-weight: 700;
+    line-height: 160%;
+	}
 
 	${({ selected }) =>
 		selected &&

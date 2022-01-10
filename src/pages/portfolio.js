@@ -106,6 +106,7 @@ const AboutPage = styled.p`
 `;
 
 const ContainerWrap = styled(Container)`
+  overflow: hidden;
 	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
 		padding-left: 56px;
 		padding-right: 56px;
