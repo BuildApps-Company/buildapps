@@ -47,7 +47,7 @@ const StyledLi = styled.li`
 	word-wrap: break-word;
 	cursor: pointer;
 
-  @media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
+  @media all and (min-width: ${breakpoints.phone}) {
     padding: 16px 16px 12px;
     font-weight: 700;
     line-height: 160%;
