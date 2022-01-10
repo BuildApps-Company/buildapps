@@ -24,7 +24,7 @@ export function BurgerMenu({ toogleList, isOpen }) {
 		<StyledBurgerMenu
       style={
         isOpen
-        ? {transform: "translateY(0%)", visibility: "visible"}
+        ? {transform: "translateY(0%)"}
         : {transform: "translateY(-100%)"}
       }
     >
@@ -177,7 +177,6 @@ const StyledBurgerMenu = styled.div`
 	width: 100%;
 	height: 100%;
 	background: #110322;
-  visibility: hidden;
   transition: transform 0.4s;
 `;
 
