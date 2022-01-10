@@ -25,7 +25,7 @@ export function BurgerMenu({ toogleList, isOpen }) {
       style={
         isOpen
         ? {transform: "translateY(0%)"}
-        : {transform: "translateY(-100%)"}
+        : {transform: "translateY(-130%)"}
       }
     >
 			<StyledBurgerHeader>
@@ -98,11 +98,11 @@ const WrapDesktop = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: flex;
-		justify-content: space-between;
 		margin-top: 48px;
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
 		margin-top: 0px;
+    box-sizing: content-box;
 	}
 `;
 const OurTeamListDesktop = styled(OurTeamList)`
