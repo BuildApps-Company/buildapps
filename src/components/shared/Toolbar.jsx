@@ -35,7 +35,7 @@ export function Toolbar({ isWhite }) {
 				active={isOpen}
 			/>
 
-			{isOpen && <BurgerMenu toogleList={toogleList} />}
+			<BurgerMenu toogleList={toogleList} isOpen={isOpen}/>
 		</StyledHeader>
 	);
 }
@@ -44,10 +44,10 @@ const StyledHeader = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 4px 6%;
+	max-width: 1900px;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		padding: 16px 6%;
+		padding: 16px 96px;
 	}
 `;
 

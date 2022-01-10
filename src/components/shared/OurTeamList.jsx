@@ -28,7 +28,7 @@ export const OurTeamList = () => {
 	);
 };
 const TeamListWrap = styled.div`
-	margin-right: 18%;
+  min-width: 210px;
 	white-space: nowrap;
 `;
 const TitleWrap = styled.div`
