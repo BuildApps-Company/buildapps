@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useI18next } from 'gatsby-plugin-react-i18next';
 import { useContactInformation, useSocialMediaListData } from '../../data';
 
-export function BurgerMenu({ toogleList }) {
+export function BurgerMenu({ toogleList, isOpen }) {
 	const { languages, changeLanguage, language, originalPath } = useI18next();
 	const socialMediaListData = useSocialMediaListData();
 	const { email } = useContactInformation();
@@ -21,7 +21,13 @@ export function BurgerMenu({ toogleList }) {
   const { t } = useTranslation();
 
 	return (
-		<StyledBurgerMenu>
+		<StyledBurgerMenu
+      style={
+        isOpen
+        ? {transform: "translateY(0%)", visibility: "visible"}
+        : {transform: "translateY(-100%)", visibility: "hidden"}
+      }
+    >
 			<StyledBurgerHeader>
 				<Link to={routes.home}>
 					<Logo
@@ -83,7 +89,7 @@ export function BurgerMenu({ toogleList }) {
 					</SocialLink>
 				))}
 			</SocialLinksWrap>
-			<GlobalStyle></GlobalStyle>
+			<GlobalStyle isOpen={isOpen}></GlobalStyle>
 		</StyledBurgerMenu>
 	);
 }
@@ -92,11 +98,11 @@ const WrapDesktop = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: flex;
-		justify-content: space-between;
 		margin-top: 48px;
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
 		margin-top: 0px;
+    box-sizing: content-box;
 	}
 `;
 const OurTeamListDesktop = styled(OurTeamList)`
@@ -152,15 +158,15 @@ const BurgerWrapDesktop = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
-		margin-right: 6%;
 	}
 `;
 
 const GlobalStyle = createGlobalStyle`
   body {
-   overflow:hidden;
+    overflow: ${props => (props.isOpen ? 'hidden' : 'auto')};
   }
 `;
+
 const StyledBurgerMenu = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -171,6 +177,7 @@ const StyledBurgerMenu = styled.div`
 	width: 100%;
 	height: 100%;
 	background: #110322;
+  transition: transform 0.4s;
 `;
 
 const StyledBurgerHeader = styled.div`
@@ -180,7 +187,7 @@ const StyledBurgerHeader = styled.div`
 	padding: 4px 6%;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		padding: 16px 6%;
+		padding: 16px 96px;
 	}
 `;
 
@@ -225,14 +232,18 @@ const LanguagesWrap = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	padding: 0 6%;
+	padding: 0 8%;
+
+	@media all and (min-width: ${breakpoints.notebook}) {
+		padding: 16px 115px;
+	}
 `;
 
 const BurgerMenuWrap = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 0 11%;
-	margin-top: auto;
+	margin-top: 15vh;
 
 	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
 		flex-direction: column;

@@ -12,7 +12,6 @@ export const ContactUsList = () => {
 
   const { t } = useTranslation();
 	return (
-		<div>
 			<ContactFormContainer>
 				<ListTitleWithUnderline>{t('contactUsList.title')}</ListTitleWithUnderline>
 
@@ -36,7 +35,6 @@ export const ContactUsList = () => {
           })}
 				</ContuctUsListStyle>
 			</ContactFormContainer>
-		</div>
 	);
 };
 
@@ -44,6 +42,7 @@ const ContactFormContainer = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
+    min-width: 210px;
 	}
 `;
 
