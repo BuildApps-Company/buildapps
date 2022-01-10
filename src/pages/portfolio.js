@@ -11,30 +11,32 @@ import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
 
 export default function PortfolioPage() {
-	const [selectedCategories, setSelectedCategories] = useState([allProjects]);
   const { t } = useTranslation();
+  const filterResetBtn = t('portfolio.filterResetBtn');
+	const [selectedCategories, setSelectedCategories] = useState([filterResetBtn]);
+  console.log(selectedCategories);
 
-	const onSelectCategory = newCategory => {
-		if (newCategory === allProjects) {
-			setSelectedCategories([allProjects]);
+  const onSelectCategory = newCategory => {
+		if (newCategory === filterResetBtn) {
+			setSelectedCategories([filterResetBtn]);
 			return;
 		}
 
 		let newCategories = [];
 		const index = selectedCategories.indexOf(newCategory);
 		if (index < 0) {
-			newCategories = [...selectedCategories, newCategory];
+			newCategories = [newCategory];
 		} else {
 			newCategories = [...selectedCategories];
 			newCategories.splice(index, 1);
 		}
 
 		if (!newCategories.length) {
-			setSelectedCategories([allProjects]);
+			setSelectedCategories([filterResetBtn]);
 		} else {
 			setSelectedCategories(
 				newCategories.filter(
-					newSelectedCategory => newSelectedCategory !== allProjects
+					newSelectedCategory => newSelectedCategory !== filterResetBtn
 				)
 			);
 		}
@@ -104,6 +106,7 @@ const AboutPage = styled.p`
 `;
 
 const ContainerWrap = styled(Container)`
+  overflow: hidden;
 	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
 		padding-left: 56px;
 		padding-right: 56px;
