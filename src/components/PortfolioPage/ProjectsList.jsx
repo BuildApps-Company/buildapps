@@ -5,17 +5,19 @@ import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
 import { Link } from 'gatsby-plugin-react-i18next';
 import { usePortfolio } from '../../data';
-import { allProjects } from '../../types/projects';
+import { useTranslation } from 'react-i18next';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 export const ProjectsList = ({ selectedCategories }) => {
+  const { t } = useTranslation();
+  const filterResetBtn = t('portfolio.filterResetBtn');
 	const portfolio = usePortfolio();
 	const projects = useMemo(
 		() =>
 			Object.entries(portfolio).filter(
 				x =>
-					selectedCategories.includes(allProjects) ||
+					selectedCategories.includes(filterResetBtn) ||
 					selectedCategories.some(category =>
 						x[1].responsibility.some(res => res === category)
 					)

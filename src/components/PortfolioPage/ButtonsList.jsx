@@ -2,13 +2,14 @@ import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import { usePortfolio } from '../../data';
 import { allProjects } from '../../types/projects';
+import { useTranslation } from 'react-i18next';
 
 export const ButtonsList = ({ selectedCategories, onSelectCategory }) => {
 	const projects = usePortfolio();
-
+  const { t } = useTranslation();
 	const buttons = useMemo(
 		() => [
-			allProjects,
+			`${t('portfolio.filterResetBtn')}`,
 			...Object.entries(projects)
 				.map(([_, el]) => el.responsibility)
 				.flat()

@@ -11,12 +11,14 @@ import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
 
 export default function PortfolioPage() {
-	const [selectedCategories, setSelectedCategories] = useState([allProjects]);
   const { t } = useTranslation();
+  const filterResetBtn = t('portfolio.filterResetBtn');
+	const [selectedCategories, setSelectedCategories] = useState([filterResetBtn]);
+  console.log(selectedCategories);
 
-	const onSelectCategory = newCategory => {
-		if (newCategory === allProjects) {
-			setSelectedCategories([allProjects]);
+  const onSelectCategory = newCategory => {
+		if (newCategory === filterResetBtn) {
+			setSelectedCategories([filterResetBtn]);
 			return;
 		}
 
@@ -30,11 +32,11 @@ export default function PortfolioPage() {
 		}
 
 		if (!newCategories.length) {
-			setSelectedCategories([allProjects]);
+			setSelectedCategories([filterResetBtn]);
 		} else {
 			setSelectedCategories(
 				newCategories.filter(
-					newSelectedCategory => newSelectedCategory !== allProjects
+					newSelectedCategory => newSelectedCategory !== filterResetBtn
 				)
 			);
 		}
