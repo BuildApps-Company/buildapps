@@ -16,7 +16,7 @@ export const ContributorsList = () => {
 				{ourContributorsData.map(el => (
 					<li key={el.key}>
 						<StyledImg src={el.img} alt={el.name} />
-						<p>{el.position}</p>
+						<PositionP>{el.position}</PositionP>
 						<h3>{el.name}</h3>
 					</li>
 				))}
@@ -28,6 +28,12 @@ export const ContributorsList = () => {
 const StyledImg = styled.img`
 	border-radius: 8px;
 `;
+
+const PositionP = styled.p`
+  display: inline-block;
+  min-height: 40px;
+`
+
 const ContributorsTitle = styled.h2`
 	margin: 0 0 24px 0;
 	padding: 0;

@@ -62,9 +62,10 @@ const TableWrap = styled.table`
 
 const DetailWrap = styled.td`
 	text-align: end;
+  padding-top: 14px;
 `;
 const TdTitle = styled.td`
 	text-transform: uppercase;
 	font-weight: 600;
-	padding-top: 14px;
+  padding-top: 14px;
 `;
