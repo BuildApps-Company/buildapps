@@ -24,8 +24,8 @@ export function BurgerMenu({ toogleList, isOpen }) {
 		<StyledBurgerMenu
       style={
         isOpen
-        ? {transform: "translateY(0%)"}
-        : {transform: "translateY(-100%)"}
+        ? {transform: "translateY(0%)", overflow: "auto"}
+        : {transform: "translateY(-100%)", overflow: "hidden"}
       }
     >
 			<StyledBurgerHeader>
