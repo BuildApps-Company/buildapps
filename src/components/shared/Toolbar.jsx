@@ -44,7 +44,6 @@ const StyledHeader = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 1900px;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		padding: 16px 96px;
