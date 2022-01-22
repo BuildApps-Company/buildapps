@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 const spbProperty = () => {
 	return (
-		<PortfolioDetails id={'spbProperty'} />
+		<PortfolioDetails id={'spbproperty'} />
 	);
 };
 
