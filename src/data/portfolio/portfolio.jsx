@@ -210,7 +210,7 @@ export const ru = {
     },
 	},
 	spbProperty: {
-		id: 'spbProperty',
+		id: 'spbproperty',
 		background:
 			'linear-gradient(88deg, rgba(255, 87, 188, 0.5) 3.37%, rgba(249, 202, 158, 0.5) 96.63%);',
 		image: spbProperty,
@@ -354,7 +354,7 @@ export const ua = {
     },
 	},
 	spbProperty: {
-		id: 'spbProperty',
+		id: 'spbproperty',
 		background:
 			'linear-gradient(88deg, rgba(255, 87, 188, 0.5) 3.37%, rgba(249, 202, 158, 0.5) 96.63%);',
 		image: spbProperty,
