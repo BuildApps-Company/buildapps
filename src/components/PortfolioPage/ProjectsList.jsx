@@ -42,7 +42,7 @@ export const ProjectsList = ({ selectedCategories }) => {
               : "fade-left"
             }
           >
-						<Link to={`${routes.portfolio}${key}/`} state={{ project: el }}>
+						<Link to={`${routes.portfolio}${el.id}/`} state={{ project: el }}>
 							<ImageContainer image={el.longImage} background={el.background}>
 								<h3>
 									<TitleValue></TitleValue>
