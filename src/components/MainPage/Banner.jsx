@@ -255,7 +255,7 @@ const SvgArrows = styled.svg`
 	height: 32px;
 	position: absolute;
 	left: 50%;
-	margin-left: -30px;
+	margin-left: -25px;
 	bottom: 20px;
 
 	path {
@@ -297,5 +297,6 @@ const SvgArrows = styled.svg`
 	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 48px;
 		height: 56px;
+		margin-left: -24px;
 	}
 `;

@@ -44,6 +44,7 @@ const StyledHeader = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 4px 16px 4px 14px;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		padding: 16px 96px;
@@ -51,8 +52,7 @@ const StyledHeader = styled.header`
 `;
 
 const Logo = styled.img`
-	width: 70px;
-	height: 32px;
+	width: 100px;
 
 	@media all and (min-width: ${breakpoints.phone}) {
 		width: 200px;
