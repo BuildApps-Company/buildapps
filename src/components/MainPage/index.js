@@ -38,11 +38,12 @@ export function MainPage() {
 			<MainBanner />
 			<LatestProjectDesktopContainer>
 				<LatestProjectDesktop projectsDesktop = { latestProjectsDesktop } />
+        <OurServices services = { ourServices } />
 			</LatestProjectDesktopContainer>
 			<LatestProjectMobileContainer>
 				<LatestProjectMobile projectsMobile = { latestProjectsMobile } />
 			</LatestProjectMobileContainer>
-      <OurServices services = { ourServices } />
+
 			<PreFooter />
 		</>
 	);

@@ -13,9 +13,10 @@ export const OurServices = ({ services }) => {
     dots: false,
     infinite: true,
     variableWidth: true,
-    padding: '40px',
-    autoplay: false,
-    speed: 400,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+    autoplay: true,
+    speed: 500,
     autoplaySpeed: 2000,
     cssEase: 'ease-out',
 	};
@@ -35,7 +36,7 @@ export const OurServices = ({ services }) => {
 					</Pagination>
 				</TopContainer>
         <BlockSlider>
-          <SliderWrap {...settings}>
+          <Slider {...settings}>
             {services.map( (service) => {
               return (
                 <ServiceCard
@@ -43,19 +44,16 @@ export const OurServices = ({ services }) => {
                   service = { service } />
               )
             })}
-					</SliderWrap>
+					</Slider>
         </BlockSlider>
 			</OurServicesContainer>
 	);
 };
 
 const OurServicesContainer = styled.article`
-	@media all and (min-width: ${breakpoints.tablet}) {
     display: flex;
     flex-direction: column;
-		height: 60vh;
-		overflow: hidden;
-	}
+		height: 70vh;
 `;
 
 const TopContainer = styled.div`
@@ -110,9 +108,4 @@ const Tab = styled.div`
 const BlockSlider = styled.div`
   display: block;
 	width: 100%;
-	overflow: hidden;
 `;
-
-const SliderWrap = styled(Slider)`
-  display: flex;
-`
