@@ -4,13 +4,15 @@ import styled from 'styled-components';
 import { MainBanner } from './Banner';
 import { LatestProjectDesktop } from './LatestProjectDesktop';
 import { LatestProjectMobile } from './LatestProjectMobile';
+import { OurServices } from './OurServices';
 import { PreFooter } from './PreFooter';
-import { usePortfolio } from '../../data';
+import { usePortfolio, useServices } from '../../data';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 export function MainPage() {
 	const projects = usePortfolio();
+  const services = useServices();
 
 	const latestProjectsDesktop = useMemo(
 		() => Object.values(projects).slice(0, 6),
@@ -22,6 +24,11 @@ export function MainPage() {
 		[projects]
 	);
 
+  const ourServices = useMemo(
+		() => Object.values(services),[services]
+	);
+  console.log(ourServices);
+
   useEffect(() => {
     Aos.init({});
 	}, []);
@@ -30,11 +37,12 @@ export function MainPage() {
 		<>
 			<MainBanner />
 			<LatestProjectDesktopContainer>
-				<LatestProjectDesktop projectsDesktop={latestProjectsDesktop} />
+				<LatestProjectDesktop projectsDesktop = { latestProjectsDesktop } />
 			</LatestProjectDesktopContainer>
 			<LatestProjectMobileContainer>
-				<LatestProjectMobile projectsMobile={latestProjectsMobile} />
+				<LatestProjectMobile projectsMobile = { latestProjectsMobile } />
 			</LatestProjectMobileContainer>
+      <OurServices services = { ourServices } />
 			<PreFooter />
 		</>
 	);

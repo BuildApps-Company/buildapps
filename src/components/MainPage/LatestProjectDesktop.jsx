@@ -164,7 +164,7 @@ const StyledButton = styled(Link)`
 
 const ContainerParent = styled.div`
 	margin-top: 46px;
-	margin-bottom: 170px;
+	margin-bottom: 28px;
 `;
 const LatestProjectsContainer = styled.div`
 	@media all and (min-width: ${breakpoints.tablet}) {

@@ -5,6 +5,7 @@ import { contactUsListData } from "./contactUsListData";
 import { ourContributorsData } from "./ourContributorsData";
 import { ourTeamListData } from "./ourTeamListData";
 import { portfolio } from "./portfolio";
+import { ourServices } from "./services";
 import { pricesAndServicesTableData } from "./pricesAndServicesTableData";
 import { calculationOptionsData } from "./pricesCalculatorData";
 import { socialMediaListData } from "./socialMediaListData";
@@ -57,4 +58,9 @@ export const useSocialMediaListData = () => {
 export const usePortfolio = () => {
     const i18n = useI18next();
     return getOrDefault(portfolio, i18n);
+}
+
+export const useServices = () => {
+  const i18n = useI18next();
+  return getOrDefault(ourServices, i18n);
 }
