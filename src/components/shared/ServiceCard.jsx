@@ -13,9 +13,9 @@ export const ServiceCard = ({ service }) => {
         <SrviceTitile>
           {title}
         </SrviceTitile>
-        <ServiceAbout>
+        <ServiceAboutDesktop>
           {description}
-        </ServiceAbout>
+        </ServiceAboutDesktop>
       </ServiceDescription>
     </CardContainer>
 	);
@@ -42,6 +42,13 @@ const CardContainer = styled.section`
       filter: invert(1) contrast(200%);
     }
   }
+
+  @media all and (max-width: ${breakpoints.tablet}) {
+		width: 60vw;
+    height: 148px;
+    padding: 38px;
+    margin: 0 10px;
+	}
 `;
 
 const ServiceImg = styled.img`
@@ -49,12 +56,20 @@ const ServiceImg = styled.img`
   width: 64px;
   height: 64px;
   margin-right: 40px;
+
+  @media all and (max-width: ${breakpoints.tablet}) {
+    margin-right: 15px;
+	}
 `;
 
 const ServiceDescription = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  @media all and (max-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    align-items: center;
+	}
 `
 
 const SrviceTitile = styled.h3`
@@ -64,11 +79,29 @@ const SrviceTitile = styled.h3`
   line-height: 160%;
   margin: 0;
   margin-bottom: 16px;
+
+  @media all and (max-width: ${breakpoints.tablet}) {
+    font-size: 18px;
+    line-height: 110%;
+	}
 `
 
-const ServiceAbout = styled.p`
+const ServiceAboutDesktop = styled.p`
+  display: none;
+  @media all and (min-width: ${breakpoints.tablet}) {
+    display: block;
+    font-size: 16px;
+    line-height: 160%;
+    margin: 0;
+  }
+`
+
+const ServiceAboutMobile = styled.p`
   display: block;
   font-size: 16px;
   line-height: 160%;
   margin: 0;
+  @media all and (min-width: ${breakpoints.tablet}) {
+		display: none;
+	}
 `

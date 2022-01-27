@@ -5,10 +5,12 @@ import { breakpoints } from '../../styles/breakpoints';
 import { useTranslation } from 'react-i18next';
 import { ServiceCard } from '../shared/ServiceCard';
 import Slider from 'react-slick';
+import { StyledLink } from '../../styles/layout'
 
 export const OurServices = ({ services }) => {
 	const { t } = useTranslation();
 	const settings = {
+    arrows: false,
     className: "slider variable-width",
     dots: false,
     infinite: true,
@@ -30,10 +32,13 @@ export const OurServices = ({ services }) => {
             >
               {t('ourservices.mainTitle')}
             </Title>
+            {/* <StyledLink
+              data-aos="fade-up"
+              to={`#`}
+            >
+							{t('ourservices.more')}
+						</StyledLink> */}
 					</TitleWrap>
-					<Pagination>
-							<Tab active = { true }></Tab>
-					</Pagination>
 				</TopContainer>
         <BlockSlider>
           <Slider {...settings}>
@@ -75,33 +80,26 @@ const TitleWrap = styled.div`
 `;
 
 const Title = styled.h2`
-	margin: 0;
-	padding: 0;
+  margin: 0 0 38px;
+	padding: 16px;
 	font-size: 3rem;
 	line-height: 160%;
 	text-transform: uppercase;
+	&:after {
+		content: '';
+		background: ${colors.Main};
+		height: 6px;
+		width: 64px;
+		display: block;
+	}
+	
 	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 4rem;
-	}
-`;
-
-const Pagination = styled.div`
-	@media all and (min-width: ${breakpoints.tablet}) {
-		display: flex;
-		margin-bottom: 32px;
-	}
-`;
-
-const Tab = styled.div`
-	padding: 8px;
-
-	&:before {
-		width: 64px;
-		height: 6px;
-		content: '';
-		display: block;
-		background: ${colors.Main};
-		border-radius: 2px;
+    margin: 0 0 66px;
+    padding: 0;
+    font-size: 3rem;
+    line-height: 160%;
+    text-transform: uppercase;
 	}
 `;
 

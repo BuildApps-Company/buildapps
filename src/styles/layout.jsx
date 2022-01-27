@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby-plugin-react-i18next';
+import { colors } from './colors';
+import { breakpoints } from './breakpoints';
 
 export const HeroBlock = styled.div`
 	min-height: 100vh;
@@ -9,3 +12,19 @@ export const HeroBlock = styled.div`
 	flex-direction: column;
 	position: relative;
 `;
+
+export const StyledLink = styled(Link)`
+	@media all and (min-width: ${breakpoints.tablet}) {
+		display: block;
+		opacity: 0.75;
+		font-size: 1.5rem;
+    font-weight: 600;
+		line-height: 160%;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: ${colors.Main};
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+	}`;

@@ -6,6 +6,7 @@ import { breakpoints } from '../../styles/breakpoints';
 import { H4, SubH3, Body2 } from '../../styles/styled-headers';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'gatsby-plugin-react-i18next';
+import { StyledLink } from '../../styles/layout'
 
 export const LatestProjectDesktop = ({ projectsDesktop }) => {
 	const [item, setItem] = useState(0);
@@ -219,23 +220,6 @@ const TitlePage = styled.h2`
 	text-transform: uppercase;
 	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 4rem;
-	}
-`;
-
-const StyledLink = styled(Link)`
-	@media all and (min-width: ${breakpoints.tablet}) {
-		display: block;
-		opacity: 0.75;
-		font-size: 1.5rem;
-    font-weight: 600;
-		line-height: 160%;
-		text-transform: uppercase;
-		text-decoration: none;
-		color: ${colors.Main};
-		&:hover,
-		&:focus {
-			opacity: 1;
-		}
 	}
 `;
 

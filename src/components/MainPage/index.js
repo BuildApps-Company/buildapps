@@ -42,8 +42,8 @@ export function MainPage() {
 			</LatestProjectDesktopContainer>
 			<LatestProjectMobileContainer>
 				<LatestProjectMobile projectsMobile = { latestProjectsMobile } />
+        <OurServices services = { ourServices } />
 			</LatestProjectMobileContainer>
-
 			<PreFooter />
 		</>
 	);
