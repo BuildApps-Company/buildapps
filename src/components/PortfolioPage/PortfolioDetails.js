@@ -16,9 +16,9 @@ export function PortfolioDetails({ id }) {
 	const project = projectsValues.find(el => el.id === id);
 	const TitleValue = project.title;
 	const Details = project.pageContent;
-  const Links = project.links;
+	const Links = project.links;
 
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	return (
 		<Page pageName={project.pageTitle}>
@@ -27,10 +27,7 @@ export function PortfolioDetails({ id }) {
 			<StyledLink to={routes.portfolio}>{t('portfolio.goBack')}</StyledLink>
 
 			<ProjectImageContainer>
-				<ImageWrap
-					image={project.longImage}
-					background={project.background}
-				>
+				<ImageWrap image={project.longImage} background={project.background}>
 					{project.longImage && (
 						<img src={project.longImage} alt="projecttitle" />
 					)}
@@ -47,10 +44,10 @@ export function PortfolioDetails({ id }) {
 				))}
 
 				<StyledDescription>{project.description}</StyledDescription>
-        <LinksList links={Links} />
+				<LinksList links={Links} />
 			</ProjectDetailsContainer>
 			<Details />
-      <LinksList links={Links} />
+			<LinksList links={Links} />
 			<PreFooter />
 		</Page>
 	);
@@ -135,7 +132,7 @@ const StyledDescription = styled.p`
 	margin: 0;
 	padding: 0;
 	line-height: 160%;
-  text-align: justify;
+	text-align: justify;
 
 	@media all and (min-width: ${breakpoints.tablet}) {
 		font-size: 1.5rem;

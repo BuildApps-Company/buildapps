@@ -1,7 +1,7 @@
 {
-  "portfolio.subTitle": "Build apps - Portfolio",
-  "portfolio.mainTitle": "Portfolio",
-  "portfolio.goBack": "Go back to portfolio",
-  "portfolio.about": "BuildApps is an actively developing IT company that provides a wide range of high quality products, solutions and services in the field of information technology. The main areas of our activity are the development of Internet projects of various levels of complexity, the creation of business automation systems and IT consulting.",
-  "portfolio.filterResetBtn": "ALL"
+	"portfolio.subTitle": "Build apps - Portfolio",
+	"portfolio.mainTitle": "Portfolio",
+	"portfolio.goBack": "Go back to portfolio",
+	"portfolio.about": "BuildApps is an actively developing IT company that provides a wide range of high quality products, solutions and services in the field of information technology. The main areas of our activity are the development of Internet projects of various levels of complexity, the creation of business automation systems and IT consulting.",
+	"portfolio.filterResetBtn": "ALL"
 }

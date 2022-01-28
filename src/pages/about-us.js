@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
 
 export default function AboutUsPage() {
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	return (
 		<Page pageName="About Us">
@@ -25,16 +25,9 @@ export default function AboutUsPage() {
 						<SubTitle>{t('aboutUsPage.subTitle')}</SubTitle>
 						<Title>{t('aboutUsPage.mainTitle')}</Title>
 						<AboutPage>
-							<p>
-                {t('aboutUsPage.paragraph1')}
-							</p>
-
-							<p>
-                {t('aboutUsPage.paragraph2')}
-							</p>
-							<p>
-                {t('aboutUsPage.paragraph3')}
-							</p>
+							<p>{t('aboutUsPage.paragraph1')}</p>
+							<p>{t('aboutUsPage.paragraph2')}</p>
+							<p>{t('aboutUsPage.paragraph3')}</p>
 						</AboutPage>
 					</TitleContainer>
 					<ContributorsList />

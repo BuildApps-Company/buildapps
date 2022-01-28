@@ -10,31 +10,31 @@ import { Link } from 'gatsby-plugin-react-i18next';
 export const ContactUsList = () => {
 	const contactUsListData = useContactInformation();
 
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 	return (
-			<ContactFormContainer>
-				<ListTitleWithUnderline>{t('contactUsList.title')}</ListTitleWithUnderline>
+		<ContactFormContainer>
+			<ListTitleWithUnderline>
+				{t('contactUsList.title')}
+			</ListTitleWithUnderline>
 
-        <ContuctUsListStyle>
-					{contactUsListData.list.map(el => {
-            return (
-              el.key === 'form'
-                ?
-                <li key={el.key}>
-                  <StyledLink to={el.href} target="_blank">
-                    {el.title}
-                  </StyledLink>
-                </li>
-                : 
-                <li key={el.key}>
-                  <StyledLinkATag href={el.href} target="_blank">
-                    {el.title}
-                  </StyledLinkATag>
-                </li>
-            )
-          })}
-				</ContuctUsListStyle>
-			</ContactFormContainer>
+			<ContuctUsListStyle>
+				{contactUsListData.list.map(el => {
+					return el.key === 'form' ? (
+						<li key={el.key}>
+							<StyledLink to={el.href} target="_blank">
+								{el.title}
+							</StyledLink>
+						</li>
+					) : (
+						<li key={el.key}>
+							<StyledLinkATag href={el.href} target="_blank">
+								{el.title}
+							</StyledLinkATag>
+						</li>
+					);
+				})}
+			</ContuctUsListStyle>
+		</ContactFormContainer>
 	);
 };
 
@@ -42,7 +42,7 @@ const ContactFormContainer = styled.div`
 	display: none;
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
-    min-width: 210px;
+		min-width: 210px;
 	}
 `;
 
@@ -67,49 +67,49 @@ const ContuctUsListStyle = styled.ul`
 `;
 
 const StyledLink = styled(Link)`
-  display: inline-block;
+	display: inline-block;
 	text-decoration: none;
 	font-size: 1.2rem;
 	color: inherit;
 	opacity: 0.75;
 
-  &:after {
-    content: '';
-    width: 0px;
-    height: 3px;
-    display: block;
-    background: ${colors.Main};
-    transition: width 0.25s;
-  }
+	&:after {
+		content: '';
+		width: 0px;
+		height: 3px;
+		display: block;
+		background: ${colors.Main};
+		transition: width 0.25s;
+	}
 
-  &:hover {
-    opacity: 1;
-  }
-  &:hover:after {
-    width: 100%;
-  }
+	&:hover {
+		opacity: 1;
+	}
+	&:hover:after {
+		width: 100%;
+	}
 `;
 
 const StyledLinkATag = styled.a`
-  display: inline-block;
+	display: inline-block;
 	text-decoration: none;
 	font-size: 1.2rem;
 	color: inherit;
 	opacity: 0.75;
 
-  &:after {
-    content: '';
-    width: 0px;
-    height: 3px;
-    display: block;
-    background: ${colors.Main};
-    transition: width 0.25s;
-  }
+	&:after {
+		content: '';
+		width: 0px;
+		height: 3px;
+		display: block;
+		background: ${colors.Main};
+		transition: width 0.25s;
+	}
 
-  &:hover {
-    opacity: 1;
-  }
-  &:hover:after {
-    width: 100%;
-  }
+	&:hover {
+		opacity: 1;
+	}
+	&:hover:after {
+		width: 100%;
+	}
 `;

@@ -18,16 +18,16 @@ export function BurgerMenu({ toogleList, isOpen }) {
 	const socialMediaListData = useSocialMediaListData();
 	const { email } = useContactInformation();
 
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	return (
 		<StyledBurgerMenu
-      style={
-        isOpen
-        ? {transform: "translateY(0%)", overflow: "auto"}
-        : {transform: "translateY(-100%)", overflow: "hidden"}
-      }
-    >
+			style={
+				isOpen
+					? { transform: 'translateY(0%)', overflow: 'auto' }
+					: { transform: 'translateY(-100%)', overflow: 'hidden' }
+			}
+		>
 			<StyledBurgerHeader>
 				<Link to={routes.home}>
 					<Logo
@@ -61,7 +61,7 @@ export function BurgerMenu({ toogleList, isOpen }) {
 				<BurgerWrapDesktop>
 					<BurgerTitle>{t('burgerMenu.question')}</BurgerTitle>
 					<ContactUsLink to={routes.contactForm} target="_blank">
-            {t('burgerMenu.contactUsButton')}
+						{t('burgerMenu.contactUsButton')}
 					</ContactUsLink>
 				</BurgerWrapDesktop>
 
@@ -71,7 +71,9 @@ export function BurgerMenu({ toogleList, isOpen }) {
 						<StyledEmail href={`mailto:${email}`} target="_blank">
 							{email}
 						</StyledEmail>
-						<StyledLink to={routes.contactForm}>{t('burgerMenu.contactUsButton')}</StyledLink>
+						<StyledLink to={routes.contactForm}>
+							{t('burgerMenu.contactUsButton')}
+						</StyledLink>
 					</ContactUsWrap>
 				</WrapMob>
 				<WrapDesktop>
@@ -102,7 +104,7 @@ const WrapDesktop = styled.div`
 	}
 	@media all and (min-width: ${breakpoints.notebook}) {
 		margin-top: 0px;
-    box-sizing: content-box;
+		box-sizing: content-box;
 	}
 `;
 const OurTeamListDesktop = styled(OurTeamList)`
@@ -177,7 +179,7 @@ const StyledBurgerMenu = styled.div`
 	width: 100%;
 	height: 100%;
 	background: #110322;
-  transition: transform 0.4s;
+	transition: transform 0.4s;
 `;
 
 const StyledBurgerHeader = styled.div`

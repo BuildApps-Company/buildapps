@@ -15,7 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
 
 export default function PortfolioPage() {
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 	return (
 		<Page pageName={t('prices.pageName')}>
 			<Toolbar />
