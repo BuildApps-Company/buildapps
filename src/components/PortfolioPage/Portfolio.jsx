@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-export const ProjectsList = ({ selectedCategories }) => {
+export const PortfolioGrid = ({ selectedCategories }) => {
 	const { t } = useTranslation();
 	const filterResetBtn = t('portfolio.filterResetBtn');
 	const portfolio = usePortfolio();
@@ -46,6 +46,7 @@ export const ProjectsList = ({ selectedCategories }) => {
 								</h3>
 								{el.longImage && <img src={el.longImage} alt={el.title} />}
 							</ImageContainer>
+
 							<>
 								{el.responsibility.map(el => (
 									<StyledResponsibility key={el}>{el}</StyledResponsibility>

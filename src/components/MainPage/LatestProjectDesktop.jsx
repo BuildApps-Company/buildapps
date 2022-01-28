@@ -6,7 +6,7 @@ import { breakpoints } from '../../styles/breakpoints';
 import { H4, SubH3, Body2 } from '../../styles/styled-headers';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'gatsby-plugin-react-i18next';
-import { StyledLink } from '../../styles/layout'
+import { StyledLink } from '../../styles/layout';
 
 export const LatestProjectDesktop = ({ projectsDesktop }) => {
 	const [item, setItem] = useState(0);
@@ -44,15 +44,10 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 			<LatestProjectsContainer>
 				<Container>
 					<TitleWrap>
-            <TitlePage
-              data-aos="fade-right"
-            >
-              {t('latestProjects.latestProjects')}
-            </TitlePage>
-						<StyledLink
-              data-aos="fade-up"
-              to={routes.portfolio}
-            >
+						<TitlePage data-aos="fade-right">
+							{t('latestProjects.latestProjects')}
+						</TitlePage>
+						<StyledLink data-aos="fade-up" to={routes.portfolio}>
 							{t('latestProjects.all')}
 						</StyledLink>
 					</TitleWrap>
@@ -77,17 +72,15 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 					{projectsDesktop.map((activeProject, index) => (
 						<ProjectContainer key={index} visible={item === index}>
 							<ProjectWrap>
-                <ImageWrapDesktop
-                    image={activeProject.longImage}
-                    background={activeProject.background}
-                    visible={item === index}
-                  >
-                    {activeProject.longImage && (
-                      <img
-                        src={activeProject.longImage}
-                        alt="longImg" />
-                    )}
-                </ImageWrapDesktop>
+								<ImageWrapDesktop
+									image={activeProject.longImage}
+									background={activeProject.background}
+									visible={item === index}
+								>
+									{activeProject.longImage && (
+										<img src={activeProject.longImage} alt="longImg" />
+									)}
+								</ImageWrapDesktop>
 								<DetailsWrap data-aos="fade-up" data-aos-delay="200">
 									<SmallLogo src={activeProject.image} />
 									<Title>{activeProject.pageTitle}</Title>
@@ -122,7 +115,7 @@ const StyledButton = styled(Link)`
 	display: flex;
 	align-items: center;
 	font-size: 1em;
-  font-weight: 600;
+	font-weight: 600;
 	padding: 10px 20px 8px;
 	margin-top: 32px;
 	position: relative;
@@ -265,8 +258,9 @@ const ImageWrapDesktop = styled.div`
 		max-width: 100%;
 		object-fit: contain;
 		max-height: 100%;
-    transition: transform 0.8s;
-    ${({ visible }) => (visible ? 'transform: translateX(0)' : 'transform: translateX(-150%)')};
+		transition: transform 0.8s;
+		${({ visible }) =>
+			visible ? 'transform: translateX(0)' : 'transform: translateX(-150%)'};
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {

@@ -13,7 +13,7 @@ import { Link } from 'gatsby-plugin-react-i18next';
 
 export function MainBanner() {
 	const [width, setWidth] = useState(0);
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	useLayoutEffect(() => {
 		window.addEventListener('resize', setWidth(window.innerWidth));
@@ -29,31 +29,26 @@ export function MainBanner() {
 			<Toolbar isWhite />
 			<StyledPageContainer>
 				<TitlesWrap>
-        <div>
-          <Title
-            data-aos="fade-down"
-            data-aos-duration="1000"
-          >
-            {t('banner.web')}
-          </Title>
-          <Title
-            data-aos="fade-down"
-            data-aos-delay="200"
-            data-aos-duration="1200"
-          >
-            {t('banner.mobile')}
-          </Title>
-          <Title
-            data-aos="fade-down"
-            data-aos-delay="400"
-            data-aos-duration="1300"
-          >
-            {t('banner.desktop')}
-          </Title>
-          <SubTitle>
-            {t('banner.designAndDevelopmentCompany')}
-          </SubTitle>
-        </div>
+					<div>
+						<Title data-aos="fade-down" data-aos-duration="1000">
+							{t('banner.web')}
+						</Title>
+						<Title
+							data-aos="fade-down"
+							data-aos-delay="200"
+							data-aos-duration="1200"
+						>
+							{t('banner.mobile')}
+						</Title>
+						<Title
+							data-aos="fade-down"
+							data-aos-delay="400"
+							data-aos-duration="1300"
+						>
+							{t('banner.desktop')}
+						</Title>
+						<SubTitle>{t('banner.designAndDevelopmentCompany')}</SubTitle>
+					</div>
 
 					{width > 450 && (
 						<Typewriter

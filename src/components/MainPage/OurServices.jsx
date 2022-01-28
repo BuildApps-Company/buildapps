@@ -5,60 +5,53 @@ import { breakpoints } from '../../styles/breakpoints';
 import { useTranslation } from 'react-i18next';
 import { ServiceCard } from '../shared/ServiceCard';
 import Slider from 'react-slick';
-import { StyledLink } from '../../styles/layout'
+import { StyledLink } from '../../styles/layout';
+
+const settings = {
+	arrows: false,
+	className: 'slider variable-width',
+	dots: false,
+	infinite: true,
+	variableWidth: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+	speed: 500,
+	autoplaySpeed: 2000,
+	cssEase: 'ease-out',
+};
 
 export const OurServices = ({ services }) => {
 	const { t } = useTranslation();
-	const settings = {
-    arrows: false,
-    className: "slider variable-width",
-    dots: false,
-    infinite: true,
-    variableWidth: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 2000,
-    cssEase: 'ease-out',
-	};
 
 	return (
-			<OurServicesContainer>
-				<TopContainer>
-					<TitleWrap>
-            <Title
-              data-aos="fade-right"
-            >
-              {t('ourservices.mainTitle')}
-            </Title>
-            {/* <StyledLink
-              data-aos="fade-up"
-              to={`#`}
-            >
+		<OurServicesContainer>
+			<TopContainer>
+				<TitleWrap>
+					<Title data-aos="fade-right">{t('ourservices.mainTitle')}</Title>
+					{/* <StyledLink
+							data-aos="fade-up"
+							to={`#`}
+						>
 							{t('ourservices.more')}
 						</StyledLink> */}
-					</TitleWrap>
-				</TopContainer>
-        <BlockSlider>
-          <Slider {...settings}>
-            {services.map( (service) => {
-              return (
-                <ServiceCard
-                  key = {service.id}
-                  service = { service } />
-              )
-            })}
-					</Slider>
-        </BlockSlider>
-			</OurServicesContainer>
+				</TitleWrap>
+			</TopContainer>
+			<BlockSlider>
+				<Slider {...settings}>
+					{services.map(service => {
+						return <ServiceCard key={service.id} service={service} />;
+					})}
+				</Slider>
+			</BlockSlider>
+		</OurServicesContainer>
 	);
 };
 
 const OurServicesContainer = styled.article`
-    display: flex;
-    flex-direction: column;
-		height: 70vh;
+	display: flex;
+	flex-direction: column;
+	height: 70vh;
 `;
 
 const TopContainer = styled.div`
@@ -76,11 +69,11 @@ const TitleWrap = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  text-transform: uppercase;
+	text-transform: uppercase;
 `;
 
 const Title = styled.h2`
-  margin: 0 0 38px;
+	margin: 0 0 38px;
 	padding: 16px;
 	font-size: 3rem;
 	line-height: 160%;
@@ -92,18 +85,18 @@ const Title = styled.h2`
 		width: 64px;
 		display: block;
 	}
-	
+
 	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 4rem;
-    margin: 0 0 66px;
-    padding: 0;
-    font-size: 3rem;
-    line-height: 160%;
-    text-transform: uppercase;
+		margin: 0 0 66px;
+		padding: 0;
+		font-size: 3rem;
+		line-height: 160%;
+		text-transform: uppercase;
 	}
 `;
 
 const BlockSlider = styled.div`
-  display: block;
+	display: block;
 	width: 100%;
 `;

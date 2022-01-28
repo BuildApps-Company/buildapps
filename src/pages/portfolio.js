@@ -11,12 +11,14 @@ import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
 
 export default function PortfolioPage() {
-  const { t } = useTranslation();
-  const filterResetBtn = t('portfolio.filterResetBtn');
-	const [selectedCategories, setSelectedCategories] = useState([filterResetBtn]);
-  console.log(selectedCategories);
+	const { t } = useTranslation();
+	const filterResetBtn = t('portfolio.filterResetBtn');
+	const [selectedCategories, setSelectedCategories] = useState([
+		filterResetBtn,
+	]);
+	console.log(selectedCategories);
 
-  const onSelectCategory = newCategory => {
+	const onSelectCategory = newCategory => {
 		if (newCategory === filterResetBtn) {
 			setSelectedCategories([filterResetBtn]);
 			return;
@@ -49,9 +51,7 @@ export default function PortfolioPage() {
 				<TitleContainer>
 					<SubTitle>{t('portfolio.subTitle')}</SubTitle>
 					<Title>{t('portfolio.mainTitle')}</Title>
-					<AboutPage>
-            {t('portfolio.about')}
-					</AboutPage>
+					<AboutPage>{t('portfolio.about')}</AboutPage>
 				</TitleContainer>
 				<ButtonsList
 					selectedCategories={selectedCategories}
@@ -106,7 +106,7 @@ const AboutPage = styled.p`
 `;
 
 const ContainerWrap = styled(Container)`
-  overflow: hidden;
+	overflow: hidden;
 	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
 		padding-left: 56px;
 		padding-right: 56px;

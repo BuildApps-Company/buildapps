@@ -18,7 +18,7 @@ export const StyledLink = styled(Link)`
 		display: block;
 		opacity: 0.75;
 		font-size: 1.5rem;
-    font-weight: 600;
+		font-weight: 600;
 		line-height: 160%;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -27,4 +27,5 @@ export const StyledLink = styled(Link)`
 		&:focus {
 			opacity: 1;
 		}
-	}`;
+	}
+`;

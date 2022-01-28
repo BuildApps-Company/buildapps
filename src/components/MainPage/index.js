@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 
 export function MainPage() {
 	const projects = usePortfolio();
-  const services = useServices();
+	const services = useServices();
 
 	const latestProjectsDesktop = useMemo(
 		() => Object.values(projects).slice(0, 6),
@@ -24,25 +24,22 @@ export function MainPage() {
 		[projects]
 	);
 
-  const ourServices = useMemo(
-		() => Object.values(services),[services]
-	);
-  console.log(ourServices);
+	const ourServices = useMemo(() => Object.values(services), [services]);
 
-  useEffect(() => {
-    Aos.init({});
+	useEffect(() => {
+		Aos.init({});
 	}, []);
 
 	return (
 		<>
 			<MainBanner />
 			<LatestProjectDesktopContainer>
-				<LatestProjectDesktop projectsDesktop = { latestProjectsDesktop } />
-        <OurServices services = { ourServices } />
+				<LatestProjectDesktop projectsDesktop={latestProjectsDesktop} />
+				<OurServices services={ourServices} />
 			</LatestProjectDesktopContainer>
 			<LatestProjectMobileContainer>
-				<LatestProjectMobile projectsMobile = { latestProjectsMobile } />
-        <OurServices services = { ourServices } />
+				<LatestProjectMobile projectsMobile={latestProjectsMobile} />
+				<OurServices services={ourServices} />
 			</LatestProjectMobileContainer>
 			<PreFooter />
 		</>
