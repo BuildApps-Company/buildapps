@@ -46,6 +46,11 @@ const CardContainer = styled.section`
 		padding: 38px;
 		margin: 0 10px;
 	}
+	
+	@media all and (max-width: ${breakpoints.phone}) {
+		width: 65vw;
+		height: 138px;
+	}
 `;
 
 const ServiceImg = styled.img`
@@ -56,6 +61,11 @@ const ServiceImg = styled.img`
 
 	@media all and (max-width: ${breakpoints.tablet}) {
 		margin-right: 15px;
+	}
+
+	@media all and (max-width: ${breakpoints.phone}) {
+		width: 56px;
+		height: 56px;
 	}
 `;
 
@@ -80,6 +90,11 @@ const ServiceTitile = styled.h3`
 	@media all and (max-width: ${breakpoints.tablet}) {
 		font-size: 18px;
 		line-height: 110%;
+	}
+
+	@media all and (max-width: ${breakpoints.phone}) {
+		font-size: 14px;
+		line-height: 100%;
 	}
 `;
 
