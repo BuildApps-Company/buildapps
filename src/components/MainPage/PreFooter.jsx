@@ -11,11 +11,10 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 export const PreFooter = () => {
+	const { t } = useTranslation();
 
-  const { t } = useTranslation();
-
-  useEffect(() => {
-    Aos.init({});
+	useEffect(() => {
+		Aos.init({});
 	}, []);
 
 	return (
@@ -23,11 +22,13 @@ export const PreFooter = () => {
 			<Marquee />
 			<Container>
 				<FlexWrap
-          data-aos="fade-down"
-          data-aos-anchor-placement="bottom-bottom"
-        >
+					data-aos="fade-down"
+					data-aos-anchor-placement="bottom-bottom"
+				>
 					<StyledText>{t('preFooter.title')}</StyledText>
-					<StyledLink to={routes.contactForm}>{t('preFooter.contactButton')}</StyledLink>
+					<StyledLink to={routes.contactForm}>
+						{t('preFooter.contactButton')}
+					</StyledLink>
 				</FlexWrap>
 			</Container>
 		</>

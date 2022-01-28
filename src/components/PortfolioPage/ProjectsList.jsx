@@ -10,8 +10,8 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 export const ProjectsList = ({ selectedCategories }) => {
-  const { t } = useTranslation();
-  const filterResetBtn = t('portfolio.filterResetBtn');
+	const { t } = useTranslation();
+	const filterResetBtn = t('portfolio.filterResetBtn');
 	const portfolio = usePortfolio();
 	const projects = useMemo(
 		() =>
@@ -21,11 +21,12 @@ export const ProjectsList = ({ selectedCategories }) => {
 					selectedCategories.some(category =>
 						x[1].responsibility.some(res => res === category)
 					)
-			), [portfolio, selectedCategories]
+			),
+		[portfolio, selectedCategories]
 	);
 
-  useEffect(() => {
-    Aos.init({});
+	useEffect(() => {
+		Aos.init({});
 	}, []);
 
 	return (
@@ -33,15 +34,11 @@ export const ProjectsList = ({ selectedCategories }) => {
 			{projects.map(([key, el], index) => {
 				const TitleValue = el.title;
 				return (
-          <li
-          key={key}
-          data-aos-delay="130"
-          data-aos={
-            index % 2 === 0
-              ? "fade-right"
-              : "fade-left"
-            }
-          >
+					<li
+						key={key}
+						data-aos-delay="130"
+						data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+					>
 						<Link to={`${routes.portfolio}${el.id}/`} state={{ project: el }}>
 							<ImageContainer image={el.longImage} background={el.background}>
 								<h3>
@@ -49,7 +46,6 @@ export const ProjectsList = ({ selectedCategories }) => {
 								</h3>
 								{el.longImage && <img src={el.longImage} alt={el.title} />}
 							</ImageContainer>
-
 							<>
 								{el.responsibility.map(el => (
 									<StyledResponsibility key={el}>{el}</StyledResponsibility>

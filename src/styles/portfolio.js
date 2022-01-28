@@ -5,7 +5,7 @@ export const ProjectDetailsContainer = styled.div`
 	padding-left: 16px;
 	padding-right: 16px;
 	p {
-    text-align: justify;
+		text-align: justify;
 		font-size: 1rem;
 		line-height: 160%;
 	}
@@ -20,9 +20,9 @@ export const ProjectDetailsContainer = styled.div`
 		}
 	}
 
-  .iphonediscount {
+	.iphonediscount {
 		max-width: 100%;
-  }
+	}
 
 	margin-bottom: 48px;
 	@media all and (min-width: ${breakpoints.tablet}) {
