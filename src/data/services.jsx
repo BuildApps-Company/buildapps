@@ -6,7 +6,7 @@ import testingSVG from '../../static/images/ourservices/testing.svg';
 const en = {
   devTeam: {
     id: 'develop',
-    title: 'Strong, skilled devlopment team',
+    title: 'Strong, skilled development team',
     description: 'A powerful and capable team fulfilling orders related to the design and development of websites, desktop and mobile applications.',
     imageLink: devTeamSVG,
   },

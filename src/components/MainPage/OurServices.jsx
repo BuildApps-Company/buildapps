@@ -49,9 +49,13 @@ export const OurServices = ({ services }) => {
 };
 
 const OurServicesContainer = styled.article`
-	display: flex;
-	flex-direction: column;
-	height: 70vh;
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+
+  @media all and (min-width: ${breakpoints.tablet}) {
+    height: 500px;
+  }
 `;
 
 const TopContainer = styled.div`
