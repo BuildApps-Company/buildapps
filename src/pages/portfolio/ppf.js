@@ -1,10 +1,11 @@
 import React from 'react';
 import { PortfolioDetails } from '../../components/PortfolioPage/index';
 import { graphql } from 'gatsby';
+import { StopWarComponent } from '../../components/stopwar/index';
 
 const Ppf = () => {
 	return (
-		<PortfolioDetails id={'ppf'} />
+		<StopWarComponent />
 	);
 };
 

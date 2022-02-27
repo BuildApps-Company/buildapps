@@ -1,9 +1,12 @@
 import React from 'react';
 import { PortfolioDetails } from '../../components/PortfolioPage';
 import { graphql } from 'gatsby';
+import { StopWarComponent } from '../../components/stopwar/index';
 
 const Sushi = () => {
-	return (<PortfolioDetails id={'sushi'} />);
+	return (
+    <StopWarComponent />
+    );
 };
 
 export default Sushi;
