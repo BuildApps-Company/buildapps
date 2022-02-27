@@ -36,7 +36,6 @@ export function Page({ children, pageName }) {
 				<meta http-equiv="Content-Language" content={activeLanguage}></meta>
 			</Helmet>
 			{children}
-			<Footer />
 			<script
 				dangerouslySetInnerHTML={{
 					__html:

@@ -9,59 +9,13 @@ import { breakpoints } from '../styles/breakpoints';
 import { allProjects } from '../types/projects';
 import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
+import { StopWarComponent } from '../components/stopwar/index';
 
 export default function PortfolioPage() {
-	const { t } = useTranslation();
-	const filterResetBtn = t('portfolio.filterResetBtn');
-	const [selectedCategories, setSelectedCategories] = useState([
-		filterResetBtn,
-	]);
-	console.log(selectedCategories);
-
-	const onSelectCategory = newCategory => {
-		if (newCategory === filterResetBtn) {
-			setSelectedCategories([filterResetBtn]);
-			return;
-		}
-
-		let newCategories = [];
-		const index = selectedCategories.indexOf(newCategory);
-		if (index < 0) {
-			newCategories = [newCategory];
-		} else {
-			newCategories = [...selectedCategories];
-			newCategories.splice(index, 1);
-		}
-
-		if (!newCategories.length) {
-			setSelectedCategories([filterResetBtn]);
-		} else {
-			setSelectedCategories(
-				newCategories.filter(
-					newSelectedCategory => newSelectedCategory !== filterResetBtn
-				)
-			);
-		}
-	};
 
 	return (
 		<Page pageName="Portfolio">
-			<Toolbar />
-			<ContainerWrap>
-				<TitleContainer>
-					<SubTitle>{t('portfolio.subTitle')}</SubTitle>
-					<Title>{t('portfolio.mainTitle')}</Title>
-					<AboutPage>{t('portfolio.about')}</AboutPage>
-				</TitleContainer>
-				<ButtonsList
-					selectedCategories={selectedCategories}
-					onSelectCategory={onSelectCategory}
-				/>
-
-				<ProjectsList selectedCategories={selectedCategories} />
-			</ContainerWrap>
-
-			<PreFooter />
+      <StopWarComponent />
 		</Page>
 	);
 }
