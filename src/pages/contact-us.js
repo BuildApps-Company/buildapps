@@ -6,16 +6,64 @@ import { ContactUsForm, Contacts } from '../components/ContactUsPage';
 import { breakpoints } from '../styles/breakpoints';
 import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
-import { StopWarComponent } from '../components/stopwar/index';
 
 export default function ContactFormPage() {
   const { t } = useTranslation();
 	return (
 		<Page pageName={'Contact Us'}>
-			<StopWarComponent />
+			<Toolbar />
+			<StyledPageContainer>
+				<SubTitle>{t('contactUs.subTitle')}</SubTitle>
+				<Title>{t('contactUs.mainTitle')}</Title>
+				<FlexContainer>
+					<ContactUsForm />
+					<Contacts />
+				</FlexContainer>
+			</StyledPageContainer>
 		</Page>
 	);
 }
+
+const StyledPageContainer = styled.div`
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 120px;
+	padding-left: 5%;
+	padding-right: 5%;
+
+	@media all and (min-width: ${breakpoints.notebook}) {
+		padding-left: 11%;
+	}
+`;
+
+const SubTitle = styled.h2`
+	margin: 0;
+	padding: 0;
+	font-size: 0.75rem;
+	line-height: 160%;
+	opacity: 0.75;
+	text-transform: uppercase;
+`;
+
+const Title = styled.h1`
+	margin: 0 0 40px 0;
+	padding: 0;
+	font-size: 3rem;
+	line-height: 160%;
+	text-transform: uppercase;
+
+	@media all and (min-width: 1480px) {
+		font-size: 4rem;
+	}
+`;
+
+const FlexContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	@media all and (min-width: ${breakpoints.notebook}) {
+		flex-direction: row;
+	}
+`;
 
 export const query = graphql`
 	query($language: String!) {

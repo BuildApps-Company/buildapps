@@ -1,11 +1,10 @@
 import React from 'react';
 import { PortfolioDetails } from '../../components/PortfolioPage';
 import { graphql } from 'gatsby';
-import { StopWarComponent } from '../../components/stopwar/index';
 
 const CardanoWater = () => {
 	return (
-		<StopWarComponent />
+		<PortfolioDetails id={'cardanowater'} />
 	);
 };
 
