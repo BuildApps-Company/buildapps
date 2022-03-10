@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { BurgerMenu } from './BurgerMenu';
+import { StopWarBanner } from './stopWarBanner'
 import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import logoWhite from '../../../static/images/logo/logoWhite.svg';
@@ -16,27 +17,30 @@ export function Toolbar({ isWhite }) {
 	const toogleList = () => setIsOpen(prevState => !prevState);
 
 	return (
-		<StyledHeader>
-			<Link to={routes.home}>
-				<Logo
-					src={isWhite ? logoWhite : logoBlack}
-					onMouseOver={e =>
-						(e.currentTarget.src = isWhite ? logoWhiteHover : logoBlackHover)
-					}
-					onMouseOut={e =>
-						(e.currentTarget.src = isWhite ? logoWhite : logoBlack)
-					}
-				/>
-			</Link>
+    <>
+      <StopWarBanner />
+      <StyledHeader>
+        <Link to={routes.home}>
+          <Logo
+            src={isWhite ? logoWhite : logoBlack}
+            onMouseOver={e =>
+              (e.currentTarget.src = isWhite ? logoWhiteHover : logoBlackHover)
+            }
+            onMouseOut={e =>
+              (e.currentTarget.src = isWhite ? logoWhite : logoBlack)
+            }
+          />
+        </Link>
 
-			<Burger
-				src={isWhite ? burgerWhite : burgerBlack}
-				onClick={toogleList}
-				active={isOpen}
-			/>
+        <Burger
+          src={isWhite ? burgerWhite : burgerBlack}
+          onClick={toogleList}
+          active={isOpen}
+        />
 
-			<BurgerMenu toogleList={toogleList} isOpen={isOpen}/>
-		</StyledHeader>
+        <BurgerMenu toogleList={toogleList} isOpen={isOpen}/>
+      </StyledHeader>
+    </>
 	);
 }
 
