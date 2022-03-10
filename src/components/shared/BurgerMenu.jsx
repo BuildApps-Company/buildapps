@@ -172,7 +172,7 @@ const GlobalStyle = createGlobalStyle`
 const StyledBurgerMenu = styled.div`
 	display: flex;
 	flex-direction: column;
-	z-index: 999;
+	z-index: 1001;
 	position: fixed;
 	top: 0px;
 	left: 0px;
