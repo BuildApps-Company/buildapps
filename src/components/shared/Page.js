@@ -34,6 +34,7 @@ export function Page({ children, pageName }) {
 				</title>
 				<meta name="description" content={t('helmet.description')} />
 				<meta http-equiv="Content-Language" content={activeLanguage}></meta>
+				<meta name="Keywords" content="buildapp, mobile form development, расчет стоимости разработки сайта, business loan lead management software, askod, аскод онлайн, cardano hompage, application development portfolio"></meta>
 			</Helmet>
 			{children}
 			<Footer />

@@ -58,7 +58,7 @@ typings/
 .cache/
 public
 
-# Mac files
+# Mac and Editors files
 .DS_Store
 .idea
 
