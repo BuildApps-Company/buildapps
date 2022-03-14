@@ -9,8 +9,6 @@ import { useTranslation } from 'react-i18next';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-const delay = [1000, 1250, 1250, 900, 1150, 900, 1000, 1250, 1350, 1150, 1450, 1000];
-
 export const ProjectsList = ({ selectedCategories }) => {
 	const { t } = useTranslation();
 	const filterResetBtn = t('portfolio.filterResetBtn');
@@ -28,33 +26,32 @@ export const ProjectsList = ({ selectedCategories }) => {
 	);
 
 	useEffect(() => {
-		Aos.init({
-      offset: 150,
-      mirror: false,
-    });
+		Aos.init({});
 	}, []);
 
 	return (
 		<StyledPortfolioList>
 			{projects.map(([key, el], index) => {
 				const TitleValue = el.title;
-
 				return (
 					<li
 						key={key}
-						data-aos='fade-up'
-						data-aos-duration={delay[index]}
-            data-aos-delay={delay[index] - 800}
+						data-aos-delay="130"
+						data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
 					>
-						<Link to={`${routes.portfolio}${el.id}/`} state={{ project: el }} style={{display: 'block' }}>
-							<ProjectContainer background={el.background}>
-								<ImageContainer>
-									{el.longImage && <img src={el.longImage} alt={el.title} />}
-								</ImageContainer>
-							</ProjectContainer>
-							<StyledTitle>
-								<TitleValue></TitleValue>
-							</StyledTitle>
+						<Link to={`${routes.portfolio}${el.id}/`} state={{ project: el }}>
+							<ImageContainer image={el.longImage} background={el.background}>
+								<h3>
+									<TitleValue></TitleValue>
+								</h3>
+								{el.longImage && <img src={el.longImage} alt={el.title} />}
+							</ImageContainer>
+							<>
+								{el.responsibility.map(el => (
+									<StyledResponsibility key={el}>{el}</StyledResponsibility>
+								))}
+								<StyledDescription>{el.description}</StyledDescription>
+							</>
 						</Link>
 					</li>
 				);
@@ -63,16 +60,6 @@ export const ProjectsList = ({ selectedCategories }) => {
 	);
 };
 
-const ImageContainer = styled.div`
-	display: flex;
-	margin: 0 auto;
-	align-items: center;
-	justify-content: center;
-	align-self: center;
-	max-width: 450px;
-	max-height: 280px;
-`
-
 const StyledPortfolioList = styled.ul`
 	margin: 0;
 	padding: 0;
@@ -80,14 +67,13 @@ const StyledPortfolioList = styled.ul`
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
 
 	@media all and (min-width: ${breakpoints.tablet}) {
 		flex-direction: row;
 	}
 
 	li {
+		margin-bottom: 16px;
 		@media all and (min-width: ${breakpoints.tablet}) {
 			width: calc((100% - 16px) / 2);
 		}
@@ -96,6 +82,7 @@ const StyledPortfolioList = styled.ul`
 	li:nth-child(odd) {
 		@media all and (min-width: ${breakpoints.tablet}) {
 			margin-right: 16px;
+			margin-bottom: 64px;
 		}
 	}
 
@@ -104,36 +91,51 @@ const StyledPortfolioList = styled.ul`
 	}
 `;
 
-const ProjectContainer = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
+const ImageContainer = styled.div`
 	min-height: 198px;
 	border-radius: 4px;
 	padding: 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	background: ${props =>
 		props.background
 			? props.background
 			: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
 
 	overflow: hidden;
-	
+
+	h3 {
+		font-size: 1.25rem;
+		line-height: 160%;
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		@media all and (min-width: ${breakpoints.notebook}) {
+			font-size: 1.5rem;
+			/* margin-top: auto; */
+			color: ${colors.light.white};
+		}
+	}
 	img {
-		display: block;
 		max-height: 150px;
 		max-width: 168px;
 
 		@media all and (min-width: ${breakpoints.notebook}) {
-			display: block;
-			max-width: 450px;
-			max-height: 336px;
+			max-width: 100%;
+			max-height: 110%;
 		}
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		justify-content: center;
-		width: 584px;
-		height: 398px;
+		justify-content: start;
+		border-radius: 8px;
+		min-height: 324px;
+		height: 325px;
 		background: ${props =>
 			props.background
 				? props.background
@@ -155,20 +157,6 @@ const StyledResponsibility = styled.p`
 		}
 	}
 `;
-
-const StyledTitle = styled.h3 `
-	margin: 0;
-	padding: 12px 0 0 0;
-	margin-bottom: 32px;
-	font-size: 16px;
-	line-height: 160%;
-
-	@media all and (min-width: ${breakpoints.notebook}) {
-		font-size: 16px;
-		/* margin-top: auto; */
-		color: ${colors.Font};
-	}
-`
 
 const StyledDescription = styled.p`
 	display: none;

@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect';
 import { Toolbar } from '../shared/Toolbar';
@@ -13,16 +13,69 @@ import { Link } from 'gatsby-plugin-react-i18next';
 
 export function MainBanner() {
 	const [width, setWidth] = useState(0);
+	const [isScrolled, setIsScrolled] = useState(false);
 	const { t } = useTranslation();
+	const refContainer = useRef();
+
+	const scrollHandlerUp = event => {
+		if (!refContainer.current) {
+			return;
+		}
+
+		const rect = refContainer.current.getBoundingClientRect();
+		let singleScreenHeight = rect.height;
+
+		if (rect.bottom > 10 && !isScrolled) {
+			window.removeEventListener('scroll', scrollHandlerUp);
+			window.scrollBy({
+				top: -singleScreenHeight,
+				behavior: 'smooth'
+			});
+			setTimeout(window.addEventListener, 1000, 'scroll', scrollHandlerDown);
+		}
+
+		// if (rect.bottom > 0 && rect.top > -50) {
+		// 	window.removeEventListener('scroll', scrollHandlerUp);
+		// 	setTimeout(window.addEventListener, 1200, 'scroll', scrollHandlerDown);
+		// }
+
+	};
+
+	const scrollHandlerDown = event => {
+		if (!refContainer.current) {
+			return;
+		}
+
+		const rect = refContainer.current.getBoundingClientRect();
+		let singleScreenHeight = rect.height;
+
+		if (rect.top < 0 && !isScrolled) {
+			window.scrollBy({
+				top: singleScreenHeight,
+				behavior: 'smooth'
+			});
+			setIsScrolled(true);
+		}
+
+		window.removeEventListener('scroll', scrollHandlerDown);
+		setTimeout(window.addEventListener, 1000, 'scroll', scrollHandlerUp);
+	};
+
+
 
 	useLayoutEffect(() => {
 		window.addEventListener('resize', setWidth(window.innerWidth));
-		return () =>
+		window.addEventListener('scroll', scrollHandlerDown);
+
+		return () => {
 			window.removeEventListener('resize', setWidth(window.innerWidth));
+			window.removeEventListener('scroll', scrollHandlerDown);
+			window.removeEventListener('scroll', scrollHandlerUp);
+		}
 	}, []);
 
 	return (
-		<HeroWrap>
+		<HeroWrap ref={refContainer}>
 			<VideoHeader playsInline autoPlay loop muted poster={headerBackground}>
 				<source src={video} alt="video" type="video/mp4" />
 			</VideoHeader>

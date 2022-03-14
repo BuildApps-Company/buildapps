@@ -25,8 +25,7 @@ import { HaskiEn, HaskiRu, HaskiUa } from './HaskiDetails';
 export const en = {
 	ppf: {
 		id: 'ppf',
-		background:
-			'linear-gradient(88deg, rgba(126, 124, 235, 0.5) 3.37%, rgba(87, 195, 255, 0.5) 96.63%);',
+		background: '#7E53C1',
 		image: ppf,
 		longImage: ppfLong,
 		title: () => <>Lead management software</>,
@@ -45,8 +44,7 @@ Integration with third-party services to obtain more complete information about 
 	},
 	sushi: {
 		id: 'sushi',
-		background:
-			'linear-gradient(88deg, rgba(87, 195, 255, 0.5) 3.37%, rgba(255, 87, 188, 0.5) 96.63%);',
+		background: '#FA7B6B',
 		image: sushi,
 		longImage: sushiLong,
 		title: () => (
@@ -67,8 +65,7 @@ Integration with third-party services to obtain more complete information about 
 	},
 	spbProperty: {
 		id: 'spbproperty',
-		background:
-			'linear-gradient(88deg, rgba(255, 87, 188, 0.5) 3.37%, rgba(249, 202, 158, 0.5) 96.63%);',
+		background: '#18a0fb',
 		image: spbProperty,
 		pageTitle: 'Petersburg real estate',
 		longImage: spbLong,
@@ -92,8 +89,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 	},
 	askod: {
 		id: 'askod',
-		background:
-			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
+		background: '#32C178',
 		image: askod,
 		longImage: askodLong,
 		title: () => (
@@ -114,8 +110,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 	},
   iphonediscount: {
 		id: 'iphonediscount',
-		background:
-			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
+		background: '#EE6363',
 		image: iphone,
 		longImage: iphoneLong,
 		title: () => <>IPhone <SpanIphoneDiscount>Discount</SpanIphoneDiscount></>,
@@ -132,8 +127,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 	},
   cardanowater: {
 		id: 'cardanowater',
-		background:
-			'linear-gradient( 135deg, #465EFB 10%, #C2FFD8 100%);',
+		background: '#2B2E83',
 		image: cardanoLogo,
 		longImage: cardanoImg,
 		title: () => <>Cardano <SpanCardano>Water</SpanCardano></>,
@@ -150,8 +144,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 	},
   haski: {
 		id: 'haski',
-		background:
-			`linear-gradient(90deg,#f5abd7,#59c4cd);`,
+		background: `#3F798F`,
 		image: haskiLogo,
 		longImage: haskiImg,
 		title: () => <SpanHaski>HASKI</SpanHaski>,
@@ -171,8 +164,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 export const ru = {
 	ppf: {
 		id: 'ppf',
-		background:
-			'linear-gradient(88deg, rgba(126, 124, 235, 0.5) 3.37%, rgba(87, 195, 255, 0.5) 96.63%);',
+		background: '#7E53C1',
 		image: ppf,
 		longImage: ppfLong,
 		title: () => <>ПО для управления лидами</>,
@@ -189,8 +181,7 @@ export const ru = {
 	},
 	sushi: {
 		id: 'sushi',
-		background:
-			'linear-gradient(88deg, rgba(87, 195, 255, 0.5) 3.37%, rgba(255, 87, 188, 0.5) 96.63%);',
+		background: '#FA7B6B',
 		image: sushi,
 		longImage: sushiLong,
 		title: () => (
@@ -211,8 +202,7 @@ export const ru = {
 	},
 	spbProperty: {
 		id: 'spbproperty',
-		background:
-			'linear-gradient(88deg, rgba(255, 87, 188, 0.5) 3.37%, rgba(249, 202, 158, 0.5) 96.63%);',
+		background: '#18a0fb',
 		image: spbProperty,
 		pageTitle: 'Petersburg real estate',
 		longImage: spbLong,
@@ -236,8 +226,7 @@ export const ru = {
 	},
 	askod: {
 		id: 'askod',
-		background:
-			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
+		background: '#32C178',
 		image: askod,
 		longImage: askodLong,
 		title: () => (
@@ -258,8 +247,7 @@ export const ru = {
 	},
   iphonediscount: {
 		id: 'iphonediscount',
-		background:
-			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
+		background: '#EE6363',
 		image: iphone,
 		longImage: iphoneLong,
 		title: () => <>IPhone <SpanIphoneDiscount>Discount</SpanIphoneDiscount></>,
@@ -276,8 +264,7 @@ export const ru = {
 	},
   cardanowater: {
 		id: 'cardanowater',
-		background:
-			'linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%);',
+		background: '#2B2E83',
 		image: cardanoLogo,
 		longImage: cardanoImg,
 		title: () => <>Cardano <SpanCardano> Water</SpanCardano></>,
@@ -294,8 +281,7 @@ export const ru = {
 	},
   haski: {
 		id: 'haski',
-		background:
-			`linear-gradient(90deg,#f5abd7,#59c4cd);`,
+		background: `#3F798F`,
     image: haskiLogo,
     longImage: haskiImg,
 		title: () => <SpanHaski>HASKI</SpanHaski>,
@@ -315,8 +301,7 @@ export const ru = {
 export const ua = {
 	ppf: {
 		id: 'ppf',
-		background:
-			'linear-gradient(88deg, rgba(126, 124, 235, 0.5) 3.37%, rgba(87, 195, 255, 0.5) 96.63%);',
+		background: '#7E53C1',
 		image: ppf,
 		longImage: ppfLong,
 		title: () => <>Lead management software</>,
@@ -333,8 +318,7 @@ export const ua = {
 	},
 	sushi: {
 		id: 'sushi',
-		background:
-			'linear-gradient(88deg, rgba(87, 195, 255, 0.5) 3.37%, rgba(255, 87, 188, 0.5) 96.63%);',
+		background: '#FA7B6B',
 		image: sushi,
 		longImage: sushiLong,
 		title: () => (
@@ -355,8 +339,7 @@ export const ua = {
 	},
 	spbProperty: {
 		id: 'spbproperty',
-		background:
-			'linear-gradient(88deg, rgba(255, 87, 188, 0.5) 3.37%, rgba(249, 202, 158, 0.5) 96.63%);',
+		background: '#18a0fb',
 		image: spbProperty,
 		pageTitle: 'Petersburg real estate',
 		longImage: spbLong,
@@ -380,8 +363,7 @@ export const ua = {
 	},
 	askod: {
 		id: 'askod',
-		background:
-			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
+		background: '#32C178',
 		image: askod,
 		longImage: askodLong,
 		title: () => (
@@ -402,8 +384,7 @@ export const ua = {
 	},
   iphonediscount: {
 		id: 'iphonediscount',
-		background:
-			'linear-gradient(88deg, rgba(249, 202, 158, 0.5) 3.37%, rgba(243, 122, 122, 0.5) 96.63%);',
+		background: '#EE6363',
 		image: iphone,
 		longImage: iphoneLong,
 		title: () => <>IPhone <SpanIphoneDiscount>Discount</SpanIphoneDiscount></>,
@@ -420,8 +401,7 @@ export const ua = {
 	},
   cardanowater: {
 		id: 'cardanowater',
-		background:
-			'linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%);',
+		background: '#2B2E83',
 		image: cardanoLogo,
 		longImage: cardanoImg,
 		title: () => <>Cardano <SpanCardano> Water</SpanCardano></>,
@@ -438,8 +418,7 @@ export const ua = {
 	},
   haski: {
 		id: 'haski',
-		background:
-			`linear-gradient(90deg,#f5abd7,#59c4cd);`,
+		background: `#3F798F`,
     image: haskiLogo,
     longImage: haskiImg,
 		title: () => <SpanHaski>HASKI</SpanHaski>,
@@ -473,7 +452,6 @@ const SpanAskodOnline = styled.span`
 `;
 const SpanSpb = styled.span`
 	color: #fd233c;
-	display: block;
 `;
 
 const SpanSushi = styled.span`
