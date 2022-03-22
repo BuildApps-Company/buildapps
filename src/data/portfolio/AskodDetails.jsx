@@ -108,7 +108,7 @@ export const AskodDetailsEn = () => {
 							<H3>The requirements of ISO 9000 standards are met</H3>
 							<p>
 								The setting of quality management has now become one of the
-								priority tasks in Russian companies. Among the requirements for
+								priority tasks. Among the requirements for
 								the quality management system (QMS) there is a transparently
 								delivered workflow, as well as information interaction between
 								employees.
@@ -261,8 +261,7 @@ export const AskodDetailsRu = () => {
 						<LowerDiv>
 							<H3>Соответсвие требованиям стандартоа ISO 9000.</H3>
 							<p>
-                Построение менеджмента качества стало одной из приоритетных задач
-                российских компаний. Среди требований к системе менеджмента качества
+                Построение менеджмента качества стало одной из приоритетных задач. Среди требований к системе менеджмента качества
                 (QMS) - прозрачно поставленный рабочий процесс, а также
                 информационное взаимодействие между сотрудниками.
 							</p>
@@ -417,7 +416,7 @@ export const AskodDetailsUa = () => {
 							<H3>Відповідність вимогам стандарту ISO 9000</H3>
 							<p>
                 Постановка управління якістю зараз стала одним з пріоритетних
-                завдань російських компаній. Серед вимог до системи менеджменту
+                завдань. Серед вимог до системи менеджменту
                 якості (QMS) — прозоро поставлений робочий процес, а також
                 інформаційна взаємодія між співробітниками.
 							</p>

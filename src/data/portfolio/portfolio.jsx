@@ -16,7 +16,6 @@ import haskiLogo from '../../../static/images/portfolio/haski_logo.png';
 import haskiImg from '../../../static/images/portfolio/haski_long.png';
 import { PpfDetailsEn, PpfDetailsRu, PpfDetailsUa } from './PpfDetails';
 import { SushiDetailsEn, SushiDetailsRu, SushiDetailsUa } from './SushiDetails';
-import { SpbPropertyEn, SpbPropertyRu, SpbPropertyUa } from './SpbProperty';
 import { AskodDetailsEn, AskodDetailsRu, AskodDetailsUa } from './AskodDetails';
 import { IPhoneDiscountEn, IPhoneDiscountRu, IPhoneDiscountUa } from './IPhoneDiscountDetails';
 import { CardanoWaterEn, CardanoWaterRu, CardanoWaterUa } from './CardanoWaterDetails';
@@ -37,7 +36,7 @@ Integration with third-party services to obtain more complete information about 
 		fullDescription: `Due to the high competition in the lending market and the high demand for loans for business purposes, the speed and the quality of working with clients are much appreciated, and, last but not least, the automation of work with each application. This is where software in the form of CRM comes into play.`,
 		pageContent: PpfDetailsEn,
     links: {
-      web: 'https://papafinance.ru/',
+      web: null,
       appStore: null,
       playMarket: null,
     },
@@ -61,30 +60,6 @@ Integration with third-party services to obtain more complete information about 
       web: null,
       appStore: 'https://apps.apple.com/ru/app/id1537535113',
       playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.sushishop',
-    },
-	},
-	spbProperty: {
-		id: 'spbproperty',
-		background: '#18a0fb',
-		image: spbProperty,
-		pageTitle: 'Petersburg real estate',
-		longImage: spbLong,
-		title: () => (
-			<>
-				Petersburg <SpanSpb>real estate</SpanSpb>
-			</>
-		),
-		description: `Mobile client for finding an apartment in residential complex in St. Petersburg and Moscow. The system allows you to book apartments, make pre-orders and find apartments at competitive prices.`,
-		responsibility: ['Mobile'],
-		fullDescription: `Hundreds of people regularly search for apartments, conclude lease agreements with realtors, buy new properties or sell old ones. The growing demand and the accelerated pace of life leave people with less and less time to personally solve such problems.
-Who would be asked more often for help in these matters? To someone who can solve them not only qualitatively, but also faster than others. A real estate mobile app will give your business a competitive advantage.
-AgentPN is a professional application only for real estate agencies - partners of Petersburg Real Estate. Search and booking of apartments in the largest database of new buildings in St. Petersburg and the Leningrad region. A login to the application is by a phone number.
-Use your favorite work tool wherever you are. Conduct consultations remotely in a place convenient for the client. Access to apartments, mortgage calculator, apartment reservations, as well as a convenient database of your clients - in one application.`,
-		pageContent: SpbPropertyEn,
-    links: {
-      web: null,
-      appStore: 'https://apps.apple.com/ru/app/id1466597730',
-      playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.AgentPn',
     },
 	},
 	askod: {
@@ -120,7 +95,7 @@ Use your favorite work tool wherever you are. Conduct consultations remotely in 
 		fullDescription: `Developing an online store is a serious task that requires a deep understanding of online business processes. It becomes more complicated when it comes to creating a reselling platform that offers products from a well-known brand. The iPhone Discount startup contacted us to solve this problem. We helped them build a technological foundation for the further development and scaling of their online business.`,
 		pageContent: IPhoneDiscountEn,
     links: {
-      web: 'https://iphone-discount.ru',
+      web: null,
       appStore: null,
       playMarket: null,
     },
@@ -174,7 +149,7 @@ export const ru = {
 		fullDescription: `В связи с высокой конкуренцией на рынке кредитования и высоким спросом на кредиты для бизнес-целей очень ценятся скорость и качество работы с клиентами, и, что не менее важно, автоматизация работы с каждым приложением. Именно здесь в игру вступает программное обеспечение в форме CRM.`,
 		pageContent: PpfDetailsRu,
     links: {
-      web: 'https://papafinance.ru/',
+      web: null,
       appStore: null,
       playMarket: null,
     },
@@ -198,30 +173,6 @@ export const ru = {
       web: null,
       appStore: 'https://apps.apple.com/ru/app/id1537535113',
       playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.sushishop',
-    },
-	},
-	spbProperty: {
-		id: 'spbproperty',
-		background: '#18a0fb',
-		image: spbProperty,
-		pageTitle: 'Petersburg real estate',
-		longImage: spbLong,
-		title: () => (
-			<>
-				Petersburg <SpanSpb>real estate</SpanSpb>
-			</>
-		),
-		description: `Мобильный клиент для поиска квартиры в ЖК в Санкт-Петербурге и Москве. Система позволяет бронировать квартиры, делать предварительные заказы и находить квартиры по выгодным ценам.`,
-		responsibility: ['Mobile'],
-		fullDescription: `Сотни людей регулярно ищут квартиры, заключают договоры аренды с риелторами, покупают новую недвижимость или продают старую. Растущий спрос и ускоренный темп жизни оставляют у людей все меньше и меньше времени для личного решения подобных проблем.
-    К кому чаще обращаются за помощью в этих вопросах? К тому, кто сможет их решить не только качественно, но и быстрее других. Мобильное приложение по недвижимости даст вашему бизнесу конкурентное преимущество.
-    AgentPN - профессиональное приложение только для агентств недвижимости - партнеров компании «Петербургская недвижимость». Поиск и бронирование квартир в крупнейшей базе новостроек Санкт-Петербурга и Ленинградской области. Вход в приложение осуществляется по номеру телефона.
-    Используйте свой любимый рабочий инструмент, где бы вы ни находились. Консультации проводим удаленно в удобном для клиента месте. Доступ к квартирам, ипотечному калькулятору, бронированию квартир, а также удобная база данных ваших клиентов - в одном приложении.`,
-		pageContent: SpbPropertyRu,
-    links: {
-      web: null,
-      appStore: 'https://apps.apple.com/ru/app/id1466597730',
-      playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.AgentPn',
     },
 	},
 	askod: {
@@ -257,7 +208,7 @@ export const ru = {
 		fullDescription: `Разработка интернет-магазина — серьезная задача, требующая глубокого понимания процессов онлайн-бизнеса. Эта задача усложняется, если дело касается создания платформы для реселлинга, когда сайт предлагает продукцию известного бренда. Именно в такой ситуации к нам обратился стартап Iphone Discount. Мы помогли ему построить технологический фундамент для дальнейшего развития и масштабирования онлайн-бизнеса.`,
 		pageContent: IPhoneDiscountRu,
     links: {
-      web: 'https://iphone-discount.ru',
+      web: null,
       appStore: null,
       playMarket: null,
     },
@@ -311,7 +262,7 @@ export const ua = {
 		fullDescription: `Завдяки високій конкуренції на ринку кредитування та високому попиту на кредити для бізнес-цілей дуже цінується швидкість та якість роботи з клієнтами, і, не в останню чергу, автоматизація роботи з кожною заявкою. Ось тут і вступає в гру програмне забезпечення у вигляді CRM.`,
 		pageContent: PpfDetailsUa,
     links: {
-      web: 'https://papafinance.ru/',
+      web: null,
       appStore: null,
       playMarket: null,
     },
@@ -335,30 +286,6 @@ export const ua = {
       web: null,
       appStore: 'https://apps.apple.com/ru/app/id1537535113',
       playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.sushishop',
-    },
-	},
-	spbProperty: {
-		id: 'spbproperty',
-		background: '#18a0fb',
-		image: spbProperty,
-		pageTitle: 'Petersburg real estate',
-		longImage: spbLong,
-		title: () => (
-			<>
-				Petersburg <SpanSpb>real estate</SpanSpb>
-			</>
-		),
-		description: `Мобільний додаток для пошуку квартири в ЖК в Санкт-Петербурзі та Москві. Система дозволяє бронювати квартири, робити попередні замовлення та знаходити квартири за вигідними цінами.`,
-		responsibility: ['Mobile'],
-		fullDescription: `Сотні людей регулярно шукають квартири, укладають договори оренди з ріелторами, купують нову нерухомість або продають стару. Зростаючий попит і прискорений темп життя залишають у людей все менше часу на особисте вирішення подібних проблем.
-    До кого частіше звертатимуться за допомогою в цих питаннях? До тих, хто може вирішити їх не тільки якісно, а й швидше за інших. Мобільний додаток для нерухомості дасть вашому бізнесу конкурентну перевагу.
-    AgentPN - це професійний додаток тільки для агентств нерухомості - партнерів Petersburg Real Estate. Пошук та бронювання квартир у найбільшій базі новобудов Санкт-Петербурга та Ленінградської області. Вхід до програми здійснюється за номером телефону.
-    Використовуйте свій улюблений робочий інструмент, де б ви не були. Проводити консультації дистанційно в зручному для клієнта місці. Доступ до квартир, іпотечного калькулятора, бронювання квартир, а також зручної бази даних ваших клієнтів - в одному додатку.`,
-		pageContent: SpbPropertyUa,
-    links: {
-      web: null,
-      appStore: 'https://apps.apple.com/ru/app/id1466597730',
-      playMarket: 'https://play.google.com/store/apps/details?id=com.notissimus.AgentPn',
     },
 	},
 	askod: {
@@ -394,7 +321,7 @@ export const ua = {
 		fullDescription: `Розробка інтернет-магазину — серйозне завдання, яке потребує глибокого розуміння процесів онлайн-бізнесу. Це завдання ускладнюється, якщо справа стосується створення платформи для реселінгу, коли сайт пропонує продукцію відомого бренду. Саме у такій ситуації до нас звернувся стартап Iphone Discount. Ми допомогли йому побудувати технологічний фундамент для подальшого розвитку та масштабування онлайн-бізнесу.`,
 		pageContent: IPhoneDiscountUa,
     links: {
-      web: 'https://iphone-discount.ru',
+      web: null,
       appStore: null,
       playMarket: null,
     },
@@ -449,9 +376,6 @@ const SpanIphoneDiscount = styled.span`
 
 const SpanAskodOnline = styled.span`
 	color: #32c178;
-`;
-const SpanSpb = styled.span`
-	color: #fd233c;
 `;
 
 const SpanSushi = styled.span`
