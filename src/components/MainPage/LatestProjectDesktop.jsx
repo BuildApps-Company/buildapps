@@ -47,7 +47,7 @@ export const LatestProjectDesktop = ({ projectsDesktop }) => {
 						<TitlePage data-aos="fade-right">
 							{t('latestProjects.latestProjects')}
 						</TitlePage>
-						<StyledLink data-aos="fade-up" to={routes.portfolio}>
+						<StyledLink data-aos="fade-up" to={routes.hiring}>
 							{t('latestProjects.all')}
 						</StyledLink>
 					</TitleWrap>

@@ -1,0 +1,21 @@
+{
+	"hiring.mainTitle": "Возможности трудоустройства",
+	"hiring.goBack": "Вернуться к вакансиям",
+	"hiring.about": "Беремся за интересные проекты, разрабатываем полезные сайты и приложения. Хочу попробовать? Свяжись с нами!",
+	"hiring.filterResetBtn": "Все",
+	"filter.filterHeader": "Фильтры",
+	"filter.categryDepartment": "Департамент",
+	"filter.btnWeb": "WEB",
+	"filter.btnMobile": "MOBILE",
+	"filter.btnDesign": "DESIGN",
+	"filter.categryExp": "Опыт работы",
+	"filter.btnSenior": "senior",
+	"filter.btnJunior": "junior",
+	"filter.btnMiddle": "middle",
+	"filter.categryWorkTime": "Модель занятости",
+	"filter.btnPart": "Частичная",
+	"filter.btnFull": "Полная",
+	"filter.categryWorkspace": "Место работы",
+	"filter.btnRemote": "Удаленно",
+	"filter.btnOffice": "Офис"
+}
