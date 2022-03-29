@@ -108,7 +108,8 @@ const ProjectContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 198px;
+	min-height: 250px;
+  min-width: 280px;
 	border-radius: 4px;
 	padding: 20px;
 	background: ${props =>

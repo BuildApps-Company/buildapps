@@ -3,7 +3,7 @@ export const routes = {
 	portfolio: '/portfolio/',
 	aboutUs: '/about-us/',
 	prices: '/prices/',
-  hiring: '/hiring/',
+	hiring: '/hiring/',
 	contactForm: '/contact-us/',
 	services_workflow: '/sevices_and_workflow/',
 };

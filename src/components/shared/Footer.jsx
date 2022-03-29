@@ -14,6 +14,8 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'gatsby-plugin-react-i18next';
 import { LanguageSelector } from './LanguageSelector';
 
+const yearData = new Date();
+
 export const Footer = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toogleList = () => setIsOpen(prevState => !prevState);
@@ -54,11 +56,11 @@ export const Footer = () => {
 			</FlexContainerMob>
 
 			<TermsOfUseContainerMobile>
-				<span>Build Apps</span> {t('footer.copyright')}
+				<span>Build Apps ©</span> {yearData.getFullYear()}
 			</TermsOfUseContainerMobile>
 
 			<TermsOfUseContainerDesktop>
-				Copyright {t('footer.copyright')} {t('footer.termsOfUse')}
+				Copyright © {yearData.getFullYear()} BuildApps {t('footer.termsOfUse')}
 			</TermsOfUseContainerDesktop>
 		</StyledFooter>
 	);
