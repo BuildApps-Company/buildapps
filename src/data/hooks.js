@@ -6,6 +6,7 @@ import { ourContributorsData } from "./ourContributorsData";
 import { ourTeamListData } from "./ourTeamListData";
 import { portfolio } from "./portfolio";
 import { ourServices } from "./services";
+import { acordeonServices } from "./services_and_workflow/services";
 import { pricesAndServicesTableData } from "./pricesAndServicesTableData";
 import { calculationOptionsData } from "./pricesCalculatorData";
 import { socialMediaListData } from "./socialMediaListData";
@@ -63,4 +64,9 @@ export const usePortfolio = () => {
 export const useServices = () => {
   const i18n = useI18next();
   return getOrDefault(ourServices, i18n);
+}
+
+export const UseAccordionServices = () => {
+  const i18n = useI18next();
+  return getOrDefault(acordeonServices, i18n);
 }

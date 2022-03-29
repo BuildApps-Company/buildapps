@@ -24,3 +24,10 @@ export const SmallContainer = styled.div`
 		padding-right: 3%;
 	}
 `;
+
+export const ContentContainer = styled.div`
+	display: block;
+	max-width: 1460px;
+	margin: 0 auto;
+	padding: 0 30px;
+`;

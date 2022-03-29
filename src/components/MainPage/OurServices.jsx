@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
+import { routes } from '../../utilities/routes';
 import { useTranslation } from 'react-i18next';
 import { ServiceCard } from '../shared/ServiceCard';
 import Slider from 'react-slick';
@@ -13,8 +14,8 @@ const settings = {
 	dots: false,
 	infinite: true,
 	variableWidth: true,
+  swipeToSlide: true,
 	slidesToShow: 1,
-	slidesToScroll: 1,
 	autoplay: true,
 	speed: 500,
 	autoplaySpeed: 2000,
@@ -29,12 +30,12 @@ export const OurServices = ({ services }) => {
 			<TopContainer>
 				<TitleWrap>
 					<Title data-aos="fade-right">{t('ourservices.mainTitle')}</Title>
-					{/* <StyledLink
+					<StyledLink
 							data-aos="fade-up"
-							to={`#`}
+							to={routes.services_workflow}
 						>
 							{t('ourservices.more')}
-						</StyledLink> */}
+						</StyledLink>
 				</TitleWrap>
 			</TopContainer>
 			<BlockSlider>
