@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { colors } from '../../styles/colors';
+import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import { ContentContainer } from '../../styles/container';
 import { StyledLink } from '../../styles/layout';
@@ -14,7 +15,7 @@ const WeHiring = () => {
 			<WeHiringWrapper>
 				<TitleContainer>
 					<Title data-aos="fade-right">{t('servicesAndWorkflow.title')}</Title>
-					<StyledLink data-aos="fade-up">
+					<StyledLink data-aos="fade-up" to={routes.hiring}>
 						{t('servicesAndWorkflow.more')}
 					</StyledLink>
 				</TitleContainer>

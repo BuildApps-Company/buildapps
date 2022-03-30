@@ -23,8 +23,7 @@ const settings = {
 	cssEase: 'ease-out',
 };
 
-export const WorkflowMobile = () => {
-	const [point, setPoint] = useState(1);
+const WorkflowMobile = () => {
 	const { t } = useTranslation();
 
 	return (
@@ -72,7 +71,8 @@ const BlockSlider = styled.div`
 const SliderElement = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 230px;
+	height: 260px;
+  margin-right: 100px;
 `;
 
 const SliderText = styled.p`
@@ -117,7 +117,7 @@ const Circle1 = styled.div`
 	transition: background-color 300ms linear;
 	cursor: pointer;
 	bottom: 0;
-	transform: translateX(70%);
+	transform: translateX(calc(50vw - 55px));
 
 	&::after {
 		content: '';
@@ -147,7 +147,7 @@ const Circle2 = styled.div`
 	transition: background-color 300ms linear;
 	cursor: pointer;
 	bottom: 0;
-	transform: translateX(70%);
+	transform: translateX(calc(50vw - 55px));
 
 	&::after {
 		content: '';
@@ -177,7 +177,7 @@ const Circle3 = styled.div`
 	transition: background-color 300ms linear;
 	cursor: pointer;
 	bottom: 0;
-	transform: translateX(70%);
+	transform: translateX(calc(50vw - 55px));
 
 	&::after {
 		content: '';
@@ -207,7 +207,7 @@ const Circle4 = styled.div`
 	transition: background-color 300ms linear;
 	cursor: pointer;
 	bottom: 0;
-	transform: translateX(70%);
+	transform: translateX(calc(50vw - 55px));
 
 	&::after {
 		content: '';

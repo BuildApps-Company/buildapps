@@ -31,27 +31,34 @@ export const ServicesAndWorkflow = () => {
 			<ContentContainer>
 				<ServicesAndCultureSection>
 					<AccordionSection>
-						<InfoSectionTitle>
-							{t('servicesAndWorkflow.services')}
-						</InfoSectionTitle>
-						{accordionServices.map(({ id, title, content }) => (
-							<Accordion
-								key={id}
-								title={title}
-								content={content}
-								ActiveTab={ActiveTab}
-								setActiveTab={setActiveTab}
-							/>
-						))}
+						<AcordionContent>
+							<InfoSectionTitle>
+								{t('servicesAndWorkflow.services')}
+							</InfoSectionTitle>
+							{accordionServices.map(({ id, title, content }) => (
+								<Accordion
+									key={id}
+									id={id}
+									title={title}
+									content={content}
+									ActiveTab={ActiveTab}
+									setActiveTab={setActiveTab}
+								/>
+							))}
+						</AcordionContent>
 					</AccordionSection>
 					<CultureSection>
-						<InfoSectionTitle>
-							{t('servicesAndWorkflow.culture')}
-						</InfoSectionTitle>
-						<CultureDescription>
-							{t('servicesAndWorkflow.cultureAbout')}
-						</CultureDescription>
-						<OurTeamPhoto />
+						<CultureTextSection>
+							<InfoSectionTitle>
+								{t('servicesAndWorkflow.culture')}
+							</InfoSectionTitle>
+							<CultureDescription>
+								{t('servicesAndWorkflow.cultureAbout')}
+							</CultureDescription>
+						</CultureTextSection>
+						<OurTeamPhotoContainer>
+							<OurTeamPhoto />
+						</OurTeamPhotoContainer>
 					</CultureSection>
 				</ServicesAndCultureSection>
 			</ContentContainer>
@@ -67,24 +74,47 @@ const OurTeamPhoto = styled.div`
 	display: block;
 	height: 296px;
 	width: 100%;
+	position: absolute;
+	right: 0;
 	background-image: url(${ourTeam});
 	background-size: cover;
 	background-position: center;
 `;
 
+const OurTeamPhotoContainer = styled.div`
+	width: 100%;
+	position: relative;
+	height: 296px;
+	overflow: hidden;
+`;
+
+const CultureTextSection = styled.div``;
+
+const AcordionContent = styled.div`
+  display: block;
+  max-width: 600px;
+`;
+
+
 const AccordionSection = styled.div`
 	display: flex;
 	flex-direction: column;
-	max-width: 600px;
 	border-bottom: 1px solid ${colors.grey.background};
 	margin-bottom: 52px;
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		width: 100%;
+	}
 `;
 
 const CultureSection = styled.div`
 	display: flex;
-	position: relative;
 	flex-direction: column;
-	max-width: 600px;
+	width: 100%;
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		width: 100%;
+	}
 `;
 
 const CultureDescription = styled.p`
