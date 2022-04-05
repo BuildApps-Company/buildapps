@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import spbProperty from '../../../static/images/portfolio/spbProperty.jpg';
-import spbLong from '../../../static/images/portfolio/spb_long.png';
 import askod from '../../../static/images/portfolio/askod.jpg';
 import askodLong from '../../../static/images/portfolio/askod-long.png';
 import sushi from '../../../static/images/portfolio/sushi.png';
@@ -16,9 +14,12 @@ import haskiLogo from '../../../static/images/portfolio/haski_logo.png';
 import haskiImg from '../../../static/images/portfolio/haski_long.png';
 import turboDispatchLogo from '../../../static/images/portfolio/turbodispatch.png';
 import turboDispatchImg from '../../../static/images/portfolio/turbodispatch_long.jpg';
+import OnPlayLogo from '../../../static/images/portfolio/prankchat.png';
+import OnPlayImg from '../../../static/images/portfolio/prankchat_long.png';
 import { PpfDetailsEn, PpfDetailsRu, PpfDetailsUa } from './PpfDetails';
 import { SushiDetailsEn, SushiDetailsRu, SushiDetailsUa } from './SushiDetails';
 import { AskodDetailsEn, AskodDetailsRu, AskodDetailsUa } from './AskodDetails';
+import { OnPlayEn, OnPlayRu, OnPlayUa } from './OnPlayDetails';
 import {
 	IPhoneDiscountEn,
 	IPhoneDiscountRu,
@@ -30,7 +31,11 @@ import {
 	CardanoWaterUa,
 } from './CardanoWaterDetails';
 import { HaskiEn, HaskiRu, HaskiUa } from './HaskiDetails';
-import { TurboDiaspachEn, TurboDiaspachRu, TurboDiaspachUa } from './TurboDispatchDetails';
+import {
+	TurboDiaspachEn,
+	TurboDiaspachRu,
+	TurboDiaspachUa,
+} from './TurboDispatchDetails';
 
 export const en = {
 	ppf: {
@@ -166,6 +171,23 @@ Integration with third-party services to obtain more complete information about 
 		responsibility: ['Design'],
 		fullDescription: `The global pandemic dictates its terms to society. Due to the people’s need to stay self-isolated and avoid visits to public places, there is a trend towards the transition to online mode in all areas of life, and sales are no exception. But if buying small goods online no longer surprises anyone, it is still more common to purchase cars offline. However, automakers and dealers are testing new methods of contactless sale and transportation of vehicles. And BuildApps agreed to help them with this.`,
 		pageContent: TurboDiaspachEn,
+		links: {
+			web: null,
+			appStore: null,
+			playMarket: null,
+		},
+	},
+	onplay: {
+		id: 'onplay',
+		background: `#F0864E`,
+		image: OnPlayLogo,
+		longImage: OnPlayImg,
+		title: () => <SpanOnPlay>OnPlay</SpanOnPlay>,
+		pageTitle: 'Pranking everywhere: a new social network for entertainment',
+		description: `How interactive can a social network be? After working on the PrankChat project, our team realized that there is no limit to user engagement. With our crazy life tempo, worries, and challenges, people need an app that allows them to relax 100%. And BuildApps created it: the perfect space for communication, funny videos, and exciting pastimes.`,
+		responsibility: ['Design', 'Mobile'],
+		fullDescription: `How interactive can a social network be? After working on the PrankChat project, our team realized that there is no limit to user engagement. With our crazy life tempo, worries, and challenges, people need an app that allows them to relax 100%. And BuildApps created it: the perfect space for communication, funny videos, and exciting pastimes.`,
+		pageContent: OnPlayEn,
 		links: {
 			web: null,
 			appStore: null,
@@ -312,6 +334,23 @@ export const ru = {
 			playMarket: null,
 		},
 	},
+	onplay: {
+		id: 'onplay',
+		background: `#F0864E`,
+		image: OnPlayLogo,
+		longImage: OnPlayImg,
+		title: () => <SpanOnPlay>OnPlay</SpanOnPlay>,
+		pageTitle: 'С пранком по жизни: новая социальная сеть для развлечений',
+		description: `Насколько интерактивной может быть социальная сеть? После работы над проектом PrankChat наша команда поняла — вовлеченности пользователей нет предела. Учитывая наш сумасшедший ритм жизни, постоянные заботы и переживания, людям просто необходимо было приложение, которое позволяет расслабиться на все 100%. И команда BuildApps создала его — идеальное пространство для общения, веселых видео и интересного времяпрепровождения.`,
+		responsibility: ['Design', 'Mobile'],
+		fullDescription: `Насколько интерактивной может быть социальная сеть? После работы над проектом PrankChat наша команда поняла — вовлеченности пользователей нет предела. Учитывая наш сумасшедший ритм жизни, постоянные заботы и переживания, людям просто необходимо было приложение, которое позволяет расслабиться на все 100%. И команда BuildApps создала его — идеальное пространство для общения, веселых видео и интересного времяпрепровождения.`,
+		pageContent: OnPlayRu,
+		links: {
+			web: null,
+			appStore: null,
+			playMarket: null,
+		},
+	},
 };
 
 export const ua = {
@@ -435,6 +474,41 @@ export const ua = {
 			playMarket: null,
 		},
 	},
+	turbodispatch: {
+		id: 'turbodispatch',
+		background: `#09091A`,
+		image: turboDispatchLogo,
+		longImage: turboDispatchImg,
+		title: () => <SpanTurboDispatch>TURBODISPATCH</SpanTurboDispatch>,
+		pageTitle:
+			'З доставкою додому: як коронавірус оживив продажі автомобілів онлайн',
+		description: `Всесвітня пандемія диктує суспільству умови. Через необхідність залишатися на самоізоляції та обмежувати відвідування громадських місць абсолютно у всіх сферах життя простежується тенденція переходу в режим онлайн. Чи не стали винятком і продажі. І якщо покупкою в інтернет магазині дрібних товарів вже нікого не здивувати, то автомобілі все ж таки звичніше купувати офлайн. Але останнім часом автовиробники та дилери все ж таки тестують нові способи безконтактного продажу та перевезення автомобілів. І команда BuildApps взялася допомогти їм у цьому.`,
+		responsibility: ['Design'],
+		fullDescription: `Всесвітня пандемія диктує суспільству умови. Через необхідність залишатися на самоізоляції та обмежувати відвідування громадських місць абсолютно у всіх сферах життя простежується тенденція переходу в режим онлайн. Чи не стали винятком і продажі. І якщо покупкою в інтернет магазині дрібних товарів вже нікого не здивувати, то автомобілі все ж таки звичніше купувати офлайн. Але останнім часом автовиробники та дилери все ж таки тестують нові способи безконтактного продажу та перевезення автомобілів. І команда BuildApps взялася допомогти їм у цьому.`,
+		pageContent: TurboDiaspachUa,
+		links: {
+			web: null,
+			appStore: null,
+			playMarket: null,
+		},
+	},
+  onplay: {
+		id: 'onplay',
+		background: `#F0864E`,
+		image: OnPlayLogo,
+		longImage: OnPlayImg,
+		title: () => <SpanOnPlay>OnPlay</SpanOnPlay>,
+		pageTitle: 'С пранком по жизни: новая социальная сеть для развлечений',
+		description: `Насколько интерактивной может быть социальная сеть? После работы над проектом PrankChat наша команда поняла — вовлеченности пользователей нет предела. Учитывая наш сумасшедший ритм жизни, постоянные заботы и переживания, людям просто необходимо было приложение, которое позволяет расслабиться на все 100%. И команда BuildApps создала его — идеальное пространство для общения, веселых видео и интересного времяпрепровождения.`,
+		responsibility: ['Design', 'Mobile'],
+		fullDescription: `Насколько интерактивной может быть социальная сеть? После работы над проектом PrankChat наша команда поняла — вовлеченности пользователей нет предела. Учитывая наш сумасшедший ритм жизни, постоянные заботы и переживания, людям просто необходимо было приложение, которое позволяет расслабиться на все 100%. И команда BuildApps создала его — идеальное пространство для общения, веселых видео и интересного времяпрепровождения.`,
+		pageContent: OnPlayUa,
+		links: {
+			web: null,
+			appStore: null,
+			playMarket: null,
+		},
+	},
   turbodispatch: {
 		id: 'turbodispatch',
 		background: `#09091A`,
@@ -459,7 +533,11 @@ const SpanHaski = styled.span`
 `;
 
 const SpanTurboDispatch = styled.span`
-	color: #09091A;
+	color: #09091a;
+`;
+
+const SpanOnPlay = styled.span`
+	color: #8E4DDB;
 `;
 
 const SpanCardano = styled.span`
