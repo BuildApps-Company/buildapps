@@ -7,9 +7,10 @@ import { useTranslation } from 'react-i18next';
 export const LinksList = ({ links }) => {
   const { web, appStore, playMarket } = links;
   const { t } = useTranslation();
+  const isLinksBlockVisible = web || appStore || playMarket;
 	return (
     <>
-      <LinksContainer>
+      {isLinksBlockVisible && <LinksContainer>
         <GreyText>
           {t('projectsLinks.mainTitle')}
         </GreyText>
@@ -18,7 +19,7 @@ export const LinksList = ({ links }) => {
               {playMarket && <Link href={ playMarket } target="_blank">Google Play</Link>}
               {appStore && <Link href={ appStore } target="_blank">Apple Store</Link>}
             </StoreContainer>
-      </LinksContainer>
+      </LinksContainer>}
     </>
 	);
 };
