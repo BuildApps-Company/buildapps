@@ -86,6 +86,7 @@ const WorkflowWrapper = styled.div`
 
 const Circle1 = styled.div`
 	display: block;
+	box-sizing: border-box;
 	position: absolute;
 	background-color: ${props =>
 		props.point === 1 ? colors.Main : colors.grey.background};
@@ -111,6 +112,18 @@ const Circle1 = styled.div`
 		background-image: url(${btn1});
 		background-repeat: no-repeat;
 		background-position: center;
+	}
+
+	&::before {
+		display: ${props => (props.point === 1 ? 'block' : 'none')};
+		box-sizing: border-box;
+		content: 'Discuss and Research';
+		font-weight: bold;
+		position: absolute;
+		width: 170px;
+		top: 120%;
+		left: -25px;
+		border: 0px;
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {
@@ -149,6 +162,19 @@ const Circle2 = styled.div`
 		background-position: center;
 	}
 
+	&::before {
+		display: ${props => (props.point === 2 ? 'block' : 'none')};
+		box-sizing: border-box;
+		content: 'Roadmap';
+		font-weight: bold;
+		position: absolute;
+		text-align: center;
+		width: 114px;
+		top: 120%;
+		left: 0;
+		border: 0px;
+	}
+
 	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 138px;
 		height: 138px;
@@ -185,6 +211,19 @@ const Circle3 = styled.div`
 		background-position: center;
 	}
 
+	&::before {
+		display: ${props => (props.point === 3 ? 'block' : 'none')};
+		box-sizing: border-box;
+		content: 'Development';
+		font-weight: bold;
+		position: absolute;
+		text-align: center;
+		width: 114px;
+		top: 120%;
+		left: 0;
+		border: 0px;
+	}
+
 	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 138px;
 		height: 138px;
@@ -219,6 +258,19 @@ const Circle4 = styled.div`
 		background-image: url(${btn4});
 		background-repeat: no-repeat;
 		background-position: center;
+	}
+
+	&::before {
+		display: ${props => (props.point === 4 ? 'block' : 'none')};
+		box-sizing: border-box;
+		content: 'Approve';
+		font-weight: bold;
+		position: absolute;
+		text-align: center;
+		width: 114px;
+		top: 120%;
+		left: 0;
+		border: 0px;
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {

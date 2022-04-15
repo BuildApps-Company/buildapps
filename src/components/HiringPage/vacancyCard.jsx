@@ -8,7 +8,7 @@ export const VacancyCard = ({ vacancy }) => {
 
 	return (
 		<VacancyContainer>
-			<VacancyLink href={link} target="_blank">
+
 				<VacancyTitleWrapper>
 					<Titile>{title}</Titile>
 					<Titile>→</Titile>
@@ -19,7 +19,7 @@ export const VacancyCard = ({ vacancy }) => {
 					})}
 				</VacancyTagWrapper>
 				<VacancyDescription>{description}</VacancyDescription>
-			</VacancyLink>
+
 		</VacancyContainer>
 	);
 };

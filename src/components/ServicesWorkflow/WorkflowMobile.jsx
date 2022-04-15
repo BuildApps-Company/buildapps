@@ -71,20 +71,21 @@ const BlockSlider = styled.div`
 const SliderElement = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 260px;
-  margin-right: 100px;
+	height: 340px;
+	margin-right: 100px;
 `;
 
 const SliderText = styled.p`
 	display: block;
 	font-size: 14px;
 	color: ${colors.light.white};
-	max-width: 80%;
+	width: 100%;
 	margin-left: 15px;
 `;
 
 const WorkflowComponent = styled.div`
 	display: block;
+	height: 450px;
 
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: none;
@@ -116,7 +117,7 @@ const Circle1 = styled.div`
 	border-radius: 100%;
 	transition: background-color 300ms linear;
 	cursor: pointer;
-	bottom: 0;
+	bottom: 35px;
 	transform: translateX(calc(50vw - 55px));
 
 	&::after {
@@ -134,6 +135,17 @@ const Circle1 = styled.div`
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+
+	&::before {
+		display: block;
+		box-sizing: border-box;
+		content: 'Discuss and Research';
+		position: absolute;
+		width: 170px;
+		top: 120%;
+		left: -35px;
+		border: 0px;
+	}
 `;
 
 const Circle2 = styled.div`
@@ -146,7 +158,7 @@ const Circle2 = styled.div`
 	border-radius: 100%;
 	transition: background-color 300ms linear;
 	cursor: pointer;
-	bottom: 0;
+	bottom: 35px;
 	transform: translateX(calc(50vw - 55px));
 
 	&::after {
@@ -164,6 +176,16 @@ const Circle2 = styled.div`
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+
+	&::before {
+		display: block;
+		box-sizing: border-box;
+		content: 'Roadmap';
+		text-align: center;
+		position: absolute;
+		width: 86px;
+		top: 120%;
+	}
 `;
 
 const Circle3 = styled.div`
@@ -176,7 +198,7 @@ const Circle3 = styled.div`
 	border-radius: 100%;
 	transition: background-color 300ms linear;
 	cursor: pointer;
-	bottom: 0;
+	bottom: 35px;
 	transform: translateX(calc(50vw - 55px));
 
 	&::after {
@@ -194,6 +216,16 @@ const Circle3 = styled.div`
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+
+	&::before {
+		display: block;
+		box-sizing: border-box;
+		content: 'Development';
+		text-align: center;
+		position: absolute;
+		top: 120%;
+		left: -8px;
+	}
 `;
 
 const Circle4 = styled.div`
@@ -206,7 +238,7 @@ const Circle4 = styled.div`
 	border-radius: 100%;
 	transition: background-color 300ms linear;
 	cursor: pointer;
-	bottom: 0;
+	bottom: 35px;
 	transform: translateX(calc(50vw - 55px));
 
 	&::after {
@@ -223,6 +255,16 @@ const Circle4 = styled.div`
 		background-image: url(${btn4});
 		background-repeat: no-repeat;
 		background-position: center;
+	}
+
+	&::before {
+		display: block;
+		width: 86px;
+		box-sizing: border-box;
+		content: 'Approve';
+		text-align: center;
+		position: absolute;
+		top: 120%;
 	}
 `;
 

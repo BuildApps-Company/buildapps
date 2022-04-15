@@ -288,9 +288,9 @@ const SmallLogo = styled.img`
 const Tag = styled(SubH3)`
 	border: 1px solid #D9DBE4;
 	border-radius: 4px;
-	padding: 8px 12px 6px;
+	padding: 10px 12px 6px;
 	line-height: 100%;
-	color: ${colors.grey.constants};
+	color: ${colors.Font};
 	text-transform: uppercase;
 
 	& + & {

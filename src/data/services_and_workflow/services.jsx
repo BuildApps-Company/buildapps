@@ -1,7 +1,7 @@
 const en = {
 	strategy: {
 		id: 'strategy',
-		title: 'Strategy EN',
+		title: 'Strategy',
 		content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
     laborum cupiditate possimus labore, hic temporibus velit dicta earum
     suscipit commodi eum enim atque at? Et perspiciatis dolore iure
@@ -9,7 +9,7 @@ const en = {
 	},
 	design: {
 		id: 'design',
-		title: 'Design EN',
+		title: 'Design',
 		content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
     reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
     quaerat iure quos dolorum accusantium ducimus in illum vero commodi
@@ -19,14 +19,14 @@ const en = {
 	},
 	development: {
 		id: 'development',
-		title: 'Development EN',
+		title: 'Development',
 		content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
     quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
     dolor ut sequi minus iste? Quas?`,
 	},
 	quality: {
 		id: 'quality',
-		title: 'Quality Control EN',
+		title: 'Quality Control',
 		content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
     quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
     dolor ut sequi minus iste? Quas?`,
@@ -36,7 +36,7 @@ const en = {
 const ru = {
 	strategy: {
 		id: 'strategy',
-		title: 'Strategy RU',
+		title: 'Планирование',
 		content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
     laborum cupiditate possimus labore, hic temporibus velit dicta earum
     suscipit commodi eum enim atque at? Et perspiciatis dolore iure
@@ -44,7 +44,7 @@ const ru = {
 	},
 	design: {
 		id: 'design',
-		title: 'Design RU',
+		title: 'Дизайн',
 		content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
     reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
     quaerat iure quos dolorum accusantium ducimus in illum vero commodi
@@ -54,14 +54,14 @@ const ru = {
 	},
 	development: {
 		id: 'development',
-		title: 'Development RU',
+		title: 'Разработка',
 		content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
     quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
     dolor ut sequi minus iste? Quas?`,
 	},
 	quality: {
 		id: 'quality',
-		title: 'Quality Control RU',
+		title: 'Контроль качества',
 		content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
     quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
     dolor ut sequi minus iste? Quas?`,
@@ -71,7 +71,7 @@ const ru = {
 const ua = {
 	strategy: {
 		id: 'strategy',
-		title: 'Strategy UA',
+		title: 'Планування',
 		content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
     laborum cupiditate possimus labore, hic temporibus velit dicta earum
     suscipit commodi eum enim atque at? Et perspiciatis dolore iure
@@ -79,7 +79,7 @@ const ua = {
 	},
 	design: {
 		id: 'design',
-		title: 'Design UA',
+		title: 'Дизайн',
 		content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
     reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
     quaerat iure quos dolorum accusantium ducimus in illum vero commodi
@@ -89,14 +89,14 @@ const ua = {
 	},
 	development: {
 		id: 'development',
-		title: 'Development UA',
+		title: 'Розробка',
 		content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
     quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
     dolor ut sequi minus iste? Quas?`,
 	},
 	quality: {
 		id: 'quality',
-		title: 'Quality Control UA',
+		title: 'Контроль якості',
 		content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
     quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
     dolor ut sequi minus iste? Quas?`,

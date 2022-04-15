@@ -44,7 +44,7 @@ export const ProjectsList = ({ selectedCategories }) => {
 						key={key}
 						data-aos='fade-up'
 						data-aos-duration={delay[index]}
-            data-aos-delay={delay[index] - 800}
+						data-aos-delay={delay[index] - 800}
 					>
 						<Link to={`${routes.portfolio}${el.id}/`} state={{ project: el }} style={{display: 'block' }}>
 							<ProjectContainer background={el.background}>

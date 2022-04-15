@@ -51,7 +51,7 @@ export const ContactUsForm = () => {
 					type="text"
 					name="name"
 					value={inputValues.name}
-					placeholder={t('contactUs.PlaceholderName')}
+					placeholder={t('contactUs.placeholderName')}
 					onChange={handleChange}
 				/>
 			</label>
@@ -62,7 +62,7 @@ export const ContactUsForm = () => {
 					type="text"
 					name="number"
 					value={inputValues.number}
-					placeholder={t('contactUs.PlaceholderPhone')}
+					placeholder={t('contactUs.placeholderPhone')}
 					onChange={handleChange}
 				/>
 			</label>
@@ -72,7 +72,7 @@ export const ContactUsForm = () => {
 					type="email"
 					name="email"
 					value={inputValues.email}
-					placeholder={t('contactUs.PlaceholderMail')}
+					placeholder={t('contactUs.placeholderMail')}
 					onChange={handleChange}
 				/>
 			</label>
@@ -84,7 +84,7 @@ export const ContactUsForm = () => {
 				onChange={handleChange}
 			>
 				<option value="" disabled selected>
-					{t('contactUs.PlaceholderWorkType')}
+					{t('contactUs.placeholderWorkType')}
 				</option>
 				<option value="Business website">{t('contactUs.workType1')}</option>
 				<option value="Landing page">{t('contactUs.workType2')}</option>
@@ -97,14 +97,13 @@ export const ContactUsForm = () => {
 					type="text"
 					name="details"
 					value={inputValues.details}
-					placeholder={t('contactUs.PlaceholderDetails')}
+					placeholder={t('contactUs.placeholderDetails')}
 					onChange={handleChange}
 				/>
 			</label>
 			<BtnWrap>
 				<StyledBtn type="submit">
-					{t('contactUs.SubmitBtn')}
-					<SpanStyledArrow>&rarr;</SpanStyledArrow>
+					{t('contactUs.submitBtn')}<SpanStyledArrow>&rarr;</SpanStyledArrow>
 				</StyledBtn>
 			</BtnWrap>
 		</StyledContactUsForm>

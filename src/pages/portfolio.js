@@ -14,7 +14,6 @@ export default function PortfolioPage() {
 	const [selectedCategories, setSelectedCategories] = useState([
 		filterResetBtn,
 	]);
-	console.log(selectedCategories);
 
 	const onSelectCategory = newCategory => {
 		if (newCategory === filterResetBtn) {

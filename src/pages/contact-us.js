@@ -15,7 +15,7 @@ export default function ContactFormPage() {
 			<StyledPageContainer>
 				<FlexContainer>
 					<ContactFormContainer>
-						<PageName>{t('contactUs.PageName')}</PageName>
+						<PageName>{t('contactUs.pageName')}</PageName>
 						<Title>{t('contactUs.mainTitle')}</Title>
 						<Subtitle>{t('contactUs.subTitle')}</Subtitle>
 						<ContactUsForm />
