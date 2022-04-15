@@ -4,9 +4,10 @@ import { SocialMediaList } from '../shared/SocialMediaList';
 import { breakpoints } from '../../styles/breakpoints';
 import { useContactInformation } from '../../data';
 import { useTranslation } from 'react-i18next';
+import { colors } from '../../styles/colors';
 
 export const Contacts = () => {
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	const { email, phone } = useContactInformation();
 
@@ -24,7 +25,9 @@ export const Contacts = () => {
 				</ContactsListItem>
 				<ContactsListItem>
 					<SocialWrap>
-						<SocialSpanStyled>{t('contactUs.contactWrapSocials')}</SocialSpanStyled>
+						<SocialSpanStyled>
+							{t('contactUs.contactWrapSocials')}
+						</SocialSpanStyled>
 						<SocialMediaList />
 					</SocialWrap>
 				</ContactsListItem>
@@ -34,8 +37,9 @@ export const Contacts = () => {
 };
 
 const Title = styled.div`
-	font-size: 2rem;
-	margin-bottom: 28px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 24px;
 `;
 
 const SocialWrap = styled.div`
@@ -43,27 +47,34 @@ const SocialWrap = styled.div`
 	flex-direction: column;
 	align-items: baseline;
 `;
-const SocialSpanStyled = styled.span`
-	margin-right: 10px;
+const SocialSpanStyled = styled.p`
+	color: ${colors.Font};
+	font-size: 1.25rem;
+	font-weight: bold;
+	margin: 0 10px 0 0;
 `;
 const ContactsWrap = styled.div`
-	/* width: 100%; */
+	display: block;
+	width: 100%;
 	height: fit-content;
 	border-radius: 8px;
-	padding: 28px;
+	padding: 32px;
 	background: #eff0f3;
 	font-size: 1.5rem;
 	line-height: 160%;
 	/* white-space: nowrap; */
-	margin-top: 32px;
 
 	h3 {
 		margin: 0 0 32px 0;
 		padding: 0;
 	}
+
+	@media all and (min-width: ${breakpoints.tablet}) {
+		max-width: 90%;
+	}
+
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 30%;
-		margin-top: -24px;
+		width: 545px;
 	}
 `;
 
@@ -88,25 +99,25 @@ const ContactsListItem = styled.li`
 	}
 
 	&:not(:last-child) {
-		margin-bottom: 24px;
+		margin-bottom: 12px;
 	}
 
 	span {
 		opacity: 0.5;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 	a {
 		text-decoration: none;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		line-height: 160%;
 	}
 
-	@media all and (min-width: 1480px) {
+	@media all and (min-width: ${breakpoints.tablet}) {
 		a {
-			font-size: 1.5rem;
+			font-size: 1.25rem;
 		}
 		span {
-			font-size: 1.5rem;
+			font-size: 1.25rem;
 		}
 		flex-direction: row;
 		margin-top: 0px;

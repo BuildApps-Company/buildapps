@@ -5,7 +5,7 @@ import { sendContactForm } from '../../api/email.js';
 import { useTranslation } from 'react-i18next';
 
 export const ContactUsForm = () => {
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	const [inputValues, setInputValues] = useState({
 		name: '',
@@ -47,6 +47,7 @@ export const ContactUsForm = () => {
 		<StyledContactUsForm autoComplete="off" onSubmit={handleSubmit}>
 			<label>
 				<input
+					required
 					type="text"
 					name="name"
 					value={inputValues.name}
@@ -57,6 +58,7 @@ export const ContactUsForm = () => {
 
 			<label>
 				<input
+					required
 					type="text"
 					name="number"
 					value={inputValues.number}
@@ -101,7 +103,8 @@ export const ContactUsForm = () => {
 			</label>
 			<BtnWrap>
 				<StyledBtn type="submit">
-					{t('contactUs.SubmitBtn')}<SpanStyledArrow>&rarr;</SpanStyledArrow>
+					{t('contactUs.SubmitBtn')}
+					<SpanStyledArrow>&rarr;</SpanStyledArrow>
 				</StyledBtn>
 			</BtnWrap>
 		</StyledContactUsForm>
@@ -119,49 +122,61 @@ const SpanStyledArrow = styled.span`
 	color: #874aad;
 	width: 24px;
 	height: 8px;
-	padding-left: 40px;
+	padding-left: 14px;
 `;
 
 const StyledContactUsForm = styled.form`
-	width: 100%;
+	display: block;
+
 	input {
-		width: 95%;
-		margin-bottom: 40px;
-		padding: 8px;
-		font-size: 1.5rem;
+		width: 100%;
+		margin-bottom: 32px;
+		padding: 8px 0;
+		color: #874aad;
+		font-size: 1rem;
+		font-weight: bold;
 		line-height: 160%;
 		border: none;
-		border-bottom: 2px solid #110322;
-		opacity: 0.5;
+		border-bottom: 2px solid #99939f;
+		opacity: 1;
+
+		&:focus {
+			border-bottom: 2px solid #874aad;
+		}
 	}
 
 	select {
-		width: 95%;
-		margin-bottom: 40px;
-		padding: 8px;
-		font-size: 1.5rem;
+		width: 100%;
+		margin-bottom: 32px;
+		padding: 8px 0;
+		font-size: 1rem;
+		font-weight: bold;
+		color: #874aad;
 		line-height: 160%;
 		border: none;
-		border-bottom: 2px solid #110322;
+		border-bottom: 2px solid #99939f;
 		background: transparent;
-		opacity: 0.5;
+		opacity: 1;
 
 		&:invalid {
 			color: gray;
 		}
 	}
+
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 68%;
+		width: 100%;
 		font-size: 2rem;
 	}
 	@media all and (min-width: 1480px) {
-		width: 60%;
+		width: 100%;
 	}
 `;
 
 const StyledBtn = styled.button`
-	padding: 8px 30px;
-	font-size: 1.5rem;
+	box-sizing: border-box;
+	padding: 8px 24px;
+	font-size: 0.75rem;
+	font-weight: bold;
 	line-height: 160%;
 	text-transform: uppercase;
 	color: #874aad;
@@ -180,6 +195,6 @@ const StyledBtn = styled.button`
 		}
 	}
 	@media all and (min-width: 1480px) {
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 `;
