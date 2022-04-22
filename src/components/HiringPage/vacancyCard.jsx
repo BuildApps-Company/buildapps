@@ -4,7 +4,7 @@ import { breakpoints } from '../../styles/breakpoints';
 import { colors } from '../../styles/colors';
 
 export const VacancyCard = ({ vacancy }) => {
-	const { title, description, requirements, link } = vacancy;
+	const { title, description, requirements } = vacancy;
 
 	return (
 		<VacancyContainer>
@@ -50,11 +50,6 @@ const VacancyTagWrapper = styled.div`
 	@media all and (min-width: ${breakpoints.phone}) {
 		gap: 16px;
 	}
-`;
-
-const VacancyLink = styled.a`
-	display: block;
-	text-decoration: none;
 `;
 
 const VacancyContainer = styled.div`

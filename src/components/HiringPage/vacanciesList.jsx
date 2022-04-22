@@ -4,7 +4,6 @@ import { routes } from '../../utilities/routes';
 import { VacancyCard } from './vacancyCard';
 import { Link } from 'gatsby-plugin-react-i18next';
 import { useVacancies } from '../../data';
-import { useTranslation } from 'react-i18next';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 

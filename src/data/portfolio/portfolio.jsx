@@ -44,12 +44,12 @@ export const en = {
 		image: ppf,
 		longImage: ppfLong,
 		title: () => <>Lead management software</>,
-		pageTitle: 'Lead management software',
-		description: `A CRM that covers most of the organization's processes related to business lending. A full cycle of processing an application - from the moment of an obtaining to the issuance of a loan.
-Integration with third-party services to obtain more complete information about the loan - credit history, information from registries for legal entities or individuals.
+		pageTitle: 'Lead Management Software',
+		description: `Due to the high competition in the lending market and the high demand for loans for business purposes, the speed and the quality of working with clients are much appreciated, and, last but not least, the automation of work with each application. This is where software in the form of CRM comes into play.
 `,
 		responsibility: ['Web', 'Desktop'],
-		fullDescription: `Due to the high competition in the lending market and the high demand for loans for business purposes, the speed and the quality of working with clients are much appreciated, and, last but not least, the automation of work with each application. This is where software in the form of CRM comes into play.`,
+		fullDescription: `A CRM that covers most of the organization's processes related to business lending. A full cycle of processing an application - from the moment of an obtaining to the issuance of a loan.
+    Integration with third-party services to obtain more complete information about the loan - credit history, information from registries for legal entities or individuals.`,
 		pageContent: PpfDetailsEn,
 		links: {
 			web: null,
@@ -317,13 +317,14 @@ export const ru = {
 			playMarket: null,
 		},
 	},
-  turbodispatch: {
+	turbodispatch: {
 		id: 'turbodispatch',
 		background: `#09091A`,
 		image: turboDispatchLogo,
 		longImage: turboDispatchImg,
 		title: () => <SpanTurboDispatch>TURBODISPATCH</SpanTurboDispatch>,
-		pageTitle: 'C доставкой на дом: как коронавирус оживил продажи автомобилей онлайн',
+		pageTitle:
+			'C доставкой на дом: как коронавирус оживил продажи автомобилей онлайн',
 		description: `Всемирная пандемия диктует обществу свои условия. Из-за необходимости оставаться на самоизоляции и ограничивать посещения общественных мест абсолютно во всех сферах жизни прослеживается тенденция к переходу в режим онлайн. Не стали исключением и продажи. И если покупкой в интернет магазине мелких товаров уже никого не удивить, то автомобили все же привычнее покупать оффлайн. Но в последнее время автопроизводители и дилеры все же тестируют новые способы бесконтактной продажи и перевозки автомобилей. И команда BuildApps взялась помочь им в этом.`,
 		responsibility: ['Design'],
 		fullDescription: `Всемирная пандемия диктует обществу свои условия. Из-за необходимости оставаться на самоизоляции и ограничивать посещения общественных мест абсолютно во всех сферах жизни прослеживается тенденция к переходу в режим онлайн. Не стали исключением и продажи. И если покупкой в интернет магазине мелких товаров уже никого не удивить, то автомобили все же привычнее покупать оффлайн. Но в последнее время автопроизводители и дилеры все же тестируют новые способы бесконтактной продажи и перевозки автомобилей. И команда BuildApps взялась помочь им в этом.`,
@@ -492,7 +493,7 @@ export const ua = {
 			playMarket: null,
 		},
 	},
-  onplay: {
+	onplay: {
 		id: 'onplay',
 		background: `#F0864E`,
 		image: OnPlayLogo,
@@ -520,7 +521,7 @@ const SpanTurboDispatch = styled.span`
 `;
 
 const SpanOnPlay = styled.span`
-	color: #8E4DDB;
+	color: #8e4ddb;
 `;
 
 const SpanCardano = styled.span`
