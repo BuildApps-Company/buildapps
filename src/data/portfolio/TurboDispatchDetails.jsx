@@ -12,7 +12,7 @@ import iPhone from '../../../static/images/projects/turbodispatch/iphone.jpg';
 import branding from '../../../static/images/projects//turbodispatch/Branding.jpg';
 
 export const TurboDiaspachEn = () => (
-	<>
+	<PageContainer>
 		<ContentContainer>
 			<ArticleTopBlock>
 				<H3>Task and Goals</H3>
@@ -88,11 +88,11 @@ export const TurboDiaspachEn = () => (
 				</TextContent>
 			</ArticleBlock>
 		</ContentContainer>
-	</>
+	</PageContainer>
 );
 
 export const TurboDiaspachRu = () => (
-	<>
+	<PageContainer>
 		<ContentContainer>
 			<ArticleTopBlock>
 				<H3>Задача и цели</H3>
@@ -168,11 +168,11 @@ export const TurboDiaspachRu = () => (
 				</TextContent>
 			</ArticleBlock>
 		</ContentContainer>
-	</>
+	</PageContainer>
 );
 
 export const TurboDiaspachUa = () => (
-	<>
+	<PageContainer>
 		<ContentContainer>
 			<ArticleTopBlock>
 				<H3>Завдання та цілі</H3>
@@ -249,8 +249,13 @@ export const TurboDiaspachUa = () => (
 				</TextContent>
 			</ArticleBlock>
 		</ContentContainer>
-	</>
+	</PageContainer>
 );
+
+const PageContainer = styled.div`
+	display: block;
+	overflow: hidden;
+`;
 
 const CarBlock = styled.div`
 	display: block;
@@ -319,6 +324,10 @@ const ImageContent = styled.div`
 	img {
 		max-width: 622px;
 		max-height: 420px;
+	}
+
+	@media (max-width: ${breakpoints.tablet}) {
+		height: auto;
 	}
 `;
 
