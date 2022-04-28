@@ -13,7 +13,7 @@ import cardanoImg from '../../../static/images/portfolio/CW_long.png';
 import haskiLogo from '../../../static/images/portfolio/haski_logo.png';
 import haskiImg from '../../../static/images/portfolio/haski_long.png';
 import turboDispatchLogo from '../../../static/images/portfolio/turbodispatch.png';
-import turboDispatchImg from '../../../static/images/portfolio/turbodispatch_long.jpg';
+import turboDispatchImg from '../../../static/images/portfolio/turbodispatch_long.png';
 import OnPlayLogo from '../../../static/images/portfolio/prankchat.png';
 import OnPlayImg from '../../../static/images/portfolio/prankchat_long.png';
 import { PpfDetailsEn, PpfDetailsRu, PpfDetailsUa } from './PpfDetails';
@@ -43,7 +43,7 @@ export const en = {
 		background: '#7E53C1',
 		image: ppf,
 		longImage: ppfLong,
-		title: () => <>Lead management software</>,
+		title: 'Lead management software',
 		pageTitle: 'Lead Management Software',
 		description: `Due to the high competition in the lending market and the high demand for loans for business purposes, the speed and the quality of working with clients are much appreciated, and, last but not least, the automation of work with each application. This is where software in the form of CRM comes into play.
 `,
@@ -62,11 +62,7 @@ export const en = {
 		background: '#FA7B6B',
 		image: sushi,
 		longImage: sushiLong,
-		title: () => (
-			<>
-				SUSHI <SpanSushi>SHOP</SpanSushi>
-			</>
-		),
+		title: 'SUSHI SHOP',
 		pageTitle: 'SUSHI SHOP',
 		description: `Online service for ordering sushi. The SushiShop system automatically determines your geolocation for the nearest sushi store to make the delivery time more comfortable for the user. The system also provides a bonus program, an accumulative system and various discounts for different holidays or seasons.`,
 		responsibility: ['Mobile'],
@@ -84,11 +80,7 @@ export const en = {
 		background: '#32C178',
 		image: askod,
 		longImage: askodLong,
-		title: () => (
-			<>
-				ASKOD <SpanAskodOnline>Online</SpanAskodOnline>
-			</>
-		),
+		title: 'ASKOD Online',
 		pageTitle: 'ASKOD Online',
 		description: `ASKOD Online service is designed to automate the processes of document circulation between legal entities and individuals and provides review, approval, signing, sending, receiving and storing documents in a cloud environment.`,
 		responsibility: ['Design'],
@@ -106,11 +98,7 @@ export const en = {
 		background: '#EE6363',
 		image: iphone,
 		longImage: iphoneLong,
-		title: () => (
-			<>
-				IPhone <SpanIphoneDiscount>Discount</SpanIphoneDiscount>
-			</>
-		),
+		title: 'IPhone Discount',
 		pageTitle: 'IPhone Discount',
 		description: `Developing an online store is a serious task that requires a deep understanding of online business processes. It becomes more complicated when it comes to creating a reselling platform that offers products from a well-known brand. The iPhone Discount startup contacted us to solve this problem. We helped them build a technological foundation for the further development and scaling of their online business.`,
 		responsibility: ['E-commerce', 'Web'],
@@ -127,11 +115,7 @@ export const en = {
 		background: '#2B2E83',
 		image: cardanoLogo,
 		longImage: cardanoImg,
-		title: () => (
-			<>
-				Cardano <SpanCardano>Water</SpanCardano>
-			</>
-		),
+		title: 'Cardano Water',
 		pageTitle: 'Cardano Water',
 		description: `Cardano-Water is a multi-platform company operating in several business lines. Their new project aims to implement blockchain technology and NFT collections and draw public attention to global problems regarding drinking water. The idea is based on charitable contributions from each sold token for the needs of underdeveloped countries.`,
 		responsibility: ['Web'],
@@ -148,7 +132,7 @@ export const en = {
 		background: `#3F798F`,
 		image: haskiLogo,
 		longImage: haskiImg,
-		title: () => <SpanHaski>HASKI</SpanHaski>,
+		title: 'HASKI',
 		pageTitle: 'Haski',
 		description: `Haski is a leading outsourcing service provider. It has been operating on the market since 2008 and has already firmly established itself in the niche. The customer decided to scale, so the existing functionality became insufficient. Having accepted the assignment, we assembled a team to analyze the customer's finished product and plan further actions. The workflow turned out to be surprisingly interesting and varied but complex and unusual in technical implementation. During development, we created a new product, transferred old data to a new environment, integrated it with a ready-made database, and ensured the exchange of information between them.`,
 		responsibility: ['Mobile', 'Design'],
@@ -165,7 +149,7 @@ export const en = {
 		background: `#09091A`,
 		image: turboDispatchLogo,
 		longImage: turboDispatchImg,
-		title: () => <SpanTurboDispatch>TURBODISPATCH</SpanTurboDispatch>,
+		title: 'TurboDispatch',
 		pageTitle: 'Home delivery: how the coronavirus revived online car sales',
 		description: `The global pandemic dictates its terms to society. Due to the people’s need to stay self-isolated and avoid visits to public places, there is a trend towards the transition to online mode in all areas of life, and sales are no exception. But if buying small goods online no longer surprises anyone, it is still more common to purchase cars offline. However, automakers and dealers are testing new methods of contactless sale and transportation of vehicles. And BuildApps agreed to help them with this.`,
 		responsibility: ['Design'],
@@ -182,7 +166,7 @@ export const en = {
 		background: `#F0864E`,
 		image: OnPlayLogo,
 		longImage: OnPlayImg,
-		title: () => <SpanOnPlay>OnPlay</SpanOnPlay>,
+		title: 'OnPlay',
 		pageTitle: 'Pranking everywhere: a new social network for entertainment',
 		description: `How interactive can a social network be? After working on the PrankChat project, our team realized that there is no limit to user engagement. With our crazy life tempo, worries, and challenges, people need an app that allows them to relax 100%. And BuildApps created it: the perfect space for communication, funny videos, and exciting pastimes.`,
 		responsibility: ['Design', 'Mobile'],
@@ -202,7 +186,7 @@ export const ru = {
 		background: '#7E53C1',
 		image: ppf,
 		longImage: ppfLong,
-		title: () => <>ПО для управления лидами</>,
+		title: 'Lead management software',
 		pageTitle: 'ПО для управления лидами',
 		description: `CRM, охватывающая большинство процессов организации, связанных с кредитованием бизнеса. Полный цикл обработки заявки - от момента получения до выдачи кредита. Интеграция со сторонними сервисами для получения более полной информации о кредите - кредитной истории, информации из реестров для юридических и физических лиц.`,
 		responsibility: ['Web', 'Desktop'],
@@ -219,11 +203,7 @@ export const ru = {
 		background: '#FA7B6B',
 		image: sushi,
 		longImage: sushiLong,
-		title: () => (
-			<>
-				SUSHI <SpanSushi>SHOP</SpanSushi>
-			</>
-		),
+		title: 'SUSHI SHOP',
 		pageTitle: 'SUSHI SHOP',
 		description: `Онлайн-сервис заказа суши. Система SushiShop автоматически определяет вашу геолокацию до ближайшего суши-магазина, чтобы время доставки было более удобным для пользователя. Также в системе предусмотрена бонусная программа, накопительная система и различные скидки для разных праздников и сезонов.`,
 		responsibility: ['Mobile'],
@@ -241,11 +221,7 @@ export const ru = {
 		background: '#32C178',
 		image: askod,
 		longImage: askodLong,
-		title: () => (
-			<>
-				ASKOD <SpanAskodOnline>Online</SpanAskodOnline>
-			</>
-		),
+		title: 'ASKOD Online',
 		pageTitle: 'ASKOD Online',
 		description: `Онлайн-сервис АСКОД предназначен для автоматизации процессов документооборота между юридическими и физическими лицами и обеспечивает просмотр, согласование, подписание, отправку, получение и хранение документов в облачной среде.`,
 		responsibility: ['Design'],
@@ -263,11 +239,7 @@ export const ru = {
 		background: '#EE6363',
 		image: iphone,
 		longImage: iphoneLong,
-		title: () => (
-			<>
-				IPhone <SpanIphoneDiscount>Discount</SpanIphoneDiscount>
-			</>
-		),
+		title: 'IPhone Discount',
 		pageTitle: 'IPhone Discount',
 		description: `Разработка интернет-магазина — серьезная задача, требующая глубокого понимания процессов онлайн-бизнеса. Эта задача усложняется, если дело касается создания платформы для реселлинга, когда сайт предлагает продукцию известного бренда. Именно в такой ситуации к нам обратился стартап Iphone Discount. Мы помогли ему построить технологический фундамент для дальнейшего развития и масштабирования онлайн-бизнеса.`,
 		responsibility: ['E-commerce', 'Web'],
@@ -284,11 +256,7 @@ export const ru = {
 		background: '#2B2E83',
 		image: cardanoLogo,
 		longImage: cardanoImg,
-		title: () => (
-			<>
-				Cardano <SpanCardano> Water</SpanCardano>
-			</>
-		),
+		title: 'Cardano Water',
 		pageTitle: 'Cardano Water',
 		description: `Cardano-Water — мультиплатформенная компания, ведущая деятельность в нескольких направлениях бизнеса. В своем новом проекте она хотела реализовать не только блокчейн технологию и NFT-коллекции, но и привлечь внимание общественности к глобальным проблемам с питьевой водой. Собственно идея и строится вокруг благотворительных отчислениях с каждого проданного токена на нужды населения стран третьего эшелона.`,
 		responsibility: ['Web'],
@@ -305,7 +273,7 @@ export const ru = {
 		background: `#3F798F`,
 		image: haskiLogo,
 		longImage: haskiImg,
-		title: () => <SpanHaski>HASKI</SpanHaski>,
+		title: 'HASKI',
 		pageTitle: 'Haski',
 		description: `Haski - ведущий поставщик аутсорсинговых услуг. Он работает на рынке с 2008 года и уже прочно занял свою нишу. Заказчик принял решение о масштабировании, поэтому существующей функциональности стало недостаточно. Приняв задание, мы собрали команду для анализа готового продукта заказчика и планирования дальнейших действий. Рабочий процесс оказался на удивление интересным и разнообразным, но сложным и необычным в технической реализации. В процессе разработки мы создали новый продукт, перенесли старые данные в новую среду, интегрировали с готовой базой данных и обеспечили обмен информацией между ними.`,
 		responsibility: ['Mobile', 'Design'],
@@ -322,7 +290,7 @@ export const ru = {
 		background: `#09091A`,
 		image: turboDispatchLogo,
 		longImage: turboDispatchImg,
-		title: () => <SpanTurboDispatch>TURBODISPATCH</SpanTurboDispatch>,
+		title: 'TurboDispatch',
 		pageTitle:
 			'C доставкой на дом: как коронавирус оживил продажи автомобилей онлайн',
 		description: `Всемирная пандемия диктует обществу свои условия. Из-за необходимости оставаться на самоизоляции и ограничивать посещения общественных мест абсолютно во всех сферах жизни прослеживается тенденция к переходу в режим онлайн. Не стали исключением и продажи. И если покупкой в интернет магазине мелких товаров уже никого не удивить, то автомобили все же привычнее покупать оффлайн. Но в последнее время автопроизводители и дилеры все же тестируют новые способы бесконтактной продажи и перевозки автомобилей. И команда BuildApps взялась помочь им в этом.`,
@@ -340,7 +308,7 @@ export const ru = {
 		background: `#F0864E`,
 		image: OnPlayLogo,
 		longImage: OnPlayImg,
-		title: () => <SpanOnPlay>OnPlay</SpanOnPlay>,
+		title: 'OnPlay',
 		pageTitle: 'С пранком по жизни: новая социальная сеть для развлечений',
 		description: `Насколько интерактивной может быть социальная сеть? После работы над проектом PrankChat наша команда поняла — вовлеченности пользователей нет предела. Учитывая наш сумасшедший ритм жизни, постоянные заботы и переживания, людям просто необходимо было приложение, которое позволяет расслабиться на все 100%. И команда BuildApps создала его — идеальное пространство для общения, веселых видео и интересного времяпрепровождения.`,
 		responsibility: ['Design', 'Mobile'],
@@ -360,7 +328,7 @@ export const ua = {
 		background: '#7E53C1',
 		image: ppf,
 		longImage: ppfLong,
-		title: () => <>Lead management software</>,
+		title: 'Lead management software',
 		pageTitle: 'Програмне забезпечення для керування потенційними клієнтами',
 		description: `CRM, що охоплює більшість процесів організації, пов’язаних із кредитуванням бізнесу. Повний цикл обробки заявки - від моменту отримання до видачі кредиту. Інтеграція із сторонніми сервісами для отримання більш повної інформації про кредит – кредитна історія, інформація з реєстрів для юридичних або фізичних осіб.`,
 		responsibility: ['Web', 'Desktop'],
@@ -377,11 +345,7 @@ export const ua = {
 		background: '#FA7B6B',
 		image: sushi,
 		longImage: sushiLong,
-		title: () => (
-			<>
-				SUSHI <SpanSushi>SHOP</SpanSushi>
-			</>
-		),
+		title: 'SUSHI SHOP',
 		pageTitle: 'SUSHI SHOP',
 		description: `Онлайн-сервіс замовлення суші. Система SushiShop автоматично визначає вашу геолокацію до найближчого магазину суші, щоб зробити час доставки зручнішим для користувача. У системі також передбачена бонусна програма, накопичувальна система та різноманітні знижки на різні свята чи сезони.`,
 		responsibility: ['Mobile'],
@@ -399,11 +363,7 @@ export const ua = {
 		background: '#32C178',
 		image: askod,
 		longImage: askodLong,
-		title: () => (
-			<>
-				ASKOD <SpanAskodOnline>Online</SpanAskodOnline>
-			</>
-		),
+		title: 'ASKOD Online',
 		pageTitle: 'ASKOD Online',
 		description: `Сервіс ASKOD Online призначений для автоматизації процесів документообігу між юридичними та фізичними особами та забезпечує перегляд, погодження, підписання, надсилання, отримання та зберігання документів у хмарному середовищі.`,
 		responsibility: ['Design'],
@@ -421,11 +381,7 @@ export const ua = {
 		background: '#EE6363',
 		image: iphone,
 		longImage: iphoneLong,
-		title: () => (
-			<>
-				IPhone <SpanIphoneDiscount>Discount</SpanIphoneDiscount>
-			</>
-		),
+		title: 'IPhone Discount',
 		pageTitle: 'IPhone Discount',
 		description: `Розробка інтернет-магазину — серйозне завдання, яке потребує глибокого розуміння процесів онлайн-бізнесу. Це завдання ускладнюється, якщо справа стосується створення платформи для реселінгу, коли сайт пропонує продукцію відомого бренду. Саме у такій ситуації до нас звернувся стартап Iphone Discount. Ми допомогли йому побудувати технологічний фундамент для подальшого розвитку та масштабування онлайн-бізнесу.`,
 		responsibility: ['E-commerce', 'Web'],
@@ -442,11 +398,7 @@ export const ua = {
 		background: '#2B2E83',
 		image: cardanoLogo,
 		longImage: cardanoImg,
-		title: () => (
-			<>
-				Cardano <SpanCardano> Water</SpanCardano>
-			</>
-		),
+		title: 'Cardano Water',
 		pageTitle: 'Cardano Water',
 		description: `Cardano-Water - мультиплатформенна компанія, що веде діяльність у кількох напрямках бізнесу. У своєму новому проекті вона хотіла реалізувати не лише блокчейн технологію та NFT-колекції, а й привернути увагу громадськості до глобальних проблем з питною водою. Власне, ідея і будується навколо благодійних відрахувань з кожного проданого токену на потреби населення країн третього ешелону.`,
 		responsibility: ['Web'],
@@ -463,7 +415,7 @@ export const ua = {
 		background: `#3F798F`,
 		image: haskiLogo,
 		longImage: haskiImg,
-		title: () => <SpanHaski>HASKI</SpanHaski>,
+		title: 'HASKI',
 		pageTitle: 'Haski',
 		description: `Haski є провідним постачальником послуг аутсорсингу. Він працює на ринку з 2008 року і вже міцно закріпився в ніші. Замовник вирішив масштабувати, тому наявної функціональності стало недостатньо. Прийнявши завдання, ми зібрали команду для аналізу готового продукту замовника та планування подальших дій. Робочий процес виявився напрочуд цікавим і різноманітним, але складним і незвичайним у технічному виконанні. Під час розробки ми створили новий продукт, перенесли старі дані в нове середовище, інтегрували їх з готовою базою даних, забезпечили обмін інформацією між ними.`,
 		responsibility: ['Mobile', 'Design'],
@@ -480,7 +432,7 @@ export const ua = {
 		background: `#09091A`,
 		image: turboDispatchLogo,
 		longImage: turboDispatchImg,
-		title: () => <SpanTurboDispatch>TURBODISPATCH</SpanTurboDispatch>,
+		title: 'TurboDispatch',
 		pageTitle:
 			'З доставкою додому: як коронавірус оживив продажі автомобілів онлайн',
 		description: `Всесвітня пандемія диктує суспільству умови. Через необхідність залишатися на самоізоляції та обмежувати відвідування громадських місць абсолютно у всіх сферах життя простежується тенденція переходу в режим онлайн. Чи не стали винятком і продажі. І якщо покупкою в інтернет магазині дрібних товарів вже нікого не здивувати, то автомобілі все ж таки звичніше купувати офлайн. Але останнім часом автовиробники та дилери все ж таки тестують нові способи безконтактного продажу та перевезення автомобілів. І команда BuildApps взялася допомогти їм у цьому.`,
@@ -498,7 +450,7 @@ export const ua = {
 		background: `#F0864E`,
 		image: OnPlayLogo,
 		longImage: OnPlayImg,
-		title: () => <SpanOnPlay>OnPlay</SpanOnPlay>,
+		title: 'OnPlay',
 		pageTitle: 'С пранком по жизни: новая социальная сеть для развлечений',
 		description: `Насколько интерактивной может быть социальная сеть? После работы над проектом PrankChat наша команда поняла — вовлеченности пользователей нет предела. Учитывая наш сумасшедший ритм жизни, постоянные заботы и переживания, людям просто необходимо было приложение, которое позволяет расслабиться на все 100%. И команда BuildApps создала его — идеальное пространство для общения, веселых видео и интересного времяпрепровождения.`,
 		responsibility: ['Design', 'Mobile'],
@@ -511,33 +463,5 @@ export const ua = {
 		},
 	},
 };
-
-const SpanHaski = styled.span`
-	color: #00a3e3;
-`;
-
-const SpanTurboDispatch = styled.span`
-	color: #09091a;
-`;
-
-const SpanOnPlay = styled.span`
-	color: #8e4ddb;
-`;
-
-const SpanCardano = styled.span`
-	color: #35258d;
-`;
-
-const SpanIphoneDiscount = styled.span`
-	color: #ee6363;
-`;
-
-const SpanAskodOnline = styled.span`
-	color: #32c178;
-`;
-
-const SpanSushi = styled.span`
-	color: #f8d343;
-`;
 
 export const portfolio = { en, ru, ua };

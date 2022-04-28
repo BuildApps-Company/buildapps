@@ -9,7 +9,20 @@ import { useTranslation } from 'react-i18next';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-const delay = [1000, 1250, 1250, 900, 1150, 900, 1000, 1250, 1350, 1150, 1450, 1000];
+const delay = [
+	1000,
+	1250,
+	1250,
+	900,
+	1150,
+	900,
+	1000,
+	1250,
+	1350,
+	1150,
+	1450,
+	1000,
+];
 
 export const ProjectsList = ({ selectedCategories }) => {
 	const { t } = useTranslation();
@@ -29,9 +42,9 @@ export const ProjectsList = ({ selectedCategories }) => {
 
 	useEffect(() => {
 		Aos.init({
-      offset: 150,
-      mirror: false,
-    });
+			offset: 150,
+			mirror: false,
+		});
 	}, []);
 
 	return (
@@ -42,19 +55,21 @@ export const ProjectsList = ({ selectedCategories }) => {
 				return (
 					<li
 						key={key}
-						data-aos='fade-up'
+						data-aos="fade-up"
 						data-aos-duration={delay[index]}
 						data-aos-delay={delay[index] - 800}
 					>
-						<Link to={`${routes.portfolio}${el.id}/`} state={{ project: el }} style={{display: 'block' }}>
+						<Link
+							to={`${routes.portfolio}${el.id}/`}
+							state={{ project: el }}
+							style={{ display: 'block' }}
+						>
 							<ProjectContainer background={el.background}>
 								<ImageContainer>
 									{el.longImage && <img src={el.longImage} alt={el.title} />}
 								</ImageContainer>
 							</ProjectContainer>
-							<StyledTitle>
-								<TitleValue></TitleValue>
-							</StyledTitle>
+							<StyledTitle>{TitleValue}</StyledTitle>
 						</Link>
 					</li>
 				);
@@ -71,7 +86,7 @@ const ImageContainer = styled.div`
 	align-self: center;
 	max-width: 450px;
 	max-height: 280px;
-`
+`;
 
 const StyledPortfolioList = styled.ul`
 	margin: 0;
@@ -109,7 +124,7 @@ const ProjectContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	min-height: 250px;
-  min-width: 280px;
+	min-width: 280px;
 	border-radius: 4px;
 	padding: 20px;
 	background: ${props =>
@@ -118,7 +133,7 @@ const ProjectContainer = styled.div`
 			: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
 
 	overflow: hidden;
-	
+
 	img {
 		display: block;
 		max-height: 150px;
@@ -142,7 +157,7 @@ const ProjectContainer = styled.div`
 	}
 `;
 
-const StyledTitle = styled.h3 `
+const StyledTitle = styled.h3`
 	margin: 0;
 	padding: 12px 0 0 0;
 	margin-bottom: 32px;
@@ -154,4 +169,4 @@ const StyledTitle = styled.h3 `
 		/* margin-top: auto; */
 		color: ${colors.Font};
 	}
-`
+`;

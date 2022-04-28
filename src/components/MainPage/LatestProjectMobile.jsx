@@ -24,7 +24,7 @@ export const LatestProjectMobile = ({ projectsMobile }) => {
 							background={background}
 						>
 							<h3>
-								<ProjectTitle></ProjectTitle>
+								{ProjectTitle}
 							</h3>
 							<img src={longImage} alt="longimg" />
 						</ImageWrap>

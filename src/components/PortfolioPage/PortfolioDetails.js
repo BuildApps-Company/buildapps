@@ -16,7 +16,7 @@ export function PortfolioDetails({ id }) {
 	const projects = usePortfolio();
 	const projectsValues = Object.values(projects);
 	const project = projectsValues.find(el => el.id === id);
-	const TitleValue = project.title;
+	const titleValue = project.title;
 	const Details = project.pageContent;
 	const Links = project.links;
 
@@ -28,9 +28,7 @@ export function PortfolioDetails({ id }) {
 						<StyledLink to={routes.portfolio}>
 							<img src={arrowBack} alt="Go Back" />
 						</StyledLink>
-						<Title>
-							<TitleValue></TitleValue>
-						</Title>
+						<Title>{titleValue}</Title>
 						<StyledDescription>{project.description}</StyledDescription>
 						<ResponsibilitiesWrap>
 							{project.responsibility.map(res => (
