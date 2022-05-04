@@ -64,7 +64,7 @@ export const ServicesAndWorkflow = () => {
 			</ContentContainer>
 			<SloganTitle>{t('servicesAndWorkflow.slogan')}</SloganTitle>
 			<WorkflowDesktop />
-			<WorkflowMobile />
+			{/* <WorkflowMobile /> */}
 			<WeHiring />
 		</>
 	);
@@ -74,16 +74,14 @@ const OurTeamPhoto = styled.div`
 	display: block;
 	height: 296px;
 	width: 100%;
-	position: absolute;
-	right: 0;
 	background-image: url(${ourTeam});
 	background-size: cover;
 	background-position: center;
 `;
 
 const OurTeamPhotoContainer = styled.div`
+	display: block;
 	width: 100%;
-	position: relative;
 	height: 296px;
 	overflow: hidden;
 `;
@@ -91,10 +89,9 @@ const OurTeamPhotoContainer = styled.div`
 const CultureTextSection = styled.div``;
 
 const AcordionContent = styled.div`
-  display: block;
-  max-width: 600px;
+	display: block;
+	max-width: 600px;
 `;
-
 
 const AccordionSection = styled.div`
 	display: flex;

@@ -39,10 +39,26 @@ export const WorkflowDesktop = () => {
 					<Brick3 />
 				</WorkflowWrapper>
 				<ContentContainer>
-					<Circle1 point={point} onClick={e => setPoint(1)} />
-					<Circle2 point={point} onClick={e => setPoint(2)} />
-					<Circle3 point={point} onClick={e => setPoint(3)} />
-					<Circle4 point={point} onClick={e => setPoint(4)} />
+					<Circle1
+						title={t('servicesAndWorkflow.circle1Title')}
+						point={point}
+						onClick={e => setPoint(1)}
+					/>
+					<Circle2
+						title={t('servicesAndWorkflow.circle2Title')}
+						point={point}
+						onClick={e => setPoint(2)}
+					/>
+					<Circle3
+						title={t('servicesAndWorkflow.circle3Title')}
+						point={point}
+						onClick={e => setPoint(3)}
+					/>
+					<Circle4
+						title={t('servicesAndWorkflow.circle4Title')}
+						point={point}
+						onClick={e => setPoint(4)}
+					/>
 				</ContentContainer>
 			</BrickContainer>
 		</WorkflowComponent>
@@ -75,11 +91,6 @@ const WorkflowWrapper = styled.div`
 		position: relative;
 		background-color: ${colors.Main};
 		width: 60%;
-		height: 300px;
-	}
-
-	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 45%;
 		height: 400px;
 	}
 `;
@@ -90,8 +101,8 @@ const Circle1 = styled.div`
 	position: absolute;
 	background-color: ${props =>
 		props.point === 1 ? colors.Main : colors.grey.background};
-	width: 110px;
-	height: 110px;
+	width: 138px;
+	height: 138px;
 	border: 12px solid ${colors.light.white};
 	border-radius: 100%;
 	bottom: -25%;
@@ -117,18 +128,13 @@ const Circle1 = styled.div`
 	&::before {
 		display: ${props => (props.point === 1 ? 'block' : 'none')};
 		box-sizing: border-box;
-		content: 'Discuss and Research';
+		content: '${props => props.title}';
 		font-weight: bold;
 		position: absolute;
 		width: 170px;
 		top: 120%;
 		left: -25px;
 		border: 0px;
-	}
-
-	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 138px;
-		height: 138px;
 	}
 `;
 
@@ -137,12 +143,12 @@ const Circle2 = styled.div`
 	position: absolute;
 	background-color: ${props =>
 		props.point === 2 ? colors.Main : colors.grey.background};
-	width: 110px;
-	height: 110px;
+	width: 138px;
+	height: 138px;
 	border: 12px solid ${colors.light.white};
 	border-radius: 100%;
 	bottom: -25%;
-	transform: translateX(150%);
+	transform: translateX(130%);
 	transition: background-color 300ms linear;
 	cursor: pointer;
 
@@ -165,7 +171,7 @@ const Circle2 = styled.div`
 	&::before {
 		display: ${props => (props.point === 2 ? 'block' : 'none')};
 		box-sizing: border-box;
-		content: 'Roadmap';
+		content: '${props => props.title}';
 		font-weight: bold;
 		position: absolute;
 		text-align: center;
@@ -176,8 +182,7 @@ const Circle2 = styled.div`
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 138px;
-		height: 138px;
+    transform: translateX(150%);
 	}
 `;
 
@@ -186,12 +191,12 @@ const Circle3 = styled.div`
 	position: absolute;
 	background-color: ${props =>
 		props.point === 3 ? colors.Main : colors.grey.background};
-	width: 110px;
-	height: 110px;
+	width: 138px;
+	height: 138px;
 	border: 12px solid ${colors.light.white};
 	border-radius: 100%;
 	bottom: -25%;
-	transform: translateX(300%);
+	transform: translateX(260%);
 	transition: background-color 300ms linear;
 	cursor: pointer;
 
@@ -214,7 +219,7 @@ const Circle3 = styled.div`
 	&::before {
 		display: ${props => (props.point === 3 ? 'block' : 'none')};
 		box-sizing: border-box;
-		content: 'Development';
+		content: '${props => props.title}';
 		font-weight: bold;
 		position: absolute;
 		text-align: center;
@@ -225,8 +230,7 @@ const Circle3 = styled.div`
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 138px;
-		height: 138px;
+    transform: translateX(300%);
 	}
 `;
 
@@ -235,12 +239,12 @@ const Circle4 = styled.div`
 	position: absolute;
 	background-color: ${props =>
 		props.point === 4 ? colors.Main : colors.grey.background};
-	width: 110px;
-	height: 110px;
+	width: 138px;
+	height: 138px;
 	border: 12px solid ${colors.light.white};
 	border-radius: 100%;
 	bottom: -25%;
-	transform: translateX(450%);
+	transform: translateX(390%);
 	transition: background-color 300ms linear;
 	cursor: pointer;
 
@@ -263,7 +267,7 @@ const Circle4 = styled.div`
 	&::before {
 		display: ${props => (props.point === 4 ? 'block' : 'none')};
 		box-sizing: border-box;
-		content: 'Approve';
+		content: '${props => props.title}';
 		font-weight: bold;
 		position: absolute;
 		text-align: center;
@@ -274,16 +278,15 @@ const Circle4 = styled.div`
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		width: 138px;
-		height: 138px;
+    transform: translateX(450%);
 	}
 `;
 
 const Brick1 = styled.div`
 	display: block;
 	position: absolute;
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	background-color: ${colors.Main};
 	left: 99%;
 	top: 50%;
@@ -299,10 +302,10 @@ const Brick1 = styled.div`
 const Brick2 = styled.div`
 	display: block;
 	position: absolute;
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	background-color: ${colors.Main};
-	left: calc(99% + 150px);
+	left: calc(99% + 200px);
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		width: 200px;
@@ -340,7 +343,9 @@ const WorkflowTitle = styled.h3`
 const WorkflowSubtitle = styled.p`
 	display: block;
 	position: absolute;
-	font-size: 16px;
+	max-width: 550px;
+	font-size: 14px;
+	text-align: justify;
 	color: ${colors.light.white};
 	line-height: 160%;
 	padding: 0;
@@ -348,4 +353,18 @@ const WorkflowSubtitle = styled.p`
 	z-index: 1;
 	opacity: ${props => (props.active ? 1 : 0)};
 	transition: opacity 200ms linear;
+
+	@media all and (min-width: ${breakpoints.tablet}) {
+		font-size: 14px;
+		max-width: 400px;
+	}
+
+	@media all and (min-width: 1100px) {
+		max-width: 600px;
+	}
+
+	@media all and (min-width: ${breakpoints.notebook}) {
+		font-size: 16px;
+		max-width: 700px;
+	}
 `;

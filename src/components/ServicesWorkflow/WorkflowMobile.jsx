@@ -77,6 +77,7 @@ const SliderElement = styled.div`
 
 const SliderText = styled.p`
 	display: block;
+  max-width: 280px;
 	font-size: 14px;
 	color: ${colors.light.white};
 	width: 100%;
@@ -117,7 +118,7 @@ const Circle1 = styled.div`
 	border-radius: 100%;
 	transition: background-color 300ms linear;
 	cursor: pointer;
-	bottom: 35px;
+	// bottom: 35px;
 	transform: translateX(calc(50vw - 55px));
 
 	&::after {
@@ -158,7 +159,6 @@ const Circle2 = styled.div`
 	border-radius: 100%;
 	transition: background-color 300ms linear;
 	cursor: pointer;
-	bottom: 35px;
 	transform: translateX(calc(50vw - 55px));
 
 	&::after {
@@ -198,7 +198,6 @@ const Circle3 = styled.div`
 	border-radius: 100%;
 	transition: background-color 300ms linear;
 	cursor: pointer;
-	bottom: 35px;
 	transform: translateX(calc(50vw - 55px));
 
 	&::after {
@@ -238,7 +237,6 @@ const Circle4 = styled.div`
 	border-radius: 100%;
 	transition: background-color 300ms linear;
 	cursor: pointer;
-	bottom: 35px;
 	transform: translateX(calc(50vw - 55px));
 
 	&::after {

@@ -46,20 +46,20 @@ export default function PortfolioPage() {
 						<SubTitle>&#128181;</SubTitle>
 						<Title>{t('hiring.mainTitle')}</Title>
 						<AboutPage>{t('hiring.about')}</AboutPage>
-						<FilterMobile onClick={() => setModalState(true)}>
+						{/* <FilterMobile onClick={() => setModalState(true)}>
 							<FilterImg />
 							Filters
-						</FilterMobile>
+						</FilterMobile> */}
 					</TitleContainer>
 
 					<VacanciesList selectedCategories={selectedCategories} />
 				</ContentWrap>
-				<FilterWrap>
+				{/* <FilterWrap>
 					<FilterList
 						selectedCategories={selectedCategories}
 						onSelectCategory={onSelectCategory}
 					/>
-				</FilterWrap>
+				</FilterWrap> */}
 			</ContainerWrap>
 
 			<PreFooter />
