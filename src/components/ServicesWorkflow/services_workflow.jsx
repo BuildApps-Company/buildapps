@@ -65,7 +65,7 @@ export const ServicesAndWorkflow = () => {
 			<SloganTitle>{t('servicesAndWorkflow.slogan')}</SloganTitle>
 			<WorkflowDesktop />
 			{/* <WorkflowMobile /> */}
-			<WeHiring />
+			{/* <WeHiring /> */}
 		</>
 	);
 };

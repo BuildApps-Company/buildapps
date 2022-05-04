@@ -11,7 +11,7 @@ export default function PortfolioPage() {
 	return (
 		<Page pageName={t('prices.pageName')}>
 			<Toolbar />
-      <ServicesAndWorkflow />
+			<ServicesAndWorkflow />
 
 			<PreFooter />
 		</Page>
