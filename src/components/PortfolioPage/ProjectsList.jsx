@@ -166,7 +166,6 @@ const StyledTitle = styled.h3`
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 16px;
-		/* margin-top: auto; */
 		color: ${colors.Font};
 	}
 `;
