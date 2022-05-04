@@ -8,7 +8,9 @@ import { routes } from '../../utilities/routes';
 import { breakpoints } from '../../styles/breakpoints';
 import { Link } from 'gatsby-plugin-react-i18next';
 import { usePortfolio } from '../../data';
+import { colors } from '../../styles/colors';
 import { useTranslation } from 'react-i18next';
+import arrowBack from '../../../static/images/portfolio/goback.png';
 
 export function PortfolioDetails({ id }) {
 	const projects = usePortfolio();
@@ -18,91 +20,100 @@ export function PortfolioDetails({ id }) {
 	const Details = project.pageContent;
 	const Links = project.links;
 
-	const { t } = useTranslation();
-
 	return (
 		<Page pageName={project.pageTitle}>
-			<Toolbar />
-
-			<StyledLink to={routes.portfolio}>{t('portfolio.goBack')}</StyledLink>
-
-			<ProjectImageContainer>
-				<ImageWrap image={project.longImage} background={project.background}>
+			<ProjectTopContainer background={project.background}>
+				<ProjectInfo>
+					<ProjectInfo>
+						<StyledLink to={routes.portfolio}>
+							<img src={arrowBack} alt="Go Back" />
+						</StyledLink>
+						<Title>
+							<TitleValue></TitleValue>
+						</Title>
+						<StyledDescription>{project.description}</StyledDescription>
+						<ResponsibilitiesWrap>
+							{project.responsibility.map(res => (
+								<StyledResponsibility key={res}>{res}</StyledResponsibility>
+							))}
+						</ResponsibilitiesWrap>
+					</ProjectInfo>
+					<LinksList links={Links} />
+				</ProjectInfo>
+				<ImageWrap image={project.longImage}>
 					{project.longImage && (
 						<img src={project.longImage} alt="projecttitle" />
 					)}
 				</ImageWrap>
-			</ProjectImageContainer>
-
-			<ProjectDetailsContainer>
-				<Title>
-					<TitleValue></TitleValue>
-				</Title>
-
-				{project.responsibility.map(res => (
-					<StyledResponsibility key={res}>{res}</StyledResponsibility>
-				))}
-
-				<StyledDescription>{project.description}</StyledDescription>
-				<LinksList links={Links} />
-			</ProjectDetailsContainer>
+			</ProjectTopContainer>
 			<Details />
-			<LinksList links={Links} />
 			<PreFooter />
 		</Page>
 	);
 }
 
 const StyledLink = styled(Link)`
-	display: inline-block;
-	margin: 0 0 16px 0;
-	padding: 0 0 0 11%;
-	font-size: 0.75rem;
-	line-height: 160%;
-	opacity: 0.75;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: #874aad;
+	display: block;
+	width: 64px;
+	height: 64px;
 `;
 
-const ProjectImageContainer = styled.div`
+const ProjectTopContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 95px 16px;
+	background: ${props =>
+		props.background
+			? props.background
+			: 'linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);'};
 	@media all and (min-width: ${breakpoints.phone}) {
+		height: 950px;
+	}
+
+	@media all and (min-width: ${breakpoints.notebook}) {
+		flex-direction: row;
 		padding-left: 18%;
 		padding-right: 18%;
 	}
 `;
 
 const ImageWrap = styled.div`
-	width: 100%;
-	overflow: hidden;
-	height: 216px;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	justify-content: center;
-	border-radius: 8px;
-
-	background: ${props =>
-		props.background
-			? props.background
-			: 'linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);'};
-
-	@media all and (min-width: ${breakpoints.notebook}) {
-		height: 324px;
-		padding: 20px;
-	}
+	align-items: center;
 
 	img {
-		max-height: 90%;
-		@media all and (min-width: ${breakpoints.notebook}) {
-			max-height: 110%;
-			margin: 20px 0;
+		display: block;
+		max-width: 100%;
+	}
+
+	@media all and (min-width: ${breakpoints.notebook}) {
+		justify-content: flex-end;
+		align-items: flex-end;
+
+		img {
+			max-height: 65%;
+			max-width: 90%;
+			transform: translateX(-40px);
 		}
+	}
+`;
+
+const ProjectInfo = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@media all and (min-width: ${breakpoints.notebook}) {
+		max-width: 600px;
 	}
 `;
 
 const Title = styled.h1`
 	font-size: 2rem;
-	line-height: 160%;
+	color: ${colors.light.white};
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 3rem;
@@ -115,40 +126,33 @@ const Title = styled.h1`
 `;
 
 const StyledResponsibility = styled.p`
-	display: inline-block;
-	margin: 0 0 16px 0;
-	padding: 0;
+	display: block;
+	box-sizing: border-box;
+	margin-right: 20px;
+	padding: 12px 16px;
+	color: ${colors.light.white};
 	font-weight: 700;
-	line-height: 160%;
 	text-transform: uppercase;
-	opacity: 0.75;
+	border: 1px solid ${colors.light.white};
+	border-radius: 4px;
 
-	&:not(:last-child) {
-		margin-right: 24px;
+	&:last-child {
+		margin-right: 0;
 	}
 `;
 
+const ResponsibilitiesWrap = styled.div`
+	display: flex;
+`;
+
 const StyledDescription = styled.p`
+	color: ${colors.light.white};
 	margin: 0;
 	padding: 0;
 	line-height: 160%;
 	text-align: justify;
 
 	@media all and (min-width: ${breakpoints.tablet}) {
-		font-size: 1.5rem;
-	}
-`;
-
-const ProjectDetailsContainer = styled.div`
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 26px;
-	@media all and (min-width: ${breakpoints.tablet}) {
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 24px;
-		padding-left: 18%;
-		padding-right: 18%;
-		margin-top: 32px;
+		font-size: 1rem;
 	}
 `;

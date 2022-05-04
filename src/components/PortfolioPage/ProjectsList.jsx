@@ -24,7 +24,7 @@ export const ProjectsList = ({ selectedCategories }) => {
 						x[1].responsibility.some(res => res === category)
 					)
 			),
-		[portfolio, selectedCategories]
+		[filterResetBtn, portfolio, selectedCategories]
 	);
 
 	useEffect(() => {
@@ -142,21 +142,6 @@ const ProjectContainer = styled.div`
 	}
 `;
 
-const StyledResponsibility = styled.p`
-	display: none;
-	@media (min-width: 450px) {
-		display: inline-block;
-		font-weight: 700;
-		line-height: 160%;
-		text-transform: uppercase;
-		opacity: 0.75;
-
-		&:not(:last-child) {
-			margin-right: 24px;
-		}
-	}
-`;
-
 const StyledTitle = styled.h3 `
 	margin: 0;
 	padding: 12px 0 0 0;
@@ -170,17 +155,3 @@ const StyledTitle = styled.h3 `
 		color: ${colors.Font};
 	}
 `
-
-const StyledDescription = styled.p`
-	display: none;
-	@media (min-width: 450px) {
-		display: block;
-		margin: 0;
-		padding: 0;
-		line-height: 160%;
-	}
-	@media all and (min-width: 1480px) {
-		font-size: 1.2rem;
-		line-height: 160%;
-	}
-`;
