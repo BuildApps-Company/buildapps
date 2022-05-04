@@ -59,14 +59,16 @@ const StyledLink = styled(Link)`
 const ProjectTopContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	justify-content: space-between;
+	height: auto;
 	padding: 95px 16px;
+	overflow: hidden;
 	background: ${props =>
 		props.background
 			? props.background
 			: 'linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);'};
 	@media all and (min-width: ${breakpoints.phone}) {
-		height: 950px;
+		height: 100vh;
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {
@@ -84,7 +86,7 @@ const ImageWrap = styled.div`
 
 	img {
 		display: block;
-		max-width: 100%;
+		max-width: 75%;
 	}
 
 	@media all and (min-width: ${breakpoints.notebook}) {

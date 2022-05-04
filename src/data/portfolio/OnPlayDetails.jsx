@@ -31,7 +31,6 @@ export const OnPlayEn = () => (
 			program: to be bright, optimistic, and memorable.
 		</p>
 		<ImageWrap>
-			<img class="iphonediscount" src={mainImg} alt="picture1" />
 		</ImageWrap>
 		<H3>How was the workflow organized?</H3>
 		<p>
@@ -137,7 +136,6 @@ export const OnPlayRu = () => (
 			назначению программы — быть ярким, оптимистичным, запоминающимся.
 		</p>
 		<ImageWrap>
-			<img class="iphonediscount" src={mainImg} alt="picture1" />
 		</ImageWrap>
 		<H3>Как организован рабочий процесс?</H3>
 		<p>
@@ -247,7 +245,6 @@ export const OnPlayUa = () => (
 			запам'ятовується.
 		</p>
 		<ImageWrap>
-			<img class="iphonediscount" src={mainImg} alt="picture1" />
 		</ImageWrap>
 		<H3>Як організовано робочий процес?</H3>
 		<p>

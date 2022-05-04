@@ -4,6 +4,8 @@ import { colors } from '../../styles/colors';
 import { breakpoints } from '../../styles/breakpoints';
 
 const Accordion = ({ id, title, content, ActiveTab, setActiveTab }) => {
+	const contentMap = Object.values(content);
+
 	return (
 		<AccordionItem>
 			<TitleContainer
@@ -15,7 +17,9 @@ const Accordion = ({ id, title, content, ActiveTab, setActiveTab }) => {
 				<Title>{ActiveTab === id ? '-' : '+'}</Title>
 			</TitleContainer>
 			<Content ActiveTab={ActiveTab} id={id}>
-				{content}
+				{contentMap.map(article => (
+					<Paragraph>{article}</Paragraph>
+				))}
 			</Content>
 		</AccordionItem>
 	);
@@ -48,16 +52,25 @@ const Title = styled.div`
 	}
 `;
 
+const Paragraph = styled.p`
+	display: block;
+	font-size: 14px;
+	margin: 0 0 12px 0;
+
+	&:last-child {
+		margin-bottom: 32px;
+	}
+
+	@media all and (min-width: ${breakpoints.phone}) {
+		font-size: 16px;
+	}
+`;
+
 const Content = styled.div`
 	display: block;
 	line-height: 160%;
-	font-size: 16px;
 	font-weight: 400;
 	height: ${props => (props.ActiveTab !== props.id ? '0' : 'unset')};
 	overflow: hidden;
 	transition: all 0.3s;
-
-	@media all and (min-width: ${breakpoints.phone}) {
-		font-size: 14px;
-	}
 `;

@@ -6,11 +6,15 @@
 	"servicesAndWorkflow.cultureAbout": "Our culture is rooted in a shared respect for the skills and perspectives each of us brings, whether you’re an intern or an executive. It’s a culture that allows us to leverage our unique backgrounds and experiences to challenge one another, to lean into being uncomfortable, and to unlearn and relearn as we continually evolve. Together, we’re defining values that we can stand behind and grow from, so everything we create leaves a lasting impact for the better.",
 	"servicesAndWorkflow.slogan": "The basis of high-quality work is mutual respect within the team and towards its customers.",
 	"servicesAndWorkflow.workflow": "Workflow",
-	"servicesAndWorkflow.workflow1": "Workflow Subtitle 111111 111111",
-	"servicesAndWorkflow.workflow2": "Workflow Subtitle 222222 222222",
-	"servicesAndWorkflow.workflow3": "Workflow Subtitle 333333 333333",
-	"servicesAndWorkflow.workflow4": "Workflow Subtitle 444444 444444",
+	"servicesAndWorkflow.workflow1": "Our journey begins with research, during which we study and analyze your business goals, target audience pain points and current market trends. If you already have an outdated product, we will continue this step with an audit. A fresh look from the outside allows you to identify the main points of improvement and gain valuable information about the future appearance of your new product. Our audit is comprehensive - we consider both design and technical aspects.",
+	"servicesAndWorkflow.workflow2": "The insights and insights gained during the research and audit phase are brought to life as we create the design concept and develop the technical proof of concept. A design concept is a visual representation of how your product should look and behave. The design concept is tested through proof of concept, a small piece of functionality designed to validate that our ideas are technically feasible.",
+	"servicesAndWorkflow.workflow3": "The stage begins with all the knowledge that we have received in the concept and verification stage. We already know enough about the product (what to build) and the project (how to build). We develop and design the product sprint after sprint, iteratively moving towards the launch of the MVP.",
+	"servicesAndWorkflow.workflow4": "The iterations do not end there - we continue to work on the product after the launch - we refine existing features, add new functionality, work on the reliability of the system.",
 	"servicesAndWorkflow.title": "We hiring",
 	"servicesAndWorkflow.more": "Learn more",
-	"servicesAndWorkflow.subTitle": "Be part of our strong team."
+	"servicesAndWorkflow.subTitle": "Be part of our strong team.",
+  "servicesAndWorkflow.circle1Title": "Discuss and Research",
+  "servicesAndWorkflow.circle2Title": "Concept",
+  "servicesAndWorkflow.circle3Title": "Development",
+  "servicesAndWorkflow.circle4Title": "Launch"
 }
