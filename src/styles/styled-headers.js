@@ -26,7 +26,7 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
 	font-weight: bold;
 	font-size: 1.5rem;
-	margin: 0;
+	margin: 20px 0;
 	line-height: 160%;
 `;
 

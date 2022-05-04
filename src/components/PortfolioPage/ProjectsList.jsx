@@ -9,7 +9,20 @@ import { useTranslation } from 'react-i18next';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-const delay = [1000, 1250, 1250, 900, 1150, 900, 1000, 1250, 1350, 1150, 1450, 1000];
+const delay = [
+	1000,
+	1250,
+	1250,
+	900,
+	1150,
+	900,
+	1000,
+	1250,
+	1350,
+	1150,
+	1450,
+	1000,
+];
 
 export const ProjectsList = ({ selectedCategories }) => {
 	const { t } = useTranslation();
@@ -24,14 +37,14 @@ export const ProjectsList = ({ selectedCategories }) => {
 						x[1].responsibility.some(res => res === category)
 					)
 			),
-		[portfolio, selectedCategories]
+		[filterResetBtn, portfolio, selectedCategories]
 	);
 
 	useEffect(() => {
 		Aos.init({
-      offset: 150,
-      mirror: false,
-    });
+			offset: 150,
+			mirror: false,
+		});
 	}, []);
 
 	return (
@@ -42,19 +55,21 @@ export const ProjectsList = ({ selectedCategories }) => {
 				return (
 					<li
 						key={key}
-						data-aos='fade-up'
+						data-aos="fade-up"
 						data-aos-duration={delay[index]}
-            data-aos-delay={delay[index] - 800}
+						data-aos-delay={delay[index] - 800}
 					>
-						<Link to={`${routes.portfolio}${el.id}/`} state={{ project: el }} style={{display: 'block' }}>
+						<Link
+							to={`${routes.portfolio}${el.id}/`}
+							state={{ project: el }}
+							style={{ display: 'block' }}
+						>
 							<ProjectContainer background={el.background}>
 								<ImageContainer>
 									{el.longImage && <img src={el.longImage} alt={el.title} />}
 								</ImageContainer>
 							</ProjectContainer>
-							<StyledTitle>
-								<TitleValue></TitleValue>
-							</StyledTitle>
+							<StyledTitle>{TitleValue}</StyledTitle>
 						</Link>
 					</li>
 				);
@@ -71,7 +86,7 @@ const ImageContainer = styled.div`
 	align-self: center;
 	max-width: 450px;
 	max-height: 280px;
-`
+`;
 
 const StyledPortfolioList = styled.ul`
 	margin: 0;
@@ -108,7 +123,8 @@ const ProjectContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 198px;
+	min-height: 250px;
+	min-width: 280px;
 	border-radius: 4px;
 	padding: 20px;
 	background: ${props =>
@@ -117,7 +133,7 @@ const ProjectContainer = styled.div`
 			: 'linear-gradient(88deg, #D0EEFF 3.37%, #E3FFFD 96.63%);'};
 
 	overflow: hidden;
-	
+
 	img {
 		display: block;
 		max-height: 150px;
@@ -141,22 +157,7 @@ const ProjectContainer = styled.div`
 	}
 `;
 
-const StyledResponsibility = styled.p`
-	display: none;
-	@media (min-width: 450px) {
-		display: inline-block;
-		font-weight: 700;
-		line-height: 160%;
-		text-transform: uppercase;
-		opacity: 0.75;
-
-		&:not(:last-child) {
-			margin-right: 24px;
-		}
-	}
-`;
-
-const StyledTitle = styled.h3 `
+const StyledTitle = styled.h3`
 	margin: 0;
 	padding: 12px 0 0 0;
 	margin-bottom: 32px;
@@ -165,21 +166,6 @@ const StyledTitle = styled.h3 `
 
 	@media all and (min-width: ${breakpoints.notebook}) {
 		font-size: 16px;
-		/* margin-top: auto; */
 		color: ${colors.Font};
-	}
-`
-
-const StyledDescription = styled.p`
-	display: none;
-	@media (min-width: 450px) {
-		display: block;
-		margin: 0;
-		padding: 0;
-		line-height: 160%;
-	}
-	@media all and (min-width: 1480px) {
-		font-size: 1.2rem;
-		line-height: 160%;
 	}
 `;

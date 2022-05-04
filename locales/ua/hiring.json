@@ -1,0 +1,21 @@
+{
+	"hiring.mainTitle": "Можливості працевляштування",
+	"hiring.goBack": "Повернутися до вакансій",
+	"hiring.about": "Беремося за цікаві проекти, розробляємо корисні сайти та додатки. Хочете спробувати? Зв'яжіться з нами!",
+	"hiring.filterResetBtn": "Все",
+	"filter.filterHeader": "Фільтри",
+	"filter.categryDepartment": "Департамент",
+	"filter.btnWeb": "WEB",
+	"filter.btnMobile": "MOBILE",
+	"filter.btnDesign": "DESIGN",
+	"filter.categryExp": "Досвід работи",
+	"filter.btnSenior": "senior",
+	"filter.btnJunior": "junior",
+	"filter.btnMiddle": "middle",
+	"filter.categryWorkTime": "Модель зайнятості",
+	"filter.btnPart": "Часткова",
+	"filter.btnFull": "Повна",
+	"filter.categryWorkspace": "Місце работи",
+	"filter.btnRemote": "Віддалена",
+	"filter.btnOffice": "Офіс"
+}

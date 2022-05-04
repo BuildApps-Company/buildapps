@@ -8,15 +8,19 @@ import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
 
 export default function ContactFormPage() {
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 	return (
 		<Page pageName={'Contact Us'}>
 			<Toolbar />
 			<StyledPageContainer>
-				<SubTitle>{t('contactUs.subTitle')}</SubTitle>
-				<Title>{t('contactUs.mainTitle')}</Title>
 				<FlexContainer>
-					<ContactUsForm />
+					<ContactFormContainer>
+						<PageName>{t('contactUs.pageName')}</PageName>
+						<Title>{t('contactUs.mainTitle')}</Title>
+						<Subtitle>{t('contactUs.subTitle')}</Subtitle>
+						<ContactUsForm />
+					</ContactFormContainer>
+
 					<Contacts />
 				</FlexContainer>
 			</StyledPageContainer>
@@ -25,18 +29,16 @@ export default function ContactFormPage() {
 }
 
 const StyledPageContainer = styled.div`
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 120px;
-	padding-left: 5%;
-	padding-right: 5%;
+	margin: 0 auto 120px;
+	padding: 0 16px;
 
 	@media all and (min-width: ${breakpoints.notebook}) {
-		padding-left: 11%;
+		margin: 0 auto 120px;
+		max-width: 1400px;
 	}
 `;
 
-const SubTitle = styled.h2`
+const PageName = styled.span`
 	margin: 0;
 	padding: 0;
 	font-size: 0.75rem;
@@ -45,10 +47,19 @@ const SubTitle = styled.h2`
 	text-transform: uppercase;
 `;
 
+const Subtitle = styled.h2`
+	margin: 0 0 32px 0;
+	padding: 0;
+	font-size: 1.25rem;
+	line-height: 160%;
+	opacity: 0.75;
+`;
+
 const Title = styled.h1`
-	margin: 0 0 40px 0;
+	margin: 0 0 12px 0;
 	padding: 0;
 	font-size: 3rem;
+	font-weight: bold;
 	line-height: 160%;
 	text-transform: uppercase;
 
@@ -60,8 +71,30 @@ const Title = styled.h1`
 const FlexContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	gap: 36px;
+
 	@media all and (min-width: ${breakpoints.notebook}) {
 		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+    gap: unset;
+	}
+`;
+
+const ContactFormContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+
+	@media all and (min-width: ${breakpoints.tablet}) {
+		margin: unset;
+		max-width: 90%;
+	}
+
+	@media all and (min-width: ${breakpoints.notebook}) {
+		margin: unset;
+		max-width: 600px;
 	}
 `;
 

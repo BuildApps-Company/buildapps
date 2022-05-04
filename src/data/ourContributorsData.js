@@ -6,7 +6,7 @@ import ivanImg from '../../static/images/team/kolosinskiy-ivan.jpg';
 const en = [
 	{
 		key: 'alexbudyakov',
-		name: 'Aleksandr Budyakov',
+		name: 'Oleksandr Budyakov',
 		position: 'Head of mobile app development',
 		img: sashaImg,
 	},

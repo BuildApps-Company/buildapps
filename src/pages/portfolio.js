@@ -4,9 +4,7 @@ import { Page } from '../components/shared/Page';
 import { Toolbar } from '../components/shared/Toolbar';
 import { ButtonsList, ProjectsList } from '../components/PortfolioPage';
 import { PreFooter } from '../components/MainPage/PreFooter';
-import { Container } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
-import { allProjects } from '../types/projects';
 import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
 
@@ -16,7 +14,6 @@ export default function PortfolioPage() {
 	const [selectedCategories, setSelectedCategories] = useState([
 		filterResetBtn,
 	]);
-	console.log(selectedCategories);
 
 	const onSelectCategory = newCategory => {
 		if (newCategory === filterResetBtn) {
@@ -109,6 +106,8 @@ const ContainerWrap = styled.div`
 	overflow: hidden;
 	max-width: 1200px;
 	margin: 0 auto;
+  padding: 0 12px;
+
 	@media all and (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.notebook}) {
 		padding-left: 56px;
 		padding-right: 56px;

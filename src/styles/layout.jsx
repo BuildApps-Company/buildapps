@@ -14,6 +14,8 @@ export const HeroBlock = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
+	display: none;
+
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;
 		opacity: 0.75;
@@ -23,9 +25,10 @@ export const StyledLink = styled(Link)`
 		text-transform: uppercase;
 		text-decoration: none;
 		color: ${colors.Main};
-		&:hover,
-		&:focus {
-			opacity: 1;
-		}
+	}
+
+	&:hover,
+	&:focus {
+		opacity: 1;
 	}
 `;

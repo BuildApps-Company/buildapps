@@ -1,0 +1,21 @@
+{
+	"hiring.mainTitle": "Jobs opportunities",
+	"hiring.goBack": "GO back to Vacancies",
+	"hiring.about": "We take on interesting projects, develop useful websites and applications. Want to try? Contact us!",
+	"hiring.filterResetBtn": "ALL",
+	"filter.filterHeader": "Filters",
+	"filter.categryDepartment": "Department",
+	"filter.btnWeb": "WEB",
+	"filter.btnMobile": "MOBILE",
+	"filter.btnDesign": "DESIGN",
+	"filter.categryExp": "Expirience",
+	"filter.btnSenior": "senior",
+	"filter.btnJunior": "junior",
+	"filter.btnMiddle": "middle",
+	"filter.categryWorkTime": "Working time",
+	"filter.btnPart": "Part Time",
+	"filter.btnFull": "Full Time",
+	"filter.categryWorkspace": "Workspace",
+	"filter.btnRemote": "Remote",
+	"filter.btnOffice": "Office"
+}
