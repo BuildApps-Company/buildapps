@@ -3,7 +3,7 @@ import { VacancyDetails } from '../../components/HiringPage/vacancyDetails';
 import { graphql } from 'gatsby';
 
 const Vacancy = () => {
-	return <VacancyDetails vacancyId={'middleXamarinFullstackDeveloper'} />;
+	return <VacancyDetails vacancyId={ 'middleXamarinFullstackDeveloper' } />;
 };
 
 export default Vacancy;
