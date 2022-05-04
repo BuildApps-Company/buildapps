@@ -8,7 +8,7 @@ import brandBook from '../../../static/images/projects/turbodispatch/brandbook.j
 import devices from '../../../static/images/projects/turbodispatch/devices.jpg';
 import car from '../../../static/images/projects/turbodispatch/Car.jpg';
 import mac from '../../../static/images/projects/turbodispatch/mac.png';
-import iPhone from '../../../static/images/projects/turbodispatch/iphone.jpg';
+import iPhone from '../../../static/images/projects/turbodispatch/iPhone.jpg';
 import branding from '../../../static/images/projects//turbodispatch/Branding.jpg';
 
 export const TurboDiaspachEn = () => (
