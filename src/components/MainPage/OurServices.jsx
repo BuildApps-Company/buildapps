@@ -40,9 +40,9 @@ export const OurServices = ({ services }) => {
 				<Slider {...settings}>
 					{services.map(service => {
 						return (
-							<ServiceLink key={service.id} to={routes.hiring}>
+							<Service key={service.id}>
 								<ServiceCard service={service} />
-							</ServiceLink>
+							</Service>
 						);
 					})}
 				</Slider>
@@ -51,9 +51,10 @@ export const OurServices = ({ services }) => {
 	);
 };
 
-export const ServiceLink = styled(Link)`
+export const Service = styled.div`
 	display: none;
 	text-decoration: none;
+  cursor: pointer;
 
 	@media all and (min-width: ${breakpoints.tablet}) {
 		display: block;

@@ -16,6 +16,11 @@ const en = [
 		title: 'About us',
 		href: routes.aboutUs,
 	},
+	{
+		key: 'hiring',
+		title: 'Hiring',
+		href: routes.hiring,
+	},
 ];
 
 const ru = [
@@ -34,6 +39,11 @@ const ru = [
 		title: 'О нас',
 		href: routes.aboutUs,
 	},
+	{
+		key: 'hiring',
+		title: 'Вакансии',
+		href: routes.hiring,
+	},
 ];
 
 const ua = [
@@ -51,6 +61,11 @@ const ua = [
 		key: 'about',
 		title: 'Про нас',
 		href: routes.aboutUs,
+	},
+  {
+		key: 'hiring',
+		title: 'Вакансії',
+		href: routes.hiring,
 	},
 ];
 
