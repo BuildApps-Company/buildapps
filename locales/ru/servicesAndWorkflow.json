@@ -1,6 +1,6 @@
 {
 	"servicesAndWorkflow.mainTitle": "Сервисы и рабочий процесс",
-	"servicesAndWorkflow.about": "Здесь, в Buildups, мы руководствуемся возможностями и перспективами. Мы создаем лучшие проекты с нашим любопытством, опытом и возможностями.",
+	"servicesAndWorkflow.about": "Здесь, в Buildapps, мы руководствуемся возможностями и перспективами. Мы создаем лучшие проекты с нашим любопытством, опытом и возможностями.",
 	"servicesAndWorkflow.services": "Сервисы",
 	"servicesAndWorkflow.culture": "Культура",
 	"servicesAndWorkflow.cultureAbout": "Наша культура основана на общем уважении к навыкам и взглядам каждого из нас, независимо от того, являетесь ли вы стажером или руководителем. Это культура, которая позволяет нам использовать наш уникальный опыт и опыт, чтобы бросать вызов друг другу, склоняться к тому, чтобы чувствовать себя некомфортно, а также переучиваться и переучиваться по мере того, как мы постоянно развиваемся. Вместе мы определяем ценности, за которые мы можем стоять и расти, поэтому все, что мы создаем, оказывает долгосрочное влияние к лучшему.",
@@ -13,8 +13,8 @@
 	"servicesAndWorkflow.title": "Мы ищем таланты",
 	"servicesAndWorkflow.more": "Узнать больше",
 	"servicesAndWorkflow.subTitle": "Стань частью нашей сильной команды.",
-  "servicesAndWorkflow.circle1Title": "Исследование задач",
-  "servicesAndWorkflow.circle2Title": "Концепция",
-  "servicesAndWorkflow.circle3Title": "Создание",
-  "servicesAndWorkflow.circle4Title": "Запуск"
+	"servicesAndWorkflow.circle1Title": "Исследование задач",
+	"servicesAndWorkflow.circle2Title": "Концепция",
+	"servicesAndWorkflow.circle3Title": "Создание",
+	"servicesAndWorkflow.circle4Title": "Запуск"
 }
