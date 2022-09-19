@@ -17,7 +17,6 @@ export const ButtonsListProducts = ({
 		],
 		[data]
 	);
-	console.log(buttons);
 
 	return (
 		<StyledButtonsList>

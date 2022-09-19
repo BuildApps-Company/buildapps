@@ -10,10 +10,12 @@ import { colors } from '../styles/colors';
 import arrowBack from '../../static/images/portfolio/goback.png';
 import { graphql } from 'gatsby';
 import { Details } from '../components/PortfolioPage/Details';
+import { ProjectDetailsContainer } from '../styles/portfolio';
 
 export default function PortfolioDetails({ data }) {
 	const useCase = data.api.useCases.data[0].attributes;
 	const titleValue = useCase.title;
+
 	const Links = useCase.link.data && useCase.link.data.attributes;
 
 	return (
@@ -47,7 +49,9 @@ export default function PortfolioDetails({ data }) {
 					)}
 				</ImageWrap>
 			</ProjectTopContainer>
-			<Details data={useCase.content} />
+			<ProjectDetailsContainer>
+				<Details data={useCase.content} />
+			</ProjectDetailsContainer>
 			<PreFooter />
 		</Page>
 	);

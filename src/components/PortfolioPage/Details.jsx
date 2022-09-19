@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ProjectDetailsContainer } from '../../styles/portfolio';
 import ReactHtmlParser from 'react-html-parser';
-import { H3, H4 } from '../../styles/styled-headers';
+import { H1, H2, H3, H4 } from '../../styles/styled-headers';
 import { breakpoints } from '../../styles/breakpoints';
 import Slider from 'react-slick';
 import arrowLeftSlider from '../../../static/images/arrowLeftSlider.svg';
@@ -21,6 +21,10 @@ const settings = {
 
 const selectHlevel = data => {
 	switch (data.level) {
+		case 1:
+			return <H1>{ReactHtmlParser(data.text)}</H1>;
+		case 2:
+			return <H2>{ReactHtmlParser(data.text)}</H2>;
 		case 3:
 			return <H3>{ReactHtmlParser(data.text)}</H3>;
 		case 4:
@@ -43,7 +47,6 @@ const CustomHeaderRenderer = ({ data }) => {
 };
 
 const CustomImageRenderer = ({ data }) => {
-	console.log(data);
 	if (data.length) {
 		if (data.length <= 2) {
 			return (
@@ -87,11 +90,7 @@ export const Details = ({ data }) => {
 		image: CustomImageRenderer,
 	};
 
-	return (
-		<ProjectDetailsContainer>
-			<Output renderers={renderers} data={content} />
-		</ProjectDetailsContainer>
-	);
+	return <Output renderers={renderers} data={content} />;
 };
 
 const ImgWrap = styled.div`

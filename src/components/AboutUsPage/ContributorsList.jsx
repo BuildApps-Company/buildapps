@@ -4,20 +4,23 @@ import { useContributorsData } from '../../data';
 import { breakpoints } from '../../styles/breakpoints';
 import { useTranslation } from 'react-i18next';
 
-export const ContributorsList = () => {
-	const ourContributorsData = useContributorsData();
-
-  const { t } = useTranslation();
+export const ContributorsList = ({ ourContributorsData }) => {
+	const { t } = useTranslation();
 	return (
 		<>
-			<ContributorsTitle>{t('aboutUsPage.contributorsTitle')}</ContributorsTitle>
+			<ContributorsTitle>
+				{t('aboutUsPage.contributorsTitle')}
+			</ContributorsTitle>
 
 			<StyledContributorsList>
-				{ourContributorsData.map(el => (
-					<li key={el.key}>
-						<StyledImg src={el.img} alt={el.name} />
-						<PositionP>{el.position}</PositionP>
-						<h3>{el.name}</h3>
+				{ourContributorsData.map(({ attributes }) => (
+					<li key={attributes.key}>
+						<StyledImg
+							src={`${process.env.GATSBY_API_DATA_URL}${attributes.img.data.attributes.url}`}
+							alt={attributes.name}
+						/>
+						<PositionP>{attributes.position}</PositionP>
+						<h3>{attributes.name}</h3>
 					</li>
 				))}
 			</StyledContributorsList>
@@ -30,9 +33,9 @@ const StyledImg = styled.img`
 `;
 
 const PositionP = styled.p`
-  display: inline-block;
-  min-height: 40px;
-`
+	display: inline-block;
+	min-height: 40px;
+`;
 
 const ContributorsTitle = styled.h2`
 	margin: 0 0 24px 0;

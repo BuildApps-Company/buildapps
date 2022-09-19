@@ -11,8 +11,13 @@ import { SmallContainer } from '../styles/container';
 import { breakpoints } from '../styles/breakpoints';
 import { useTranslation } from 'react-i18next';
 import { graphql } from 'gatsby';
+import { Details } from '../components/PortfolioPage/Details';
 
-export default function AboutUsPage() {
+export default function AboutUsPage({
+	data: {
+		api: { leaders, aboutUs },
+	},
+}) {
 	const { t } = useTranslation();
 
 	return (
@@ -23,14 +28,15 @@ export default function AboutUsPage() {
 				<AboutUsWrap>
 					<TitleContainer>
 						<SubTitle>{t('aboutUsPage.subTitle')}</SubTitle>
-						<Title>{t('aboutUsPage.mainTitle')}</Title>
+						{/* <Title>{t('aboutUsPage.mainTitle')}</Title> */}
 						<AboutPage>
-							<p>{t('aboutUsPage.paragraph1')}</p>
+							{/* <p>{t('aboutUsPage.paragraph1')}</p>
 							<p>{t('aboutUsPage.paragraph2')}</p>
-							<p>{t('aboutUsPage.paragraph3')}</p>
+							<p>{t('aboutUsPage.paragraph3')}</p> */}
+							<Details data={aboutUs.data.attributes.content} />
 						</AboutPage>
 					</TitleContainer>
-					<ContributorsList />
+					<ContributorsList ourContributorsData={leaders.data} />
 				</AboutUsWrap>
 				<ContactUsVerticalStretch>
 					<ContactUsContainerWrap />
@@ -100,13 +106,40 @@ const AboutPage = styled.p`
 `;
 
 export const query = graphql`
-	query($language: String!) {
+	query($language: String!, $locale: Api_I18NLocaleCode) {
 		locales: allLocale(filter: { language: { eq: $language } }) {
 			edges {
 				node {
 					ns
 					data
 					language
+				}
+			}
+		}
+		api {
+			aboutUs(locale: $locale) {
+				data {
+					attributes {
+						content
+					}
+				}
+			}
+			leaders(locale: $locale) {
+				data {
+					attributes {
+						key
+						name
+						position
+						img {
+							data {
+								attributes {
+									previewUrl
+									url
+									caption
+								}
+							}
+						}
+					}
 				}
 			}
 		}

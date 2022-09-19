@@ -32,9 +32,7 @@ module.exports = {
 				typeName: 'Api',
 				fieldName: 'api',
 				url: process.env.GATSBY_API_URL,
-				// HTTP headers
 				headers: {
-					// Learn about environment variables: https://gatsby.dev/env-vars
 					Authorization: `Bearer ${process.env.GATSBY_API_KEY}`,
 				},
 			},
